@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+    <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=XxmFwaN36x6HCtXO4rWm7aUAW92nWJfN5c0tnAfh"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-merchant-KBB page-merchant-map-mode">
+      <!-- 상단 공통 헤더 -->
+      <header class="common-header">
+        <button type="button" class="btn-go-main">메인으로</button>
+      </header>
+
+      <main class="main-content">
+        <!-- 검색 입력 영역 -->
+        <section class="merchant-search-section">
+          <div class="common-input-field merchant-search-field">
+            <input
+              type="text"
+              id="searchInput"
+              class="common-form-input"
+              placeholder="이름, 업종을 검색해보세요"
+              aria-label="사용처 이름 또는 업종 검색"
+            />
+            <button type="button" id="btnSearch" class="btn-search-action" aria-label="검색">
+              <i class="icon-search-black" aria-hidden="true"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- 현재 위치 & 목록 보기 전환 버튼 영역 -->
+        <section class="merchant-location-section">
+          <div class="location-current-wrapper">
+            <i class="icon-current-location" aria-hidden="true"></i>
+            <span class="location-text" id="locationText">서울 중구 태평로1가</span>
+          </div>
+          <button type="button" class="btn-list-view" aria-label="목록형으로 보기">
+            <i class="icon-view-list" aria-hidden="true"></i>
+          </button>
+        </section>
+
+        <!-- 지도 뷰 영역 -->
+        <section class="merchant-map-container">
+          <!-- 화면 중앙 고정 파란 점 핀 -->
+          <div class="map-center-pin-wrapper" aria-hidden="true">
+            <div class="map-center-blue-ripple"></div>
+            <div class="map-center-blue-dot"></div>
+          </div>
+
+          <!-- 좌하단 플로팅 컨트롤 버튼 -->
+          <div class="map-floating-controls-left">
+            <button type="button" id="btnMyLocation" class="btn-map-circle-action" aria-label="현재 위치로 이동">
+              <i class="icon-location-gps" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn-map-circle-action" aria-label="지도 안내 정보">
+              <i class="icon-info-circle-outline" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- 우하단 '이 지역에서 검색' 플로팅 캡슐 버튼 -->
+          <div class="map-floating-action-right">
+            <button type="button" id="btnSearchThisArea" class="btn-search-this-area">
+              <i class="icon-refresh-white" aria-hidden="true"></i>
+              <span>이 지역에서 검색</span>
+            </button>
+          </div>
+          <div class="map-view-canvas" id="merchantMap"></div>
+        </section>
+      </main>
+    </div>
+
+    <!-- 가맹점 상세 정보 바텀시트 오버레이 -->
+    <div class="bottom-sheet-overlay sheet-map-merchant" id="merchantDetailSheet">
+      <div class="bottom-sheet-container merchant-detail-sheet">
+        <!-- 1. 바텀시트 헤더 -->
+        <div class="bottom-sheet-header">
+          <h3 class="bottom-sheet-title" id="sheetTitle">가맹점명</h3>
+          <button type="button" class="btn-sheet-close" id="btnSheetClose" aria-label="닫기">
+            <i class="icon-close-24" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- 2. 바텀시트 본문 스크롤 영역 -->
+        <div class="bottom-sheet-content">
+          <div class="merchant-mini-map">
+            <!-- 지도가 그려지는 순수 영역 -->
+            <div class="mini-map-canvas" id="detailMiniMap"></div>
+            <!-- 지도 위에 고정될 핀 오버레이 -->
+          </div>
+
+          <!-- 정보 데이터 리스트 -->
+          <dl class="merchant-info-list">
+            <div class="info-row">
+              <dt class="info-label">주소</dt>
+              <dd class="info-value" id="sheetAddress">-</dd>
+            </div>
+            <div class="info-row">
+              <dt class="info-label">전화번호</dt>
+              <dd class="info-value val-number" id="sheetTel">-</dd>
+            </div>
+            <div class="info-row">
+              <dt class="info-label">업종</dt>
+              <dd class="info-value" id="sheetCategory">-</dd>
+            </div>
+            <div class="info-row row-voucher">
+              <dt class="info-label">사용가능 바우처</dt>
+              <dd class="info-value text-right" id="sheetVoucher">
+                국민서울사랑바우처, 대한민국화이팅<br />
+                바우처, 여의도사랑바우처, 캐시백<br />
+                룰루랄라
+              </dd>
+            </div>
+          </dl>
+
+          <!-- 정보 더보기 링크 -->
+          <div class="merchant-more-action">
+            <button type="button" class="btn-info-more">
+              <span>정보 더보기</span>
+              <i class="icon-arrow-right-16" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. 하단 고정 버튼 -->
+        <div class="bottom-sheet-footer">
+          <a href="tel:" class="btn-sheet-confirm" id="btnSheetCall">전화하기</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var map;
+      var miniMap = null; // 미니 지도 인스턴스 전역 변수
+      var currentMarkers = [];
+      var appKey = 'XxmFwaN36x6HCtXO4rWm7aUAW92nWJfN5c0tnAfh';
+
+      var myLocationLatLng = new Tmapv2.LatLng(37.5239, 126.9301);
+      var cityHallLatLng = new Tmapv2.LatLng(37.5665, 126.978);
+
+      function initTmap() {
+        map = new Tmapv2.Map('merchantMap', {
+          center: cityHallLatLng,
+          width: '100%',
+          height: '100%',
+          zoom: 16,
+          zoomControl: false,
+          scaleBar: false,
+        });
+
+        updateLocationText(cityHallLatLng);
+        bindEvents();
+      }
+
+      function updateLocationText(latLng) {
+        var lat = latLng.lat();
+        var lng = latLng.lng();
+
+        var url = `https://apis.openapi.sk.com/tmap/geo/reversegeocoding?version=1&lat=${lat}&lon=${lng}&coordType=WGS84GEO&addressType=A02&appKey=${appKey}`;
+
+        fetch(url, {
+          headers: {
+            Accept: 'application/json',
+          },
+        })
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            if (data && data.addressInfo) {
+              var info = data.addressInfo;
+              var fullAddress =
+                `${info.city_do || ''} ${info.gu_gun || ''} ${info.legalDong || info.adminDong || ''}`.trim();
+              if (fullAddress) {
+                document.getElementById('locationText').innerText = fullAddress;
+              }
+            }
+          })
+          .catch(function (error) {
+            console.error('Reverse Geocoding 에러:', error);
+          });
+      }
+
+      function clearMerchantMarkers() {
+        currentMarkers.forEach(function (marker) {
+          marker.setMap(null);
+        });
+        currentMarkers = [];
+      }
+
+      function searchPoi(keyword, isAreaSearch) {
+        if (!keyword) {
+          alert('검색어를 입력해주세요.');
+          return;
+        }
+
+        var center = map.getCenter();
+        var url = `https://apis.openapi.sk.com/tmap/pois?version=1&searchKeyword=${encodeURIComponent(
+          keyword,
+        )}&count=10&appKey=${appKey}&centerLat=${center.lat()}&centerLon=${center.lng()}`;
+
+        fetch(url, {
+          headers: {
+            Accept: 'application/json',
+          },
+        })
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            if (data && data.searchPoiInfo && data.searchPoiInfo.pois && data.searchPoiInfo.pois.poi) {
+              var poiList = data.searchPoiInfo.pois.poi;
+              renderPoiMarkers(poiList, isAreaSearch);
+            } else {
+              alert('검색 결과가 없습니다.');
+              clearMerchantMarkers();
+            }
+          })
+          .catch(function (error) {
+            console.error('Tmap POI 검색 에러:', error);
+            alert('검색 중 오류가 발생했습니다.');
+          });
+      }
+
+      function openMerchantDetailSheet(poi) {
+        var name = poi.name || '가맹점';
+        var category = poi.upperBizName || poi.middleBizName || '기타';
+        var address =
+          poi.upperAddrName + ' ' + poi.middleAddrName + ' ' + poi.lowerAddrName + ' ' + (poi.detailAddrName || '');
+        var tel = poi.telNo || '정보 없음';
+
+        document.getElementById('sheetTitle').innerText = name;
+        document.getElementById('sheetAddress').innerText = address.trim();
+        document.getElementById('sheetTel').innerText = tel;
+        document.getElementById('sheetCategory').innerText = category;
+
+        var callBtn = document.getElementById('btnSheetCall');
+        if (poi.telNo) {
+          callBtn.setAttribute('href', 'tel:' + poi.telNo);
+          callBtn.style.pointerEvents = 'auto';
+          callBtn.style.opacity = '1';
+        } else {
+          callBtn.setAttribute('href', 'javascript:void(0);');
+          callBtn.style.pointerEvents = 'none';
+          callBtn.style.opacity = '0.5';
+        }
+
+        var poiLat = parseFloat(poi.frontLat);
+        var poiLon = parseFloat(poi.frontLon);
+        var poiLatLng = new Tmapv2.LatLng(poiLat, poiLon);
+
+        // 기존 미니맵 제거
+        if (miniMap) {
+          try {
+            miniMap.destroy();
+          } catch (e) {}
+          miniMap = null;
+        }
+        var miniMapEl = document.getElementById('detailMiniMap');
+        miniMapEl.innerHTML = '';
+
+        // 바텀시트 활성화
+        document.getElementById('merchantDetailSheet').classList.add('active');
+
+        // 애니메이션 완료 후 미니맵 생성 (CSS transition 300ms + 여유)
+        setTimeout(function () {
+          miniMap = new Tmapv2.Map('detailMiniMap', {
+            center: poiLatLng,
+            width: '100%',
+            height: '200px',
+            zoom: 16,
+            zoomControl: false,
+            scaleBar: false,
+          });
+
+          var forkMarkerHtml =
+            '<div class="map-fork-marker">' +
+            '<div class="marker-head">' +
+            '<i class="icon-fork-spoon" aria-hidden="true"></i>' +
+            '</div>' +
+            '</div>';
+
+          new Tmapv2.Marker({
+            position: poiLatLng,
+            iconHTML: forkMarkerHtml,
+            map: miniMap,
+          });
+        }, 0);
+      }
+
+      function closeMerchantDetailSheet() {
+        document.getElementById('merchantDetailSheet').classList.remove('active');
+        if (miniMap) {
+          try {
+            miniMap.destroy();
+          } catch (e) {}
+          miniMap = null;
+        }
+      }
+
+      function renderPoiMarkers(poiList, keepCurrentCenter) {
+        clearMerchantMarkers();
+
+        poiList.forEach(function (poi, index) {
+          var lat = parseFloat(poi.frontLat);
+          var lon = parseFloat(poi.frontLon);
+          var position = new Tmapv2.LatLng(lat, lon);
+
+          if (index === 0 && !keepCurrentCenter) {
+            map.setCenter(position);
+            updateLocationText(position);
+          }
+
+          var category = poi.upperBizName || poi.middleBizName || '사용처';
+          var title = poi.name;
+
+          var bubbleHtml = `
+            <div class="map-bubble-marker">
+              <div class="bubble-content">
+                <strong class="merchant-title">${title}</strong>
+                <span class="merchant-cate">${category}</span>
+              </div>
+              <div class="bubble-pin-tail"></div>
+            </div>
+          `;
+
+          var marker = new Tmapv2.Marker({
+            position: position,
+            iconHTML: bubbleHtml,
+            offset: new Tmapv2.Point(0, 0),
+            map: map,
+          });
+
+          marker.addListener('click', function () {
+            openMerchantDetailSheet(poi);
+          });
+
+          currentMarkers.push(marker);
+        });
+      }
+
+      function bindEvents() {
+        map.addListener('dragend', function () {
+          var center = map.getCenter();
+          updateLocationText(center);
+        });
+
+        document.getElementById('btnMyLocation').addEventListener('click', function () {
+          map.setCenter(myLocationLatLng);
+          updateLocationText(myLocationLatLng);
+        });
+
+        document.getElementById('btnSearchThisArea').addEventListener('click', function () {
+          var keyword = document.getElementById('searchInput').value.trim();
+          if (!keyword) {
+            alert('검색어를 입력 후 재검색해주세요.');
+            return;
+          }
+          searchPoi(keyword, true);
+        });
+
+        var handleSearchAction = function () {
+          var keyword = document.getElementById('searchInput').value.trim();
+          searchPoi(keyword, false);
+        };
+
+        document.getElementById('btnSearch').addEventListener('click', handleSearchAction);
+        document.getElementById('searchInput').addEventListener('keyup', function (e) {
+          if (e.key === 'Enter') {
+            handleSearchAction();
+          }
+        });
+
+        // 바텀시트 닫기
+        document.getElementById('btnSheetClose').addEventListener('click', closeMerchantDetailSheet);
+
+        // 바텀시트 어두운 배경(딤) 영역 터치 시 닫기
+        document.getElementById('merchantDetailSheet').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeMerchantDetailSheet();
+          }
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', initTmap);
+    </script>
+  </body>
+</html>

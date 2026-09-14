@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <!-- 받는분(실명확인) 바텀시트 -->
+    <div class="bottom-sheet-overlay active" id="recipientVerifySheet">
+      <div class="bottom-sheet-container recipient-verify-sheet-container">
+        <!-- 헤더 -->
+        <div class="bottom-sheet-header">
+          <h3 class="bottom-sheet-title">받는분(실명확인)</h3>
+          <button type="button" class="btn-sheet-close" id="btnRecipientClose" aria-label="닫기"></button>
+        </div>
+
+        <!-- 본문 -->
+        <div class="bottom-sheet-content">
+          <!-- 연락처 및 실명 정보 -->
+          <div class="recipient-contact-info">
+            <i class="icon-contact-phone" aria-hidden="true"></i>
+            <span class="contact-name">김국민</span>
+            <span class="contact-phone">010-1234-5678</span>
+          </div>
+
+          <!-- 받는분명 입력 필드 그룹 -->
+          <div class="recipient-input-group">
+            <label for="recipientNameInput" class="input-group-label">받는분명</label>
+            <div class="common-input-field has-clear-btn">
+              <input
+                type="text"
+                class="common-form-input"
+                id="recipientNameInput"
+                value="김국민"
+                placeholder="받는 분 성명을 입력해주세요"
+                aria-label="받는분명"
+              />
+              <button type="button" class="btn-input-clear" id="btnRecipientClear" aria-label="입력내용 삭제">
+                <i class="icon-input-clear" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <!-- 안내 문구 -->
+            <div class="recipient-caption-message">
+              <i class="icon-caption-info" aria-hidden="true"></i>
+              <span>받는 분 명(성+이름)과 일치해야 송금이 가능합니다.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 공통 2버튼 (취소 40% / 확인 60%) -->
+        <div class="fixed-bottom-dual-btn-wrapper">
+          <button type="button" class="btn-dual-cancel" id="btnRecipientCancel">취소</button>
+          <button type="button" class="btn-dual-confirm" id="btnRecipientConfirm">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 스크립트 -->
+  </body>
+</html>

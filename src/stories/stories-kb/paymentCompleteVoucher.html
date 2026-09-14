@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+  </head>
+  <body class="KBB">
+    <div class="page-pay-complete-KBB">
+      <!-- 상단 공통 헤더 -->
+      <header class="common-header">
+        <button type="button" class="btn-go-main">메인으로</button>
+      </header>
+
+      <main class="pay-complete-main">
+        <!-- 완료 메시지 & 금액 섹션 -->
+        <section class="pay-complete-result-section">
+          <div class="complete-status-icon">
+            <i class="icon-check-yellow" aria-hidden="true"></i>
+          </div>
+          <h2 class="complete-title">결제를 완료했어요</h2>
+
+          <div class="complete-total-amount">
+            <span class="total-label">총 결제 금액</span>
+            <div class="amount-value-wrapper">
+              <span class="amount-val">20,000</span>
+              <span class="amount-unit">원</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 결제 기본 정보 리스트 -->
+        <section class="complete-info-section">
+          <div class="info-list-group">
+            <div class="info-row">
+              <span class="info-label">거래 구분</span>
+              <span class="info-value">결제</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">이용 지갑</span>
+              <span class="info-value">국민 123456-12-123456</span>
+            </div>
+            <div class="info-row align-top">
+              <span class="info-label">결제 번호</span>
+              <span class="info-value word-break">
+                KBBCBcfa2c273fd934428949<br />
+                070eead34c29e1
+              </span>
+            </div>
+          </div>
+
+          <!-- 혜택 정보 리스트 -->
+          <div class="info-list-group">
+            <div class="info-row">
+              <span class="info-label">적용 혜택</span>
+              <span class="info-value">서울시 나라사랑 바우처 사용</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">예금 토큰 적립 예정</span>
+              <span class="info-value">5,000원</span>
+            </div>
+          </div>
+
+          <!-- 하단 안내 문구 -->
+          <div class="complete-notice-message">
+            <i class="icon-caption-info" aria-hidden="true"></i>
+            <span class="notice-text">이용 내역 반영까지 최대 5분이 소요 될 수 있습니다.</span>
+          </div>
+        </section>
+      </main>
+
+      <!-- 하단 공통 2버튼 고정 푸터 -->
+      <div class="fixed-bottom-dual-btn-wrapper">
+        <button type="button" class="btn-dual-sub">내역 보기</button>
+        <button type="button" class="btn-dual-main">확인</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>QR 결제 안내 - KB국민은행</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-qr-guide-KBB">
+      <!-- 독립 상단 닫기 헤더 -->
+      <header class="qr-guide-header">
+        <button type="button" class="btn-guide-close" aria-label="닫기">
+          <i class="icon-guide-close" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <!-- **** 공통 탭 네비게이션 적용 (QR 보여주기 활성화) -->
+      <nav class="common-tab-nav" aria-label="QR 안내 탭">
+        <ul class="common-tab-list">
+          <li class="tab-item">
+            <button type="button" class="tab-btn" aria-selected="false">QR 스캔하기</button>
+          </li>
+          <li class="tab-item is-active">
+            <button type="button" class="tab-btn" aria-selected="true">QR 보여주기</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 메인 가이드 콘텐츠 -->
+      <main class="qr-guide-main">
+        <!-- 1단계: QR 보여주기 -->
+        <section class="guide-step-section">
+          <h2 class="step-title">1.QR 보여주기</h2>
+          <p class="step-desc">
+            결제 QR코드 또는 바코드는 유효 시간 내에 가맹점에서 스캔을 진행해야 합니다. 유효 시간 만료 후에는 재발급
+            버튼으로 결제 QR코드/바코드를 다시 만들고 결제를 진행할 수 있어요.
+          </p>
+          <div class="step-visual-box">
+            <i class="img-qr-present-step1" aria-hidden="true"></i>
+          </div>
+        </section>
+
+        <!-- 2단계: 결제 전 예금 토큰과 혜택 적용 확인 -->
+        <section class="guide-step-section">
+          <h2 class="step-title">2.결제 전 예금 토큰과 혜택 적용 확인</h2>
+          <p class="step-desc">결제 전에 결제에 사용할 예금 토큰과 혜택 적용 내용을 확인해 보세요.</p>
+          <div class="step-visual-box">
+            <i class="img-qr-present-step2" aria-hidden="true"></i>
+          </div>
+        </section>
+
+        <!-- 3단계: 잔액 부족 시 안내 -->
+        <section class="guide-step-section">
+          <p class="step-desc highlight-step-desc">
+            결제는 예금 토큰으로만 사용 가능하며, 결제 금액보다 잔액이 부족한 경우 충전 후 결제가 가능합니다.
+          </p>
+          <div class="step-visual-box">
+            <i class="img-qr-present-step3" aria-hidden="true"></i>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

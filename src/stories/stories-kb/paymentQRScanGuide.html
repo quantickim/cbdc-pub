@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>QR 결제 안내 - KB국민은행</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-qr-guide-KBB">
+      <!-- 독립 상단 닫기 헤더 -->
+      <header class="qr-guide-header">
+        <button type="button" class="btn-guide-close" aria-label="닫기">
+          <i class="icon-guide-close" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <!-- **** 공통 탭 네비게이션 적용 -->
+      <nav class="common-tab-nav" aria-label="QR 안내 탭">
+        <ul class="common-tab-list">
+          <li class="tab-item is-active">
+            <button type="button" class="tab-btn" aria-selected="true">QR 스캔하기</button>
+          </li>
+          <li class="tab-item">
+            <button type="button" class="tab-btn" aria-selected="false">QR 보여주기</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 메인 가이드 콘텐츠 -->
+      <main class="qr-guide-main">
+        <!-- 1단계: 매장의 QR 스캔 -->
+        <section class="guide-step-section">
+          <h2 class="step-title">1.매장의 QR 스캔</h2>
+          <p class="step-desc">매장 내 또는 안내받은 QR코드를 스캔하여 주세요.</p>
+          <div class="step-visual-box">
+            <i class="img-qr-guide-step1" aria-hidden="true"></i>
+          </div>
+        </section>
+
+        <!-- 2단계: 결제할 금액을 입력 또는 결제 내용 확인 -->
+        <section class="guide-step-section">
+          <h2 class="step-title">2.결제할 금액을 입력 또는 결제 내용 확인</h2>
+          <p class="step-desc">
+            결제는 예금 토큰으로만 가능합니다.<br />
+            결제 금액을 입력하셨거나, 결제 금액이 이미 입력된 상태라면 결제 내용을 확인하고 결제를 진행해 주세요.
+          </p>
+          <div class="step-visual-box">
+            <i class="img-qr-guide-step2" aria-hidden="true"></i>
+          </div>
+        </section>
+
+        <!-- 3단계 보조 안내: 혜택 적용 -->
+        <section class="guide-step-section">
+          <p class="step-desc highlight-step-desc">결제 내용을 확인하면서 사용할 수 있는 혜택을 적용할 수 있어요.</p>
+          <div class="step-visual-box">
+            <i class="img-qr-guide-step3" aria-hidden="true"></i>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

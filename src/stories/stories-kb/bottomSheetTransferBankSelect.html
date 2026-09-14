@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <!-- 은행 선택 바텀시트 (딤드 활성화) -->
+    <div class="bottom-sheet-overlay active" id="bankSelectSheet">
+      <div class="bottom-sheet-container bank-select-sheet-container">
+        <!-- 헤더 -->
+        <div class="bottom-sheet-header">
+          <h3 class="bottom-sheet-title">은행 선택</h3>
+          <button type="button" class="btn-sheet-close" id="btnBankSheetClose" aria-label="닫기"></button>
+        </div>
+
+        <!-- 본문 (지정된 순서의 은행 2열 그리드 리스트) -->
+        <div class="bottom-sheet-content bank-sheet-content">
+          <ul class="bank-list-grid">
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="KB" data-name="국민은행">
+                <i class="bank-logo logo-kb" aria-hidden="true"></i>
+                <span class="bank-name">국민은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="SUHYUP" data-name="수협은행">
+                <i class="bank-logo logo-suhyup" aria-hidden="true"></i>
+                <span class="bank-name">수협은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="C" data-name="C은행">
+                <i class="bank-logo logo-c" aria-hidden="true"></i>
+                <span class="bank-name">C은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="NH" data-name="농협은행">
+                <i class="bank-logo logo-nh" aria-hidden="true"></i>
+                <span class="bank-name">농협은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="WOORI" data-name="우리은행">
+                <i class="bank-logo logo-woori" aria-hidden="true"></i>
+                <span class="bank-name">우리은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="HANA" data-name="하나은행">
+                <i class="bank-logo logo-hana" aria-hidden="true"></i>
+                <span class="bank-name">하나은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="SHINHAN" data-name="신한은행">
+                <i class="bank-logo logo-shinhan" aria-hidden="true"></i>
+                <span class="bank-name">신한은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="IBK" data-name="기업은행">
+                <i class="bank-logo logo-ibk" aria-hidden="true"></i>
+                <span class="bank-name">기업은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="IM" data-name="IM뱅크">
+                <i class="bank-logo logo-dgb" aria-hidden="true"></i>
+                <span class="bank-name">IM뱅크</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="BS" data-name="부산은행">
+                <i class="bank-logo logo-bs" aria-hidden="true"></i>
+                <span class="bank-name">부산은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="JB" data-name="전북은행">
+                <i class="bank-logo logo-jb" aria-hidden="true"></i>
+                <span class="bank-name">전북은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="KBANK" data-name="케이뱅크">
+                <i class="bank-logo logo-kbank" aria-hidden="true"></i>
+                <span class="bank-name">케이뱅크</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="A" data-name="A은행">
+                <i class="bank-logo logo-a" aria-hidden="true"></i>
+                <span class="bank-name">A은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="B" data-name="B은행">
+                <i class="bank-logo logo-b" aria-hidden="true"></i>
+                <span class="bank-name">B은행</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="KFTC" data-name="금융결제원">
+                <i class="bank-logo logo-kftc" aria-hidden="true"></i>
+                <span class="bank-name">금융결제원</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-bank-select-item" data-code="BNK" data-name="BNK경남은행">
+                <i class="bank-logo logo-bnk" aria-hidden="true"></i>
+                <span class="bank-name">BNK경남은행</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 스크립트 -->
+  </body>
+</html>
