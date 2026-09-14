@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-remit-confirm-KBB">
+      <!-- 상단 공통 헤더 -->
+      <header class="common-header">
+        <button type="button" class="btn-go-main">메인으로</button>
+      </header>
+      <main class="main-content">
+        <!-- 수취인 간단 안내 영역 -->
+        <section class="remit-target-summary-container">
+          <h2 class="target-name-title"><strong>김한국님</strong> 지갑으로</h2>
+          <div class="target-account-wrapper">
+            <span class="bank-name">국민</span>
+            <span class="account-num val-number">110-123-456789</span>
+            <button type="button" class="btn-change-target">변경</button>
+          </div>
+        </section>
+
+        <!-- 중앙 송금 금액 강조 영역 -->
+        <section class="remit-amount-confirm-container">
+          <div class="remit-amount-wrapper">
+            <span class="amount-val val-number">5,000,000</span>
+            <span class="amount-unit">원</span>
+          </div>
+          <p class="remit-confirm-question">예금 토큰을 <strong>송금</strong> 하시겠습니까?</p>
+        </section>
+
+        <!-- 하단 상세 내역 테이블 리스트 -->
+        <section class="remit-detail-container">
+          <ul class="remit-detail-list">
+            <li class="remit-detail-item">
+              <span class="detail-label">수취인 명</span>
+              <strong class="detail-value">이민국</strong>
+            </li>
+            <li class="remit-detail-item">
+              <span class="detail-label">
+                수취인 예금 토큰<br />
+                전자지갑
+              </span>
+              <div class="detail-value text-right">
+                <span class="bank-name">국민은행</span>
+                <span class="wallet-address val-number">(12345678901345)</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <!-- 하단 고정 송금 버튼 -->
+      <div class="fixed-bottom-btn-wrapper">
+        <button type="button" class="btn-confirm-bottom" id="btnSubmitRemit">송금하기</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-link-account-KBB">
+      <!-- 상단 공통 헤더 -->
+      <header class="common-header">
+        <button type="button" class="btn-go-main">국민지갑 메인</button>
+      </header>
+
+      <main class="main-content">
+        <!-- 타이틀 & 안내 문구 섹션 -->
+        <section class="account-title-container">
+          <h2 class="account-main-title">
+            예금토큰 전자지갑에 연결할<br />
+            계좌를 선택해주세요
+          </h2>
+          <p class="account-sub-desc">
+            계좌가 연결되면 예금을 토큰으로 전환하거나<br />
+            받은 토큰을 예금으로 전환할 수 있어요.
+          </p>
+        </section>
+
+        <!-- 계좌 선택 영역 -->
+        <section class="account-select-section">
+          <span class="account-field-label">선택 계좌</span>
+
+          <!-- 계좌 카드 드롭다운 버튼 -->
+          <button type="button" class="btn-account-card-select" aria-haspopup="listbox" aria-expanded="false">
+            <div class="account-card-body">
+              <i class="bank-logo-kb" aria-hidden="true"></i>
+              <div class="account-card-info">
+                <strong class="account-name">직장인우대종합통장</strong>
+                <div class="account-number-box">
+                  <span class="account-num val-number">123456-12-123456</span>
+                </div>
+                <div class="account-balance-box">
+                  <span class="balance-label">출금가능금액</span>
+                  <span class="balance-val val-number">500,000</span>
+                  <span class="balance-unit">원</span>
+                </div>
+              </div>
+            </div>
+            <i class="icon-arrow-down-20" aria-hidden="true"></i>
+          </button>
+        </section>
+
+        <!-- 자동충전 설정 토글 영역 -->
+        <!-- <section class="auto-charge-section">
+          <div class="auto-charge-label-box">
+            <span class="auto-charge-title">자동충전 설정</span>
+            <button type="button" class="btn-info-tooltip" aria-label="자동충전 설정 안내 보기">
+              <i class="icon-help-circle-18" aria-hidden="true"></i>
+            </button>
+          </div>
+          <label class="common-switch" for="switchId">
+            <input type="checkbox" id="switchId" class="switch-input" />
+            <span class="switch-track">
+              <span class="switch-thumb"></span>
+            </span>
+          </label>
+        </section> -->
+
+        <!-- 유의사항/알려드립니다 공통 아코디언 -->
+        <section class="common-notice-accordion">
+          <button type="button" class="btn-notice-toggle is-open" aria-expanded="true">
+            <div class="title-wrapper">
+              <i class="icon-notice-info" aria-hidden="true"></i>
+              <span class="notice-title">알려드립니다</span>
+            </div>
+            <i class="icon-arrow-toggle" aria-hidden="true"></i>
+          </button>
+
+          <div class="notice-content-body" style="display: block">
+            <ul class="notice-bullet-list">
+              <li class="bullet-main-item">등록가능한 계좌만 노출됩니다.</li>
+              <li class="bullet-main-item">지갑에 연결한 계좌는 변경이 불가합니다.</li>
+              <li class="bullet-main-item">
+                KB 국민은행 계좌만 가능하며, 활동정지 및 예적금/CMA 계좌 등 일부 계좌는 등록이 제한될 수 있습니다.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <!-- 하단 고정 버튼 -->
+      <div class="fixed-bottom-btn-wrapper">
+        <button type="button" class="btn-confirm-bottom" id="btnLinkAccountNext">다음</button>
+      </div>
+    </div>
+  </body>
+</html>

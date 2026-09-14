@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>CBDC - 설정</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="page-settings-KBB KBB">
+    <!-- 공통 상단 헤더 -->
+    <!-- 상단 공통 헤더 -->
+    <header>
+      <div class="common-header">
+        <button type="button" class="btn-go-main">메인으로</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. 사용자 정보 영역 -->
+      <section class="page-myinfo-container">
+        <p class="page-myinfo-name">김국민님</p>
+        <p class="page-myinfo-date">
+          <span>최근 접속</span>
+          <span class="common-font-roboto">24.08.08 13:21:23</span>
+        </p>
+      </section>
+
+      <!-- 2. 상단 3열 원형 퀵 메뉴 (28px 아이콘 + 10px 패딩) -->
+      <section class="page-account-container">
+        <div class="page-account-btn-wrapper">
+          <button type="button" class="page-account-btn-wallet">
+            <i></i>
+            <p>내 지갑 관리</p>
+          </button>
+        </div>
+        <div class="page-account-btn-wrapper">
+          <button type="button" class="page-account-btn-auth" data-href="auth_security.html">
+            <i></i>
+            <p>인증/보안</p>
+          </button>
+        </div>
+        <div class="page-account-btn-wrapper">
+          <button type="button" class="page-account-btn-notice" data-href="notice_list.html">
+            <i></i>
+            <p>
+              <span class="notice-label">공지사항</span>
+              <span class="badge-dot" aria-label="새 공지사항"></span>
+            </p>
+          </button>
+        </div>
+      </section>
+
+      <!-- 구분선 -->
+      <div class="divider-container" aria-hidden="true"></div>
+
+      <!-- 3. 서비스 설정 섹션 -->
+      <section class="page-list-container">
+        <p class="page-list-title">서비스 설정</p>
+        <div class="page-list">
+          <div class="page-item" data-href="linked_account_info.html">
+            <p>연계 계좌 확인</p>
+            <button type="button" aria-label="이동"></button>
+          </div>
+          <div class="page-item" data-href="auto_charge_withdraw_setting.html">
+            <p>자동 충전/출금 설정</p>
+            <button type="button" aria-label="이동"></button>
+          </div>
+          <div class="page-item" data-href="voucher_status_list.html">
+            <p>내 바우처 현황</p>
+            <button type="button" aria-label="이동"></button>
+          </div>
+          <div class="page-item" data-href="notification_setting.html">
+            <p>알림 설정</p>
+            <button type="button" aria-label="이동"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 구분선 -->
+      <div class="divider-container" aria-hidden="true"></div>
+
+      <!-- 4. 서비스 안내 섹션 -->
+      <section class="page-list-container">
+        <p class="page-list-title">서비스 안내</p>
+        <div class="page-list">
+          <div class="page-item" data-href="guide_use.html">
+            <p>이용 안내</p>
+            <button type="button" aria-label="이동"></button>
+          </div>
+          <div class="page-item" data-href="guide_merchant.html">
+            <p>사용처 안내</p>
+            <button type="button" aria-label="이동"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 구분선 -->
+      <div class="divider-container" aria-hidden="true"></div>
+
+      <!-- 5. 고객 지원 섹션 -->
+      <section class="page-list-container">
+        <p class="page-list-title">고객 지원</p>
+        <div class="page-list">
+          <div class="page-item" data-href="faq_list.html">
+            <p>자주 묻는 질문</p>
+            <button type="button" aria-label="이동"></button>
+          </div>
+          <div class="page-item" data-href="inquiry_list.html">
+            <p><span class="common-font-roboto">1:1</span> <span>문의</span></p>
+            <button type="button" aria-label="이동"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 6. 국민지갑 하단 푸터 -->
+    <footer class="footer-bottom-page">
+      <p class="kb-wallet">국민지갑</p>
+      <div class="bottom-page-container">
+        <button type="button" class="is-strong">개인정보처리방침</button>
+        <div class="divider" aria-hidden="true"></div>
+        <button type="button">위치기반서비스</button>
+        <div class="divider" aria-hidden="true"></div>
+        <button type="button">이용약관</button>
+      </div>
+      <p class="customer-service">
+        <span class="tel-info">고객센터:</span>
+        <a href="tel:1588-9999" class="tel-link common-font-roboto">1588-9999</a>
+        <span class="tel-info">(평일</span>
+        <span class="tel-time common-font-roboto">09:00~18:00</span><span>)</span>
+      </p>
+      <p class="copyright">
+        <i></i>
+        <span class="common-font-roboto">KB KOOKMIN BANK</span>
+      </p>
+    </footer>
+  </body>
+</html>

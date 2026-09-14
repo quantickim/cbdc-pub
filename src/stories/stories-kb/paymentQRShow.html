@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+  </head>
+  <body class="KBB">
+    <div class="page-qr-show-KBB">
+      <!-- 상단 빠른 링크 버튼 (공통 헤더 영역) -->
+      <header class="common-header">
+        <button type="button" class="btn-go-main">메인으로</button>
+      </header>
+
+      <main class="qr-show-main">
+        <!-- 탭 영역 (QR 스캔하기 / QR 보여주기) -->
+        <div class="qr-tab-container">
+          <button type="button" class="btn-qr-tab">QR 스캔하기</button>
+          <button type="button" class="btn-qr-tab active">QR 보여주기</button>
+        </div>
+
+        <!-- QR 카드 메인 컨테이너 -->
+        <section class="qr-show-card">
+          <!-- QR 코드 이미지 -->
+          <div class="qr-show-image-wrapper">
+            <i class="icon-qr-large" aria-label="QR코드"></i>
+          </div>
+
+          <!-- 유효시간 및 갱신 버튼 -->
+          <div class="qr-timer-wrapper">
+            <span class="timer-label">유효시간</span>
+            <span class="timer-time">02:00</span>
+            <button type="button" class="btn-timer-refresh" aria-label="유효시간 연장">
+              <i class="icon-refresh" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- 예금 토큰 잔액 카드 -->
+          <div class="qr-info-card">
+            <div class="qr-info-card-left">
+              <span class="card-label">예금 토큰 보유 잔액</span>
+              <div class="balance-wrapper">
+                <span class="balance-amount">3,270,000</span>
+                <span class="balance-unit">원</span>
+                <button type="button" class="btn-balance-toggle">숨김</button>
+              </div>
+            </div>
+            <button type="button" class="btn-card-arrow" aria-label="잔액 상세보기">
+              <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- 바우처 혜택 적용 카드 -->
+          <div class="qr-info-card">
+            <div class="qr-info-card-left">
+              <span class="card-label">바우처 혜택 적용</span>
+              <span class="card-value">미적용</span>
+            </div>
+            <button type="button" class="btn-card-arrow" aria-label="바우처 선택하기">
+              <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- 이용안내 링크 -->
+          <div class="qr-show-guide-link">
+            <a href="javascript:void(0);" class="link-guide">QR 보여주기 이용안내</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

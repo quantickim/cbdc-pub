@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/common.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/style.css" />
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-alarm-KBB">
+      <header>
+        <div class="common-header">
+          <button type="button" class="btn-go-main">메인으로</button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="alarm-banner-container no-bg">
+          <div class="alarm-banner-wrapper">
+            <p class="alarm-banner-desc">알림 내역은 최근 3개월까지 보관됩니다.</p>
+            <a href="javascript:void(0);" class="btn-alarm-setting-link">
+              <span>알림설정</span>
+              <i class="icon-arrow-right-16" aria-hidden="true"></i>
+            </a>
+          </div>
+        </section>
+
+        <section class="alarm-filter-container">
+          <div class="alarm-chip-wrapper">
+            <button type="button" class="btn-filter-chip is-active">전체</button>
+            <button type="button" class="btn-filter-chip">토큰·결제</button>
+            <button type="button" class="btn-filter-chip">보안</button>
+            <button type="button" class="btn-filter-chip">활동·소식</button>
+          </div>
+        </section>
+
+        <div class="alarm-section-divider" aria-hidden="true"></div>
+
+        <section class="alarm-list-container">
+          <div class="alarm-date-group">
+            <div class="alarm-date-header">
+              <h3 class="alarm-date-title">오늘 <span class="val-number">3.14 화</span></h3>
+            </div>
+            <ul class="alarm-item-list">
+              <li class="alarm-item">
+                <div class="alarm-item-top row-wrapper">
+                  <div class="alarm-type-wrapper">
+                    <i class="icon-alarm-remit" aria-hidden="true"></i>
+                    <strong class="alarm-item-title">거래구분</strong>
+                  </div>
+                  <span class="alarm-item-time val-number">hh:mm:ss</span>
+                </div>
+                <p class="alarm-item-desc">금액 및 안내 문구 노출 영역</p>
+              </li>
+
+              <li class="alarm-item">
+                <div class="alarm-item-top row-wrapper">
+                  <div class="alarm-type-wrapper">
+                    <i class="icon-alarm-receive" aria-hidden="true"></i>
+                    <strong class="alarm-item-title">받기</strong>
+                  </div>
+                  <span class="alarm-item-time val-number">23:19:27</span>
+                </div>
+                <p class="alarm-item-desc">
+                  김한국님에게 예금 토큰 <span class="point-blue val-number">345,000</span>원을 받았어요.
+                </p>
+              </li>
+
+              <li class="alarm-item">
+                <div class="alarm-item-top row-wrapper">
+                  <div class="alarm-type-wrapper">
+                    <i class="icon-alarm-remit" aria-hidden="true"></i>
+                    <strong class="alarm-item-title">송금</strong>
+                  </div>
+                  <span class="alarm-item-time val-number">23:19:27</span>
+                </div>
+                <p class="alarm-item-desc">
+                  김대한님에게 예금 토큰 <span class="point-red val-number">34,500</span>원을 송금했어요.
+                </p>
+              </li>
+
+              <li class="alarm-item">
+                <div class="alarm-item-top row-wrapper">
+                  <div class="alarm-type-wrapper">
+                    <i class="icon-alarm-onramp" aria-hidden="true"></i>
+                    <strong class="alarm-item-title">예금 전환</strong>
+                  </div>
+                  <span class="alarm-item-time val-number">23:19:27</span>
+                </div>
+                <p class="alarm-item-desc">
+                  예금 토큰 <span class="point-red val-number">234,500</span>원을 예금으로 전환했어요.
+                </p>
+              </li>
+
+              <li class="alarm-item">
+                <div class="alarm-item-top row-wrapper">
+                  <div class="alarm-type-wrapper">
+                    <i class="icon-alarm-onramp" aria-hidden="true"></i>
+                    <strong class="alarm-item-title">전환 입금</strong>
+                  </div>
+                  <span class="alarm-item-time val-number">23:19:27</span>
+                </div>
+                <p class="alarm-item-desc">
+                  예금 <span class="point-blue val-number">34,500</span>원을 예금 토큰으로 전환했어요.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="alarm-footer-container">
+          <p class="alarm-footer-text">마지막 알림 입니다.</p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
