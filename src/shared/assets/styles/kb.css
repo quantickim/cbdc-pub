@@ -157,6 +157,9 @@ th {
   align-self: center;
 }
 
+.kb-pub-list .sub-desc {
+  margin-bottom: 20px;
+}
 .kb-pub-list .wrap.bgw {
   min-height: 100vh;
   background-color: #f4f5f7;
