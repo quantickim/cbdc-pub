@@ -18,7 +18,7 @@
     section.main-wallet-container {
       display: flex;
       height: 222px;
-      padding: 20px 24px 16px 24px;
+      padding: 20px 24px;
       width: stretch;
       background: linear-gradient(180deg, #fff 0%, #f1f3f5 100%);
       .main-wallet-card {
@@ -39,7 +39,7 @@
         margin-bottom: 16px;
         .main-wallet-title-container {
           .icon-main-wallet-account {
-            @include icon-style('icon_cbdc.svg', 22px);
+            @include icon-style('icon_cbdc.png', 22px);
           }
           .main-wallet-left-wrapper {
             display: flex;
@@ -66,7 +66,6 @@
               }
               .main-wallet-badge-shop {
                 display: flex;
-                height: 20px;
                 padding: 0 4px;
                 align-items: center;
                 gap: 10px;
@@ -466,7 +465,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
         .main-notice-title {
           color: #484b51;
           font-family: 'KBFG Text';
@@ -696,6 +695,7 @@
       .wallet-detail-title-wrapper {
         display: flex;
         gap: 6px;
+        align-items: center;
         .wallet-detail-title {
           color: #26282c;
           font-family: 'KBFG Text';
@@ -708,7 +708,7 @@
         .wallet-detail-status {
           display: flex;
           height: 20px;
-          padding: 2px 4px;
+          padding: 0 4px;
           align-items: center;
           gap: 10px;
           border-radius: 4px;
@@ -1009,6 +1009,7 @@
   }
   section.wallet-detail-history-container {
     padding: 0 24px;
+    padding-bottom: 4px;
     .wallet-detail-history-item {
       display: flex;
       flex-direction: column;
@@ -1259,9 +1260,6 @@
       }
     }
   }
-  .common-notice-accordion {
-    margin-top: 48px;
-  }
 }
 
 // ============================================================
@@ -1283,6 +1281,8 @@
     .history-detail-container {
       padding: 16px 0 !important;
       border-bottom: 1px solid #ebeef0;
+      position: relative;
+      z-index: 1;
       &:has(+ .common-notice-accordion) {
         margin-bottom: 48px;
       }
@@ -1317,7 +1317,7 @@
       flex-direction: column;
       gap: 12px;
       border-top: 1px solid #c6cbd0;
-      padding-top: 16px;
+      padding: 16px 0;
       position: relative;
       .history-detail-info-item {
         display: flex;
@@ -1375,7 +1375,6 @@
           font-weight: 300;
           line-height: 23px;
           letter-spacing: -0.32px;
-          text-align: right;
 
           &.word-break {
             word-break: break-all;
@@ -1385,15 +1384,22 @@
       }
     }
     .history-detail-section {
+      position: relative;
       .history-detail-info-list {
         padding-bottom: 16px !important;
         border-bottom: 1px solid #ebeef0;
         position: relative;
+        z-index: 1;
+      }
+      .section-sub-title {
+        position: relative;
+        z-index: 1;
       }
       .watermark-stamp {
         position: absolute;
         left: 50%;
         transform: translate(-49%, -35px) rotate(-21deg);
+        z-index: 0;
         font-family: 'KBFG Text', sans-serif;
         font-size: 80px;
         font-weight: 700;
@@ -1409,7 +1415,7 @@
     }
 
     .history-detail-section.benefit-section {
-      padding: 40px 0;
+      padding: 24px 0;
 
       .section-sub-title {
         color: #26282c;
@@ -1518,9 +1524,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    &:has(+ .fixed-bottom-btn-wrapper) {
-      padding-bottom: 32px;
-    }
 
     .business-register-quick-link {
       display: flex;
@@ -1545,7 +1548,7 @@
     }
 
     .business-register-title-container {
-      padding: 16px 24px 40px 24px;
+      padding: 16px 24px;
 
       .page-title {
         color: #26282c;
@@ -1643,18 +1646,18 @@
               width: 100%;
               border: none;
               border-bottom: 2px solid #b0986a;
-              padding: 8px 0 8px 0;
+              padding: 8px 0 8px 2px;
 
               outline: none;
               border-radius: 0;
               background-color: transparent;
               color: #26282c;
 
-              font-family: 'KBFG Text';
+              font-family: Roboto, sans-serif;
               font-size: 19px;
               font-style: normal;
               font-weight: 700;
-              line-height: 27px;
+              line-height: 26px;
               letter-spacing: -0.38px;
               &::placeholder {
                 color: #929292;
@@ -1662,6 +1665,12 @@
 
               &:focus {
                 border-bottom-color: #26282c;
+              }
+            }
+            .input-underline-date {
+              font-family: Roboto, sans-serif;
+              &::placeholder {
+                font-family: 'KBFG Text';
               }
             }
           }
@@ -1674,7 +1683,7 @@
             width: 100%;
             border: none;
             border-bottom: 2px solid #b0986a;
-            padding: 8px 0 10px 0;
+            padding: 8px 0 10px 2px;
             color: #26282c;
             font-family: 'KBFG Text';
             font-size: 18px;
@@ -1684,6 +1693,10 @@
             border-radius: 0;
             background-color: transparent;
             box-sizing: border-box;
+
+            &.input-underline-date {
+              font-family: Roboto, sans-serif;
+            }
 
             &::placeholder {
               color: #838b94;
@@ -1762,6 +1775,44 @@
 }
 
 // ============================================================
+// **** QR 공용 탭
+// =========================
+.qr-tab-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  background: #ebeef0;
+  border-radius: 22px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+
+  .btn-qr-tab {
+    border-radius: 20px;
+    color: #696e76;
+    text-align: center;
+    font-family: 'KBFG Text';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: -0.32px;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+      border: 1px solid #dde1e4;
+      background: #fff;
+      color: #26282c;
+      box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+// ============================================================
 // **** QR 스캔하기 페이지
 // ============================================================
 .page-qr-scan-KBB {
@@ -1789,42 +1840,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .qr-tab-container {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      width: 100%;
-      height: 40px;
-      background: #ebeef0;
-      border-radius: 22px;
-      box-sizing: border-box;
-      margin-bottom: 32px;
-
-      .btn-qr-tab {
-        border-radius: 20px;
-        color: #696e76;
-        text-align: center;
-        font-family: 'KBFG Text';
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23px;
-        letter-spacing: -0.32px;
-        cursor: pointer;
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &.active {
-          border: 1px solid #dde1e4;
-          background: #fff;
-          color: #26282c;
-          box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.05);
-        }
-      }
     }
 
     .qr-scan-guide-text {
@@ -1862,29 +1877,29 @@
         &.top-left {
           top: -3px;
           left: -3px;
-          border-width: 5px 0 0 5px;
-          border-top-left-radius: 12px;
+          border-width: 8px 0 0 8px;
+          border-top-left-radius: 10px;
         }
 
         &.top-right {
           top: -3px;
           right: -3px;
-          border-width: 5px 5px 0 0;
-          border-top-right-radius: 12px;
+          border-width: 8px 8px 0 0;
+          border-top-right-radius: 10px;
         }
 
         &.bottom-left {
           bottom: -3px;
           left: -3px;
-          border-width: 0 0 5px 5px;
-          border-bottom-left-radius: 12px;
+          border-width: 0 0 8px 8px;
+          border-bottom-left-radius: 10px;
         }
 
         &.bottom-right {
           bottom: -3px;
           right: -3px;
-          border-width: 0 5px 5px 0;
-          border-bottom-right-radius: 12px;
+          border-width: 0 8px 8px 0;
+          border-bottom-right-radius: 10px;
         }
       }
     }
@@ -1917,6 +1932,7 @@
         border-radius: 2px;
         border: 1px solid #dde1e4;
         cursor: pointer;
+        height: 44px;
       }
 
       .link-qr-guide {
@@ -1952,42 +1968,6 @@
     display: flex;
     flex-direction: column;
     padding: 32px 24px 24px 24px;
-
-    .qr-tab-container {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      width: 100%;
-      height: 44px;
-      background: #ebeef0;
-      border-radius: 22px;
-      box-sizing: border-box;
-      margin-bottom: 32px;
-
-      .btn-qr-tab {
-        border-radius: 20px;
-        color: #696e76;
-        text-align: center;
-        font-family: 'KBFG Text';
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23px;
-        letter-spacing: -0.32px;
-        cursor: pointer;
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &.active {
-          border: 1px solid #dde1e4;
-          background: #fff;
-          color: #26282c;
-          box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.05);
-        }
-      }
-    }
 
     .qr-show-card {
       display: flex;
@@ -2234,16 +2214,17 @@
 
       .qr-show-guide-link {
         margin-top: 20px;
-        border-bottom: 1px solid #696e76;
 
         .link-guide {
-          color: #696e76;
-          font-size: 13px;
-          font-weight: 400;
-          line-height: 18px;
-          letter-spacing: -0.13px;
           text-decoration: underline;
           text-underline-position: under;
+          color: var(--Colors-KB_UI_04, #696e76);
+          font-family: 'KBFG Text';
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 20px; /* 142.857% */
+          letter-spacing: -0.14px;
         }
       }
     }
@@ -2396,7 +2377,7 @@
           height: 0;
 
           &:checked + .custom-radio {
-            border-color: #7d6b58;
+            border-color: #7d6c59;
 
             &::after {
               opacity: 1;
@@ -2409,7 +2390,7 @@
           position: relative;
           width: 24px;
           height: 24px;
-          border: 2px solid #8e959e;
+          border: 2px solid #838b94;
           border-radius: 50%;
           box-sizing: border-box;
           flex-shrink: 0;
@@ -2423,7 +2404,7 @@
             left: 50%;
             width: 12px;
             height: 12px;
-            background-color: #7d6b58;
+            background-color: #7d6c59;
             border-radius: 50%;
             opacity: 0;
             transform: translate(-50%, -50%) scale(0.6);
@@ -3222,7 +3203,41 @@
           letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
         }
       }
+      .account-target {
+        .label {
+          color: var(--Colors-KB_UI_03, #484b51);
 
+          /* Body/Body 2_Light */
+          font-family: var(--Text, 'KBFG Text');
+          font-size: var(--Body-2_Light-Size, 16px);
+          font-style: normal;
+          font-weight: 300;
+          line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
+          letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
+        }
+        .val {
+          color: var(--Colors-KB_UI_03, #484b51);
+
+          /* Number/Number 2_Light */
+          font-family: var(--Number-2_Light-Font, Roboto);
+          font-size: var(--Number-2_Light-Size, 17px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: var(--Number-2_Light-Line-Height, 23px); /* 135.294% */
+          letter-spacing: var(--Number-2_Light-Tracking, -0.2px);
+        }
+        .unit {
+          color: var(--Colors-KB_UI_03, #484b51);
+
+          /* Body/Body 2_Light */
+          font-family: var(--Text, 'KBFG Text');
+          font-size: var(--Body-2_Light-Size, 16px);
+          font-style: normal;
+          font-weight: 300;
+          line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
+          letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
+        }
+      }
       .account-balance {
         .label {
           color: var(--Colors-KB_UI_02, #26282c);
@@ -3547,13 +3562,53 @@
           }
 
           &.icon-token {
-            @include icon-style('icon_cbdc.svg', 40px);
+            @include icon-style('icon_cbdc.png', 40px);
           }
         }
 
         .icon-arrows {
-          display: inline-block;
-          @include icon-style('icon_arrows.svg', 40px, 32px);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0;
+          width: 40px;
+          height: 32px;
+
+          .arrow {
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 5px 7px;
+            border-color: transparent transparent transparent #c6cbd0;
+            opacity: 0.3;
+            animation: arrowPulse 1.6s infinite ease-in-out;
+
+            &.arrow-1 {
+              animation-delay: 0s;
+            }
+            &.arrow-2 {
+              animation-delay: 0.3s;
+            }
+            &.arrow-3 {
+              animation-delay: 0.6s;
+            }
+            &.arrow-4 {
+              animation-delay: 0.9s;
+            }
+          }
+        }
+        @keyframes arrowPulse {
+          0%,
+          100% {
+            opacity: 0.3;
+          }
+          25% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.3;
+          }
         }
       }
 
@@ -3604,7 +3659,7 @@
     .convert-info-section {
       border-top: 1px solid #c6cbd0;
       border-bottom: 1px solid #ebeef0;
-      padding: 16px 0;
+      padding: 16px 0 !important;
 
       .convert-info-list {
         list-style: none;
@@ -3646,6 +3701,7 @@
             &.account-text {
               .account-num {
                 font-family: Roboto, sans-serif;
+                color: inherit;
               }
             }
           }
@@ -3765,6 +3821,7 @@
             &.account-text {
               .account-num {
                 font-family: Roboto, sans-serif;
+                color: inherit;
               }
             }
           }
@@ -5025,6 +5082,7 @@
       opacity: 0;
       width: 0;
       height: 0;
+      align-self: flex-start;
 
       &:checked + .icon-round-chk {
         @include icon-style('icon_check_round_on_24.svg', 22px);
@@ -5039,6 +5097,7 @@
       width: 24px;
       height: 24px;
       flex-shrink: 0;
+      align-self: flex-start;
       @include icon-style('icon_check_round_off_24.svg', 22px);
     }
 
@@ -5126,7 +5185,6 @@
           letter-spacing: -0.32px;
 
           margin: 0;
-          padding-left: 34px;
           word-break: keep-all;
 
           .terms-num {
@@ -5222,7 +5280,9 @@
 
                 .btn-terms-detail-toggle {
                   width: 20px;
-                  height: 20px;
+                  height: 23px;
+                  display: flex;
+                  align-items: center;
                   background: transparent;
                   border: none;
                   padding: 0;
@@ -5306,7 +5366,7 @@
       .account-info {
         display: flex;
         align-items: flex-start;
-        gap: 12px;
+        gap: 16px;
 
         .icon-bank-kb-circle {
           @include icon-style('logo_bank_KB.svg', 32px);
@@ -5346,7 +5406,6 @@
             display: flex;
             align-items: center;
             gap: 4px;
-            margin-top: 2px;
 
             .balance-label {
               color: #696e76;
@@ -5488,7 +5547,7 @@
           font-size: 19px;
           font-style: normal;
           font-weight: 700;
-          line-height: 27px;
+          line-height: 26px;
           letter-spacing: -0.19px;
           outline: none;
 
@@ -5530,7 +5589,7 @@
           font-family: Roboto, sans-serif;
           font-size: 19px;
           font-style: normal;
-          line-height: 27px;
+          line-height: 26px;
           letter-spacing: -0.19px;
         }
 
@@ -5550,8 +5609,8 @@
       }
 
       .form-input-underline {
-        border-bottom: 1.5px solid #ab9d8b;
-        padding-bottom: 8px;
+        border-bottom: 2px solid #b0986a;
+        padding: 8px 0 8px 2px;
 
         .custom-form-input {
           width: 100%;
@@ -5559,10 +5618,14 @@
           background: transparent;
           color: #26282c;
           font-family: Roboto, sans-serif;
-          font-size: 22px;
+          color: var(--text-kbui-0226282-c, #26282c);
+
+          /* Input/Input Text */
+          font-size: 19px;
+          font-style: normal;
           font-weight: 700;
-          line-height: 30px;
-          letter-spacing: 0.2px;
+          line-height: 26px; /* 142.105% */
+          letter-spacing: -0.19px;
           padding: 0;
           outline: none;
 
@@ -6875,7 +6938,7 @@ i[class^='icon-alarm-'] {
     .merchant-more-container {
       display: flex;
       justify-content: center;
-      padding-top: 24px;
+      padding-top: 20px;
       .btn-merchant-more {
         display: inline-flex;
         align-items: center;
@@ -10879,7 +10942,7 @@ i[class^='icon-alarm-'] {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 32px 24px 0 24px;
+    padding: 40px 24px 0 24px;
     box-sizing: border-box;
 
     .guide-step-section {
@@ -10914,6 +10977,7 @@ i[class^='icon-alarm-'] {
         font-weight: 300;
         line-height: 23px; /* 143.75% */
         letter-spacing: -0.32px;
+        padding: 0 4px;
 
         &.highlight-step-desc {
           margin-bottom: 16px;
