@@ -6266,7 +6266,7 @@ i[class^='icon-alarm-'] {
   @include icon-style('icon_receive_22.svg', 14px);
 }
 .icon-alarm-remit::before {
-  @include icon-style('icon_safe_remit_22.svg', 14px);
+  @include icon-style('icon_receive_22.svg', 14px);
 }
 
 .icon-alarm-refund,

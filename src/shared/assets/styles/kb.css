@@ -7726,7 +7726,7 @@ i[class^=icon-alarm-]::before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background-image: url("../img/img-kb/icon_safe_remit_22.svg");
+  background-image: url("../img/img-kb/icon_receive_22.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -12192,5 +12192,4 @@ i[class^=icon-alarm-]::before {
   vertical-align: middle;
   background-size: contain;
 }
-
 /*# sourceMappingURL=kb.css.map */
