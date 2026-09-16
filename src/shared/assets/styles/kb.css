@@ -60,6 +60,8 @@ button {
   cursor: pointer;
   display: inline-flex;
   border: none;
+  color: inherit;
+  background: none;
 }
 
 body,
@@ -729,9 +731,10 @@ th {
 .bottom-sheet-overlay .bottom-sheet-container .bottom-sheet-content .refund-notice-list li {
   display: flex;
   gap: 6px;
-  align-items: center;
+  align-items: flex-start;
 }
 .bottom-sheet-overlay .bottom-sheet-container .bottom-sheet-content .refund-notice-list li .icon-notice-bullet {
+  margin: 2px 0 0 2px;
   display: inline-block;
   display: inline-block;
   width: 16px;
@@ -1190,6 +1193,7 @@ th {
 
 .common-transactions-value-wrapper {
   text-align: right;
+  display: flex;
 }
 .common-transactions-value-wrapper .common-transactions-sign,
 .common-transactions-value-wrapper .common-transactions-value {
@@ -1230,7 +1234,7 @@ th {
   font-weight: 300;
   line-height: 23px;
   letter-spacing: -0.32px;
-  margin-left: 0;
+  margin-left: 2px;
 }
 .common-transactions-value-wrapper .common-transactions-cancel {
   color: #26282c;
@@ -1279,7 +1283,7 @@ th {
 .common-notice-accordion .btn-notice-toggle .title-wrapper {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 .common-notice-accordion .btn-notice-toggle .title-wrapper .icon-notice-info {
   display: inline-block;
@@ -1656,7 +1660,7 @@ th {
 .page-main-KBB .main-content section.main-wallet-container {
   display: flex;
   height: 222px;
-  padding: 20px 24px 16px 24px;
+  padding: 20px 24px;
   width: stretch;
   background: linear-gradient(180deg, #fff 0%, #f1f3f5 100%);
 }
@@ -1681,7 +1685,7 @@ th {
   display: inline-block;
   width: 22px;
   height: 22px;
-  background-image: url("../img/img-kb/icon_cbdc.svg");
+  background-image: url("../img/img-kb/icon_cbdc.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1714,7 +1718,6 @@ th {
 }
 .page-main-KBB .main-content section.main-wallet-container .main-wallet-card-top .main-wallet-title-container .main-wallet-left-wrapper .main-wallet-title-content .main-wallet-badge-shop {
   display: flex;
-  height: 20px;
   padding: 0 4px;
   align-items: center;
   gap: 10px;
@@ -2166,7 +2169,7 @@ th {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .page-main-KBB .main-content section.main-notice-container .main-notice-title-wrapper .main-notice-title {
   color: #484b51;
@@ -2392,6 +2395,7 @@ th {
 .page-wallet-detail-KBB section.wallet-detail-container .wallet-detail-account-info .wallet-detail-title-wrapper {
   display: flex;
   gap: 6px;
+  align-items: center;
 }
 .page-wallet-detail-KBB section.wallet-detail-container .wallet-detail-account-info .wallet-detail-title-wrapper .wallet-detail-title {
   color: #26282c;
@@ -2405,7 +2409,7 @@ th {
 .page-wallet-detail-KBB section.wallet-detail-container .wallet-detail-account-info .wallet-detail-title-wrapper .wallet-detail-status {
   display: flex;
   height: 20px;
-  padding: 2px 4px;
+  padding: 0 4px;
   align-items: center;
   gap: 10px;
   border-radius: 4px;
@@ -2723,6 +2727,7 @@ th {
 }
 .page-wallet-detail-KBB section.wallet-detail-history-container {
   padding: 0 24px;
+  padding-bottom: 4px;
 }
 .page-wallet-detail-KBB section.wallet-detail-history-container .wallet-detail-history-item {
   display: flex;
@@ -2969,9 +2974,6 @@ th {
   background-size: contain;
   vertical-align: middle;
 }
-.page-link-account-KBB .common-notice-accordion {
-  margin-top: 48px;
-}
 
 .page-history-detail-KBB {
   display: flex;
@@ -2989,6 +2991,8 @@ th {
 .page-history-detail-KBB .history-detail-main .history-detail-container {
   padding: 16px 0 !important;
   border-bottom: 1px solid #ebeef0;
+  position: relative;
+  z-index: 1;
 }
 .page-history-detail-KBB .history-detail-main .history-detail-container:has(+ .common-notice-accordion) {
   margin-bottom: 48px;
@@ -3019,7 +3023,7 @@ th {
   flex-direction: column;
   gap: 12px;
   border-top: 1px solid #c6cbd0;
-  padding-top: 16px;
+  padding: 16px 0;
   position: relative;
 }
 .page-history-detail-KBB .history-detail-main .history-detail-info-list .history-detail-info-item {
@@ -3071,21 +3075,29 @@ th {
   font-weight: 300;
   line-height: 23px;
   letter-spacing: -0.32px;
-  text-align: right;
 }
 .page-history-detail-KBB .history-detail-main .history-detail-info-list .history-detail-info-item .history-detail-info-value.word-break {
   word-break: break-all;
   font-family: Roboto, sans-serif;
 }
+.page-history-detail-KBB .history-detail-main .history-detail-section {
+  position: relative;
+}
 .page-history-detail-KBB .history-detail-main .history-detail-section .history-detail-info-list {
   padding-bottom: 16px !important;
   border-bottom: 1px solid #ebeef0;
   position: relative;
+  z-index: 1;
+}
+.page-history-detail-KBB .history-detail-main .history-detail-section .section-sub-title {
+  position: relative;
+  z-index: 1;
 }
 .page-history-detail-KBB .history-detail-main .history-detail-section .watermark-stamp {
   position: absolute;
   left: 50%;
   transform: translate(-49%, -35px) rotate(-21deg);
+  z-index: 0;
   font-family: "KBFG Text", sans-serif;
   font-size: 80px;
   font-weight: 700;
@@ -3099,7 +3111,7 @@ th {
   letter-spacing: -1.6px;
 }
 .page-history-detail-KBB .history-detail-main .history-detail-section.benefit-section {
-  padding: 40px 0;
+  padding: 24px 0;
 }
 .page-history-detail-KBB .history-detail-main .history-detail-section.benefit-section .section-sub-title {
   color: #26282c;
@@ -3211,9 +3223,6 @@ th {
   display: flex;
   flex-direction: column;
 }
-.page-business-register-KBB .business-register-main:has(+ .fixed-bottom-btn-wrapper) {
-  padding-bottom: 32px;
-}
 .page-business-register-KBB .business-register-main .business-register-quick-link {
   display: flex;
   justify-content: flex-end;
@@ -3235,7 +3244,7 @@ th {
   letter-spacing: -0.13px;
 }
 .page-business-register-KBB .business-register-main .business-register-title-container {
-  padding: 16px 24px 40px 24px;
+  padding: 16px 24px;
 }
 .page-business-register-KBB .business-register-main .business-register-title-container .page-title {
   color: #26282c;
@@ -3322,16 +3331,16 @@ th {
   width: 100%;
   border: none;
   border-bottom: 2px solid #b0986a;
-  padding: 8px 0 8px 0;
+  padding: 8px 0 8px 2px;
   outline: none;
   border-radius: 0;
   background-color: transparent;
   color: #26282c;
-  font-family: "KBFG Text";
+  font-family: Roboto, sans-serif;
   font-size: 19px;
   font-style: normal;
   font-weight: 700;
-  line-height: 27px;
+  line-height: 26px;
   letter-spacing: -0.38px;
 }
 .page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item .input-underline::placeholder {
@@ -3340,6 +3349,12 @@ th {
 .page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item .input-underline:focus {
   border-bottom-color: #26282c;
 }
+.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item .input-underline-date {
+  font-family: Roboto, sans-serif;
+}
+.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item .input-underline-date::placeholder {
+  font-family: "KBFG Text";
+}
 .page-business-register-KBB .business-register-main .business-register-form-container .form-item .input-item {
   width: 100%;
 }
@@ -3347,7 +3362,7 @@ th {
   width: 100%;
   border: none;
   border-bottom: 2px solid #b0986a;
-  padding: 8px 0 10px 0;
+  padding: 8px 0 10px 2px;
   color: #26282c;
   font-family: "KBFG Text";
   font-size: 18px;
@@ -3357,6 +3372,9 @@ th {
   border-radius: 0;
   background-color: transparent;
   box-sizing: border-box;
+}
+.page-business-register-KBB .business-register-main .business-register-form-container .form-item .input-item .input-underline.input-underline-date {
+  font-family: Roboto, sans-serif;
 }
 .page-business-register-KBB .business-register-main .business-register-form-container .form-item .input-item .input-underline::placeholder {
   color: #838b94;
@@ -3417,6 +3435,40 @@ th {
   letter-spacing: -0.48px;
 }
 
+.qr-tab-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  background: #ebeef0;
+  border-radius: 22px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+}
+.qr-tab-container .btn-qr-tab {
+  border-radius: 20px;
+  color: #696e76;
+  text-align: center;
+  font-family: "KBFG Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: -0.32px;
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qr-tab-container .btn-qr-tab.active {
+  border: 1px solid #dde1e4;
+  background: #fff;
+  color: #26282c;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.05);
+}
+
 .page-qr-scan-KBB {
   display: flex;
   flex-direction: column;
@@ -3443,39 +3495,6 @@ th {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.page-qr-scan-KBB .qr-scan-main .qr-tab-container {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  width: 100%;
-  height: 40px;
-  background: #ebeef0;
-  border-radius: 22px;
-  box-sizing: border-box;
-  margin-bottom: 32px;
-}
-.page-qr-scan-KBB .qr-scan-main .qr-tab-container .btn-qr-tab {
-  border-radius: 20px;
-  color: #696e76;
-  text-align: center;
-  font-family: "KBFG Text";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23px;
-  letter-spacing: -0.32px;
-  cursor: pointer;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.page-qr-scan-KBB .qr-scan-main .qr-tab-container .btn-qr-tab.active {
-  border: 1px solid #dde1e4;
-  background: #fff;
-  color: #26282c;
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.05);
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-guide-text {
   position: relative;
@@ -3510,26 +3529,26 @@ th {
 .page-qr-scan-KBB .qr-scan-main .qr-scan-viewfinder-wrapper .corner-bracket.top-left {
   top: -3px;
   left: -3px;
-  border-width: 5px 0 0 5px;
-  border-top-left-radius: 12px;
+  border-width: 8px 0 0 8px;
+  border-top-left-radius: 10px;
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-viewfinder-wrapper .corner-bracket.top-right {
   top: -3px;
   right: -3px;
-  border-width: 5px 5px 0 0;
-  border-top-right-radius: 12px;
+  border-width: 8px 8px 0 0;
+  border-top-right-radius: 10px;
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-viewfinder-wrapper .corner-bracket.bottom-left {
   bottom: -3px;
   left: -3px;
-  border-width: 0 0 5px 5px;
-  border-bottom-left-radius: 12px;
+  border-width: 0 0 8px 8px;
+  border-bottom-left-radius: 10px;
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-viewfinder-wrapper .corner-bracket.bottom-right {
   bottom: -3px;
   right: -3px;
-  border-width: 0 5px 5px 0;
-  border-bottom-right-radius: 12px;
+  border-width: 0 8px 8px 0;
+  border-bottom-right-radius: 10px;
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-bottom-actions {
   position: relative;
@@ -3559,6 +3578,7 @@ th {
   border-radius: 2px;
   border: 1px solid #dde1e4;
   cursor: pointer;
+  height: 44px;
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-bottom-actions .link-qr-guide {
   color: #ebeef0;
@@ -3588,39 +3608,6 @@ th {
   display: flex;
   flex-direction: column;
   padding: 32px 24px 24px 24px;
-}
-.page-qr-show-KBB .qr-show-main .qr-tab-container {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  width: 100%;
-  height: 44px;
-  background: #ebeef0;
-  border-radius: 22px;
-  box-sizing: border-box;
-  margin-bottom: 32px;
-}
-.page-qr-show-KBB .qr-show-main .qr-tab-container .btn-qr-tab {
-  border-radius: 20px;
-  color: #696e76;
-  text-align: center;
-  font-family: "KBFG Text";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23px;
-  letter-spacing: -0.32px;
-  cursor: pointer;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.page-qr-show-KBB .qr-show-main .qr-tab-container .btn-qr-tab.active {
-  border: 1px solid #dde1e4;
-  background: #fff;
-  color: #26282c;
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.05);
 }
 .page-qr-show-KBB .qr-show-main .qr-show-card {
   display: flex;
@@ -3863,16 +3850,17 @@ th {
 }
 .page-qr-show-KBB .qr-show-main .qr-show-card .qr-show-guide-link {
   margin-top: 20px;
-  border-bottom: 1px solid #696e76;
 }
 .page-qr-show-KBB .qr-show-main .qr-show-card .qr-show-guide-link .link-guide {
-  color: #696e76;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: -0.13px;
   text-decoration: underline;
   text-underline-position: under;
+  color: var(--Colors-KB_UI_04, #696e76);
+  font-family: "KBFG Text";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.14px;
 }
 
 .page-trade-code-KBB {
@@ -4015,7 +4003,7 @@ th {
   height: 0;
 }
 .bottom-sheet-overlay.sheet-voucher-select .bottom-sheet-content .voucher-select-list .voucher-select-item .radio-input:checked + .custom-radio {
-  border-color: #7d6b58;
+  border-color: #7d6c59;
 }
 .bottom-sheet-overlay.sheet-voucher-select .bottom-sheet-content .voucher-select-list .voucher-select-item .radio-input:checked + .custom-radio::after {
   opacity: 1;
@@ -4025,7 +4013,7 @@ th {
   position: relative;
   width: 24px;
   height: 24px;
-  border: 2px solid #8e959e;
+  border: 2px solid #838b94;
   border-radius: 50%;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -4039,7 +4027,7 @@ th {
   left: 50%;
   width: 12px;
   height: 12px;
-  background-color: #7d6b58;
+  background-color: #7d6c59;
   border-radius: 50%;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.6);
@@ -4745,6 +4733,36 @@ th {
   line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
   letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
 }
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-target .label {
+  color: var(--Colors-KB_UI_03, #484b51);
+  /* Body/Body 2_Light */
+  font-family: var(--Text, "KBFG Text");
+  font-size: var(--Body-2_Light-Size, 16px);
+  font-style: normal;
+  font-weight: 300;
+  line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
+  letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
+}
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-target .val {
+  color: var(--Colors-KB_UI_03, #484b51);
+  /* Number/Number 2_Light */
+  font-family: var(--Number-2_Light-Font, Roboto);
+  font-size: var(--Number-2_Light-Size, 17px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Number-2_Light-Line-Height, 23px); /* 135.294% */
+  letter-spacing: var(--Number-2_Light-Tracking, -0.2px);
+}
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-target .unit {
+  color: var(--Colors-KB_UI_03, #484b51);
+  /* Body/Body 2_Light */
+  font-family: var(--Text, "KBFG Text");
+  font-size: var(--Body-2_Light-Size, 16px);
+  font-style: normal;
+  font-weight: 300;
+  line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
+  letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
+}
 .page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-balance .label {
   color: var(--Colors-KB_UI_02, #26282c);
   /* Body/Body 4_Light */
@@ -4956,22 +4974,52 @@ th {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-image: url("../img/img-kb/icon_cbdc.svg");
+  background-image: url("../img/img-kb/icon_cbdc.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   vertical-align: middle;
 }
 .page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows {
-  display: inline-block;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
   width: 40px;
   height: 32px;
-  background-image: url("../img/img-kb/icon_arrows.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  vertical-align: middle;
+}
+.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows .arrow {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 7px;
+  border-color: transparent transparent transparent #c6cbd0;
+  opacity: 0.3;
+  animation: arrowPulse 1.6s infinite ease-in-out;
+}
+.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-1 {
+  animation-delay: 0s;
+}
+.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-2 {
+  animation-delay: 0.3s;
+}
+.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-3 {
+  animation-delay: 0.6s;
+}
+.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-4 {
+  animation-delay: 0.9s;
+}
+@keyframes arrowPulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
 }
 .page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title {
   color: #26282c;
@@ -5014,7 +5062,7 @@ th {
 .page-convert-confirm-KBB .convert-confirm-main .convert-info-section {
   border-top: 1px solid #c6cbd0;
   border-bottom: 1px solid #ebeef0;
-  padding: 16px 0;
+  padding: 16px 0 !important;
 }
 .page-convert-confirm-KBB .convert-confirm-main .convert-info-section .convert-info-list {
   list-style: none;
@@ -5051,6 +5099,7 @@ th {
 }
 .page-convert-confirm-KBB .convert-confirm-main .convert-info-section .convert-info-list .convert-info-item .value.account-text .account-num {
   font-family: Roboto, sans-serif;
+  color: inherit;
 }
 
 .page-convert-complete-KBB {
@@ -5150,6 +5199,7 @@ th {
 }
 .page-convert-complete-KBB .convert-complete-main .convert-info-section .convert-info-list .convert-info-item .value.account-text .account-num {
   font-family: Roboto, sans-serif;
+  color: inherit;
 }
 .page-convert-complete-KBB .convert-complete-main .convert-info-section .convert-notice-message {
   display: flex;
@@ -6564,6 +6614,7 @@ th {
   opacity: 0;
   width: 0;
   height: 0;
+  align-self: flex-start;
 }
 .page-terms-agree-KBB .custom-terms-check-label .custom-terms-check-input:checked + .icon-round-chk {
   display: inline-block;
@@ -6589,6 +6640,7 @@ th {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
+  align-self: flex-start;
   display: inline-block;
   width: 22px;
   height: 22px;
@@ -6694,7 +6746,6 @@ th {
   line-height: 23px; /* 143.75% */
   letter-spacing: -0.32px;
   margin: 0;
-  padding-left: 34px;
   word-break: keep-all;
 }
 .page-terms-agree-KBB .terms-agree-group-container .terms-group-card .terms-group-content-wrapper .terms-protection-desc .terms-num {
@@ -6785,7 +6836,9 @@ th {
 }
 .page-terms-agree-KBB .terms-agree-group-container .terms-group-card .terms-group-content-wrapper .terms-sub-list .terms-sub-item .terms-detail-container .terms-detail-tag-wrapper .btn-terms-detail-toggle {
   width: 20px;
-  height: 20px;
+  height: 23px;
+  display: flex;
+  align-items: center;
   background: transparent;
   border: none;
   padding: 0;
@@ -6851,7 +6904,7 @@ th {
 .bottom-sheet-content .account-select-list .account-select-item .account-info {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 16px;
 }
 .bottom-sheet-content .account-select-list .account-select-item .account-info .icon-bank-kb-circle {
   display: inline-block;
@@ -6893,7 +6946,6 @@ th {
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-top: 2px;
 }
 .bottom-sheet-content .account-select-list .account-select-item .account-info .account-text-group .account-balance-group .balance-label {
   color: #696e76;
@@ -7027,7 +7079,7 @@ th {
   font-size: 19px;
   font-style: normal;
   font-weight: 700;
-  line-height: 27px;
+  line-height: 26px;
   letter-spacing: -0.19px;
   outline: none;
 }
@@ -7062,7 +7114,7 @@ th {
   font-family: Roboto, sans-serif;
   font-size: 19px;
   font-style: normal;
-  line-height: 27px;
+  line-height: 26px;
   letter-spacing: -0.19px;
 }
 .page-verification-KBB .verification-form-container .form-group-item .form-rrn-wrapper .rrn-masking-dots {
@@ -7078,8 +7130,8 @@ th {
   border-radius: 50%;
 }
 .page-verification-KBB .verification-form-container .form-group-item .form-input-underline {
-  border-bottom: 1.5px solid #ab9d8b;
-  padding-bottom: 8px;
+  border-bottom: 2px solid #b0986a;
+  padding: 8px 0 8px 2px;
 }
 .page-verification-KBB .verification-form-container .form-group-item .form-input-underline .custom-form-input {
   width: 100%;
@@ -7087,10 +7139,13 @@ th {
   background: transparent;
   color: #26282c;
   font-family: Roboto, sans-serif;
-  font-size: 22px;
+  color: var(--text-kbui-0226282-c, #26282c);
+  /* Input/Input Text */
+  font-size: 19px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0.2px;
+  line-height: 26px; /* 142.105% */
+  letter-spacing: -0.19px;
   padding: 0;
   outline: none;
 }
@@ -8330,7 +8385,7 @@ i[class^=icon-alarm-]::before {
 .page-merchant-KBB.page-merchant-list-mode .merchant-list-section .merchant-more-container {
   display: flex;
   justify-content: center;
-  padding-top: 24px;
+  padding-top: 20px;
 }
 .page-merchant-KBB.page-merchant-list-mode .merchant-list-section .merchant-more-container .btn-merchant-more {
   display: inline-flex;
@@ -12015,7 +12070,7 @@ i[class^=icon-alarm-]::before {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 32px 24px 0 24px;
+  padding: 40px 24px 0 24px;
   box-sizing: border-box;
 }
 .page-qr-guide-KBB .qr-guide-main .guide-step-section {
@@ -12047,6 +12102,7 @@ i[class^=icon-alarm-]::before {
   font-weight: 300;
   line-height: 23px; /* 143.75% */
   letter-spacing: -0.32px;
+  padding: 0 4px;
 }
 .page-qr-guide-KBB .qr-guide-main .guide-step-section .step-desc.highlight-step-desc {
   margin-bottom: 16px;
