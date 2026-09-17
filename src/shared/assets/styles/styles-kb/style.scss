@@ -723,6 +723,7 @@
           letter-spacing: -0.13px;
         }
         .wallet-detail-shop {
+          margin-top: 1px;
           display: flex;
           padding: 0 4px;
           align-items: center;
@@ -3891,6 +3892,7 @@
     flex-direction: column;
     align-items: center;
     padding: 48px 24px calc(48px + env(safe-area-inset-bottom)) 24px;
+    padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 40px) !important;
 
     .convert-progress-title-section {
       display: flex;
@@ -4145,7 +4147,7 @@
     }
 
     .bank-select-field {
-      margin-bottom: 8px;
+      margin-bottom: 12px;
 
       .btn-bank-select {
         width: 100%;
@@ -4392,7 +4394,7 @@
       margin: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      row-gap: 20px;
+      row-gap: 24px;
       column-gap: 16px;
 
       li {
@@ -4420,79 +4422,79 @@
           border-radius: 50%;
 
           &.logo-kb {
-            @include icon-style('logo_bank_KB.svg', 28px);
+            @include icon-style('logo_bank_KB.svg', 24px);
           }
           &.logo-ibk {
-            @include icon-style('logo_bank_IBK.svg', 28px);
+            @include icon-style('logo_bank_IBK.svg', 24px);
           }
           &.logo-nh {
-            @include icon-style('logo_bank_NH.svg', 28px);
+            @include icon-style('logo_bank_NH.svg', 24px);
           }
           &.logo-kdb {
-            @include icon-style('logo_bank_KDB.svg', 28px);
+            @include icon-style('logo_bank_KDB.svg', 24px);
           }
           &.logo-suhyup {
-            @include icon-style('logo_bank_SUHYUP.svg', 28px);
+            @include icon-style('logo_bank_SUHYUP.svg', 24px);
           }
           &.logo-shinhan {
-            @include icon-style('logo_bank_SHINHAN.svg', 28px);
+            @include icon-style('logo_bank_SHINHAN.svg', 24px);
           }
           &.logo-woori {
-            @include icon-style('logo_bank_WOORI.svg', 28px);
+            @include icon-style('logo_bank_WOORI.svg', 24px);
           }
           &.logo-jpmorgan {
-            @include icon-style('logo_bank_JPMORGAN.svg', 28px);
+            @include icon-style('logo_bank_JPMORGAN.svg', 24px);
           }
           &.logo-hana {
-            @include icon-style('logo_bank_HANA.svg', 28px);
+            @include icon-style('logo_bank_HANA.svg', 24px);
           }
           &.logo-citi {
-            @include icon-style('logo_bank_CITI.svg', 28px);
+            @include icon-style('logo_bank_CITI.svg', 24px);
           }
           &.logo-sc {
-            @include icon-style('logo_bank_SC.svg', 28px);
+            @include icon-style('logo_bank_SC.svg', 24px);
           }
           &.logo-kakao {
-            @include icon-style('logo_bank_KAKAO.svg', 28px);
+            @include icon-style('logo_bank_KAKAO.svg', 24px);
           }
           &.logo-boa {
-            @include icon-style('logo_bank_BOA.svg', 28px);
+            @include icon-style('logo_bank_BOA.svg', 24px);
           }
           &.logo-toss {
             @include icon-style('logo_bank_TOSS.svg', 28px);
           }
           &.logo-bnk {
-            @include icon-style('logo_bank_BNK.svg', 28px);
+            @include icon-style('logo_bank_BNK.svg', 24px);
           }
           &.logo-dgb {
-            @include icon-style('logo_bank_DGB.svg', 28px);
+            @include icon-style('logo_bank_DGB.svg', 24px);
           }
           &.logo-kn {
-            @include icon-style('logo_bank_BNK.svg', 20px);
+            @include icon-style('logo_bank_BNK.svg', 24px);
           }
           &.logo-bs {
-            @include icon-style('logo_bank_BNK.svg', 20px);
+            @include icon-style('logo_bank_BNK.svg', 24px);
           }
           &.logo-im {
-            @include icon-style('logo_bank_DGB.svg', 20px);
+            @include icon-style('logo_bank_DGB.svg', 24px);
           }
           &.logo-kbank {
-            @include icon-style('logo_bank_KBANK.svg', 20px);
+            @include icon-style('logo_bank_KBANK.svg', 24px);
           }
           &.logo-jb {
-            @include icon-style('icon_bank_JB.svg', 20px);
+            @include icon-style('icon_bank_JB.svg', 24px);
           }
           &.logo-kftc {
-            @include icon-style('logo_KFTC.svg', 20px);
+            @include icon-style('logo_KFTC.svg', 24px);
           }
           &.logo-a {
-            @include icon-style('logo_bank_A.svg', 20px);
+            @include icon-style('logo_bank_A.svg', 24px);
           }
           &.logo-b {
-            @include icon-style('logo_bank_B.svg', 20px);
+            @include icon-style('logo_bank_B.svg', 24px);
           }
           &.logo-c {
-            @include icon-style('logo_bank_C.svg', 20px);
+            @include icon-style('logo_bank_C.svg', 24px);
           }
         }
 
@@ -5851,7 +5853,7 @@
       background: #f7f7f8;
       padding: 16px 24px;
       .alarm-banner-wrapper {
-        gap: 16px;
+        gap: 10px;
         flex-direction: column;
 
         .alarm-banner-desc {
@@ -5859,12 +5861,12 @@
           padding-left: 10px;
           align-self: flex-start;
 
-          color: #484b51;
+          color: var(--Text-KB_UI_03, #484b51);
           font-family: 'KBFG Text';
           font-size: 15px;
           font-style: normal;
           font-weight: 300;
-          line-height: 21px;
+          line-height: 21px; /* 140% */
           letter-spacing: -0.3px;
           &::before {
             content: '';
@@ -5882,13 +5884,14 @@
           display: inline-flex;
           align-items: center;
           gap: 4px;
-          color: #484b51;
+          color: var(--Text-KB_UI_03, #484b51);
 
+          /* Button/Button 02_light */
           font-family: 'KBFG Text';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
-          line-height: 23px;
+          line-height: 23px; /* 143.75% */
           letter-spacing: -0.32px;
           align-self: flex-end;
           .icon-arrow-right-14 {
@@ -6001,7 +6004,6 @@
       .alarm-date-title {
         border-bottom: 1px solid #c6cbd0;
         padding-bottom: 8px;
-        margin-bottom: 4px;
         display: flex;
         align-items: center;
         .val-today {
@@ -6049,7 +6051,13 @@
         flex-direction: column;
 
         .alarm-item {
-          padding: 16px 0;
+          padding: 20px 0;
+          &:first-child {
+            padding-top: 24px;
+          }
+          &:last-child {
+            padding-bottom: 12px;
+          }
 
           .alarm-item-top {
             display: flex;
@@ -6441,11 +6449,10 @@ i[class^='icon-alarm-'] {
       .segment-tab-wrapper {
         display: flex;
         width: 100%;
-        border: 1px solid #dde1e4;
-        border-radius: 4px;
         overflow: hidden;
         box-sizing: border-box;
         background-color: #ffffff;
+        height: 44px;
 
         .btn-segment-tab {
           flex: 1;
@@ -6454,19 +6461,20 @@ i[class^='icon-alarm-'] {
           justify-content: center;
           background-color: #ffffff;
           border: none;
-          color: #484b51;
+          color: var(--text-kbui-03484-b-51, #484b51);
           text-align: center;
+          border-bottom-right-radius: 2px;
+          border-top-right-radius: 2px;
+          /* Button/Button 02_light */
           font-family: 'KBFG Text';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
-          line-height: 23px;
+          line-height: 23px; /* 143.75% */
           letter-spacing: -0.32px;
+          border: 1px solid #dde1e4;
           cursor: pointer;
           padding: 10px 0;
-          transition:
-            color 0.15s ease,
-            font-weight 0.15s ease;
 
           // 중간 구분선
           &:first-child {
@@ -6475,9 +6483,22 @@ i[class^='icon-alarm-'] {
 
           // 선택된 탭 상태
           &.is-active {
-            color: #26282c;
-            font-weight: 700;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
             background-color: #ffffff;
+            border-radius: 2px 0 0 2px;
+            border: 2px solid var(--text-kbui-03484-b-51, #484b51);
+            background: var(--text-kbui-11-ffffff, #fff);
+            color: var(--text-kbui-0226282-c, #26282c);
+            text-align: center;
+
+            /* Button/Button 02_bold */
+            font-family: 'KBFG Text';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23px; /* 143.75% */
+            letter-spacing: -0.32px;
           }
         }
       }
@@ -9196,11 +9217,11 @@ i[class^='icon-alarm-'] {
   .voucher-list-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
 
     .voucher-card {
       padding: 18px 20px;
-      border-radius: 12px;
+      border-radius: 8px;
       border: 1px solid #dde1e4;
       background-color: #ffffff;
       display: flex;
@@ -9827,10 +9848,11 @@ i[class^='icon-alarm-'] {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 0 24px calc(80px + env(safe-area-inset-bottom)) 24px;
+    padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 40px) !important;
   }
 
   .faq-accordion-container {
-    padding: 0 24px;
     display: flex;
     flex-direction: column;
 
@@ -9867,6 +9889,7 @@ i[class^='icon-alarm-'] {
             line-height: 21px;
             letter-spacing: -0.2px;
             word-break: keep-all;
+            white-space: normal;
           }
 
           .icon-faq-arrow {
@@ -9980,7 +10003,7 @@ i[class^='icon-alarm-'] {
 
       .btn-help-outline {
         flex: 1;
-        height: 48px;
+        height: 36px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -10020,7 +10043,7 @@ i[class^='icon-alarm-'] {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 0 24px calc(80px + env(safe-area-inset-bottom)) 24px;
+    padding: 0 24px calc(60px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
   }
 
   .inquiry-list-container {
@@ -10056,7 +10079,7 @@ i[class^='icon-alarm-'] {
           .common-badge {
             margin-bottom: 10px;
             display: flex;
-            padding: 3px 12px;
+            padding: 0 12px;
             justify-content: center;
             align-items: center;
 
@@ -10073,6 +10096,7 @@ i[class^='icon-alarm-'] {
 
           .inquiry-title {
             margin: 0 0 8px 0;
+            padding-left: 2px;
             color: #26282c;
 
             font-family: 'KBFG Text';
@@ -10086,6 +10110,7 @@ i[class^='icon-alarm-'] {
 
           .inquiry-date {
             color: #838b94;
+            padding-left: 2px;
 
             font-family: Roboto;
             font-size: 15px;
@@ -10122,7 +10147,7 @@ i[class^='icon-alarm-'] {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 16px 24px calc(90px + env(safe-area-inset-bottom)) 24px;
+    padding: 16px 24px calc(60px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
   }
 
   .inquiry-write-title-area {
@@ -10170,7 +10195,7 @@ i[class^='icon-alarm-'] {
         .common-form-select {
           width: 100%;
           height: 44px;
-          padding: 6px 32px 8px 0;
+          padding: 6px 32px 8px 2px;
           background: transparent;
           border: none;
           outline: none;
@@ -10207,7 +10232,7 @@ i[class^='icon-alarm-'] {
           font-weight: 700;
           line-height: 27px;
           letter-spacing: -0.38px;
-          padding: 6px 2px 8px 0;
+          padding: 6px 2px 8px 2px;
 
           &::placeholder {
             color: #929292;
@@ -10263,12 +10288,14 @@ i[class^='icon-alarm-'] {
           line-height: 18px;
           .current {
             text-align: right;
+            text-align: right;
 
+            /* Number/Body 04_medium */
             font-family: Roboto;
             font-size: 14px;
             font-style: normal;
-            font-weight: 400;
-            line-height: 20px;
+            font-weight: 500;
+            line-height: 20px; /* 142.857% */
             letter-spacing: -0.14px;
           }
           .max {
@@ -10337,13 +10364,14 @@ i[class^='icon-alarm-'] {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 24px 24px calc(140px + env(safe-area-inset-bottom)) 24px;
-
+    padding: 24px 24px calc(96px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
     &:has(.inquiry-answer-container) {
-      padding: 0 0 calc(100px + env(safe-area-inset-bottom)) 0;
-
+      padding: 0 0 calc(84px + env(safe-area-inset-bottom) / 2 + 40px) 0;
       .inquiry-detail-container {
         padding: 12px 24px 0 24px;
+      }
+      .inquiry-body-area {
+        padding-bottom: 48px;
       }
     }
   }
@@ -10402,9 +10430,8 @@ i[class^='icon-alarm-'] {
   .inquiry-answer-container {
     width: 100%;
     background-color: #f7f8f9;
-    padding: 32px 24px 40px 24px;
+    padding: 32px 24px;
     box-sizing: border-box;
-    margin-top: 16px;
     .answer-header {
       display: flex;
       align-items: center;
@@ -10455,7 +10482,7 @@ i[class^='icon-alarm-'] {
     right: 0;
     width: 100%;
     z-index: 100;
-    padding: 0 24px calc(77px + env(safe-area-inset-bottom)) 24px;
+    padding: 0 24px calc(env(safe-area-inset-bottom) / 2 + 40px) 24px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;

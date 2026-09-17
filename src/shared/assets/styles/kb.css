@@ -426,7 +426,7 @@ th {
 .common-input-field .common-form-input {
   flex: 1;
   width: 100%;
-  padding: 8px 2px 6px 0;
+  padding: 8px 2px 6px 2px;
   border: none;
   outline: none;
   background: transparent;
@@ -2430,6 +2430,7 @@ th {
   letter-spacing: -0.13px;
 }
 .page-wallet-detail-KBB section.wallet-detail-container .wallet-detail-account-info .wallet-detail-title-wrapper .wallet-detail-shop {
+  margin-top: 1px;
   display: flex;
   padding: 0 4px;
   align-items: center;
@@ -5266,6 +5267,7 @@ th {
   flex-direction: column;
   align-items: center;
   padding: 48px 24px calc(48px + env(safe-area-inset-bottom)) 24px;
+  padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 40px) !important;
 }
 .page-convert-progress-KBB .convert-progress-main .convert-progress-title-section {
   display: flex;
@@ -5516,7 +5518,7 @@ th {
   opacity: 0.85;
 }
 .page-remit-address-KBB .remit-address-main .bank-select-field {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 .page-remit-address-KBB .remit-address-main .bank-select-field .btn-bank-select {
   width: 100%;
@@ -5893,7 +5895,7 @@ th {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 20px;
+  row-gap: 24px;
   column-gap: 16px;
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid li {
@@ -5921,8 +5923,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-kb {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_KB.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -5931,8 +5933,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-ibk {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_IBK.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -5941,8 +5943,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-nh {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_NH.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -5951,8 +5953,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-kdb {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_KDB.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -5961,8 +5963,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-suhyup {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_SUHYUP.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -5971,8 +5973,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-shinhan {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_SHINHAN.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -5981,8 +5983,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-woori {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_WOORI.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -5991,8 +5993,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-jpmorgan {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_JPMORGAN.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6001,8 +6003,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-hana {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_HANA.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6011,8 +6013,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-citi {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_CITI.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6021,8 +6023,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-sc {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_SC.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6031,8 +6033,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-kakao {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_KAKAO.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6041,8 +6043,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-boa {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_BOA.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6061,8 +6063,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-bnk {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_BNK.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6071,8 +6073,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-dgb {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_DGB.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6081,8 +6083,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-kn {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_BNK.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6091,8 +6093,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-bs {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_BNK.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6101,8 +6103,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-im {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_DGB.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6111,8 +6113,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-kbank {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_KBANK.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6121,8 +6123,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-jb {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/icon_bank_JB.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6131,8 +6133,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-kftc {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_KFTC.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6141,8 +6143,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-a {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_A.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6151,8 +6153,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-b {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_B.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -6161,8 +6163,8 @@ th {
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-logo.logo-c {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/logo_bank_C.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -7341,19 +7343,19 @@ th {
   padding: 16px 24px;
 }
 .page-alarm-KBB .alarm-banner-container.on-bg .alarm-banner-wrapper {
-  gap: 16px;
+  gap: 10px;
   flex-direction: column;
 }
 .page-alarm-KBB .alarm-banner-container.on-bg .alarm-banner-wrapper .alarm-banner-desc {
   position: relative;
   padding-left: 10px;
   align-self: flex-start;
-  color: #484b51;
+  color: var(--Text-KB_UI_03, #484b51);
   font-family: "KBFG Text";
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
-  line-height: 21px;
+  line-height: 21px; /* 140% */
   letter-spacing: -0.3px;
 }
 .page-alarm-KBB .alarm-banner-container.on-bg .alarm-banner-wrapper .alarm-banner-desc::before {
@@ -7370,12 +7372,13 @@ th {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: #484b51;
+  color: var(--Text-KB_UI_03, #484b51);
+  /* Button/Button 02_light */
   font-family: "KBFG Text";
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  line-height: 23px;
+  line-height: 23px; /* 143.75% */
   letter-spacing: -0.32px;
   align-self: flex-end;
 }
@@ -7482,7 +7485,6 @@ th {
 .page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-date-title {
   border-bottom: 1px solid #c6cbd0;
   padding-bottom: 8px;
-  margin-bottom: 4px;
   display: flex;
   align-items: center;
 }
@@ -7527,7 +7529,13 @@ th {
   flex-direction: column;
 }
 .page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-item-list .alarm-item {
-  padding: 16px 0;
+  padding: 20px 0;
+}
+.page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-item-list .alarm-item:first-child {
+  padding-top: 24px;
+}
+.page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-item-list .alarm-item:last-child {
+  padding-bottom: 12px;
 }
 .page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-item-list .alarm-item .alarm-item-top {
   display: flex;
@@ -7956,11 +7964,10 @@ i[class^=icon-alarm-]::before {
 .page-cash-receipt-KBB .receipt-form-container .form-group-item .segment-tab-wrapper {
   display: flex;
   width: 100%;
-  border: 1px solid #dde1e4;
-  border-radius: 4px;
   overflow: hidden;
   box-sizing: border-box;
   background-color: #ffffff;
+  height: 44px;
 }
 .page-cash-receipt-KBB .receipt-form-container .form-group-item .segment-tab-wrapper .btn-segment-tab {
   flex: 1;
@@ -7969,25 +7976,40 @@ i[class^=icon-alarm-]::before {
   justify-content: center;
   background-color: #ffffff;
   border: none;
-  color: #484b51;
+  color: var(--text-kbui-03484-b-51, #484b51);
   text-align: center;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  /* Button/Button 02_light */
   font-family: "KBFG Text";
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  line-height: 23px;
+  line-height: 23px; /* 143.75% */
   letter-spacing: -0.32px;
+  border: 1px solid #dde1e4;
   cursor: pointer;
   padding: 10px 0;
-  transition: color 0.15s ease, font-weight 0.15s ease;
 }
 .page-cash-receipt-KBB .receipt-form-container .form-group-item .segment-tab-wrapper .btn-segment-tab:first-child {
   border-right: 1px solid #dde1e4;
 }
 .page-cash-receipt-KBB .receipt-form-container .form-group-item .segment-tab-wrapper .btn-segment-tab.is-active {
-  color: #26282c;
-  font-weight: 700;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
   background-color: #ffffff;
+  border-radius: 2px 0 0 2px;
+  border: 2px solid var(--text-kbui-03484-b-51, #484b51);
+  background: var(--text-kbui-11-ffffff, #fff);
+  color: var(--text-kbui-0226282-c, #26282c);
+  text-align: center;
+  /* Button/Button 02_bold */
+  font-family: "KBFG Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px; /* 143.75% */
+  letter-spacing: -0.32px;
 }
 .page-cash-receipt-KBB .receipt-form-container .form-group-item .phone-input-row {
   display: flex;
@@ -10518,11 +10540,11 @@ i[class^=icon-alarm-]::before {
 .page-voucher-status-KBB .voucher-list-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 .page-voucher-status-KBB .voucher-list-container .voucher-card {
   padding: 18px 20px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid #dde1e4;
   background-color: #ffffff;
   display: flex;
@@ -11059,9 +11081,10 @@ i[class^=icon-alarm-]::before {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding: 0 24px calc(80px + env(safe-area-inset-bottom)) 24px;
+  padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 40px) !important;
 }
 .page-faq-list-KBB .faq-accordion-container {
-  padding: 0 24px;
   display: flex;
   flex-direction: column;
 }
@@ -11098,6 +11121,7 @@ i[class^=icon-alarm-]::before {
   line-height: 21px;
   letter-spacing: -0.2px;
   word-break: keep-all;
+  white-space: normal;
 }
 .page-faq-list-KBB .faq-accordion-container .faq-list .faq-item .faq-question-btn .icon-faq-arrow {
   width: 20px;
@@ -11197,7 +11221,7 @@ i[class^=icon-alarm-]::before {
 }
 .page-faq-list-KBB .faq-help-section .help-btn-group .btn-help-outline {
   flex: 1;
-  height: 48px;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11229,7 +11253,7 @@ i[class^=icon-alarm-]::before {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0 24px calc(80px + env(safe-area-inset-bottom)) 24px;
+  padding: 0 24px calc(60px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
 }
 .page-inquiry-list-KBB .inquiry-list-container .inquiry-list {
   list-style: none;
@@ -11263,7 +11287,7 @@ i[class^=icon-alarm-]::before {
 .page-inquiry-list-KBB .inquiry-list-container .inquiry-list .inquiry-item .item-content .common-badge {
   margin-bottom: 10px;
   display: flex;
-  padding: 3px 12px;
+  padding: 0 12px;
   justify-content: center;
   align-items: center;
 }
@@ -11277,6 +11301,7 @@ i[class^=icon-alarm-]::before {
 }
 .page-inquiry-list-KBB .inquiry-list-container .inquiry-list .inquiry-item .item-content .inquiry-title {
   margin: 0 0 8px 0;
+  padding-left: 2px;
   color: #26282c;
   font-family: "KBFG Text";
   font-size: 16px;
@@ -11288,6 +11313,7 @@ i[class^=icon-alarm-]::before {
 }
 .page-inquiry-list-KBB .inquiry-list-container .inquiry-list .inquiry-item .item-content .inquiry-date {
   color: #838b94;
+  padding-left: 2px;
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
@@ -11321,7 +11347,7 @@ i[class^=icon-alarm-]::before {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 16px 24px calc(90px + env(safe-area-inset-bottom)) 24px;
+  padding: 16px 24px calc(60px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
 }
 .page-inquiry-write-KBB .inquiry-write-title-area {
   margin-bottom: 40px;
@@ -11363,7 +11389,7 @@ i[class^=icon-alarm-]::before {
 .page-inquiry-write-KBB .inquiry-form-section .form-group .select-field-wrap .common-form-select {
   width: 100%;
   height: 44px;
-  padding: 6px 32px 8px 0;
+  padding: 6px 32px 8px 2px;
   background: transparent;
   border: none;
   outline: none;
@@ -11401,7 +11427,7 @@ i[class^=icon-alarm-]::before {
   font-weight: 700;
   line-height: 27px;
   letter-spacing: -0.38px;
-  padding: 6px 2px 8px 0;
+  padding: 6px 2px 8px 2px;
 }
 .page-inquiry-write-KBB .inquiry-form-section .form-group .common-input-field .common-form-input::placeholder {
   color: #929292;
@@ -11453,11 +11479,13 @@ i[class^=icon-alarm-]::before {
 }
 .page-inquiry-write-KBB .inquiry-form-section .form-group .textarea-box-wrap .textarea-counter .current {
   text-align: right;
+  text-align: right;
+  /* Number/Body 04_medium */
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
   letter-spacing: -0.14px;
 }
 .page-inquiry-write-KBB .inquiry-form-section .form-group .textarea-box-wrap .textarea-counter .max {
@@ -11519,13 +11547,16 @@ i[class^=icon-alarm-]::before {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 24px 24px calc(140px + env(safe-area-inset-bottom)) 24px;
+  padding: 24px 24px calc(96px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
 }
 .page-inquiry-detail-KBB main:has(.inquiry-answer-container) {
-  padding: 0 0 calc(100px + env(safe-area-inset-bottom)) 0;
+  padding: 0 0 calc(84px + env(safe-area-inset-bottom) / 2 + 40px) 0;
 }
 .page-inquiry-detail-KBB main:has(.inquiry-answer-container) .inquiry-detail-container {
   padding: 12px 24px 0 24px;
+}
+.page-inquiry-detail-KBB main:has(.inquiry-answer-container) .inquiry-body-area {
+  padding-bottom: 48px;
 }
 .page-inquiry-detail-KBB .inquiry-detail-container {
   display: flex;
@@ -11572,9 +11603,8 @@ i[class^=icon-alarm-]::before {
 .page-inquiry-detail-KBB .inquiry-answer-container {
   width: 100%;
   background-color: #f7f8f9;
-  padding: 32px 24px 40px 24px;
+  padding: 32px 24px;
   box-sizing: border-box;
-  margin-top: 16px;
 }
 .page-inquiry-detail-KBB .inquiry-answer-container .answer-header {
   display: flex;
@@ -11619,7 +11649,7 @@ i[class^=icon-alarm-]::before {
   right: 0;
   width: 100%;
   z-index: 100;
-  padding: 0 24px calc(77px + env(safe-area-inset-bottom)) 24px;
+  padding: 0 24px calc(env(safe-area-inset-bottom) / 2 + 40px) 24px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
