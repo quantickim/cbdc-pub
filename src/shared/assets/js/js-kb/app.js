@@ -818,6 +818,25 @@ function initWalletDetailFilter() {
   });
 }
 
+/**
+ * 세그먼트 탭 초기화
+ */
+function initSegmentTab() {
+  document.querySelectorAll('.segment-tab-wrapper').forEach(function (wrapper) {
+    var buttons = wrapper.querySelectorAll('.btn-segment-tab');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        buttons.forEach(function (b) {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-checked', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-checked', 'true');
+      });
+    });
+  });
+}
+
 // DOM 로드 시 공통 컴포넌트 자동 실행
 document.addEventListener('DOMContentLoaded', function () {
   initInlineActions();
@@ -840,4 +859,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initRemitAmountInput();
   initIdentityVerify();
   initWalletDetailFilter();
+  initSegmentTab();
 });
