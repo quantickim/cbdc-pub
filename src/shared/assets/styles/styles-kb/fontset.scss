@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+// ============================================================
+// Font Faces
+// ============================================================
+
+// Roboto
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('Roboto'),
+    local('Roboto-Regular'),
+    url('./fonts-kb/Roboto-Regular.woff2') format('woff2'),
+    url('./fonts-kb/Roboto-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local('Roboto Medium'),
+    local('Roboto-Medium'),
+    url('./fonts-kb/Roboto-Medium.woff2') format('woff2'),
+    url('./fonts-kb/Roboto-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local('Roboto Bold'),
+    local('Roboto-Bold'),
+    url('./fonts-kb/Roboto-Bold.woff2') format('woff2'),
+    url('./fonts-kb/Roboto-Bold.woff') format('woff');
+}
+
+// KBFG Text
+@font-face {
+  font-family: 'KBFG Text';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    url('./fonts-kb/KBFGTextL.woff2') format('woff2'),
+    url('./fonts-kb/KBFGTextL.woff') format('woff');
+}
+@font-face {
+  font-family: 'KBFG Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url('./fonts-kb/KBFGTextL.woff2') format('woff2'),
+    url('./fonts-kb/KBFGTextL.woff') format('woff');
+}
+@font-face {
+  font-family: 'KBFG Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url('./fonts-kb/KBFGTextM.woff2') format('woff2'),
+    url('./fonts-kb/KBFGTextM.woff') format('woff');
+}
+@font-face {
+  font-family: 'KBFG Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url('./fonts-kb/KBFGTextM.woff2') format('woff2'),
+    url('./fonts-kb/KBFGTextM.woff') format('woff');
+}
+@font-face {
+  font-family: 'KBFG Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url('./fonts-kb/KBFGTextB.woff2') format('woff2'),
+    url('./fonts-kb/KBFGTextB.woff') format('woff');
+}
