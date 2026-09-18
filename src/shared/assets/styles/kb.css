@@ -2733,65 +2733,23 @@ th {
   letter-spacing: -0.3px;
 }
 .page-wallet-detail-KBB section.wallet-detail-history-container {
-  padding: 0 24px;
-  padding-bottom: 4px;
+  padding: 8px 24px 0 24px;
 }
-.page-wallet-detail-KBB section.wallet-detail-history-container .wallet-detail-history-item {
+.page-wallet-detail-KBB section.wallet-detail-history-container .main-empty-state {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  border-bottom: 1px solid #ebeef0;
-  padding: 20px 0;
-}
-.page-wallet-detail-KBB section.wallet-detail-history-container .wallet-detail-history-item .wallet-detail-history-item-top {
-  display: flex;
-  flex-direction: column;
-}
-.page-wallet-detail-KBB section.wallet-detail-history-container .wallet-detail-history-item .wallet-detail-history-item-top .wallet-detail-history-info-wrapper {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 8px;
   align-items: center;
+  justify-content: center;
+  padding-top: 100px;
 }
-.page-wallet-detail-KBB section.wallet-detail-history-container .wallet-detail-history-item .wallet-detail-history-item-top .wallet-detail-history-info-wrapper .wallet-detail-history-date {
-  color: #696e76;
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: -0.2px;
-}
-.page-wallet-detail-KBB section.wallet-detail-history-container .wallet-detail-history-item .wallet-detail-history-item-top .wallet-detail-history-info-wrapper .icon-wallet-detail-history-divider {
-  display: inline-block;
-  width: 1px;
-  height: 14px;
-  background-image: url("../img/img-kb/icon_divider.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  vertical-align: middle;
-}
-.page-wallet-detail-KBB section.wallet-detail-history-container .wallet-detail-history-item .wallet-detail-history-item-top .wallet-detail-history-info-wrapper .wallet-detail-history-type {
-  color: #696e76;
-  font-family: "KBFG Text";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 20px;
-  letter-spacing: -0.2px;
-}
-.page-wallet-detail-KBB section.wallet-detail-history-container .wallet-detail-history-item .wallet-detail-history-item-top .wallet-detail-history-label {
-  color: #26282c;
+.page-wallet-detail-KBB section.wallet-detail-history-container .main-empty-state .empty-text {
+  color: var(--Colors-KB_UI_02, #26282c);
+  text-align: center;
   font-family: "KBFG Text";
   font-size: 16px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 23px;
-  letter-spacing: -0.2px;
-}
-.page-wallet-detail-KBB section.wallet-detail-history-container .wallet-detail-history-item .wallet-detail-history-item-bottom {
-  align-self: flex-end;
+  letter-spacing: -0.32px;
 }
 
 .page-link-account-KBB {
