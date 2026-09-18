@@ -3030,7 +3030,7 @@ th {
   flex-direction: column;
   gap: 12px;
   border-top: 1px solid #c6cbd0;
-  padding: 16px 0;
+  padding: 16px 0 0;
   position: relative;
 }
 .page-history-detail-KBB .history-detail-main .history-detail-info-list .history-detail-info-item {
@@ -3118,7 +3118,7 @@ th {
   letter-spacing: -1.6px;
 }
 .page-history-detail-KBB .history-detail-main .history-detail-section.benefit-section {
-  padding: 24px 0;
+  padding-top: 40px;
 }
 .page-history-detail-KBB .history-detail-main .history-detail-section.benefit-section .section-sub-title {
   color: #26282c;
