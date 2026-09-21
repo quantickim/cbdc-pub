@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <!-- 거래제한 (시스템 점검) 중앙 얼럿 모달 -->
+    <div class="modal-dialog-overlay active" id="modalSystemMaintenance" role="dialog" aria-modal="true">
+      <div class="modal-dialog-container main-modal">
+        <div class="modal-dialog-content">
+          <!-- 타이틀 -->
+          <h3 class="modal-dialog-title">거래제한</h3>
+
+          <!-- 제한 사유 강조 -->
+          <p class="modal-dialog-reason">사유(시스템 점검 중)</p>
+
+          <!-- 설명 문구 -->
+          <p class="modal-dialog-description">
+            고객님 죄송합니다.<br />
+            현재 시스템 점검 중으로 서비스 이용이 어렵습니다.
+          </p>
+
+          <!-- 대표전화 안내 블록 -->
+          <div class="modal-contact-block">
+            <span class="contact-label">대표전화</span>
+            <a href="tel:1588-9999" class="contact-number val-number">1588-9999</a>
+          </div>
+        </div>
+
+        <!-- 하단 단일 확인 버튼 푸터 -->
+        <div class="modal-dialog-footer">
+          <button type="button" class="btn-modal-confirm" id="btnMaintenanceConfirm">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 닫기 스크립트 -->
+  </body>
+</html>

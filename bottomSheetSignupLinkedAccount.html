@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <!-- 연계 계좌 선택 바텀시트 -->
+    <div class="bottom-sheet-overlay active" id="sheetSelectAccount" role="dialog" aria-modal="true">
+      <div class="bottom-sheet-container">
+        <!-- 헤더 -->
+        <div class="bottom-sheet-header">
+          <h3 class="bottom-sheet-title">연계 계좌 선택</h3>
+          <button type="button" class="btn-sheet-close" id="btnAccountSheetClose" aria-label="닫기"></button>
+        </div>
+
+        <!-- 본문 (계좌 리스트) -->
+        <div class="bottom-sheet-content">
+          <div class="account-select-list">
+            <!-- 계좌 1 (선택 상태) -->
+            <button type="button" class="account-select-item">
+              <div class="account-info">
+                <i class="icon-bank-kb-circle" aria-hidden="true"></i>
+                <div class="account-text-group">
+                  <strong class="account-title">직장인우대종합통장</strong>
+                  <span class="account-desc val-number">800000-21-900000</span>
+                  <div class="account-balance-group">
+                    <span class="balance-label">출금가능금액</span>
+                    <span class="balance-val val-number">723,000,000</span>
+                    <span class="balance-unit">원</span>
+                  </div>
+                </div>
+              </div>
+              <i class="icon-select-check" aria-hidden="true"></i>
+            </button>
+
+            <!-- 계좌 2 -->
+            <button type="button" class="account-select-item">
+              <div class="account-info">
+                <i class="icon-bank-kb-circle" aria-hidden="true"></i>
+                <div class="account-text-group">
+                  <strong class="account-title">KB마이핏통장</strong>
+                  <span class="account-desc val-number">800000-21-900000</span>
+                  <div class="account-balance-group">
+                    <span class="balance-label">출금가능금액</span>
+                    <span class="balance-val val-number">723,000,000</span>
+                    <span class="balance-unit">원</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <!-- 계좌 3 -->
+            <button type="button" class="account-select-item">
+              <div class="account-info">
+                <i class="icon-bank-kb-circle" aria-hidden="true"></i>
+                <div class="account-text-group">
+                  <strong class="account-title">KB국민ONE통장</strong>
+                  <span class="account-desc val-number">800000-21-900000</span>
+                  <div class="account-balance-group">
+                    <span class="balance-label">출금가능금액</span>
+                    <span class="balance-val val-number">723,000,000</span>
+                    <span class="balance-unit">원</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <!-- 하단 유의 문구 -->
+          <div class="account-sheet-notice">
+            <i class="icon-sheet-notice" aria-hidden="true"></i>
+            <p class="notice-text">
+              KB국민은행 계좌만 가능해요.<br />
+              (단, 금융거래한도계좌는 등록 불가)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

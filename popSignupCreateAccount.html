@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <!-- 계좌 개설 필요 안내 모달 (공통 modal-dialog 규격) -->
+    <div class="modal-dialog-overlay modal-need-account active" id="modalNeedAccount" role="dialog" aria-modal="true">
+      <div class="modal-dialog-container">
+        <!-- 모달 본문 (타이틀 없는 본문 단독형) -->
+        <div class="modal-dialog-content">
+          <p class="modal-dialog-description no-title">
+            예금 토큰 전자지갑 서비스 이용을 위해서는<br />
+            KB국민은행 입출금 계좌가 필요합니다.
+          </p>
+        </div>
+
+        <!-- 하단 공통 4:6 분할 버튼 (취소 4 : 계좌 만들기 6) -->
+        <div class="modal-dialog-footer">
+          <button type="button" class="btn-modal-cancel" id="btnAccountCancel">취소</button>
+          <button type="button" class="btn-modal-confirm" id="btnAccountCreate">계좌 만들기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 스크립트 -->
+  </body>
+</html>

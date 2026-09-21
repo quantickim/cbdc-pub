@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-cash-receipt-KBB">
+      <!-- 상단 공통 헤더 -->
+      <header>
+        <div class="common-header">
+          <button type="button" class="btn-go-main">메인으로</button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <!-- 타이틀 섹션 -->
+        <section class="receipt-title-container">
+          <h2 class="receipt-main-title">
+            현금영수증<br />
+            발행 정보를 입력해주세요.
+          </h2>
+        </section>
+
+        <!-- 발행 정보 입력 폼 섹션 -->
+        <section class="receipt-form-container">
+          <!-- 1. 금액 입력 영역 (직접 입력 가능) -->
+          <div class="form-group-item">
+            <label class="form-field-label" for="receiptAmount">금액</label>
+            <div class="amount-input-box">
+              <input
+                type="tel"
+                id="receiptAmount"
+                class="custom-form-input amount-val val-number"
+                value="30,000"
+                placeholder="0"
+                inputmode="numeric"
+              />
+              <span class="amount-unit">원</span>
+            </div>
+            <div class="amount-korean-text">
+              <span class="korean-val" id="koreanAmount">3</span>
+              <span class="korean-unit">만원</span>
+            </div>
+          </div>
+
+          <!-- 2. 구분 세그먼트 탭 영역 -->
+          <div class="form-group-item">
+            <span class="form-field-label">구분</span>
+            <div class="segment-tab-wrapper" role="radiogroup" aria-label="현금영수증 구분 선택">
+              <button type="button" class="btn-segment-tab is-active" role="radio" aria-checked="true">
+                개인소득공제용
+              </button>
+              <button type="button" class="btn-segment-tab" role="radio" aria-checked="false">사업자지출증빙용</button>
+            </div>
+          </div>
+
+          <!-- 3. 휴대폰 번호 분할 인풋 영역 -->
+          <div class="form-group-item">
+            <label class="form-field-label" for="phoneBody">휴대폰 번호</label>
+            <!-- 휴대폰 번호처럼 셀렉트 + 인풋 조합 시 -->
+            <div class="phone-input-row">
+              <div class="common-select-field phone-prefix-field">
+                <select id="phonePrefix" class="common-form-select">
+                  <option value="010" selected>010</option>
+                  <option value="011">011</option>
+                  <option value="016">016</option>
+                  <option value="017">017</option>
+                  <option value="018">018</option>
+                  <option value="019">019</option>
+                </select>
+                <i class="icon-select-arrow" aria-hidden="true"></i>
+              </div>
+
+              <div class="common-input-field">
+                <input
+                  class="common-form-input"
+                  type="tel"
+                  id="phoneBody"
+                  placeholder="휴대폰 번호 (-없이 입력)"
+                  maxlength="8"
+                  inputmode="numeric"
+                />
+                <button
+                  type="button"
+                  class="btn-input-clear"
+                  id="btnRemitAddressClear"
+                  aria-label="입력내용 삭제"
+                  style="display: none"
+                >
+                  <i class="icon-input-clear" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- 하단 공통 2버튼 (취소 40% / 확인 60%) -->
+      <div class="fixed-bottom-dual-btn-wrapper">
+        <button type="button" class="btn-dual-cancel" id="btnRecipientCancel">취소</button>
+        <button type="button" class="btn-dual-confirm" id="btnRecipientConfirm">확인</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - 내 바우처 상세</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="page-voucher-detail-KBB KBB">
+    <!-- 닫기(X) 헤더 -->
+    <header class="detail-header">
+      <h1 class="header-title">내 바우처 현황</h1>
+      <button type="button" class="btn-detail-close" data-action="back" aria-label="닫기">
+        <i class="icon-close-24" aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <main>
+      <!-- 바우처 기본 요약 정보 -->
+      <section class="voucher-summary-container">
+        <div class="summary-top">
+          <!-- 뱃지 그룹: 캐시백 + 기간만료 -->
+          <div class="badge-group">
+            <span class="common-badge badge-cashback">캐시백</span>
+            <span class="common-badge badge-cancel">기간만료</span>
+          </div>
+
+          <div class="title-amount-row">
+            <h2 class="voucher-title">서울 사랑 바우처</h2>
+            <div class="voucher-amount">
+              <span class="val-num common-font-roboto">1,780,000</span>
+              <span class="val-unit">원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-info-list">
+          <div class="info-row">
+            <span class="info-label">발행 기관</span>
+            <span class="info-value">서울시</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">지원 대상</span>
+            <span class="info-value">
+              서울에 주민등록을 둔 만 <span class="common-font-roboto">19</span>세 이상 성인
+            </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">사용 조건</span>
+            <span class="info-value">
+              <span class="common-font-roboto">1</span>회 최대 <span class="common-font-roboto">5,000</span>원 캐시백
+            </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">발행일</span>
+            <span class="info-value common-font-roboto">2025.04.29</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">유효기간</span>
+            <span class="info-value common-font-roboto">2025.04.29 ~ 2025.06.30</span>
+          </div>
+        </div>
+
+        <div class="summary-bottom-link">
+          <button type="button" class="btn-merchant-link" data-href="guide_merchant.html">
+            <span>사용 가능 사용처 확인</span>
+            <i class="icon-arrow-right-16" aria-hidden="true"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- 섹션 구분선 -->
+      <div class="divider-container" aria-hidden="true"></div>
+
+      <!-- 이용내역 목록 섹션 -->
+      <section class="voucher-history-container">
+        <h3 class="history-section-title">이용내역</h3>
+
+        <ul class="history-list">
+          <li class="history-item">
+            <div class="item-left">
+              <span class="history-datetime common-font-roboto">07.11 10:10:04</span>
+              <p class="history-name">스피카 나폴리 합정 캐시백 취소</p>
+            </div>
+            <div class="common-transactions-value-wrapper">
+              <span class="common-transactions-value sign-plus">+30,000</span>
+              <span class="common-transactions-won">원</span>
+            </div>
+          </li>
+
+          <li class="history-item">
+            <div class="item-left">
+              <span class="history-datetime common-font-roboto">07.11 10:10:04</span>
+              <p class="history-name">스피카 나폴리 합정 캐시백 취소</p>
+            </div>
+            <div class="common-transactions-value-wrapper">
+              <span class="common-transactions-value sign-plus">+30,000</span>
+              <span class="common-transactions-won">원</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
