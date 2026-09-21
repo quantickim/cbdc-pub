@@ -1,2 +1,0 @@
-import{l as e,e as a,f as u}from"./index-D2xv4sQy.js";const g=e.memo(function({on:t=!1,onToggle:s}){const[o,c]=e.useState(t),r=()=>{c(l=>{const n=!l;return(s==null?void 0:s(n))===!1?l:n})};return e.useEffect(()=>{c(t)},[t]),a("button",{type:"button",className:u("toggle-btn",{on:o}),onClick:r,children:a("span",{className:"toggle",children:"Toggle"})})});export{g as T};
-//# sourceMappingURL=toggle-switch-Dt7oevoA.js.map

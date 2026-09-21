@@ -3677,7 +3677,7 @@ th {
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 24px 24px 32px 24px !important;
   box-sizing: border-box;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -3789,7 +3789,7 @@ th {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
   margin-bottom: 40px;
 }
 .page-qr-show-KBB .qr-show-main .qr-show-card .qr-expired-message .icon-warning-red {
@@ -3822,7 +3822,7 @@ th {
   border: 1px solid #dde1e4;
   border-radius: 12px;
   box-sizing: border-box;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .page-qr-show-KBB .qr-show-main .qr-show-card .qr-info-card .qr-info-card-left {
   display: flex;
@@ -3968,7 +3968,7 @@ th {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 0px 32px 0px;
+  padding-bottom: 32px;
   border-radius: 16px;
   background-color: #f8f9fa;
   margin-top: 16px;
@@ -3979,7 +3979,22 @@ th {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 32px;
   margin-bottom: 56px;
+}
+.page-trade-code-KBB .trade-code-main .trade-code-guide-card .qr-guide-visual::after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 232px;
+  height: 71px;
+  background-image: url("../img/img-kb/image_qr_shadow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
 }
 .page-trade-code-KBB .trade-code-main .trade-code-guide-card .qr-guide-visual .qr-image-placeholder {
   width: 96px;
@@ -3987,7 +4002,6 @@ th {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.35;
 }
 .page-trade-code-KBB .trade-code-main .trade-code-guide-card .qr-guide-visual .qr-image-placeholder .icon-qr-sample {
   display: inline-block;
@@ -4001,16 +4015,15 @@ th {
 }
 .page-trade-code-KBB .trade-code-main .trade-code-guide-card .qr-guide-visual .qr-code-pill-badge {
   position: absolute;
-  bottom: -44px;
-  display: inline-flex;
+  top: 90px;
   align-items: center;
   display: inline-flex;
-  padding: 16px 20px;
-  align-items: center;
+  padding: 0 20px;
+  height: 42px;
   gap: 20px;
   border-radius: 999px;
   background: #fff;
-  box-shadow: 0px -4px 16px rgba(0, 0, 0, 0.12);
+  z-index: 1;
 }
 .page-trade-code-KBB .trade-code-main .trade-code-guide-card .qr-guide-visual .qr-code-pill-badge .badge-label {
   color: #838b94;
@@ -4049,7 +4062,7 @@ th {
 .bottom-sheet-overlay.sheet-voucher-select .bottom-sheet-content .voucher-select-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   padding: 0;
 }
 .bottom-sheet-overlay.sheet-voucher-select .bottom-sheet-content .voucher-select-list .voucher-select-item {
@@ -4191,9 +4204,16 @@ th {
   letter-spacing: -0.21px;
 }
 .page-qr-pay-amount-KBB .qr-pay-amount-main .pay-amount-card .input-amount-wrapper .input-amount-field .input-amount-number::placeholder {
-  color: #838b94;
+  color: #929292;
   text-align: left;
   font-family: "KBFG Text";
+  /* Input/Input Placeholder */
+  font-family: "KBFG Text";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px; /* 142.105% */
+  letter-spacing: -0.38px;
 }
 .page-qr-pay-amount-KBB .qr-pay-amount-main .pay-amount-card .input-amount-wrapper .input-amount-field .unit-won {
   margin-left: 4px;
@@ -4410,7 +4430,7 @@ th {
   position: relative;
   width: 24px;
   height: 24px;
-  border: 2px solid #c6cbd0;
+  border: 2px solid #838b94;
   border-radius: 50%;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -4506,7 +4526,7 @@ th {
   align-items: center;
   padding: 16px 20px;
   border: 1px solid #dde1e4;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #ffffff;
 }
 .page-pay-confirm-KBB .pay-confirm-main .pay-price-summary-container .price-summary-card .price-label {
@@ -4667,8 +4687,8 @@ th {
   align-items: flex-start;
 }
 .page-pay-complete-KBB .pay-complete-main .complete-info-section .info-list-group .info-row .info-label {
-  color: var(--Colors-KB_UI_02, #26282c);
   text-align: right;
+  color: var(--Colors-KB_UI_04, #696e76);
   /* Body/Body 2_Light */
   font-family: var(--Text, "KBFG Text");
   font-size: var(--Body-2_Light-Size, 16px);
