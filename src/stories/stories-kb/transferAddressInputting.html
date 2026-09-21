@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-remit-address-KBB">
+      <!-- 상단 공통 헤더 -->
+      <header class="common-header">
+        <button type="button" class="btn-go-main">메인으로</button>
+      </header>
+
+      <main class="remit-address-main">
+        <!-- 타이틀 -->
+        <h2 class="remit-address-title">누구의 지갑으로 보낼까요?</h2>
+
+        <!-- 지갑 주소 디스플레이 필드 (최초 빈 값 상태: is-empty 클래스 적용) -->
+        <!-- <div class="common-input-field has-clear-btn">
+ <div class="common-form-display val-number is-empty" id="remitAddressDisplay">
+ <span class="display-text" id="remitAddressText">예금 토큰 전자지갑 주소를 입력해주세요</span>
+ </div>
+ <button
+ type="button"
+ class="btn-input-clear"
+ id="btnAddressClear"
+ aria-label="입력내용 삭제"
+ style="display: none"
+ >
+ <i class="icon-input-clear" aria-hidden="true"></i>
+ </button>
+ </div> -->
+        <!-- 공통 인풋 필드 (삭제 버튼 포함) -->
+        <div class="common-input-field">
+          <input
+            type="text"
+            class="common-form-input"
+            id="remitAddressInput"
+            placeholder="예금 토큰 전자지갑 주소를 입력해주세요"
+            aria-label="전자지갑 주소 입력"
+            maxlength="18"
+          />
+          <button
+            type="button"
+            class="btn-input-clear"
+            id="btnRemitAddressClear"
+            aria-label="입력내용 삭제"
+            style="display: none"
+          >
+            <i class="icon-input-clear" aria-hidden="true"></i>
+          </button>
+        </div>
+        <!-- 은행 선택 드롭다운 필드 (공통 셀렉트 적용) -->
+        <div class="bank-select-field">
+          <div class="common-select-field">
+            <select id="bankSelect" class="common-form-select" aria-label="은행 선택">
+              <option value="" disabled selected>은행 선택</option>
+              <option value="KB">국민은행</option>
+              <option value="SUHYUP">수협</option>
+              <option value="NH">농협은행</option>
+              <option value="WOORI">우리은행</option>
+              <option value="HANA">하나은행</option>
+              <option value="SHINHAN">신한은행</option>
+              <option value="IBK">기업은행</option>
+              <option value="IM">iM뱅크</option>
+              <option value="BS">부산은행</option>
+              <option value="JB">전북은행</option>
+              <option value="KBANK">케이뱅크</option>
+              <option value="KFTC">금융결제원</option>
+              <option value="KN">경남은행</option>
+            </select>
+            <i class="icon-select-arrow" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <!-- 독립 가로 스크롤 은행 칩 컨테이너 (16개 전체 은행) -->
+        <div class="quick-bank-scroll-container">
+          <div class="quick-bank-chips-track" id="bankChipsTrack">
+            <button type="button" class="btn-bank-chip" data-code="KB" data-name="국민은행">
+              <i class="bank-logo logo-kb" aria-hidden="true"></i>
+              <span class="bank-name">국민은행</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="SUHYUP" data-name="수협">
+              <i class="bank-logo logo-suhyup" aria-hidden="true"></i>
+              <span class="bank-name">수협</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="NH" data-name="농협은행">
+              <i class="bank-logo logo-nh" aria-hidden="true"></i>
+              <span class="bank-name">농협은행</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="WOORI" data-name="우리은행">
+              <i class="bank-logo logo-woori" aria-hidden="true"></i>
+              <span class="bank-name">우리은행</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="HANA" data-name="하나은행">
+              <i class="bank-logo logo-hana" aria-hidden="true"></i>
+              <span class="bank-name">하나은행</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="SHINHAN" data-name="신한은행">
+              <i class="bank-logo logo-shinhan" aria-hidden="true"></i>
+              <span class="bank-name">신한은행</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="IBK" data-name="기업은행">
+              <i class="bank-logo logo-ibk" aria-hidden="true"></i>
+              <span class="bank-name">기업은행</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="IM" data-name="iM뱅크">
+              <i class="bank-logo logo-im" aria-hidden="true"></i>
+              <span class="bank-name">iM뱅크</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="BS" data-name="부산은행">
+              <i class="bank-logo logo-bs" aria-hidden="true"></i>
+              <span class="bank-name">부산은행</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="JB" data-name="전북은행">
+              <i class="bank-logo logo-jb" aria-hidden="true"></i>
+              <span class="bank-name">전북은행</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="KBANK" data-name="케이뱅크">
+              <i class="bank-logo logo-kbank" aria-hidden="true"></i>
+              <span class="bank-name">케이뱅크</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="KFTC" data-name="금융결제원">
+              <i class="bank-logo logo-kftc" aria-hidden="true"></i>
+              <span class="bank-name">금융결제원</span>
+            </button>
+            <button type="button" class="btn-bank-chip" data-code="KN" data-name="경남은행">
+              <i class="bank-logo logo-kn" aria-hidden="true"></i>
+              <span class="bank-name">경남은행</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 하단 보조 액션 -->
+        <div class="remit-scan-link-wrapper">
+          <a href="javascript:void(0);" class="link-wallet-scan">지갑 번호 QR 스캔하기</a>
+        </div>
+      </main>
+      <div class="fixed-bottom-btn-wrapper">
+        <button type="button" class="btn-confirm-bottom disabled" id="btnRemitNext" disabled>다음</button>
+      </div>
+      <!-- 하단 키패드 바텀시트 (딤 없음) -->
+      <!-- <div class="bottom-sheet-overlay no-dim active">
+ <div class="bottom-sheet-container keypad-sheet-container">
+ <div class="bottom-sheet-content">
+ <div class="common-keypad-grid" id="remitKeypadGrid">
+ <button type="button" class="btn-key" data-key="1">1</button>
+ <button type="button" class="btn-key" data-key="2">2</button>
+ <button type="button" class="btn-key" data-key="3">3</button>
+ <button type="button" class="btn-key" data-key="4">4</button>
+ <button type="button" class="btn-key" data-key="5">5</button>
+ <button type="button" class="btn-key" data-key="6">6</button>
+ <button type="button" class="btn-key" data-key="7">7</button>
+ <button type="button" class="btn-key" data-key="8">8</button>
+ <button type="button" class="btn-key" data-key="9">9</button>
+ <button type="button" class="btn-key btn-key-empty" aria-hidden="true"></button>
+ <button type="button" class="btn-key" data-key="0">0</button>
+ <button type="button" class="btn-key btn-key-delete" data-key="delete" aria-label="지우기">
+ <i class="icon-keypad-delete" aria-hidden="true"></i>
+ </button>
+ </div>
+ </div>
+
+ <div class="bottom-sheet-footer">
+ <button type="button" class="btn-sheet-confirm disabled" id="btnRemitNext" disabled>다음</button>
+ </div>
+ </div>
+ </div> -->
+    </div>
+
+    <!-- 스크립트 영역 -->
+  </body>
+</html>

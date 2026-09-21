@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+  </head>
+  <body class="KBB">
+    <!-- 바텀시트 딤 오버레이 -->
+    <div class="bottom-sheet-overlay active">
+      <div class="bottom-sheet-container">
+        <!-- 상단 헤더 -->
+        <div class="bottom-sheet-header">
+          <h3 class="bottom-sheet-title">검색</h3>
+          <button type="button" class="btn-sheet-close" aria-label="닫기"></button>
+        </div>
+
+        <!-- 본문 콘텐츠 -->
+        <div class="bottom-sheet-content">
+          <div class="search-input-wrapper">
+            <div class="input-field">
+              <input type="text" class="form-input" placeholder="사용처, 사람, 은행명 검색" maxlength="14" />
+            </div>
+            <!-- 입력 안내/에러 캡션 -->
+            <div class="input-caption-message">
+              <i class="icon-caption-info" aria-hidden="true"></i>
+              <span>14자 이내로 입력해주세요.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 단일 확인 버튼 -->
+        <div class="bottom-sheet-footer">
+          <button type="button" class="btn-sheet-confirm">확인</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
