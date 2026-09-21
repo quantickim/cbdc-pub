@@ -1,0 +1,1 @@
+{"version":3,"file":"constants-D9z7ifcV.js","sources":["../../entities/mobile-verification/model/constants.ts"],"sourcesContent":["export const DEFAULT_TIME_OUT = 3 * 60 * 1000;\nexport const RETRY_TIME_LIMIT = 5000;\n\nexport const DEFAULT_PAYMENT_TIME_OUT = 3 * 60 * 1000;\n"],"names":["DEFAULT_TIME_OUT","DEFAULT_PAYMENT_TIME_OUT"],"mappings":"AAAO,MAAMA,EAAmB,KAGnBC,EAA2B"}

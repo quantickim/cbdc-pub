@@ -1,11 +1,170 @@
 <!doctype html>
-<html lang="ko">
+<html lang="kr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=kbPubList.html" />
-    <title>KB 퍼블리싱 목록</title>
+    <script type="module" crossorigin src="/assets/polyfills-Db72Tk1i.js"></script>
+
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+    <link href="/favicon.ico" rel="icon" />
+    <meta
+      content="user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="#FFFFFF" name="theme-color" />
+    <meta content="Web site created using create-react-app" name="description" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta content="white" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="robots" content="noindex" />
+    <!-- <link rel="apple-touch-icon" href="/logo192.png" /> -->
+    <!-- <link rel="apple-touch-icon" href="/logo192.png" /> -->
+    <!--
+    manifest.json provides metadata used when your web app is installed on a
+    user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+  -->
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
+    <link href="/manifest.json" rel="manifest" />
+    <!--
+    Notice the use of  in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running
+      `pnpm run cbdc build --bank=a --env=prod`.
+    -->
+    <title>예금 토큰 전자지갑</title>
+    <link href="/transkey_mobile/transkey.css" rel="stylesheet" type="text/css" />
+    <script type="module" crossorigin src="/assets/index-CapjMIed.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0VqUBGVK.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
   </head>
+  <script type="text/javascript">
+    function loadScript(src) {
+      const script = document.createElement('script');
+      script.src = src;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+
+    var dummy = '?dummy=' + new Date().getTime();
+    loadScript('https://oimg1.kbstar.com/js/common/extendPlatform/extend_platform.js' + dummy);
+    loadScript('https://obank.kbstar.com/mliivk/app/js/kbwallet/kbwallet_app_bridge.js' + dummy);
+  </script>
   <body>
-    <a href="kbPubList.html">KB 퍼블리싱 목록으로 이동</a>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      (function () {
+        var promiseChain = Promise.resolve();
+        var callbacks = {};
+        var callbackTimeoutMs = 5 * 60 * 1000;
+        var takeCallback = function (msgId) {
+          var callback = callbacks[msgId];
+          if (!callback) {
+            return;
+          }
+
+          delete callbacks[msgId];
+          window.clearTimeout(callback.timeoutId);
+          return callback;
+        };
+        var init = function () {
+          const guid = function () {
+            function s4() {
+              return Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+                .substring(1);
+            }
+
+            return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+          };
+
+          window.webViewBridge = {
+            send: function (targetFunc, data) {
+              var data = data || {};
+              var msgObj = {
+                targetFunc: targetFunc,
+                data: data,
+              };
+
+              if (data.success || data.error) {
+                msgObj.msgId = guid();
+              }
+
+              var msg = JSON.stringify(msgObj);
+
+              promiseChain = promiseChain
+                .then(function () {
+                  return new Promise(function (resolve, reject) {
+                    if (msgObj.msgId && window.ReactNativeWebView) {
+                      callbacks[msgObj.msgId] = {
+                        onsuccess: data.success,
+                        onerror: data.error,
+                        timeoutId: window.setTimeout(function () {
+                          delete callbacks[msgObj.msgId];
+                        }, callbackTimeoutMs),
+                      };
+                    }
+                    // 로컬환경에서 테스트 위해서 추가
+                    if (!window.ReactNativeWebView) {
+                      data.success && data.success.call(null, { isSuccessful: true });
+                    }
+
+                    if (window.ReactNativeWebView) {
+                      window.ReactNativeWebView.postMessage(msg);
+                    }
+                    resolve();
+                  });
+                })
+                .catch(function (e) {
+                  console.error('메세지 실패 ' + e.message);
+                });
+            },
+          };
+
+          const listener = (e) => {
+            var message;
+            try {
+              message = JSON.parse(e.data);
+            } catch (err) {
+              console.error('메세지를 파싱할수 없음 ' + err);
+              return;
+            }
+
+            var callback = takeCallback(message.msgId);
+            if (callback) {
+              var handler = message.isSuccessful ? callback.onsuccess : callback.onerror;
+              if (handler) {
+                handler.call(null, message);
+              }
+            }
+          };
+
+          if (window.ReactNativeWebView) {
+            /** android */
+            document.addEventListener('message', listener);
+            /** ios */
+            window.addEventListener('message', listener);
+          }
+        };
+
+        init();
+      })();
+    </script>
+    <div id="root"></div>
+    <!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
+
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
+
+  To begin development, run `pnpm run cbdc start --bank=a --env=dev`.
+  To create a production bundle, use `pnpm run cbdc build --bank=a --env=prod`.
+-->
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="/assets/polyfills-legacy-CRhXtBdy.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="/assets/index-legacy-D87DMGXW.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
   </body>
 </html>
