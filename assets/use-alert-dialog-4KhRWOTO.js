@@ -1,0 +1,2 @@
+import{l as D,o as g,e as x,D as v,i as A}from"./index-D2xv4sQy.js";const j=()=>({openAlertDialog:D.useCallback(({message:t,title:r,buttonLabel:o=[A.t("confirm")],onConfirmClick:e,onCancelClick:a})=>{g.exclusiveOpen(({isOpen:p,close:s,unmount:u})=>x(v,{open:p,afterLeave:u,onClose:s,message:t,title:r,buttonLabel:o,onConfirmClick:()=>{s(),e==null||e()},onCancelClick:()=>{s(),a==null||a()}}))},[])});export{j as u};
+//# sourceMappingURL=use-alert-dialog-4KhRWOTO.js.map
