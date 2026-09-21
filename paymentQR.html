@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+  </head>
+  <body class="KBB">
+    <div class="page-qr-scan-KBB">
+      <header class="common-header">
+        <button type="button" class="btn-go-main">메인으로</button>
+      </header>
+      <main class="qr-scan-main">
+        <!-- 탭 영역 (QR 스캔하기 / QR 보여주기) -->
+        <div class="qr-tab-container">
+          <button type="button" class="btn-qr-tab active">QR 스캔하기</button>
+          <button type="button" class="btn-qr-tab">QR 보여주기</button>
+        </div>
+
+        <!-- 안내 문구 -->
+        <p class="qr-scan-guide-text">
+          아래 사각형에 맞춰<br />
+          QR코드를 스캔해 주세요.
+        </p>
+
+        <!-- 카메라 스캔 뷰파인더 영역 -->
+        <div class="qr-scan-viewfinder-wrapper">
+          <div class="qr-scan-viewfinder">
+            <span class="corner-bracket top-left"></span>
+            <span class="corner-bracket top-right"></span>
+            <span class="corner-bracket bottom-left"></span>
+            <span class="corner-bracket bottom-right"></span>
+            <div class="qr-scan-camera-preview"></div>
+          </div>
+        </div>
+
+        <!-- 하단 액션 버튼 및 이용안내 링크 -->
+        <div class="qr-scan-bottom-actions">
+          <button type="button" class="btn-manual-pay">직접 입력해서 결제하기</button>
+          <a href="javascript:void(0);" class="link-qr-guide">QR 스캔하기 이용안내</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

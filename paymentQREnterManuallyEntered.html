@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-trade-code-KBB">
+      <!-- 상단 닫기 버튼 -->
+      <div class="trade-code-top-action">
+        <button type="button" class="btn-top-close" aria-label="닫기">
+          <i class="icon-close-black" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <main class="trade-code-main">
+        <!-- QR 안내 예시 카드 영역 -->
+        <section class="trade-code-guide-card">
+          <div class="qr-guide-visual">
+            <div class="qr-image-placeholder">
+              <i class="icon-qr-sample" aria-hidden="true"></i>
+            </div>
+            <div class="qr-code-pill-badge">
+              <span class="badge-label">거래코드</span>
+              <span class="badge-sample-value">901TX0code0insert</span>
+            </div>
+          </div>
+          <p class="guide-card-title">거래코드는 QR 코드 아래에 있습니다.</p>
+        </section>
+
+        <!-- 거래코드 입력 영역 -->
+        <section class="trade-code-input-container">
+          <div class="common-input-field">
+            <input
+              type="text"
+              id="tradeCodeInput"
+              class="common-form-input"
+              value="901TX0code0insert"
+              placeholder="거래 코드를 입력해주세요."
+            />
+          </div>
+        </section>
+      </main>
+
+      <!-- 공통 하단 고정 버튼 (기본 disabled) -->
+      <div class="fixed-bottom-btn-wrapper">
+        <button type="button" class="btn-confirm-bottom" id="btnConfirm">확인</button>
+      </div>
+    </div>
+  </body>
+</html>

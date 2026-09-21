@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - 연계계좌 확인</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="page-linked-account-KBB KBB">
+    <!-- 공통 헤더 규격 -->
+    <header>
+      <div class="common-header">
+        <button type="button" class="btn-go-main">메인으로</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- 계좌 정보 카드 -->
+      <section class="account-card-container">
+        <div class="card-top">
+          <span class="card-label">연계계좌</span>
+          <p class="account-number common-font-roboto">111111-23-444444</p>
+        </div>
+        <div class="card-bottom">
+          <span class="balance-label">계좌잔액</span>
+          <p class="balance-value">
+            <span class="val-amount common-font-roboto">2,584,710</span>
+            <span class="val-unit">원</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- 공통 안내사항 아코디언 (.common-notice-accordion) -->
+      <section class="common-notice-accordion">
+        <button type="button" class="btn-notice-toggle is-open" aria-expanded="true">
+          <div class="title-wrapper">
+            <i class="icon-notice-info" aria-hidden="true"></i>
+            <span class="notice-title">알려드립니다</span>
+          </div>
+          <i class="icon-arrow-toggle" aria-hidden="true"></i>
+        </button>
+
+        <div class="notice-content-body">
+          <ul class="notice-bullet-list">
+            <li class="bullet-main-item">연계계좌는 가입 시 인증한 계좌로 변경할 수 없습니다.</li>
+            <li class="bullet-main-item">변경이 필요할 경우 ‘예금 토큰 전자지갑’ 삭제 후 재가입 필요합니다.</li>
+            <li class="bullet-main-item">연계계좌를 통해 예금토큰 충전 및 전환이 가능합니다.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
