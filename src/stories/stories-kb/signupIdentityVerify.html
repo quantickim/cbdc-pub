@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-verification-KBB">
+      <main class="main-content">
+        <!-- 메인 타이틀 섹션 -->
+        <section class="verification-title-container">
+          <h2 class="verification-main-title">
+            마지막으로<br />
+            본인 여부를 확인할게요
+          </h2>
+        </section>
+
+        <!-- 본인인증 폼 섹션 -->
+        <section class="verification-form-container">
+          <!-- 1. 이름 입력 필드 (입력 가능형) -->
+          <div class="form-group-item">
+            <label class="form-field-label" for="userName">이름</label>
+            <div class="form-input-box">
+              <input type="text" id="userName" class="custom-form-input" placeholder="이름 입력" autocomplete="name" />
+            </div>
+          </div>
+
+          <!-- 2. 주민등록번호 입력 필드 (입력 가능형 앞자리 6자리 + 뒷자리 1자리) -->
+          <div class="form-group-item">
+            <label class="form-field-label" for="userRrnFirst">주민등록번호</label>
+            <div class="form-rrn-wrapper row-wrapper">
+              <div class="form-input-box rrn-box">
+                <input
+                  type="tel"
+                  id="userRrnFirst"
+                  class="custom-form-input val-number"
+                  placeholder="앞 6자리"
+                  maxlength="6"
+                  inputmode="numeric"
+                />
+              </div>
+              <span class="rrn-dash">-</span>
+              <div class="form-input-box rrn-single-box">
+                <input
+                  type="tel"
+                  id="userRrnSecond"
+                  class="custom-form-input val-number"
+                  placeholder="●"
+                  maxlength="1"
+                  inputmode="numeric"
+                />
+              </div>
+              <div class="rrn-masking-dots" aria-hidden="true">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. 핸드폰 번호 입력 필드 (언더라인형) -->
+          <div class="form-group-item">
+            <label class="form-field-label" for="userPhone">핸드폰 번호</label>
+            <div class="form-input-underline">
+              <input
+                type="tel"
+                id="userPhone"
+                class="custom-form-input val-number"
+                placeholder="핸드폰 번호 입력"
+                maxlength="11"
+                inputmode="numeric"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- 하단 고정 단일 버튼 -->
+      <div class="fixed-bottom-btn-wrapper">
+        <button type="button" class="btn-confirm-bottom" id="btnVerifyNext">다음</button>
+      </div>
+    </div>
+
+    <!-- 주민등록번호 6자리 입력 시 다음 인풋 자동 포커스 스크립트 -->
+  </body>
+</html>

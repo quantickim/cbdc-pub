@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-remit-address-KBB">
+      <!-- 상단 공통 헤더 (뒤로가기/홈/메뉴 및 메인으로) -->
+      <header class="common-header">
+        <div class="header-left">
+          <button type="button" class="btn-header-back" aria-label="뒤로가기">
+            <i class="icon-back" aria-hidden="true"></i>
+            <span class="header-title">송금</span>
+          </button>
+        </div>
+        <div class="header-right">
+          <button type="button" class="btn-header-home" aria-label="홈">
+            <i class="icon-home" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn-header-menu" aria-label="전체메뉴">
+            <i class="icon-menu" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn-go-main">메인으로</button>
+        </div>
+      </header>
+
+      <main class="remit-address-main">
+        <!-- 타이틀 -->
+        <h2 class="remit-address-title">누구의 지갑으로 보낼까요?</h2>
+
+        <!-- 공통 인풋 필드 (삭제 버튼 포함 - app.js 자동 연동) -->
+        <div class="common-input-field">
+          <input
+            type="text"
+            class="common-form-input"
+            id="remitAddressInput"
+            value="03760299000001"
+            placeholder="예금 토큰 전자지갑 주소를 입력해주세요"
+            aria-label="전자지갑 주소 입력"
+          />
+          <button type="button" class="btn-input-clear" id="btnRemitAddressClear" aria-label="입력내용 삭제">
+            <i class="icon-input-clear" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- 은행 선택 드롭다운 필드 -->
+        <div class="bank-select-field">
+          <div class="common-select-field">
+            <select id="bankSelect" class="common-form-select" aria-label="은행 선택">
+              <option value="" disabled selected>은행 선택</option>
+              <option value="KB">국민은행</option>
+              <option value="SUHYUP">수협</option>
+              <option value="NH">농협은행</option>
+              <option value="WOORI">우리은행</option>
+              <option value="HANA">하나은행</option>
+              <option value="SHINHAN">신한은행</option>
+              <option value="IBK">기업은행</option>
+              <option value="IM">iM뱅크</option>
+              <option value="BS">부산은행</option>
+              <option value="JB">전북은행</option>
+              <option value="KBANK">케이뱅크</option>
+              <option value="KFTC">금융결제원</option>
+              <option value="KN">경남은행</option>
+            </select>
+            <i class="icon-select-arrow" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <!-- 에러 안내 문구 영역 -->
+        <div class="remit-error-message" id="remitErrorMessage">
+          <i class="icon-warning-red" aria-hidden="true"></i>
+          <span class="error-text">입력하신 정보를 다시 확인해주세요.</span>
+        </div>
+      </main>
+
+      <!-- 하단 고정 버튼 (비활성화 상태) -->
+      <div class="fixed-bottom-btn-wrapper">
+        <button type="button" class="btn-confirm-bottom disabled" id="btnRemitNext" disabled>다음</button>
+      </div>
+    </div>
+  </body>
+</html>

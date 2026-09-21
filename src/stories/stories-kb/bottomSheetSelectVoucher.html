@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+  </head>
+  <body class="KBB">
+    <!-- 바우처 혜택 적용 선택 바텀시트 -->
+    <div class="bottom-sheet-overlay sheet-voucher-select active">
+      <div class="bottom-sheet-container">
+        <!-- 헤더 -->
+        <div class="bottom-sheet-header">
+          <h3 class="bottom-sheet-title">바우처 혜택 적용 선택</h3>
+          <button type="button" class="btn-sheet-close" aria-label="닫기"></button>
+        </div>
+
+        <!-- 본문 (라디오 옵션 목록) -->
+        <div class="bottom-sheet-content">
+          <div class="voucher-select-list">
+            <!-- 적용 안함 -->
+            <label class="voucher-select-item" for="voucherOpt0">
+              <input type="radio" name="voucherOption" id="voucherOpt0" class="radio-input" checked />
+              <span class="custom-radio"></span>
+              <div class="voucher-info">
+                <span class="voucher-title">적용 안함</span>
+              </div>
+            </label>
+
+            <!-- 11% 캐시백 상품권 -->
+            <label class="voucher-select-item" for="voucherOpt1">
+              <input type="radio" name="voucherOption" id="voucherOpt1" class="radio-input" />
+              <span class="custom-radio"></span>
+              <div class="voucher-info">
+                <span class="voucher-title">11% 캐시백 상품권</span>
+                <span class="voucher-desc">최소 1만원 이상 결제 시 사용 가능</span>
+              </div>
+            </label>
+
+            <!-- 캐시백 상품권 5,000원 -->
+            <label class="voucher-select-item" for="voucherOpt2">
+              <input type="radio" name="voucherOption" id="voucherOpt2" class="radio-input" />
+              <span class="custom-radio"></span>
+              <div class="voucher-info">
+                <span class="voucher-title">캐시백 상품권 5,000원</span>
+                <span class="voucher-desc">최소 3만원 이상 결제 시 사용 가능</span>
+              </div>
+            </label>
+
+            <!-- 보조금 상품권 20,000원 -->
+            <label class="voucher-select-item" for="voucherOpt3">
+              <input type="radio" name="voucherOption" id="voucherOpt3" class="radio-input" />
+              <span class="custom-radio"></span>
+              <div class="voucher-info">
+                <span class="voucher-title">보조금 상품권 20,000원</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 하단 확인 버튼 -->
+        <div class="bottom-sheet-footer">
+          <button type="button" class="btn-sheet-confirm">확인</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

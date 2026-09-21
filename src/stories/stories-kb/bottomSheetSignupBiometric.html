@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - 예금 토큰 전자지갑</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-complete-result-KBB">
+      <!-- 1. 상단 헤더 -->
+      <header class="common-header">
+        <button type="button" class="btn-go-main">국민지갑 메인</button>
+      </header>
+
+      <!-- 3. 중앙 완료 메시지 본문 -->
+      <main class="complete-main-content">
+        <!-- 완료 체크 그래픽 (웜그레이 원형 + 옐로우 체크) -->
+        <div class="complete-status-icon">
+          <i class="icon-check-yellow" aria-hidden="true"></i>
+        </div>
+
+        <!-- 결과 메시지 타이틀 -->
+        <h2 class="complete-result-title">
+          예금 토큰 전자지갑이<br />
+          만들어졌어요
+        </h2>
+      </main>
+
+      <!-- 4. 하단 고정 확인 버튼 영역 -->
+      <div class="fixed-bottom-btn-wrapper">
+        <button type="button" class="btn-confirm-bottom" id="btnLinkAccountNext">확인</button>
+      </div>
+
+      <!-- 5. [추가] 생체정보 추가 등록 바텀시트 (공통 bottom-sheet-overlay 규격 사용) -->
+      <div class="bottom-sheet-overlay active" id="bioRegisterSheet" role="dialog" aria-modal="true">
+        <div class="bottom-sheet-container bio-register-sheet">
+          <!-- 바텀시트 헤더 -->
+          <div class="bottom-sheet-header">
+            <h3 class="bottom-sheet-title">생체정보 추가 등록</h3>
+            <button type="button" class="btn-sheet-close" aria-label="닫기"></button>
+          </div>
+
+          <!-- 바텀시트 본문 (중앙 안내 텍스트) -->
+          <div class="bottom-sheet-content">
+            <div class="bio-guide-box">
+              <p class="guide-text">
+                등록하신 패턴 대신 <span class="val-highlight">Face ID</span>으로<br />
+                로그인할 수 있습니다
+              </p>
+              <p class="guide-question"><span class="val-highlight">Face ID</span>를 추가 등록하시겠습니까?</p>
+            </div>
+          </div>
+
+          <!-- 바텀시트 푸터 (공통 4:6 비율 취소/확인 버튼) -->
+          <div class="bottom-sheet-footer">
+            <button type="button" class="btn-sheet-cancel">취소</button>
+            <button type="button" class="btn-sheet-confirm">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
