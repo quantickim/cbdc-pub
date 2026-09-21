@@ -1,2 +1,0 @@
-import{L as m,$ as o}from"./index-BNHlVvwp.js";const u=["tokenId","trnscAmt","trnscTypeCd","trnscId","aliasNm","mpmType"],c=(t,r)=>u.includes(t)?r:r==="true"?!0:r==="false"?!1:!isNaN(Number(r))&&r!==""?Number(r):r,d=()=>{const t=m(),[r]=o();let s=t==null?void 0:t.state;return s||(s=Array.from(r.entries()).reduce((e,[n,a])=>(e[n]=c(n,a),e),{})),{routerState:s}};export{d as u};
-//# sourceMappingURL=use-get-router-state-C8uNG9K8.js.map

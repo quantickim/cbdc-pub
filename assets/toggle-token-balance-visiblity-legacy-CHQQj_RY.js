@@ -1,2 +1,0 @@
-System.register(["./index-legacy-BP4QUKdI.js","./toggle-switch-legacy-CfBzfhUa.js"],function(e,n){"use strict";var t,i,c,u;return{setters:[function(e){t=e.B,i=e.l,c=e.e},function(e){u=e.T}],execute:function(){e("T",function(){var e=t(function(e){return e.appConfigSlice.isHideBalance}),n=t(function(e){return e.appConfigSlice.setIsHideBalance}),o=i.useCallback(function(e){n(e)},[]);return c(u,{on:e,onToggle:o})})}}});
-//# sourceMappingURL=toggle-token-balance-visiblity-legacy-CHQQj_RY.js.map
