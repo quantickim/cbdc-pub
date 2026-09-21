@@ -4898,14 +4898,15 @@ th {
   padding: 0;
   margin: 0;
   text-align: center;
-  color: #26282c;
-  font-family: Roboto, sans-serif;
-  font-size: 30px;
+  color: var(--Input-Placeholder, #929292);
+  text-align: center;
+  /* Display/Display */
+  font-family: var(--Display-Font, "KBFG Text");
+  font-size: var(--Display-Size, 28px);
   font-style: normal;
-  font-weight: 500;
-  line-height: 35px;
-  letter-spacing: -0.2px;
-  -webkit-appearance: none;
+  font-weight: 700;
+  line-height: var(--Display-Line-Height, 39px); /* 139.286% */
+  letter-spacing: var(--Display-Tracking, -0.2px);
 }
 .convert-question-section .question-title-wrapper .question-input::placeholder {
   color: #929292;
