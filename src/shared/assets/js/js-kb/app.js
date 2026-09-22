@@ -681,14 +681,24 @@ function initRemitAmountInput() {
 
   const maxAmount = parseInt(maxAmountElem.dataset.max, 10);
   const availableWrapper = document.getElementById('availableAmountWrapper');
-  // 안심송금 안내 말풍선은 금액이 비었을 때만 노출한다
+  // 안심송금 안내 말풍선은 금액이 비었을 때만, 그리고 진입 후 10초 동안만 노출한다
   const safeRemitTooltip = document.getElementById('safeRemitTooltip');
+  const TOOLTIP_VISIBLE_MS = 10000;
+  let isTooltipDismissed = false;
   // .speech-bubble-tooltip 이 display:inline-flex 라서 hidden 속성으로는 가려지지 않는다
   const setTooltipVisible = (visible) => {
-    if (safeRemitTooltip) safeRemitTooltip.style.display = visible ? '' : 'none';
+    if (!safeRemitTooltip) return;
+    safeRemitTooltip.style.display = visible && !isTooltipDismissed ? '' : 'none';
   };
 
-  const updateInputState = (valStr) => {
+  if (safeRemitTooltip) {
+    window.setTimeout(() => {
+      isTooltipDismissed = true;
+      setTooltipVisible(false);
+    }, TOOLTIP_VISIBLE_MS);
+  }
+
+  const updateInputState = (valStr, fromUserInput) => {
     let rawValue = valStr.replace(/[^0-9]/g, '');
 
     if (rawValue === '' || parseInt(rawValue, 10) === 0) {
@@ -703,7 +713,8 @@ function initRemitAmountInput() {
       return;
     }
 
-    setTooltipVisible(false);
+    // 미리 채워진 금액으로 진입한 경우에는 말풍선을 남겨두고, 사용자가 직접 입력할 때만 감춘다
+    if (fromUserInput) setTooltipVisible(false);
 
     let numericValue = parseInt(rawValue, 10);
 
@@ -733,10 +744,10 @@ function initRemitAmountInput() {
   };
 
   // 빈 값으로 시작하는 경우에도 말풍선/버튼 초기 상태를 맞춘다
-  updateInputState(remitInput.value ?? '');
+  updateInputState(remitInput.value ?? '', false);
 
   remitInput.addEventListener('input', (e) => {
-    updateInputState(e.target.value);
+    updateInputState(e.target.value, true);
   });
 }
 
