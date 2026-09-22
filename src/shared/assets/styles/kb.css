@@ -8657,9 +8657,6 @@ i[class^=icon-alarm-]::before {
   letter-spacing: -0.32px;
   margin: 0 0 6px 0;
 }
-.page-merchant-KBB.page-merchant-list-mode .merchant-empty-section .empty-primary-text .keyword {
-  font-weight: 700;
-}
 .page-merchant-KBB.page-merchant-list-mode .merchant-empty-section .empty-sub-text {
   color: #696e76;
   text-align: center;
@@ -12309,5 +12306,4 @@ i[class^=icon-alarm-]::before {
   vertical-align: middle;
   background-size: contain;
 }
-
 /*# sourceMappingURL=kb.css.map */

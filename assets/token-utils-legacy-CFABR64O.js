@@ -1,2 +1,0 @@
-System.register(["./index-legacy-URGn_fwV.js"],function(n,t){"use strict";var r,e,u,i;return{setters:[function(n){r=n.U,e=n.a7,u=n.b,i=n.a3}],execute:function(){var t=function(n,t,r){var e;return n&&null!==(e=n.find(function(n){return n[t]===r}))&&void 0!==e?e:{}},c=n("a",function(n,r){return n?t(n,"id",r):{}});n("f",function(n,r){return n?t(n,"type",r):{}}),n("b",function(n){return i[n.type]}),n("g",function(n,t){var i=c(n,t);return(null==i?void 0:i.type)===r.DC2?i.bankCd===u.BANK_CODE?e.DC2_당행:e.DC2_타행:e.DC1})}}});
-//# sourceMappingURL=token-utils-legacy-CFABR64O.js.map
