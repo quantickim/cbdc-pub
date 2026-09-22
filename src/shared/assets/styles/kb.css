@@ -429,11 +429,13 @@ th {
   display: flex;
   align-items: center;
   border-bottom: 2px solid #b0986a;
+  height: 44px;
+  box-sizing: border-box;
 }
 .common-input-field .common-form-input {
   flex: 1;
   width: 100%;
-  padding: 8px 2px 6px 2px;
+  padding: 8px 2px 7px 2px;
   border: none;
   outline: none;
   background: transparent;
@@ -478,10 +480,11 @@ th {
   border-bottom: 2px solid #b0986a;
   box-sizing: border-box;
   width: 100%;
+  height: 44px;
 }
 .common-select-field .common-form-select {
   width: 100%;
-  padding: 8px 28px 6px 0;
+  padding: 8px 28px 7px 0;
   border: none;
   outline: none;
   background: transparent;
@@ -5440,7 +5443,7 @@ th {
   letter-spacing: -0.48px;
 }
 .page-remit-address-KBB .remit-address-main .common-input-field:not(.has-clear-btn) {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .page-remit-address-KBB .remit-address-main .common-input-field.has-clear-btn {
   display: flex;
@@ -5590,8 +5593,15 @@ th {
 .page-remit-address-KBB .remit-address-main .btn-recent-remit-banner:active {
   opacity: 0.85;
 }
-.page-remit-address-KBB .remit-address-main .bank-select-field {
-  margin-bottom: 12px;
+.page-remit-address-KBB .remit-address-main .bank-select-field .common-select-field .common-form-select.bank-select {
+  color: var(--text-kbui-0226282-c, #26282c);
+  /* Input/Input Placeholder */
+  font-family: "KBFG Text";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px; /* 142.105% */
+  letter-spacing: -0.38px;
 }
 .page-remit-address-KBB .remit-address-main .bank-select-field .btn-bank-select {
   width: 100%;
@@ -5624,6 +5634,7 @@ th {
   vertical-align: middle;
 }
 .page-remit-address-KBB .remit-address-main .quick-bank-scroll-container {
+  margin-top: 16px;
   width: calc(100% + 48px);
   margin-left: -24px;
   margin-right: -24px;
@@ -5880,6 +5891,7 @@ th {
   display: flex;
   align-items: center;
   gap: 4px;
+  margin-top: 8px;
 }
 .page-remit-address-KBB .remit-address-main .remit-error-message .icon-warning-red {
   display: inline-block;
@@ -6420,45 +6432,29 @@ th {
   font-family: "KBFG Text", sans-serif;
   font-weight: 400;
 }
-.page-remit-amount-KBB .remit-amount-main .remit-target-info .target-name {
-  color: #484b51;
-  font-family: "KBFG Text";
-  font-size: 16px;
+.page-remit-amount-KBB .remit-amount-main .remit-target-info .target-name,
+.page-remit-amount-KBB .remit-amount-main .remit-target-info .target-bank,
+.page-remit-amount-KBB .remit-amount-main .remit-target-info .target-suffix {
+  margin-left: 4px;
+  color: var(--Colors-KB_UI_03, #484b51);
+  /* Body/Body 2_Light */
+  font-family: var(--Text, "KBFG Text");
+  font-size: var(--Body-2_Light-Size, 16px);
   font-style: normal;
   font-weight: 300;
-  line-height: 23px;
-  letter-spacing: -0.2px;
-}
-.page-remit-amount-KBB .remit-amount-main .remit-target-info .target-bank {
-  margin-left: 4px;
-  color: #484b51;
-  font-family: "KBFG Text";
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: -0.2px;
+  line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
+  letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
 }
 .page-remit-amount-KBB .remit-amount-main .remit-target-info .target-account {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
   margin-left: 4px;
-  color: #484b51;
-  font-family: Roboto;
-  font-size: 17px;
+  color: var(--Colors-KB_UI_03, #484b51);
+  /* Number/Number 2_Light */
+  font-family: var(--Number-2_Light-Font, Roboto);
+  font-size: var(--Number-2_Light-Size, 17px);
   font-style: normal;
   font-weight: 400;
-  line-height: 23px;
-  letter-spacing: -0.2px;
-}
-.page-remit-amount-KBB .remit-amount-main .remit-target-info .target-suffix {
-  color: #484b51;
-  font-family: "KBFG Text";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 23px;
-  letter-spacing: -0.2px;
+  line-height: var(--Number-2_Light-Line-Height, 23px); /* 135.294% */
+  letter-spacing: var(--Number-2_Light-Tracking, -0.2px);
 }
 .page-remit-amount-KBB .remit-amount-main .available-amount-info {
   display: flex;
