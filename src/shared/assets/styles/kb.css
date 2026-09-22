@@ -1416,7 +1416,7 @@ th {
   font-weight: 500;
   line-height: 20px;
 }
-.common-quick-amount-group .btn-quick-amount .unit {
+.common-quick-amount-group .btn-quick-amount .quick-amount-unit {
   font-family: "KBFG Text", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -4789,7 +4789,7 @@ th {
 .page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-title {
   margin-bottom: 2px;
 }
-.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-title .label {
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-title .account-title-label {
   color: var(--text-kbui-03484-b-51, #484b51);
   /* Contents/Body 02_bold */
   font-family: "KBFG Text";
@@ -4799,7 +4799,7 @@ th {
   line-height: 23px; /* 143.75% */
   letter-spacing: -0.32px;
 }
-.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-title .val {
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-title .account-title-val {
   color: var(--text-kbui-03484-b-51, #484b51);
   /* Number/Body 02_medium */
   font-family: Roboto;
@@ -4809,7 +4809,7 @@ th {
   line-height: 23px; /* 135.294% */
   letter-spacing: -0.34px;
 }
-.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-title .unit {
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-title .account-title-unit {
   color: var(--text-kbui-03484-b-51, #484b51);
   /* Body/Body 2_Light */
   font-family: var(--Text, "KBFG Text");
@@ -4819,7 +4819,7 @@ th {
   line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
   letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
 }
-.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-target .label {
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-target .account-target-label {
   color: var(--Colors-KB_UI_03, #484b51);
   /* Body/Body 2_Light */
   font-family: var(--Text, "KBFG Text");
@@ -4829,7 +4829,7 @@ th {
   line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
   letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
 }
-.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-target .val {
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-target .account-target-val {
   color: var(--Colors-KB_UI_03, #484b51);
   /* Number/Number 2_Light */
   font-family: var(--Number-2_Light-Font, Roboto);
@@ -4839,7 +4839,7 @@ th {
   line-height: var(--Number-2_Light-Line-Height, 23px); /* 135.294% */
   letter-spacing: var(--Number-2_Light-Tracking, -0.2px);
 }
-.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-target .unit {
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-target .account-target-unit {
   color: var(--Colors-KB_UI_03, #484b51);
   /* Body/Body 2_Light */
   font-family: var(--Text, "KBFG Text");
@@ -4849,7 +4849,7 @@ th {
   line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
   letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
 }
-.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-balance .label {
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-balance .account-balance-label {
   color: var(--Colors-KB_UI_02, #26282c);
   /* Body/Body 4_Light */
   font-family: var(--Text, "KBFG Text");
@@ -4859,7 +4859,7 @@ th {
   line-height: var(--Body-4_Light-Line-Height, 20px); /* 142.857% */
   letter-spacing: var(--Body-4_Light-Tracking, -0.2px);
 }
-.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-balance .val {
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-balance .account-balance-val {
   color: var(--Colors-KB_UI_02, #26282c);
   /* Number/Number 3_Light */
   font-family: var(--Number-3_Light-Font, Roboto);
@@ -4869,7 +4869,7 @@ th {
   line-height: var(--Number-3_Light-Line-Height, 20px); /* 133.333% */
   letter-spacing: var(--Number-3_Light-Tracking, -0.2px);
 }
-.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-balance .unit {
+.page-convert-deposit-KBB .convert-deposit-main .account-info-section .account-balance .account-balance-unit {
   color: var(--Colors-KB_UI_02, #26282c);
   /* Body/Body 4_Light */
   font-family: var(--Text, "KBFG Text");
@@ -4917,7 +4917,7 @@ th {
   line-height: 39px;
   letter-spacing: -0.2px;
 }
-.convert-question-section .question-title-wrapper .unit {
+.convert-question-section .question-title-wrapper .question-title-unit {
   display: none;
   font-family: "KBFG Text", sans-serif;
   font-size: 28px;
@@ -4932,7 +4932,7 @@ th {
   text-align: right;
   width: 1ch;
 }
-.convert-question-section .question-title-wrapper.has-value .unit {
+.convert-question-section .question-title-wrapper.has-value .question-title-unit {
   display: inline-block;
 }
 .convert-question-section .available-amount-wrapper {
@@ -4956,8 +4956,8 @@ th {
   line-height: var(--Number-3_Light-Line-Height, 20px); /* 133.333% */
   letter-spacing: var(--Number-3_Light-Tracking, -0.2px);
 }
-.convert-question-section .available-amount-wrapper .label,
-.convert-question-section .available-amount-wrapper .unit {
+.convert-question-section .available-amount-wrapper .available-amount-label,
+.convert-question-section .available-amount-wrapper .available-amount-unit {
   color: var(--Colors-KB_UI_02, #26282c);
   text-align: center;
   /* Body/Body 4_Light */
@@ -4990,8 +4990,8 @@ th {
   margin: 2px;
 }
 .convert-question-section .available-amount-wrapper.is-insufficient .insufficient-tag,
-.convert-question-section .available-amount-wrapper.is-insufficient .label,
-.convert-question-section .available-amount-wrapper.is-insufficient .unit {
+.convert-question-section .available-amount-wrapper.is-insufficient .available-amount-label,
+.convert-question-section .available-amount-wrapper.is-insufficient .available-amount-unit {
   display: inline;
   color: var(--Colors-Point-Red, #f23f3f);
   /* Body/Caption 1 */
@@ -5114,8 +5114,8 @@ th {
   line-height: 38px;
   letter-spacing: -0.5px;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title .label,
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title .unit {
+.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title .convert-confirm-label,
+.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title .convert-confirm-unit {
   color: #26282c;
   text-align: center;
   font-family: "KBFG Text";
@@ -5135,7 +5135,7 @@ th {
   line-height: 33px;
   letter-spacing: -0.2px;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title .label {
+.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title .convert-confirm-label {
   color: #26282c;
   font-family: "KBFG Text";
   font-size: 24px;
@@ -5162,7 +5162,7 @@ th {
   justify-content: space-between;
   align-items: flex-start;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-info-section .convert-info-list .convert-info-item .label {
+.page-convert-confirm-KBB .convert-confirm-main .convert-info-section .convert-info-list .convert-info-item .convert-info-label {
   color: #696e76;
   font-family: "KBFG Text";
   font-size: 16px;
@@ -5232,7 +5232,7 @@ th {
   font-weight: 500;
   line-height: 35px;
 }
-.page-convert-complete-KBB .convert-complete-main .convert-visual-section .convert-complete-amount .unit {
+.page-convert-complete-KBB .convert-complete-main .convert-visual-section .convert-complete-amount .convert-complete-unit {
   color: #26282c;
   font-family: "KBFG Text";
   font-size: 24px;
@@ -5262,7 +5262,7 @@ th {
   justify-content: space-between;
   align-items: flex-start;
 }
-.page-convert-complete-KBB .convert-complete-main .convert-info-section .convert-info-list .convert-info-item .label {
+.page-convert-complete-KBB .convert-complete-main .convert-info-section .convert-info-list .convert-info-item .convert-info-label {
   color: #696e76;
   font-family: "KBFG Text";
   font-size: 16px;
@@ -5386,7 +5386,7 @@ th {
   font-weight: 700;
   line-height: 38px;
 }
-.page-convert-progress-KBB .convert-progress-main .convert-progress-title-section .convert-progress-amount .unit {
+.page-convert-progress-KBB .convert-progress-main .convert-progress-title-section .convert-progress-amount .convert-progress-unit {
   font-family: "KBFG Text", sans-serif;
   font-size: 28px;
   font-weight: 700;
@@ -6470,8 +6470,8 @@ th {
 .page-remit-amount-KBB .remit-amount-main .available-amount-info .error-tag {
   display: none;
 }
-.page-remit-amount-KBB .remit-amount-main .available-amount-info .label,
-.page-remit-amount-KBB .remit-amount-main .available-amount-info .unit {
+.page-remit-amount-KBB .remit-amount-main .available-amount-info .remit-available-label,
+.page-remit-amount-KBB .remit-amount-main .available-amount-info .remit-available-unit {
   font-family: "KBFG Text", sans-serif;
   font-weight: 300;
 }
@@ -6510,8 +6510,8 @@ th {
   line-height: 20px;
   letter-spacing: -0.2px;
 }
-.page-remit-amount-KBB .remit-amount-main .available-amount-info.is-over-limit .label,
-.page-remit-amount-KBB .remit-amount-main .available-amount-info.is-over-limit .unit {
+.page-remit-amount-KBB .remit-amount-main .available-amount-info.is-over-limit .remit-available-label,
+.page-remit-amount-KBB .remit-amount-main .available-amount-info.is-over-limit .remit-available-unit {
   color: #f23f3f;
   font-family: "KBFG Text";
   font-size: 14px;
@@ -7560,26 +7560,28 @@ th {
   letter-spacing: var(--Body-2_Bold-Tracking, -0.2px);
   margin-right: 8px;
 }
-.page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-date-title .val-number {
-  color: #696e76;
+.page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-date-title .val-date {
+  color: var(--Colors-KB_UI_04, #696e76);
   text-align: right;
-  font-family: Roboto;
-  font-size: 15px;
+  /* Number/Number 3_Light */
+  font-family: var(--Number-3_Light-Font, Roboto);
+  font-size: var(--Number-3_Light-Size, 15px);
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
-  letter-spacing: -0.2px;
+  line-height: var(--Number-3_Light-Line-Height, 20px); /* 133.333% */
+  letter-spacing: var(--Number-3_Light-Tracking, -0.2px);
   margin-right: 2px;
 }
 .page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-date-title .val-day {
-  color: #696e76;
+  color: var(--Colors-KB_UI_04, #696e76);
   text-align: right;
-  font-family: "KBFG Text";
-  font-size: 14px;
+  /* Body/Body 4_Light */
+  font-family: var(--Text, "KBFG Text");
+  font-size: var(--Body-4_Light-Size, 14px);
   font-style: normal;
   font-weight: 300;
-  line-height: 20px;
-  letter-spacing: -0.2px;
+  line-height: var(--Body-4_Light-Line-Height, 20px); /* 142.857% */
+  letter-spacing: var(--Body-4_Light-Tracking, -0.2px);
 }
 .page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-item-list {
   list-style: none;
@@ -7601,12 +7603,11 @@ th {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-item-list .alarm-item .alarm-item-top .alarm-type-wrapper {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 .page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-item-list .alarm-item .alarm-item-top .alarm-type-wrapper .alarm-item-title {
   color: #484b51;
@@ -7616,6 +7617,8 @@ th {
   font-weight: 700;
   line-height: 21px;
   letter-spacing: -0.2px;
+  margin-left: 10px;
+  margin-right: 8px;
 }
 .page-alarm-KBB .alarm-list-container .alarm-date-group .alarm-item-list .alarm-item .alarm-item-top .alarm-item-time {
   color: #838b94;
@@ -12306,4 +12309,5 @@ i[class^=icon-alarm-]::before {
   vertical-align: middle;
   background-size: contain;
 }
+
 /*# sourceMappingURL=kb.css.map */

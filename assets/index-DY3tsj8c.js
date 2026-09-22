@@ -1,0 +1,2 @@
+import{h as i,j as r,e as l,m as c}from"./index-Bh4842l0.js";import{i as m}from"./isEmpty-C-FK6YLu.js";const h=({desc:e})=>{var t,s;const{data:a}=i(),n=(t=a==null?void 0:a.tbCstmrMastr)==null?void 0:t.isWalletBlocked,o=!m((s=a==null?void 0:a.tbCstmrMastr)==null?void 0:s.ewaBizNo);return r(c,{children:[o&&l("span",{className:"main-wallet-badge-shop",children:"사업자"}),n&&l("span",{className:"main-wallet-status",children:e||"거래 제한"})]})};export{h as W};
+//# sourceMappingURL=index-DY3tsj8c.js.map

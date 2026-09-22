@@ -1,0 +1,2 @@
+System.register(["./index-legacy-URGn_fwV.js"],function(e,l){"use strict";var c,r,t;return{setters:[function(e){c=e.l,r=e.j,t=e.e}],execute:function(){e("T",c.memo(function(e){var l=e.label,c=e.desc,a=e.children;return r("div",{className:"toggle-area",children:[r("div",{className:"toggle-box",children:[t("p",{className:"toggle-label",children:l}),a]}),c&&t("p",{className:"toggle-info whitespace-pre-wrap",children:c})]})}))}}});
+//# sourceMappingURL=toggle-switch-section-legacy-CTHfrPxK.js.map
