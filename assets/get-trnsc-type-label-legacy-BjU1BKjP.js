@@ -1,2 +1,0 @@
-System.register(["./index-legacy-URGn_fwV.js"],function(t,e){"use strict";var r,n;return{setters:[function(t){r=t.H,n=t.i}],execute:function(){t("g",function(t){switch(t){case r.송금:return n.t("remittance");case r.결제:return n.t("payment");case r.충전:return n.t("topUp");case r.전환:return n.t("conv");case r.전환입금:return n.t("convertToToken");case r.예금전환:return n.t("convertToDeposit");default:return""}})}}});
-//# sourceMappingURL=get-trnsc-type-label-legacy-BjU1BKjP.js.map
