@@ -19,14 +19,14 @@
         <!-- 연계계좌 정보 -->
         <section class="account-info-section">
           <p class="account-title">
-            <span class="label">연계계좌</span>
-            <span class="val">(14019552327425)</span>
-            <span class="unit">에서</span>
+            <span class="account-title-label">연계계좌</span>
+            <span class="account-title-val">(14019552327425)</span>
+            <span class="account-title-unit">에서</span>
           </p>
           <p class="account-balance">
-            <span class="label">잔고 :</span>
-            <span class="val">1,000,000</span>
-            <span class="unit">원</span>
+            <span class="account-balance-label">잔고 :</span>
+            <span class="account-balance-val">1,000,000</span>
+            <span class="account-balance-unit">원</span>
           </p>
         </section>
 
@@ -42,7 +42,7 @@
               inputmode="numeric"
               autocomplete="off"
             />
-            <span class="unit" aria-hidden="true">원</span>
+            <span class="question-title-unit" aria-hidden="true">원</span>
           </div>
           <!-- <h2 class="question-title has-value" id="convertQuestionTitle">
  <span class="val">5,000,000</span>
@@ -53,9 +53,9 @@
           <div class="available-amount-wrapper is-insufficient" id="availableAmountWrapper">
             <i class="icon-warning-fill" aria-hidden="true"></i>
             <span class="insufficient-tag">[잔액부족]</span>
-            <span class="label">전환 가능 금액</span>
+            <span class="available-amount-label">전환 가능 금액</span>
             <span class="amount" id="maxAvailableAmount" data-max="1000000">1,000,000</span>
-            <span class="unit">원</span>
+            <span class="available-amount-unit">원</span>
           </div>
         </section>
       </main>
@@ -69,19 +69,19 @@
  <div class="bottom-sheet-content">
  <div class="common-quick-amount-group" id="convertQuickGroup">
  <button type="button" class="btn-quick-amount" data-add="1000000">
- <span class="num">100</span><span class="unit">만</span>
+ <span class="num">100</span><span class="quick-amount-unit">만</span>
  </button>
  <button type="button" class="btn-quick-amount" data-add="100000">
- <span class="num">10</span><span class="unit">만</span>
+ <span class="num">10</span><span class="quick-amount-unit">만</span>
  </button>
  <button type="button" class="btn-quick-amount" data-add="50000">
- <span class="num">5</span><span class="unit">만</span>
+ <span class="num">5</span><span class="quick-amount-unit">만</span>
  </button>
  <button type="button" class="btn-quick-amount" data-add="10000">
- <span class="num">1</span><span class="unit">만</span>
+ <span class="num">1</span><span class="quick-amount-unit">만</span>
  </button>
  <button type="button" class="btn-quick-amount" data-action="all">
- <span class="unit">전액</span>
+ <span class="quick-amount-unit">전액</span>
  </button>
  </div>
 
