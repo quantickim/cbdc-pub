@@ -1662,7 +1662,7 @@ th {
 .page-main-KBB {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100dvh;
   padding-bottom: 0 !important;
 }
 .page-main-KBB .main-content {
@@ -1672,7 +1672,6 @@ th {
 }
 .page-main-KBB .main-content section.main-wallet-container {
   display: flex;
-  min-height: 222px;
   padding: 20px 24px;
   width: stretch;
   background: linear-gradient(180deg, #fff 0%, #f1f3f5 100%);
@@ -1680,6 +1679,7 @@ th {
 .page-main-KBB .main-content section.main-wallet-container .main-wallet-card {
   width: -webkit-fill-available;
   padding: 16px 16px 4px 16px;
+  min-height: 222px;
   border: 1px solid #ebeef0;
   display: flex;
   justify-content: center;
@@ -1855,7 +1855,7 @@ th {
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
-  line-height: normal;
+  line-height: 25px;
   letter-spacing: -0.36px;
 }
 .page-main-KBB .main-content section.main-wallet-container .main-wallet-card-top .main-wallet-token-container .main-wallet-token-balance {
@@ -3583,8 +3583,8 @@ th {
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-viewfinder-wrapper .corner-bracket {
   position: absolute;
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   border-color: #ffd338;
   border-style: solid;
   z-index: 2;
@@ -3593,25 +3593,25 @@ th {
   top: -3px;
   left: -3px;
   border-width: 8px 0 0 8px;
-  border-top-left-radius: 10px;
+  border-top-left-radius: 16px;
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-viewfinder-wrapper .corner-bracket.top-right {
   top: -3px;
   right: -3px;
   border-width: 8px 8px 0 0;
-  border-top-right-radius: 10px;
+  border-top-right-radius: 16px;
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-viewfinder-wrapper .corner-bracket.bottom-left {
   bottom: -3px;
   left: -3px;
   border-width: 0 0 8px 8px;
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 16px;
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-viewfinder-wrapper .corner-bracket.bottom-right {
   bottom: -3px;
   right: -3px;
   border-width: 0 8px 8px 0;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 16px;
 }
 .page-qr-scan-KBB .qr-scan-main .qr-scan-bottom-actions {
   position: relative;
@@ -4898,15 +4898,13 @@ th {
   padding: 0;
   margin: 0;
   text-align: center;
-  color: var(--Input-Placeholder, #929292);
+  color: var(--text-kbui-0226282-c, #26282c);
   text-align: center;
-  /* Display/Display */
-  font-family: var(--Display-Font, "KBFG Text");
-  font-size: var(--Display-Size, 28px);
+  font-family: Roboto;
+  font-size: 30px;
   font-style: normal;
-  font-weight: 700;
-  line-height: var(--Display-Line-Height, 39px); /* 139.286% */
-  letter-spacing: var(--Display-Tracking, -0.2px);
+  font-weight: 500;
+  line-height: 35px; /* 116.667% */
 }
 .convert-question-section .question-title-wrapper .question-input::placeholder {
   color: #929292;
@@ -4925,7 +4923,7 @@ th {
   line-height: 39px;
   letter-spacing: -0.56px;
   color: #26282c;
-  margin-left: 2px;
+  margin-left: 4px;
 }
 .convert-question-section .question-title-wrapper.has-value .question-input {
   text-align: right;
@@ -5442,7 +5440,7 @@ th {
   letter-spacing: -0.48px;
 }
 .page-remit-address-KBB .remit-address-main .common-input-field:not(.has-clear-btn) {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .page-remit-address-KBB .remit-address-main .common-input-field.has-clear-btn {
   display: flex;
@@ -5543,15 +5541,13 @@ th {
 .page-remit-address-KBB .remit-address-main .btn-recent-remit-banner {
   width: 100%;
   display: flex;
-  width: 327px;
-  padding: 10px 20px;
+  padding: 10px 20px !important;
   align-items: center;
   border-radius: 10px;
   background: #484b51;
   border: none;
   box-sizing: border-box;
   cursor: pointer;
-  margin-bottom: 24px;
 }
 .page-remit-address-KBB .remit-address-main .btn-recent-remit-banner .banner-text {
   color: #ffffff;
@@ -5964,7 +5960,7 @@ th {
   flex: 1;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 8px 24px calc(24px + env(safe-area-inset-bottom)) 24px;
+  padding: 0 24px;
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid {
   list-style: none;
@@ -5982,7 +5978,7 @@ th {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: transparent;
   border: none;
   padding: 4px 0;
@@ -6249,12 +6245,14 @@ th {
   vertical-align: middle;
 }
 .bottom-sheet-container.bank-select-sheet-container .bank-sheet-content .bank-list-grid .btn-bank-select-item .bank-name {
-  color: #26282c;
-  font-family: "KBFG Text", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;
-  letter-spacing: -0.2px;
+  color: var(--text-kbui-0226282-c, #26282c);
+  /* Contents/Guide_bold */
+  font-family: "KBFG Text";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px; /* 140% */
+  letter-spacing: -0.3px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -6272,7 +6270,7 @@ th {
   padding-bottom: 0;
 }
 .bottom-sheet-container.recipient-verify-sheet-container .bottom-sheet-content {
-  padding: 24px 24px 0 24px;
+  padding: 0 24px;
 }
 .bottom-sheet-container.recipient-verify-sheet-container .bottom-sheet-content .recipient-contact-info {
   display: flex;
@@ -6315,6 +6313,9 @@ th {
   line-height: 23px;
   letter-spacing: -0.34px;
 }
+.bottom-sheet-container.recipient-verify-sheet-container .bottom-sheet-content .recipient-input-group {
+  padding: 24px 0 32px 0;
+}
 .bottom-sheet-container.recipient-verify-sheet-container .bottom-sheet-content .recipient-input-group .input-group-label {
   display: block;
   color: #696e76;
@@ -6324,7 +6325,7 @@ th {
   font-weight: 300;
   line-height: 23px;
   letter-spacing: -0.32px;
-  padding-top: 31px;
+  padding-top: 7px;
 }
 .bottom-sheet-container.recipient-verify-sheet-container .bottom-sheet-content .recipient-input-group .common-input-field.has-clear-btn {
   display: flex;
@@ -6649,7 +6650,7 @@ th {
   background-color: #ffffff;
 }
 .bottom-sheet-container.wallet-address-sheet-container .bottom-sheet-content {
-  padding: 24px 0 0 0;
+  padding: 0;
 }
 .bottom-sheet-container.wallet-address-sheet-container .bottom-sheet-content .keypad-amount-display-wrapper .keypad-amount-display {
   justify-content: flex-start;

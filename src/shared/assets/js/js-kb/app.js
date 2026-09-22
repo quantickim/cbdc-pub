@@ -681,6 +681,12 @@ function initRemitAmountInput() {
 
   const maxAmount = parseInt(maxAmountElem.dataset.max, 10);
   const availableWrapper = document.getElementById('availableAmountWrapper');
+  // 안심송금 안내 말풍선은 금액이 비었을 때만 노출한다
+  const safeRemitTooltip = document.getElementById('safeRemitTooltip');
+  // .speech-bubble-tooltip 이 display:inline-flex 라서 hidden 속성으로는 가려지지 않는다
+  const setTooltipVisible = (visible) => {
+    if (safeRemitTooltip) safeRemitTooltip.style.display = visible ? '' : 'none';
+  };
 
   const updateInputState = (valStr) => {
     let rawValue = valStr.replace(/[^0-9]/g, '');
@@ -690,11 +696,14 @@ function initRemitAmountInput() {
       remitInput.style.width = '100%';
       titleWrapper.classList.remove('has-value');
       if (availableWrapper) availableWrapper.classList.remove('is-insufficient');
+      setTooltipVisible(true);
 
       btnConfirm.disabled = true;
       btnConfirm.classList.add('disabled');
       return;
     }
+
+    setTooltipVisible(false);
 
     let numericValue = parseInt(rawValue, 10);
 
@@ -723,9 +732,8 @@ function initRemitAmountInput() {
     }
   };
 
-  if (remitInput.value) {
-    updateInputState(remitInput.value);
-  }
+  // 빈 값으로 시작하는 경우에도 말풍선/버튼 초기 상태를 맞춘다
+  updateInputState(remitInput.value ?? '');
 
   remitInput.addEventListener('input', (e) => {
     updateInputState(e.target.value);

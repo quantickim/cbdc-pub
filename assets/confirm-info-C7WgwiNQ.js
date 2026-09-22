@@ -1,0 +1,2 @@
+import{e as c,j as r}from"./index-hFR4Z9Y3.js";var e=(s=>(s[s.Confirm=0]="Confirm",s[s.Process=1]="Process",s[s.Complete=2]="Complete",s))(e||{});const i={0:"하시겠습니까?",1:"하고 있어요.",2:"하였습니다."},a=({amount:s,phase:n,transactionLabel:o,children:t})=>c("div",{className:"sub-desc exc-confirm",children:r("span",{children:[t,r("span",{className:"amount",children:[Number(s).toLocaleString(),"원"]}),r("span",{id:"textSttus",children:[o,i[n]]})]})});export{a as C,e as P};
+//# sourceMappingURL=confirm-info-C7WgwiNQ.js.map
