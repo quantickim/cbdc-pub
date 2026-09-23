@@ -1,0 +1,225 @@
+//메인 금액박스
+.wallet-asset-box button {
+  width: 100%;
+}
+.wallet-main-box .wallet-asset-list .wallet-asset-box {
+  width: 100%;
+}
+//인디케이터
+.sub-step {
+  gap: 0;
+}
+.sub-step span {
+  margin-right: 3px;
+}
+//qr결제
+.qr-pay-show .qr-img-area .pay-info-area {
+  gap: 0;
+}
+.qr-pay-show .qr-img-area .pay-info-area button {
+  margin-bottom: 10px;
+}
+.alert-list ul {
+  gap: 0px;
+  li {
+    margin-bottom: 10px;
+  }
+}
+.alert-list ul li .noti-box {
+  gap: 0px;
+  & > div {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+//사용처
+.shop-vouc-filter .toggle-area .toggle-box {
+  gap: 0;
+  .toggle-btn {
+    margin-right: 10px;
+  }
+}
+.shop-list .shop-list-inner ul {
+  gap: 0px;
+  li {
+    margin-bottom: 15px;
+  }
+}
+.shop-list .shop-list-inner ul li .shop-list-box {
+  gap: 0px;
+  h3 {
+    margin-bottom: 5px;
+  }
+  & span.shop-addr {
+    margin-bottom: 5px;
+  }
+}
+//사용처-바텀시트
+.filter-item {
+  gap: 0;
+  button {
+    margin-right: 10px;
+  }
+}
+.shop-list-filter-item {
+  gap: 0px;
+  button {
+    margin-right: 10px;
+  }
+}
+//.empty {
+//min-height: calc(100vh - 50%);
+//}
+.bottom-fixed {
+  min-height: calc(100vh - 56px);
+}
+//내바우처현황
+.vouc-area .vouc-list ul {
+  gap: 0;
+  li {
+    margin-bottom: 15px;
+  }
+}
+//키패드
+.keypad-pin {
+  padding: 0;
+}
+.qna-label {
+  gap: 0;
+  span {
+    margin-right: 5px;
+  }
+}
+.keypad-top {
+  padding-top: 0px;
+}
+
+//.ptr, .ptr__children {
+//justify-content: flex-start;
+//}
+
+.keypad-list.relative.w-full {
+  min-height: 55dvh !important;
+}
+//약관동의 하단
+.b-fixed {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.policy-list {
+  justify-content: flex-end;
+}
+
+.justify-content {
+  justify-content: space-between;
+}
+
+.ml10 {
+  margin-left: 10px !important;
+}
+
+//qr 스캔하기 ~스캔해 주세요. 문구
+.eJjppU,
+.ksuocC {
+  margin-top: 24px !important;
+}
+
+.bWQPsF {
+  line-height: 22px !important;
+  font-size: 16px !important;
+}
+
+//qr 스캔하기 상단 탭버튼
+.fQsFbg button:first-child {
+  margin-right: 4px;
+}
+
+.fQsFbg {
+  gap: 0 !important;
+}
+
+//간편 비밀번호 입력 height
+.max-h {
+  max-height: 92%;
+}
+
+//.keypad-wrap {
+//min-height:initial;
+//}
+
+.btn-bottom {
+  position: fixed;
+  bottom: 0;
+}
+
+// @at-root {
+//     .empty {
+//       #root {
+//         height: 100%;
+//       }
+//     }
+//   }
+
+//#root height:100 적용 페이지 (데이터 없을경우, 인트로, 에러페이지, 약관동의)
+body:has(.empty, .blank, .intro, .b-fixed) {
+  #root {
+    height: 100%;
+  }
+}
+
+:root:has(.empty, .blank, .intro, .b-fixed) {
+  height: 100%;
+}
+
+#root .blank {
+  height: calc(100vh - 56px);
+}
+
+#root .intro {
+  height: calc(100vh - 56px);
+}
+
+// .vouc-area {
+//     height: calc(100vh - 56px);
+// }
+
+.alert-list .empty {
+  height: calc(100vh - 203px);
+}
+
+//큰글씨일때 깨지는부분
+.exc-trans .exc-trans-box span {
+  width: 100%;
+}
+
+.app-info.pay .acnt-info p {
+  min-width: 100px;
+}
+
+.acnt-info {
+  flex-wrap: nowrap;
+}
+
+//.wallet-asset-info span {
+//white-space: normal;
+//text-align: right;
+//}
+
+.whs-normal {
+  white-space: normal;
+}
+
+.trans-info {
+  background-position: left center;
+}
+
+//야이폰 xs 2022에서 약관동의 안보이는 오류
+body:has(.b-fixed) {
+  .bg-white {
+    height: 100vh;
+  }
+}

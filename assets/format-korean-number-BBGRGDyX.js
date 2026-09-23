@@ -1,2 +1,0 @@
-import{i as t}from"./index-Bo6NAn3j.js";const s=e=>{const a=[t.t("koreanNumberUnits.empty"),t.t("koreanNumberUnits.man"),t.t("koreanNumberUnits.eok"),t.t("koreanNumberUnits.jo"),t.t("koreanNumberUnits.kyeong"),t.t("koreanNumberUnits.hae")];let r="",n=0;for(;e>0;){const o=e%1e4;o!=0&&(r="".concat(o.toLocaleString()).concat(a[n]).concat(r)),e=Math.floor(e/1e4),n++}return r};export{s as f};
-//# sourceMappingURL=format-korean-number-BBGRGDyX.js.map

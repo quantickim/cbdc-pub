@@ -1,2 +1,0 @@
-System.register(["./index-legacy-EDmueKn7.js"],function(e,t){"use strict";var n;return{setters:[function(e){n=e.i}],execute:function(){e("f",function(e){for(var t=[n.t("koreanNumberUnits.empty"),n.t("koreanNumberUnits.man"),n.t("koreanNumberUnits.eok"),n.t("koreanNumberUnits.jo"),n.t("koreanNumberUnits.kyeong"),n.t("koreanNumberUnits.hae")],r="",o=0;e>0;){var a=e%1e4;0!=a&&(r="".concat(a.toLocaleString()).concat(t[o]).concat(r)),e=Math.floor(e/1e4),o++}return r})}}});
-//# sourceMappingURL=format-korean-number-legacy-Bbdyq4nq.js.map
