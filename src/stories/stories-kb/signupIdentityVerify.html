@@ -10,6 +10,9 @@
   </head>
   <body class="KBB">
     <div class="page-verification-KBB">
+      <header class="common-header">
+        <button type="button" class="btn-go-main">메인으로</button>
+      </header>
       <main class="main-content">
         <!-- 메인 타이틀 섹션 -->
         <section class="verification-title-container">
@@ -24,8 +27,16 @@
           <!-- 1. 이름 입력 필드 (입력 가능형) -->
           <div class="form-group-item">
             <label class="form-field-label" for="userName">이름</label>
-            <div class="form-input-box">
-              <input type="text" id="userName" class="custom-form-input" placeholder="이름 입력" autocomplete="name" />
+            <div class="common-input-field">
+              <input
+                type="text"
+                id="userName"
+                class="common-form-input kbfg-text"
+                placeholder="이름 입력"
+                autocomplete="name"
+                value="김국민"
+                disabled
+              />
             </div>
           </div>
 
@@ -33,34 +44,27 @@
           <div class="form-group-item">
             <label class="form-field-label" for="userRrnFirst">주민등록번호</label>
             <div class="form-rrn-wrapper row-wrapper">
-              <div class="form-input-box rrn-box">
+              <div class="common-input-field">
                 <input
                   type="tel"
                   id="userRrnFirst"
-                  class="custom-form-input val-number"
+                  class="common-form-input"
                   placeholder="앞 6자리"
                   maxlength="6"
                   inputmode="numeric"
+                  value="9003151"
+                  size="7"
+                  disabled
                 />
-              </div>
-              <span class="rrn-dash">-</span>
-              <div class="form-input-box rrn-single-box">
-                <input
-                  type="tel"
-                  id="userRrnSecond"
-                  class="custom-form-input val-number"
-                  placeholder="●"
-                  maxlength="1"
-                  inputmode="numeric"
-                />
-              </div>
-              <div class="rrn-masking-dots" aria-hidden="true">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                <!-- 주민등록번호 뒤 6자리 마스킹 -->
+                <span class="rrn-masking-dots" aria-hidden="true">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </span>
               </div>
             </div>
           </div>
@@ -68,14 +72,15 @@
           <!-- 3. 핸드폰 번호 입력 필드 (언더라인형) -->
           <div class="form-group-item">
             <label class="form-field-label" for="userPhone">핸드폰 번호</label>
-            <div class="form-input-underline">
+            <div class="common-input-field">
               <input
                 type="tel"
                 id="userPhone"
-                class="custom-form-input val-number"
+                class="common-form-input"
                 placeholder="핸드폰 번호 입력"
                 maxlength="11"
                 inputmode="numeric"
+                value="01012345678"
               />
             </div>
           </div>

@@ -780,6 +780,35 @@ function initIdentityVerify() {
 }
 
 /**
+ * 계좌비밀번호 입력 제어
+ * - 입력 전에는 자리수 안내 점을 노출하고 하단 버튼을 비활성화한다
+ */
+function initAccountPasswordInput() {
+  const input = document.getElementById('accountPassword');
+  const field = document.getElementById('accountPasswordField');
+  const btnNext = document.getElementById('btnVerifyNext');
+  if (!input || !field) return;
+
+  const updateState = () => {
+    const hasValue = input.value.length > 0;
+
+    field.classList.toggle('has-value', hasValue);
+
+    if (btnNext) {
+      btnNext.disabled = !hasValue;
+      btnNext.classList.toggle('disabled', !hasValue);
+    }
+  };
+
+  input.addEventListener('input', function () {
+    this.value = this.value.replace(/[^0-9]/g, '');
+    updateState();
+  });
+
+  updateState();
+}
+
+/**
  * 공통 인라인 이벤트 위임 초기화
  * - data-href: 페이지 이동
  * - data-action="back": 뒤로가기
@@ -877,6 +906,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initRemitAddressInput();
   initRemitAmountInput();
   initIdentityVerify();
+  initAccountPasswordInput();
   initWalletDetailFilter();
   initSegmentTab();
 });
