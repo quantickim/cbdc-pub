@@ -5404,7 +5404,7 @@ th {
   letter-spacing: -0.48px;
 }
 .page-remit-address-KBB .remit-address-main .common-input-field:not(.has-clear-btn) {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .page-remit-address-KBB .remit-address-main .common-input-field.has-clear-btn {
   display: flex;
@@ -5595,7 +5595,7 @@ th {
   vertical-align: middle;
 }
 .page-remit-address-KBB .remit-address-main .quick-bank-scroll-container {
-  margin-top: 16px;
+  margin-top: 20px;
   width: calc(100% + 48px);
   margin-left: -24px;
   margin-right: -24px;
