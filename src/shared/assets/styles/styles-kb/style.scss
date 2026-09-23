@@ -4854,6 +4854,12 @@
 
     .keypad-amount-display-wrapper .keypad-amount-display {
       justify-content: flex-start;
+      .common-form-input {
+        font-family: Roboto;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+      }
     }
 
     .common-keypad-grid .btn-key.btn-key-empty {
