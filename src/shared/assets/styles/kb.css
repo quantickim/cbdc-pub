@@ -4,56 +4,56 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Roboto"), local("Roboto-Regular"), url("./fonts-kb/Roboto-Regular.woff2") format("woff2"), url("./fonts-kb/Roboto-Regular.woff") format("woff");
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/fonts-kb/Roboto-Regular.woff2") format("woff2"), url("../fonts/fonts-kb/Roboto-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local("Roboto Medium"), local("Roboto-Medium"), url("./fonts-kb/Roboto-Medium.woff2") format("woff2"), url("./fonts-kb/Roboto-Medium.woff") format("woff");
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/fonts-kb/Roboto-Medium.woff2") format("woff2"), url("../fonts/fonts-kb/Roboto-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Roboto Bold"), local("Roboto-Bold"), url("./fonts-kb/Roboto-Bold.woff2") format("woff2"), url("./fonts-kb/Roboto-Bold.woff") format("woff");
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/fonts-kb/Roboto-Bold.woff2") format("woff2"), url("../fonts/fonts-kb/Roboto-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "KBFG Text";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("./fonts-kb/KBFGTextL.woff2") format("woff2"), url("./fonts-kb/KBFGTextL.woff") format("woff");
+  src: url("../fonts/fonts-kb/KBFGTextL.woff2") format("woff2"), url("../fonts/fonts-kb/KBFGTextL.woff") format("woff");
 }
 @font-face {
   font-family: "KBFG Text";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("./fonts-kb/KBFGTextL.woff2") format("woff2"), url("./fonts-kb/KBFGTextL.woff") format("woff");
+  src: url("../fonts/fonts-kb/KBFGTextL.woff2") format("woff2"), url("../fonts/fonts-kb/KBFGTextL.woff") format("woff");
 }
 @font-face {
   font-family: "KBFG Text";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("./fonts-kb/KBFGTextM.woff2") format("woff2"), url("./fonts-kb/KBFGTextM.woff") format("woff");
+  src: url("../fonts/fonts-kb/KBFGTextM.woff2") format("woff2"), url("../fonts/fonts-kb/KBFGTextM.woff") format("woff");
 }
 @font-face {
   font-family: "KBFG Text";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("./fonts-kb/KBFGTextM.woff2") format("woff2"), url("./fonts-kb/KBFGTextM.woff") format("woff");
+  src: url("../fonts/fonts-kb/KBFGTextM.woff2") format("woff2"), url("../fonts/fonts-kb/KBFGTextM.woff") format("woff");
 }
 @font-face {
   font-family: "KBFG Text";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("./fonts-kb/KBFGTextB.woff2") format("woff2"), url("./fonts-kb/KBFGTextB.woff") format("woff");
+  src: url("../fonts/fonts-kb/KBFGTextB.woff2") format("woff2"), url("../fonts/fonts-kb/KBFGTextB.woff") format("woff");
 }
 html,
 body {
@@ -12244,4 +12244,5 @@ i[class^=icon-alarm-]::before {
   vertical-align: middle;
   background-size: contain;
 }
+
 /*# sourceMappingURL=kb.css.map */

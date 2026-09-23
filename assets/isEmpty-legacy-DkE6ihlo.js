@@ -1,2 +1,0 @@
-System.register(["./_getTag-legacy-SPRtSgiF.js"],function(t,e){"use strict";var r,n,i,u,c,f,o,s;return{setters:[function(t){r=t.i,n=t.a,i=t.b,u=t.c,c=t.d,f=t.g,o=t.e,s=t.f}],execute:function(){t("i",function(t){if(null==t)return!0;if(r(t)&&(n(t)||"string"==typeof t||"function"==typeof t.splice||i(t)||u(t)||c(t)))return!t.length;var l=f(t);if(l==e||l==a)return!t.size;if(o(t))return!s(t).length;for(var p in t)if(g.call(t,p))return!1;return!0});var e="[object Map]",a="[object Set]",g=Object.prototype.hasOwnProperty}}});
-//# sourceMappingURL=isEmpty-legacy-DkE6ihlo.js.map
