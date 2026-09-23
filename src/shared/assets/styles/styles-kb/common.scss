@@ -475,7 +475,7 @@ span + span {
 
   .common-form-select {
     width: 100%;
-    padding: 8px 28px 7px 0;
+    padding: 8px 28px 7px 2px;
     border: none;
     outline: none;
     background: transparent;
@@ -1220,7 +1220,7 @@ span + span {
     color: #0073fb;
   }
   &.badge-cashback {
-    background: #fdf3e7;
+    background: #fff4df;
     color: #f95a00;
   }
   &.badge-onramp {

@@ -494,7 +494,7 @@ th {
 }
 .common-select-field .common-form-select {
   width: 100%;
-  padding: 8px 28px 7px 0;
+  padding: 8px 28px 7px 2px;
   border: none;
   outline: none;
   background: transparent;
@@ -1189,7 +1189,7 @@ th {
   color: #0073fb;
 }
 .common-badge.badge-cashback {
-  background: #fdf3e7;
+  background: #fff4df;
   color: #f95a00;
 }
 .common-badge.badge-onramp {
@@ -4975,19 +4975,7 @@ th {
   letter-spacing: var(--Number-3_Light-Tracking, -0.2px);
 }
 
-.page-convert-confirm-KBB {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-.page-convert-confirm-KBB .convert-confirm-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 0 24px;
-}
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section {
+.convert-visual-section {
   padding-top: 16px;
   padding-bottom: 40px;
   display: flex;
@@ -4995,18 +4983,18 @@ th {
   align-items: center;
   text-align: center;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow {
+.convert-visual-section .convert-icon-flow {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-circle {
+.convert-visual-section .convert-icon-flow .icon-circle {
   display: inline-block;
   width: 48px;
   height: 48px;
   border-radius: 50%;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-circle.icon-kb {
+.convert-visual-section .convert-icon-flow .icon-circle.icon-kb {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -5016,7 +5004,7 @@ th {
   background-size: contain;
   vertical-align: middle;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-circle.icon-token {
+.convert-visual-section .convert-icon-flow .icon-circle.icon-token {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -5026,7 +5014,17 @@ th {
   background-size: contain;
   vertical-align: middle;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows {
+.convert-visual-section .convert-icon-flow .icon-circle.icon-nh {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/img-kb/logo_bank_NH.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+}
+.convert-visual-section .convert-icon-flow .icon-arrows {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -5034,7 +5032,7 @@ th {
   width: 40px;
   height: 32px;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows .arrow {
+.convert-visual-section .convert-icon-flow .icon-arrows .arrow {
   display: block;
   width: 0;
   height: 0;
@@ -5044,16 +5042,16 @@ th {
   opacity: 0.3;
   animation: arrowPulse 1.6s infinite ease-in-out;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-1 {
+.convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-1 {
   animation-delay: 0s;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-2 {
+.convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-2 {
   animation-delay: 0.3s;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-3 {
+.convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-3 {
   animation-delay: 0.6s;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-4 {
+.convert-visual-section .convert-icon-flow .icon-arrows .arrow.arrow-4 {
   animation-delay: 0.9s;
 }
 @keyframes arrowPulse {
@@ -5067,7 +5065,7 @@ th {
     opacity: 0.3;
   }
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title {
+.convert-visual-section .convert-confirm-title {
   color: #26282c;
   font-family: "KBFG Text", sans-serif;
   font-size: 26px;
@@ -5075,8 +5073,8 @@ th {
   line-height: 38px;
   letter-spacing: -0.5px;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title .convert-confirm-label,
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title .convert-confirm-unit {
+.convert-visual-section .convert-confirm-title .convert-confirm-label,
+.convert-visual-section .convert-confirm-title .convert-confirm-unit {
   color: #26282c;
   text-align: center;
   font-family: "KBFG Text";
@@ -5086,7 +5084,7 @@ th {
   line-height: 33px;
   letter-spacing: -0.2px;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title .amount {
+.convert-visual-section .convert-confirm-title .amount {
   font-family: Roboto;
   color: #26282c;
   text-align: center;
@@ -5096,7 +5094,7 @@ th {
   line-height: 33px;
   letter-spacing: -0.2px;
 }
-.page-convert-confirm-KBB .convert-confirm-main .convert-visual-section .convert-confirm-title .convert-confirm-label {
+.convert-visual-section .convert-confirm-title .convert-confirm-label {
   color: #26282c;
   font-family: "KBFG Text";
   font-size: 24px;
@@ -5104,6 +5102,19 @@ th {
   font-weight: 300;
   line-height: 33px;
   letter-spacing: -0.2px;
+}
+
+.page-convert-confirm-KBB {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.page-convert-confirm-KBB .convert-confirm-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
 }
 .page-convert-confirm-KBB .convert-confirm-main .convert-info-section {
   border-top: 1px solid #c6cbd0;
@@ -5499,7 +5510,7 @@ th {
 .page-remit-address-KBB .remit-address-main .remit-quick-actions .divider {
   display: inline-block;
   width: 1px;
-  height: 12px;
+  height: 16px;
   background-color: #dde1e4;
 }
 .page-remit-address-KBB .remit-address-main .btn-recent-remit-banner {
@@ -5954,7 +5965,6 @@ th {
   gap: 8px;
   background: transparent;
   border: none;
-  padding: 4px 0;
   cursor: pointer;
   text-align: left;
   outline: none;
@@ -7940,6 +7950,7 @@ i[class^=icon-alarm-]::before {
   flex-direction: column;
 }
 .page-cash-receipt-KBB .receipt-form-container .form-group-item .form-field-label {
+  margin-top: 7px;
   color: #696e76;
   font-family: "KBFG Text";
   font-size: 16px;
@@ -7947,13 +7958,12 @@ i[class^=icon-alarm-]::before {
   font-weight: 300;
   line-height: 23px;
   letter-spacing: -0.32px;
-  margin-bottom: 10px;
 }
 .page-cash-receipt-KBB .receipt-form-container .form-group-item .amount-input-box {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 6px 16px;
+  padding: 6px 2px;
   border-bottom: 2px solid #dde1e4;
   background: #f7f7f8;
   box-sizing: border-box;
@@ -7961,17 +7971,7 @@ i[class^=icon-alarm-]::before {
 .page-cash-receipt-KBB .receipt-form-container .form-group-item .amount-input-box .amount-val {
   flex: 1;
   text-align: right;
-  border: none;
-  color: #26282c;
-  text-align: right;
   background: #f7f7f8;
-  font-family: Roboto;
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 29px;
-  letter-spacing: -0.21px;
-  outline: none;
 }
 .page-cash-receipt-KBB .receipt-form-container .form-group-item .amount-input-box .amount-unit {
   color: #26282c;
@@ -7982,7 +7982,7 @@ i[class^=icon-alarm-]::before {
   font-weight: 700;
   line-height: 140%;
   letter-spacing: -0.19px;
-  margin-left: 4px;
+  margin-left: 2px;
 }
 .page-cash-receipt-KBB .receipt-form-container .form-group-item .amount-korean-text {
   text-align: right;
@@ -8095,9 +8095,6 @@ i[class^=icon-alarm-]::before {
   padding: 16px 24px 0 24px;
   box-sizing: border-box;
 }
-.page-remit-confirm-KBB .remit-target-summary-container {
-  margin-bottom: 54px;
-}
 .page-remit-confirm-KBB .remit-target-summary-container .target-name-title {
   color: #484b51;
   font-family: "KBFG Text";
@@ -8162,50 +8159,62 @@ i[class^=icon-alarm-]::before {
   text-decoration: underline;
   cursor: pointer;
 }
+.page-remit-confirm-KBB .convert-visual-section {
+  padding-top: 52px;
+  padding-bottom: 24px;
+}
 .page-remit-confirm-KBB .remit-amount-confirm-container {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 36px;
 }
 .page-remit-confirm-KBB .remit-amount-confirm-container .remit-amount-wrapper {
-  margin-bottom: 8px;
+  display: inline-flex;
 }
 .page-remit-confirm-KBB .remit-amount-confirm-container .remit-amount-wrapper .amount-val {
   color: #26282c;
   font-family: Roboto;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 35px;
-}
-.page-remit-confirm-KBB .remit-amount-confirm-container .remit-amount-wrapper .amount-unit {
-  color: #26282c;
-  font-family: "KBFG Text";
-  font-size: 28px;
+  font-size: var(--Title-1-Size, 24px);
   font-style: normal;
   font-weight: 700;
-  line-height: 39px;
-  letter-spacing: -0.2px;
+  line-height: var(--Title-1-Line-Height, 33px);
+  letter-spacing: var(--Title-1-Tracking, -0.2px);
+}
+.page-remit-confirm-KBB .remit-amount-confirm-container .remit-amount-wrapper .amount-unit {
+  color: var(--Colors-KB_UI_02, #26282c);
+  text-align: center;
+  /* Title/Title 1 */
+  font-family: var(--Title-1-Font, "KBFG Text");
+  font-size: var(--Title-1-Size, 24px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--Title-1-Line-Height, 33px); /* 137.5% */
+  letter-spacing: var(--Title-1-Tracking, -0.2px);
 }
 .page-remit-confirm-KBB .remit-amount-confirm-container .remit-confirm-question {
   color: #26282c;
   text-align: center;
-  font-family: "KBFG Text";
-  font-size: 14px;
+  color: var(--Colors-KB_UI_02, #26282c);
+  /* Title/Title 1 */
+  font-family: var(--Title-1-Font, "KBFG Text");
+  font-size: var(--Title-1-Size, 24px);
   font-style: normal;
   font-weight: 300;
-  line-height: 20px;
-  letter-spacing: -0.2px;
+  line-height: var(--Title-1-Line-Height, 33px);
+  letter-spacing: var(--Title-1-Tracking, -0.2px);
   margin: 0;
 }
 .page-remit-confirm-KBB .remit-amount-confirm-container .remit-confirm-question strong {
   color: #26282c;
   text-align: center;
-  font-family: "KBFG Text";
-  font-size: 14px;
+  color: var(--Colors-KB_UI_02, #26282c);
+  text-align: center;
+  /* Title/Title 1 */
+  font-family: var(--Title-1-Font, "KBFG Text");
+  font-size: var(--Title-1-Size, 24px);
   font-style: normal;
   font-weight: 700;
-  line-height: 20px;
-  letter-spacing: -0.14px;
+  line-height: var(--Title-1-Line-Height, 33px); /* 137.5% */
+  letter-spacing: var(--Title-1-Tracking, -0.2px);
 }
 .page-remit-confirm-KBB .remit-detail-container {
   border-top: 1px solid #c6cbd0;
@@ -8218,7 +8227,7 @@ i[class^=icon-alarm-]::before {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 .page-remit-confirm-KBB .remit-detail-container .remit-detail-list .remit-detail-item {
   display: flex;
@@ -8226,23 +8235,26 @@ i[class^=icon-alarm-]::before {
   align-items: flex-start;
 }
 .page-remit-confirm-KBB .remit-detail-container .remit-detail-list .remit-detail-item .detail-label {
-  color: #696e76;
-  font-family: "KBFG Text";
-  font-size: 14px;
+  color: var(--Colors-KB_UI_04, #696e76);
+  /* Body/Body 2_Light */
+  font-family: var(--Text, "KBFG Text");
+  font-size: var(--Body-2_Light-Size, 16px);
   font-style: normal;
   font-weight: 300;
-  line-height: 20px;
-  letter-spacing: -0.2px;
+  line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
+  letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
 }
 .page-remit-confirm-KBB .remit-detail-container .remit-detail-list .remit-detail-item .detail-value {
-  color: #26282c;
   text-align: right;
-  font-family: "KBFG Text";
-  font-size: 14px;
+  color: var(--Colors-KB_UI_02, #26282c);
+  text-align: right;
+  /* Body/Body 2_Light */
+  font-family: var(--Text, "KBFG Text");
+  font-size: var(--Body-2_Light-Size, 16px);
   font-style: normal;
   font-weight: 300;
-  line-height: 20px;
-  letter-spacing: -0.14px;
+  line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
+  letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
 }
 .page-remit-confirm-KBB .remit-detail-container .remit-detail-list .remit-detail-item .detail-value.text-right {
   display: flex;
@@ -10128,6 +10140,7 @@ i[class^=icon-alarm-]::before {
   padding: 0 24px calc(56px + env(safe-area-inset-bottom)) 24px;
 }
 .page-notice-empty-KBB .notice-empty-container {
+  margin-top: 16px;
   padding-top: 44px;
   display: flex;
   flex-direction: column;
@@ -10266,7 +10279,7 @@ i[class^=icon-alarm-]::before {
   border-bottom: 1px solid #ebeef0;
 }
 .page-auto-setting-KBB .auto-setting-list .setting-item:first-child {
-  padding-top: 16px;
+  padding-top: 34px;
 }
 .page-auto-setting-KBB .auto-setting-list .setting-item.is-link {
   cursor: pointer;
@@ -10652,6 +10665,7 @@ i[class^=icon-alarm-]::before {
 }
 .page-voucher-status-KBB .voucher-list-container .voucher-card.is-disabled {
   background: #ebeef0;
+  border: none;
   cursor: default;
 }
 .page-voucher-status-KBB .voucher-list-container .voucher-card.is-disabled:active {
@@ -10740,6 +10754,7 @@ i[class^=icon-alarm-]::before {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 32px) !important;
 }
 .page-voucher-detail-KBB .voucher-summary-container {
   padding: 20px 24px 36px 24px;
@@ -10909,7 +10924,7 @@ i[class^=icon-alarm-]::before {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 36px 24px calc(77px + env(safe-area-inset-bottom)) 24px;
+  padding: 36px 24px 0 24px;
 }
 .page-voucher-detail-KBB .voucher-history-container .history-section-title {
   padding-bottom: 16px;
@@ -10976,7 +10991,10 @@ i[class^=icon-alarm-]::before {
   text-align: center;
 }
 .page-voucher-detail-KBB .voucher-history-container .history-empty-wrapper .history-empty-text {
-  margin-top: 117px;
+  padding-top: 116px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #efeef0;
+  width: 100%;
   color: #26282c;
   text-align: center;
   font-family: "KBFG Text";
@@ -11011,7 +11029,7 @@ i[class^=icon-alarm-]::before {
 }
 
 .bottom-sheet-overlay.sheet-voucher-merchants .bottom-sheet-container .bottom-sheet-content {
-  padding: 24px 24px 0 24px;
+  padding: 0 24px;
 }
 .bottom-sheet-overlay.sheet-voucher-merchants .bottom-sheet-container .bottom-sheet-content .merchant-sheet-container {
   display: flex;
@@ -11042,7 +11060,7 @@ i[class^=icon-alarm-]::before {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   max-height: 58vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -11404,6 +11422,7 @@ i[class^=icon-alarm-]::before {
   flex-direction: column;
 }
 .page-inquiry-write-KBB .inquiry-form-section .form-group .form-label {
+  margin-top: 7px;
   color: #696e76;
   font-family: "KBFG Text";
   font-size: 16px;
@@ -11471,7 +11490,7 @@ i[class^=icon-alarm-]::before {
   height: 240px;
   padding: 16px;
   border: 1px solid #aab0b8;
-  border-radius: 4px;
+  border-radius: 0;
   box-sizing: border-box;
   background-color: #ffffff;
   display: flex;
@@ -11644,18 +11663,27 @@ i[class^=icon-alarm-]::before {
   margin-bottom: 16px;
 }
 .page-inquiry-detail-KBB .inquiry-answer-container .answer-header .answer-icon {
-  color: #484b51;
+  color: var(--text-kbui-03484-b-51, #484b51);
   font-family: "KBFG Text";
-  font-size: 24px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
-  line-height: 23px;
+  line-height: 23px; /* 104.545% */
   letter-spacing: -0.44px;
 }
 .page-inquiry-detail-KBB .inquiry-answer-container .answer-header .common-badge.badge-status-done {
   background-color: #287eff;
   color: #ffffff;
-  padding: 3px 12px;
+  padding: 0 12px;
+  height: 24px;
+  color: var(--text-kbui-11-ffffff, #fff);
+  /* Contents/Caption 02 */
+  font-family: "KBFG Text";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px; /* 138.462% */
+  letter-spacing: -0.13px;
 }
 .page-inquiry-detail-KBB .inquiry-answer-container .answer-body {
   display: flex;
@@ -12253,5 +12281,4 @@ i[class^=icon-alarm-]::before {
   vertical-align: middle;
   background-size: contain;
 }
-
 /*# sourceMappingURL=kb.css.map */

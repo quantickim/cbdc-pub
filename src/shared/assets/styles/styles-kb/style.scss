@@ -3446,6 +3446,127 @@
     }
   }
 }
+.convert-visual-section {
+  padding-top: 16px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .convert-icon-flow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .icon-circle {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+
+      &.icon-kb {
+        @include icon-style('logo_bank_KB.svg', 40px);
+      }
+
+      &.icon-token {
+        @include icon-style('icon_cbdc.png', 40px);
+      }
+      &.icon-nh {
+        @include icon-style('logo_bank_NH.svg', 40px);
+      }
+    }
+
+    .icon-arrows {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      width: 40px;
+      height: 32px;
+
+      .arrow {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 7px;
+        border-color: transparent transparent transparent #c6cbd0;
+        opacity: 0.3;
+        animation: arrowPulse 1.6s infinite ease-in-out;
+
+        &.arrow-1 {
+          animation-delay: 0s;
+        }
+        &.arrow-2 {
+          animation-delay: 0.3s;
+        }
+        &.arrow-3 {
+          animation-delay: 0.6s;
+        }
+        &.arrow-4 {
+          animation-delay: 0.9s;
+        }
+      }
+    }
+    @keyframes arrowPulse {
+      0%,
+      100% {
+        opacity: 0.3;
+      }
+      25% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .convert-confirm-title {
+    color: #26282c;
+    font-family: 'KBFG Text', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: -0.5px;
+    .convert-confirm-label,
+    .convert-confirm-unit {
+      color: #26282c;
+      text-align: center;
+
+      font-family: 'KBFG Text';
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 33px;
+      letter-spacing: -0.2px;
+    }
+
+    .amount {
+      font-family: Roboto;
+      color: #26282c;
+      text-align: center;
+
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 33px;
+      letter-spacing: -0.2px;
+    }
+    .convert-confirm-label {
+      color: #26282c;
+
+      font-family: 'KBFG Text';
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 33px;
+      letter-spacing: -0.2px;
+    }
+  }
+}
+
 // ============================================================
 // **** 전환 입금 확인 화면
 // ============================================================
@@ -3460,124 +3581,6 @@
     display: flex;
     flex-direction: column;
     padding: 0 24px;
-
-    .convert-visual-section {
-      padding-top: 16px;
-      padding-bottom: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-
-      .convert-icon-flow {
-        display: flex;
-        align-items: center;
-        margin-bottom: 24px;
-
-        .icon-circle {
-          display: inline-block;
-          width: 48px;
-          height: 48px;
-          border-radius: 50%;
-
-          &.icon-kb {
-            @include icon-style('logo_bank_KB.svg', 40px);
-          }
-
-          &.icon-token {
-            @include icon-style('icon_cbdc.png', 40px);
-          }
-        }
-
-        .icon-arrows {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0;
-          width: 40px;
-          height: 32px;
-
-          .arrow {
-            display: block;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 5px 0 5px 7px;
-            border-color: transparent transparent transparent #c6cbd0;
-            opacity: 0.3;
-            animation: arrowPulse 1.6s infinite ease-in-out;
-
-            &.arrow-1 {
-              animation-delay: 0s;
-            }
-            &.arrow-2 {
-              animation-delay: 0.3s;
-            }
-            &.arrow-3 {
-              animation-delay: 0.6s;
-            }
-            &.arrow-4 {
-              animation-delay: 0.9s;
-            }
-          }
-        }
-        @keyframes arrowPulse {
-          0%,
-          100% {
-            opacity: 0.3;
-          }
-          25% {
-            opacity: 1;
-          }
-          50% {
-            opacity: 0.3;
-          }
-        }
-      }
-
-      .convert-confirm-title {
-        color: #26282c;
-        font-family: 'KBFG Text', sans-serif;
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 38px;
-        letter-spacing: -0.5px;
-        .convert-confirm-label,
-        .convert-confirm-unit {
-          color: #26282c;
-          text-align: center;
-
-          font-family: 'KBFG Text';
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 33px;
-          letter-spacing: -0.2px;
-        }
-
-        .amount {
-          font-family: Roboto;
-          color: #26282c;
-          text-align: center;
-
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 33px;
-          letter-spacing: -0.2px;
-        }
-        .convert-confirm-label {
-          color: #26282c;
-
-          font-family: 'KBFG Text';
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 33px;
-          letter-spacing: -0.2px;
-        }
-      }
-    }
 
     .convert-info-section {
       border-top: 1px solid #c6cbd0;
@@ -4007,7 +4010,7 @@
       .divider {
         display: inline-block;
         width: 1px;
-        height: 12px;
+        height: 16px;
         background-color: #dde1e4;
       }
     }
@@ -4340,7 +4343,6 @@
         gap: 8px;
         background: transparent;
         border: none;
-        padding: 4px 0;
         cursor: pointer;
         text-align: left;
         outline: none;
@@ -6212,6 +6214,7 @@ i[class^='icon-alarm-'] {
       flex-direction: column;
 
       .form-field-label {
+        margin-top: 7px;
         color: #696e76;
 
         font-family: 'KBFG Text';
@@ -6220,14 +6223,13 @@ i[class^='icon-alarm-'] {
         font-weight: 300;
         line-height: 23px;
         letter-spacing: -0.32px;
-        margin-bottom: 10px;
       }
 
       .amount-input-box {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: 6px 16px;
+        padding: 6px 2px;
         border-bottom: 2px solid #dde1e4;
         background: #f7f7f8;
         box-sizing: border-box;
@@ -6235,18 +6237,7 @@ i[class^='icon-alarm-'] {
         .amount-val {
           flex: 1;
           text-align: right;
-          border: none;
-          color: #26282c;
-          text-align: right;
           background: #f7f7f8;
-
-          font-family: Roboto;
-          font-size: 21px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 29px;
-          letter-spacing: -0.21px;
-          outline: none;
         }
 
         .amount-unit {
@@ -6258,7 +6249,7 @@ i[class^='icon-alarm-'] {
           font-weight: 700;
           line-height: 140%;
           letter-spacing: -0.19px;
-          margin-left: 4px;
+          margin-left: 2px;
         }
       }
 
@@ -6394,8 +6385,6 @@ i[class^='icon-alarm-'] {
   }
 
   .remit-target-summary-container {
-    margin-bottom: 54px;
-
     .target-name-title {
       color: #484b51;
 
@@ -6468,33 +6457,38 @@ i[class^='icon-alarm-'] {
       }
     }
   }
-
+  .convert-visual-section {
+    padding-top: 52px;
+    padding-bottom: 24px;
+  }
   .remit-amount-confirm-container {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 36px;
 
     .remit-amount-wrapper {
-      margin-bottom: 8px;
-
+      display: inline-flex;
       .amount-val {
         color: #26282c;
 
         font-family: Roboto;
-        font-size: 30px;
+        font-size: var(--Title-1-Size, 24px);
         font-style: normal;
-        font-weight: 500;
-        line-height: 35px;
+        font-weight: 700;
+        line-height: var(--Title-1-Line-Height, 33px);
+        letter-spacing: var(--Title-1-Tracking, -0.2px);
       }
 
       .amount-unit {
-        color: #26282c;
+        color: var(--Colors-KB_UI_02, #26282c);
+        text-align: center;
 
-        font-family: 'KBFG Text';
-        font-size: 28px;
+        /* Title/Title 1 */
+        font-family: var(--Title-1-Font, 'KBFG Text');
+        font-size: var(--Title-1-Size, 24px);
         font-style: normal;
         font-weight: 700;
-        line-height: 39px;
-        letter-spacing: -0.2px;
+        line-height: var(--Title-1-Line-Height, 33px); /* 137.5% */
+        letter-spacing: var(--Title-1-Tracking, -0.2px);
       }
     }
 
@@ -6502,24 +6496,31 @@ i[class^='icon-alarm-'] {
       color: #26282c;
       text-align: center;
 
-      font-family: 'KBFG Text';
-      font-size: 14px;
+      color: var(--Colors-KB_UI_02, #26282c);
+
+      /* Title/Title 1 */
+      font-family: var(--Title-1-Font, 'KBFG Text');
+      font-size: var(--Title-1-Size, 24px);
       font-style: normal;
       font-weight: 300;
-      line-height: 20px;
-      letter-spacing: -0.2px;
+      line-height: var(--Title-1-Line-Height, 33px);
+      letter-spacing: var(--Title-1-Tracking, -0.2px);
       margin: 0;
 
       strong {
         color: #26282c;
         text-align: center;
 
-        font-family: 'KBFG Text';
-        font-size: 14px;
+        color: var(--Colors-KB_UI_02, #26282c);
+        text-align: center;
+
+        /* Title/Title 1 */
+        font-family: var(--Title-1-Font, 'KBFG Text');
+        font-size: var(--Title-1-Size, 24px);
         font-style: normal;
         font-weight: 700;
-        line-height: 20px;
-        letter-spacing: -0.14px;
+        line-height: var(--Title-1-Line-Height, 33px); /* 137.5% */
+        letter-spacing: var(--Title-1-Tracking, -0.2px);
       }
     }
   }
@@ -6535,7 +6536,7 @@ i[class^='icon-alarm-'] {
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 12px;
 
       .remit-detail-item {
         display: flex;
@@ -6543,26 +6544,29 @@ i[class^='icon-alarm-'] {
         align-items: flex-start;
 
         .detail-label {
-          color: #696e76;
+          color: var(--Colors-KB_UI_04, #696e76);
 
-          font-family: 'KBFG Text';
-          font-size: 14px;
+          /* Body/Body 2_Light */
+          font-family: var(--Text, 'KBFG Text');
+          font-size: var(--Body-2_Light-Size, 16px);
           font-style: normal;
           font-weight: 300;
-          line-height: 20px;
-          letter-spacing: -0.2px;
+          line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
+          letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
         }
 
         .detail-value {
-          color: #26282c;
+          text-align: right;
+          color: var(--Colors-KB_UI_02, #26282c);
           text-align: right;
 
-          font-family: 'KBFG Text';
-          font-size: 14px;
+          /* Body/Body 2_Light */
+          font-family: var(--Text, 'KBFG Text');
+          font-size: var(--Body-2_Light-Size, 16px);
           font-style: normal;
           font-weight: 300;
-          line-height: 20px;
-          letter-spacing: -0.14px;
+          line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
+          letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
 
           &.text-right {
             display: flex;
@@ -8567,6 +8571,7 @@ i[class^='icon-alarm-'] {
   }
 
   .notice-empty-container {
+    margin-top: 16px;
     padding-top: 44px;
     display: flex;
     flex-direction: column;
@@ -8723,9 +8728,8 @@ i[class^='icon-alarm-'] {
       padding: 18px 0;
       border-bottom: 1px solid #ebeef0;
       &:first-child {
-        padding-top: 16px;
+        padding-top: 34px;
       }
-
       &.is-link {
         cursor: pointer;
 
@@ -9141,6 +9145,7 @@ i[class^='icon-alarm-'] {
 
       &.is-disabled {
         background: #ebeef0;
+        border: none;
         cursor: default;
 
         &:active {
@@ -9246,6 +9251,7 @@ i[class^='icon-alarm-'] {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 32px) !important;
   }
 
   .voucher-summary-container {
@@ -9433,7 +9439,7 @@ i[class^='icon-alarm-'] {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 36px 24px calc(77px + env(safe-area-inset-bottom)) 24px;
+    padding: 36px 24px 0 24px;
 
     .history-section-title {
       padding-bottom: 16px;
@@ -9508,8 +9514,10 @@ i[class^='icon-alarm-'] {
       text-align: center;
 
       .history-empty-text {
-        margin-top: 117px;
-
+        padding-top: 116px;
+        padding-bottom: 100px;
+        border-bottom: 1px solid #efeef0;
+        width: 100%;
         color: #26282c;
         text-align: center;
 
@@ -9558,7 +9566,7 @@ i[class^='icon-alarm-'] {
 .bottom-sheet-overlay.sheet-voucher-merchants {
   .bottom-sheet-container {
     .bottom-sheet-content {
-      padding: 24px 24px 0 24px;
+      padding: 0 24px;
 
       .merchant-sheet-container {
         display: flex;
@@ -9593,7 +9601,7 @@ i[class^='icon-alarm-'] {
           padding: 0;
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 8px;
           max-height: 58vh;
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
@@ -10009,6 +10017,7 @@ i[class^='icon-alarm-'] {
       flex-direction: column;
 
       .form-label {
+        margin-top: 7px;
         color: #696e76;
 
         font-family: 'KBFG Text';
@@ -10080,7 +10089,7 @@ i[class^='icon-alarm-'] {
         height: 240px;
         padding: 16px;
         border: 1px solid #aab0b8;
-        border-radius: 4px;
+        border-radius: 0;
         box-sizing: border-box;
         background-color: #ffffff;
         display: flex;
@@ -10271,19 +10280,29 @@ i[class^='icon-alarm-'] {
       margin-bottom: 16px;
 
       .answer-icon {
-        color: #484b51;
+        color: var(--text-kbui-03484-b-51, #484b51);
         font-family: 'KBFG Text';
-        font-size: 24px;
+        font-size: 22px;
         font-style: normal;
         font-weight: 700;
-        line-height: 23px;
+        line-height: 23px; /* 104.545% */
         letter-spacing: -0.44px;
       }
 
       .common-badge.badge-status-done {
         background-color: #287eff;
         color: #ffffff;
-        padding: 3px 12px;
+        padding: 0 12px;
+        height: 24px;
+        color: var(--text-kbui-11-ffffff, #fff);
+
+        /* Contents/Caption 02 */
+        font-family: 'KBFG Text';
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 18px; /* 138.462% */
+        letter-spacing: -0.13px;
       }
     }
 
