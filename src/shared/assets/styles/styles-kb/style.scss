@@ -4854,12 +4854,6 @@
 
     .keypad-amount-display-wrapper .keypad-amount-display {
       justify-content: flex-start;
-      .common-form-input {
-        font-family: Roboto;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 500;
-      }
     }
 
     .common-keypad-grid .btn-key.btn-key-empty {
@@ -4922,15 +4916,15 @@
       height: 0;
       align-self: flex-start;
       &:checked + .icon-round-chk {
-        @include icon-style('icon_check_round_on_24.svg', 20px);
+        @include icon-style('icon_check_gold2_24.svg', 24px);
       }
     }
 
     .icon-round-chk {
       flex-shrink: 0;
       align-self: flex-start;
-      margin: 2px;
-      @include icon-style('icon_check_round_off_24.svg', 20px);
+      // margin: 2px;
+      @include icon-style('icon_check_24.svg', 24px);
     }
 
     &.check-v-type {
@@ -4940,6 +4934,11 @@
         height: 24px;
         flex-shrink: 0;
         @include icon-style('icon_check_24.svg', 24px);
+      }
+
+      // 체크되면 회색 V 에서 골드 V 로 바뀐다 (기본 규칙보다 뒤에 와야 덮이지 않음)
+      .custom-terms-check-input:checked + .icon-terms-chk-v {
+        @include icon-style('icon_check_gold2_24.svg', 24px);
       }
     }
   }

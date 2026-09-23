@@ -6612,12 +6612,6 @@ th {
 .bottom-sheet-container.wallet-address-sheet-container .bottom-sheet-content .keypad-amount-display-wrapper .keypad-amount-display {
   justify-content: flex-start;
 }
-.bottom-sheet-container.wallet-address-sheet-container .bottom-sheet-content .keypad-amount-display-wrapper .keypad-amount-display .common-form-input {
-  font-family: Roboto;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 500;
-}
 .bottom-sheet-container.wallet-address-sheet-container .bottom-sheet-content .common-keypad-grid .btn-key.btn-key-empty {
   pointer-events: none;
   cursor: default;
@@ -6667,9 +6661,9 @@ th {
 }
 .page-terms-agree-KBB .custom-terms-check-label .custom-terms-check-input:checked + .icon-round-chk {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url("../img/img-kb/icon_check_round_on_24.svg");
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/img-kb/icon_check_gold2_24.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -6678,11 +6672,10 @@ th {
 .page-terms-agree-KBB .custom-terms-check-label .icon-round-chk {
   flex-shrink: 0;
   align-self: flex-start;
-  margin: 2px;
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url("../img/img-kb/icon_check_round_off_24.svg");
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/img-kb/icon_check_24.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -6699,6 +6692,16 @@ th {
   width: 24px;
   height: 24px;
   background-image: url("../img/img-kb/icon_check_24.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+}
+.page-terms-agree-KBB .custom-terms-check-label.check-v-type .custom-terms-check-input:checked + .icon-terms-chk-v {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/img-kb/icon_check_gold2_24.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -12250,4 +12253,5 @@ i[class^=icon-alarm-]::before {
   vertical-align: middle;
   background-size: contain;
 }
+
 /*# sourceMappingURL=kb.css.map */
