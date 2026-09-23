@@ -6612,6 +6612,12 @@ th {
 .bottom-sheet-container.wallet-address-sheet-container .bottom-sheet-content .keypad-amount-display-wrapper .keypad-amount-display {
   justify-content: flex-start;
 }
+.bottom-sheet-container.wallet-address-sheet-container .bottom-sheet-content .keypad-amount-display-wrapper .keypad-amount-display .common-form-input {
+  font-family: Roboto;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+}
 .bottom-sheet-container.wallet-address-sheet-container .bottom-sheet-content .common-keypad-grid .btn-key.btn-key-empty {
   pointer-events: none;
   cursor: default;
@@ -12244,5 +12250,4 @@ i[class^=icon-alarm-]::before {
   vertical-align: middle;
   background-size: contain;
 }
-
 /*# sourceMappingURL=kb.css.map */
