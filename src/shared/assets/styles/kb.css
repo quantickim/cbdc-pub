@@ -432,6 +432,11 @@ th {
   height: 44px;
   box-sizing: border-box;
 }
+.common-input-field:has(.common-form-input.disabled), .common-input-field:has(.common-form-input:disabled) {
+  border-bottom: 2px solid #dde1e4;
+  background: #f7f7f8;
+  cursor: not-allowed;
+}
 .common-input-field .common-form-input {
   flex: 1;
   width: 100%;
@@ -445,11 +450,16 @@ th {
   font-style: normal;
   font-weight: 700;
   line-height: 27px;
-  letter-spacing: -0.38px;
+  letter-spacing: -0.19px;
 }
 .common-input-field .common-form-input::placeholder {
   color: #929292;
   font-family: "KBFG Text";
+}
+.common-input-field .common-form-input:-webkit-autofill, .common-input-field .common-form-input:-webkit-autofill:hover, .common-input-field .common-form-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  -webkit-text-fill-color: #26282c;
+  caret-color: #26282c;
 }
 .common-input-field .btn-input-clear {
   display: inline-flex;
@@ -3390,63 +3400,14 @@ th {
 .page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item {
   flex: 1;
 }
+.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item.flex-1 {
+  flex: 1.2;
+}
 .page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item.flex-2 {
+  flex: 1;
+}
+.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item.flex-3 {
   flex: 1.5;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item .input-underline {
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #b0986a;
-  padding: 8px 0 8px 2px;
-  outline: none;
-  border-radius: 0;
-  background-color: transparent;
-  color: #26282c;
-  font-family: Roboto, sans-serif;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
-  letter-spacing: -0.38px;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item .input-underline::placeholder {
-  color: #929292;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item .input-underline:focus {
-  border-bottom-color: #26282c;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item .input-underline-date {
-  font-family: Roboto, sans-serif;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item .input-underline-date::placeholder {
-  font-family: "KBFG Text";
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .input-item {
-  width: 100%;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .input-item .input-underline {
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #b0986a;
-  padding: 8px 0 10px 2px;
-  color: #26282c;
-  font-family: "KBFG Text";
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 24px;
-  outline: none;
-  border-radius: 0;
-  background-color: transparent;
-  box-sizing: border-box;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .input-item .input-underline.input-underline-date {
-  font-family: Roboto, sans-serif;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .input-item .input-underline::placeholder {
-  color: #838b94;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .input-item .input-underline:focus {
-  border-bottom-color: #26282c;
 }
 
 .page-business-complete-KBB {
@@ -5243,7 +5204,7 @@ th {
   margin-left: 4px;
 }
 .page-convert-complete-KBB .convert-complete-main .convert-info-section {
-  border-top: 1px solid #ebeef0;
+  border-top: 1px solid #c6cbd0;
   padding-top: 16px;
 }
 .page-convert-complete-KBB .convert-complete-main .convert-info-section .convert-info-list {
@@ -7159,42 +7120,20 @@ th {
   align-items: center;
   gap: 8px;
 }
-.page-verification-KBB .verification-form-container .form-group-item .form-rrn-wrapper .rrn-box {
-  width: 154px;
-  flex-shrink: 0;
-}
-.page-verification-KBB .verification-form-container .form-group-item .form-rrn-wrapper .rrn-single-box {
-  width: 44px;
-  flex-shrink: 0;
-  justify-content: center;
-  padding: 0;
-}
-.page-verification-KBB .verification-form-container .form-group-item .form-rrn-wrapper .rrn-single-box .custom-form-input {
-  text-align: center;
-}
-.page-verification-KBB .verification-form-container .form-group-item .form-rrn-wrapper .rrn-dash {
-  color: #696e76;
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-}
-.page-verification-KBB .verification-form-container .form-group-item .form-rrn-wrapper .custom-form-input.val-number {
-  font-family: Roboto, sans-serif;
-  font-size: 19px;
-  font-style: normal;
-  line-height: 26px;
-  letter-spacing: -0.19px;
+.page-verification-KBB .verification-form-container .form-group-item .form-rrn-wrapper .common-input-field .common-form-input {
+  flex: 0 1 auto;
+  width: auto;
 }
 .page-verification-KBB .verification-form-container .form-group-item .form-rrn-wrapper .rrn-masking-dots {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding-left: 4px;
+  flex-shrink: 0;
 }
 .page-verification-KBB .verification-form-container .form-group-item .form-rrn-wrapper .rrn-masking-dots .dot {
-  width: 7px;
-  height: 7px;
-  background-color: #b5bcc3;
+  width: 8px;
+  height: 8px;
+  background-color: #c6cbd0;
   border-radius: 50%;
 }
 .page-verification-KBB .verification-form-container .form-group-item .form-input-underline {
@@ -7221,6 +7160,25 @@ th {
   color: #aab0b8;
   font-size: 18px;
   font-weight: 400;
+}
+.page-verification-KBB .verification-form-container .form-group-item .common-input-field .password-placeholder-dots {
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+.page-verification-KBB .verification-form-container .form-group-item .common-input-field .password-placeholder-dots .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #c6cbd0;
+  border-radius: 50%;
+}
+.page-verification-KBB .verification-form-container .form-group-item .common-input-field.has-value .password-placeholder-dots {
+  display: none;
 }
 
 .page-password-KBB {
@@ -7408,7 +7366,6 @@ th {
 }
 .page-alarm-KBB .alarm-banner-container.on-bg .alarm-banner-wrapper .alarm-banner-desc {
   position: relative;
-  padding-left: 10px;
   align-self: flex-start;
   color: var(--Text-KB_UI_03, #484b51);
   font-family: "KBFG Text";
@@ -7417,16 +7374,6 @@ th {
   font-weight: 300;
   line-height: 21px; /* 140% */
   letter-spacing: -0.3px;
-}
-.page-alarm-KBB .alarm-banner-container.on-bg .alarm-banner-wrapper .alarm-banner-desc::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background-color: #696e76;
 }
 .page-alarm-KBB .alarm-banner-container.on-bg .alarm-banner-wrapper .btn-alarm-setting-link {
   display: inline-flex;
@@ -8310,7 +8257,7 @@ i[class^=icon-alarm-]::before {
   box-sizing: border-box;
 }
 .page-merchant-KBB .merchant-search-section {
-  padding: 16px 0 16px 24px;
+  padding: 16px 0 20px 24px;
 }
 .page-merchant-KBB .merchant-search-section .merchant-search-field {
   border-bottom: 2px solid #26282c;
@@ -8919,8 +8866,9 @@ i[class^=icon-alarm-]::before {
   /* 꼬리표: 1px 보더(#696e76) 및 흰색 배경 완벽 동기화 */
 }
 .page-merchant-KBB.page-merchant-map-mode .merchant-map-container .map-bubble-marker .bubble-pin-tail {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
+  border-bottom-right-radius: 3px;
   background-color: #ffffff;
   border-right: 1px solid #696e76;
   border-bottom: 1px solid #696e76;
@@ -8964,16 +8912,6 @@ i[class^=icon-alarm-]::before {
   width: 24px;
   height: 24px;
   background-image: url("../img/img-kb/icon_target_location_20.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  vertical-align: middle;
-}
-.page-merchant-KBB.page-merchant-map-mode .merchant-map-container .map-floating-controls-left .btn-map-circle-action .icon-info-circle-outline {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url("../img/img-kb/icon_input_caption_border.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -9099,7 +9037,7 @@ i[class^=icon-alarm-]::before {
 .bottom-sheet-overlay.sheet-map-merchant .bottom-sheet-content {
   flex: 1;
   overflow-y: auto;
-  padding: 8px 24px 32px 24px;
+  padding: 0 24px 32px 24px;
   -webkit-overflow-scrolling: touch;
 }
 .bottom-sheet-overlay.sheet-map-merchant .bottom-sheet-content .merchant-mini-map {

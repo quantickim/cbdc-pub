@@ -1,0 +1,2 @@
+import{z as s,q as a,r,a as n,A as u,aR as o,U as c}from"./index-Bo6NAn3j.js";const i=({amt:e,bankCd:t})=>[{id:"0",type:c.DC1,amt:e!=null?e:0,bankCd:t!=null?t:""}],l=e=>({...e,isWalletBlocked:e.useYn===o.블랙리스트,tokenList:i({amt:e.acnutnoBlce,bankCd:e.bankCd})}),y=async()=>(await r(n.get(u.cstmrWalletList))).map(l),m=()=>s({queryKey:a.cstr.cstmrWalletList.queryKey,queryFn:()=>y()});export{m as u};
+//# sourceMappingURL=use-get-cstmr-wallet-list-query-C54wBc1b.js.map

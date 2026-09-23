@@ -9,10 +9,12 @@
   </head>
   <body class="KBB">
     <div class="page-business-register-KBB has-fixed-bottom">
+      <!-- 상단 공통 헤더 -->
+      <header class="common-header">
+        <button type="button" class="btn-go-main">메인으로</button>
+      </header>
+
       <main class="business-register-main">
-        <header class="common-header">
-          <button type="button" class="btn-go-main">메인으로</button>
-        </header>
         <!-- 타이틀 & 안내 문구 -->
         <section class="business-register-title-container">
           <h2 class="page-title">사업자 정보 등록</h2>
@@ -27,37 +29,37 @@
           <div class="form-item">
             <label class="form-label" for="bizNum1">사업자등록번호</label>
             <div class="business-number-inputs">
-              <div class="input-item">
+              <div class="input-item common-input-field flex-1">
                 <input
-                  type="number"
+                  type="text"
                   inputmode="numeric"
                   id="bizNum1"
-                  class="input-underline"
+                  class="common-form-input"
                   placeholder="3자리"
                   maxlength="3"
-                  oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);"
+                  value="111"
                 />
               </div>
-              <div class="input-item">
+              <div class="input-item common-input-field flex-2">
                 <input
-                  type="number"
+                  type="text"
                   inputmode="numeric"
                   id="bizNum2"
-                  class="input-underline"
+                  class="common-form-input"
                   placeholder="2자리"
                   maxlength="2"
-                  oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);"
+                  value="222"
                 />
               </div>
-              <div class="input-item flex-2">
+              <div class="input-item common-input-field flex-3">
                 <input
-                  type="number"
+                  type="text"
                   inputmode="numeric"
                   id="bizNum3"
-                  class="input-underline"
+                  class="common-form-input"
                   placeholder="5자리"
                   maxlength="5"
-                  oninput="if(this.value.length > 5) this.value = this.value.slice(0, 5);"
+                  value="34567"
                 />
               </div>
             </div>
