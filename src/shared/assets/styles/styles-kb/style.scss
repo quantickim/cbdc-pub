@@ -3324,11 +3324,13 @@
       text-align: center;
       color: var(--text-kbui-0226282-c, #26282c);
       text-align: center;
-      font-family: Roboto;
-      font-size: 30px;
+      /* Display/Display */
+      font-family: var(--Display-Font, 'KBFG Text');
+      font-size: var(--Display-Size, 28px);
       font-style: normal;
-      font-weight: 500;
-      line-height: 35px; /* 116.667% */
+      font-weight: 700;
+      line-height: var(--Display-Line-Height, 39px); /* 139.286% */
+      letter-spacing: var(--Display-Tracking, -0.2px);
       &::placeholder {
         color: #929292;
         font-family: 'KBFG Text';
@@ -4600,7 +4602,7 @@
     width: 100%;
     box-sizing: border-box;
     .convert-question-section {
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
 
     .remit-target-info {

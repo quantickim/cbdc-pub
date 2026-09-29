@@ -4864,11 +4864,13 @@ th {
   text-align: center;
   color: var(--text-kbui-0226282-c, #26282c);
   text-align: center;
-  font-family: Roboto;
-  font-size: 30px;
+  /* Display/Display */
+  font-family: var(--Display-Font, "KBFG Text");
+  font-size: var(--Display-Size, 28px);
   font-style: normal;
-  font-weight: 500;
-  line-height: 35px; /* 116.667% */
+  font-weight: 700;
+  line-height: var(--Display-Line-Height, 39px); /* 139.286% */
+  letter-spacing: var(--Display-Tracking, -0.2px);
 }
 .convert-question-section .question-title-wrapper .question-input::placeholder {
   color: #929292;
@@ -6386,7 +6388,7 @@ th {
   box-sizing: border-box;
 }
 .page-remit-amount-KBB .remit-amount-main .convert-question-section {
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 }
 .page-remit-amount-KBB .remit-amount-main .remit-target-info {
   display: flex;
@@ -12281,4 +12283,5 @@ i[class^=icon-alarm-]::before {
   vertical-align: middle;
   background-size: contain;
 }
+
 /*# sourceMappingURL=kb.css.map */
