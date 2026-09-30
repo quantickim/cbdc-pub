@@ -136,6 +136,8 @@ function createCommonKeypad(config) {
 
 /**
  * 공통 탭 네비게이션 초기화
+ * - 탭(.tab-item)에 data-filter 가 있으면 같은 화면의 [data-category] 항목을 걸러 보여준다.
+ *   data-filter="all" 은 전체, 그 외에는 data-category 가 같은 항목만 보인다. (예: faq_list.html)
  */
 function initCommonTabNav() {
   var tabNav = document.querySelector('.common-tab-nav');
@@ -148,6 +150,13 @@ function initCommonTabNav() {
         el.classList.remove('is-active');
       });
       item.classList.add('is-active');
+
+      var filter = item.getAttribute('data-filter');
+      if (filter === null) return;
+      document.querySelectorAll('[data-category]').forEach(function (el) {
+        var isMatched = filter === 'all' || el.getAttribute('data-category') === filter;
+        el.style.display = isMatched ? '' : 'none';
+      });
     });
   });
 }

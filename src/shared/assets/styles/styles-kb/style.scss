@@ -7751,93 +7751,6 @@ i[class^='icon-alarm-'] {
   flex-direction: column;
   box-sizing: border-box;
 
-  .common-nav-header {
-    height: 56px;
-    padding: 0 16px;
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    .btn-nav-back {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: transparent;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-
-      .icon-arrow-back-24 {
-        @include icon-style('icon_arrow_back_24.svg', 24px);
-      }
-    }
-
-    .nav-title {
-      color: #26282c;
-      font-family: 'KBFG Text', sans-serif;
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 26px;
-      letter-spacing: -0.3px;
-      margin: 0 0 0 4px;
-    }
-
-    .nav-right-actions {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-
-      button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        background: transparent;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-
-        .icon-nav-home-24 {
-          @include icon-style('icon_home_24.svg', 24px);
-        }
-
-        .icon-nav-menu-24 {
-          @include icon-style('icon_menu_24.svg', 24px);
-        }
-      }
-    }
-  }
-
-  .complete-top-action-bar {
-    display: flex;
-    justify-content: flex-end;
-    padding: 4px 20px 0 20px;
-
-    .btn-wallet-main {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid #dde1e4;
-      background-color: #ffffff;
-      color: #484b51;
-      font-family: 'KBFG Text', sans-serif;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 20px;
-      letter-spacing: -0.14px;
-      cursor: pointer;
-
-      &:active {
-        background-color: #f7f8f9;
-      }
-    }
-  }
   .complete-main-content {
     flex: 1;
     display: flex;
@@ -7849,41 +7762,14 @@ i[class^='icon-alarm-'] {
 
     .complete-result-title {
       margin: 0;
-
       color: #26282c;
       text-align: center;
-
       font-family: 'KBFG Text';
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
       line-height: 33px;
       letter-spacing: -0.48px;
-    }
-  }
-
-  .complete-bottom-footer {
-    padding: 0;
-
-    .btn-confirm-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 56px;
-      background-color: #ffd338;
-      color: #26282c;
-      font-family: 'KBFG Text', sans-serif;
-      font-size: 17px;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      padding-bottom: env(safe-area-inset-bottom);
-      box-sizing: content-box;
-
-      &:active {
-        filter: brightness(0.96);
-      }
     }
   }
 }
@@ -8252,9 +8138,37 @@ i[class^='icon-alarm-'] {
     }
   }
 }
+// 앱에서는 .KBB 안의 div 에 .page-settings-KBB 가 붙어서 common.scss 의 공통 규칙
+// ([class^='page-'][class*='-KBB'] : 페이지 아래 여백 40px, 마지막 요소 아래 여백 0)에 걸린다.
+// 퍼블리싱(setting_all.html 은 body 에 클래스가 있어 이 규칙에 걸리지 않음)과 같게 보이도록 되돌린다.
+.KBB .page-settings-KBB[class^='page-'][class*='-KBB'] {
+  padding-bottom: 0;
+
+  > main > .page-list-container:last-child {
+    padding-bottom: 35px;
+  }
+
+  > .footer-bottom-page:last-child {
+    padding-bottom: calc(77px + env(safe-area-inset-bottom));
+  }
+}
 // ============================================================
 // **** 인증/보안 페이지 (.page-auth-security-KBB)
 // ============================================================
+// 앱에서는 .KBB 안의 div 에 .page-auth-security-KBB 가 붙어서 common.scss 의 공통 규칙
+// ([class^='page-'][class*='-KBB'] : 페이지 아래 여백 40px, 마지막 요소 아래 여백 0)에 걸린다.
+// 퍼블리싱(auth_security.html 은 body 에 클래스가 있어 이 규칙에 걸리지 않음)과 같게 보이도록 되돌린다.
+.KBB .page-auth-security-KBB[class^='page-'][class*='-KBB'] {
+  padding-bottom: 0;
+
+  > main > .security-list-container:last-child {
+    padding-bottom: 40px;
+
+    > .security-item:last-child {
+      padding-bottom: 18px;
+    }
+  }
+}
 
 .page-auth-security-KBB {
   min-height: 100vh;
@@ -8553,6 +8467,22 @@ i[class^='icon-alarm-'] {
       width: 100%;
     }
   }
+}
+// 앱에서는 SubLayout 의 헤더 아래 <main> 안에 .page-notice-list-KBB div 가 들어가고, 퍼블리싱의 <main> 은 두지 않는다.
+// - min-height: 100vh 를 그대로 두면 헤더 높이만큼 늘 스크롤이 생기므로 풀어 준다.
+// - 퍼블리싱에서 main 이 갖던 여백을 페이지 div 에 준다 (common.scss 의 공통 아래 여백 40px 을 대신한다).
+.KBB .page-notice-list-KBB[class^='page-'][class*='-KBB'] {
+  min-height: auto;
+  padding: 0 24px calc(24px + env(safe-area-inset-bottom)) 24px;
+}
+
+// 앱에서는 SubLayout 의 헤더(.common-header, 높이 55px) 아래 <main> 안에 .page-notice-detail-KBB div 가 들어가고,
+// 퍼블리싱의 <main> 은 두지 않는다.
+// - min-height: 100vh 는 헤더 높이만큼 늘 스크롤을 만들므로 헤더를 뺀 높이로 바꾼다 (목록 버튼은 그대로 화면 아래쪽에 붙는다).
+// - 퍼블리싱에서 main 이 갖던 여백을 페이지 div 에 준다.
+.KBB .page-notice-detail-KBB[class^='page-'][class*='-KBB'] {
+  min-height: calc(100vh - 55px);
+  padding: 20px 24px calc(77px + env(safe-area-inset-bottom)) 24px;
 }
 // ============================================================
 // **** 공지사항 빈 화면 페이지 (.page-notice-empty-KBB)
@@ -9690,13 +9620,13 @@ i[class^='icon-alarm-'] {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 0 24px calc(80px + env(safe-area-inset-bottom)) 24px;
     padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 40px) !important;
   }
 
   .faq-accordion-container {
     display: flex;
     flex-direction: column;
+    padding: 0 24px;
 
     .faq-list {
       list-style: none;
@@ -9871,6 +9801,97 @@ i[class^='icon-alarm-'] {
     }
   }
 }
+// 앱에서는 SubLayout 의 헤더 아래 <main> 안에 .page-faq-list-KBB div 가 들어가고, 퍼블리싱의 <main> 은 두지 않는다.
+// - min-height: 100vh 를 그대로 두면 헤더 높이만큼 늘 스크롤이 생기므로 풀어 준다.
+// - 퍼블리싱에서 main 이 갖던 아래 여백(40px + 안전 영역 절반)을 페이지에 준다.
+//   (common.scss 의 [class^='page-'][class*='-KBB'] 공통 아래 여백 40px 을 대신한다)
+.KBB .page-faq-list-KBB[class^='page-'][class*='-KBB'] {
+  min-height: auto;
+  padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 40px);
+}
+// 목록이 없을 때: 빈 화면 퍼블리싱(voucher_list_empty.html·inquiry_list_empty.html, .page-notice-empty-KBB 의
+// .notice-empty-container)과 같은 아이콘·문구를 목록 자리에 보여준다.
+// FAQ 는 탭 아래 위(16 + 44)와 아래(36 + 상담 영역 margin 24) 여백을 60px 로 맞춘다.
+.page-faq-list-KBB .faq-accordion-container .notice-empty-container,
+.page-inquiry-list-KBB .inquiry-list-container .notice-empty-container,
+.page-notice-list-KBB .notice-empty-container {
+  margin-top: 16px;
+  padding: 44px 0 36px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .icon-empty-notice {
+    @include icon-style('icon_error_gray_60.svg', 60px);
+    margin-bottom: 16px;
+  }
+
+  .empty-text {
+    margin: 0;
+    color: #26282c;
+    text-align: center;
+
+    font-family: 'KBFG Text';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: -0.36px;
+    word-break: keep-all;
+  }
+}
+// 1:1 문의·공지사항 목록이 없을 때: 헤더 아래 여백을 빈 화면 퍼블리싱(inquiry_list_empty.html·notice_list_empty.html)과
+// 같게(16 + 16 + 44) 맞춘다
+.page-inquiry-list-KBB .inquiry-list-container .notice-empty-container,
+.page-notice-list-KBB .notice-empty-container {
+  margin-top: 32px;
+}
+
+// ============================================================
+// 1:1 문의 목록·작성·상세 (앱)
+// 앱에서는 SubLayout 의 헤더 아래 <main> 안에 페이지 div 가 들어가고, 퍼블리싱의 <main> 은 두지 않는다.
+// - min-height: 100vh 를 그대로 두면 헤더 높이만큼 늘 스크롤이 생기므로 풀어 준다.
+// - 퍼블리싱에서 main 이 갖던 여백을 페이지 div 에 준다.
+// - common.scss 의 [class^='page-'][class*='-KBB'] > :last-child (아래 여백 0) 에 걸리는 하단 고정 버튼 여백을 되돌린다.
+// ============================================================
+.KBB .page-inquiry-list-KBB[class^='page-'][class*='-KBB'] {
+  min-height: auto;
+  padding: 0 24px calc(60px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
+}
+
+.KBB .page-inquiry-write-KBB[class^='page-'][class*='-KBB'] {
+  min-height: auto;
+  padding: 16px 24px calc(60px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
+
+  // 카테고리는 select 모양의 버튼으로 두고 누르면 바텀시트를 연다
+  .select-field-wrap button.common-form-select {
+    display: block;
+    text-align: left;
+  }
+}
+
+.KBB .page-inquiry-detail-KBB[class^='page-'][class*='-KBB'] {
+  min-height: auto;
+  padding: 24px 24px calc(96px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
+
+  &:has(.inquiry-answer-container) {
+    padding: 0 0 calc(84px + env(safe-area-inset-bottom) / 2 + 40px) 0;
+
+    .inquiry-detail-container {
+      padding: 12px 24px 0 24px;
+    }
+
+    .inquiry-body-area {
+      padding-bottom: 48px;
+    }
+  }
+
+  > .fixed-bottom-actions {
+    padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 40px);
+  }
+}
+
 // ============================================================
 // **** 1:1 문의하기 목록 페이지 (.page-inquiry-list-KBB)
 // ============================================================

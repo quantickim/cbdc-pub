@@ -9381,104 +9381,6 @@ i[class^=icon-alarm-]::before {
   flex-direction: column;
   box-sizing: border-box;
 }
-.page-complete-result-KBB .common-nav-header {
-  height: 56px;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.page-complete-result-KBB .common-nav-header .btn-nav-back {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-.page-complete-result-KBB .common-nav-header .btn-nav-back .icon-arrow-back-24 {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url("../img/img-kb/icon_arrow_back_24.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  vertical-align: middle;
-}
-.page-complete-result-KBB .common-nav-header .nav-title {
-  color: #26282c;
-  font-family: "KBFG Text", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 26px;
-  letter-spacing: -0.3px;
-  margin: 0 0 0 4px;
-}
-.page-complete-result-KBB .common-nav-header .nav-right-actions {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.page-complete-result-KBB .common-nav-header .nav-right-actions button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-.page-complete-result-KBB .common-nav-header .nav-right-actions button .icon-nav-home-24 {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url("../img/img-kb/icon_home_24.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  vertical-align: middle;
-}
-.page-complete-result-KBB .common-nav-header .nav-right-actions button .icon-nav-menu-24 {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url("../img/img-kb/icon_menu_24.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  vertical-align: middle;
-}
-.page-complete-result-KBB .complete-top-action-bar {
-  display: flex;
-  justify-content: flex-end;
-  padding: 4px 20px 0 20px;
-}
-.page-complete-result-KBB .complete-top-action-bar .btn-wallet-main {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid #dde1e4;
-  background-color: #ffffff;
-  color: #484b51;
-  font-family: "KBFG Text", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 20px;
-  letter-spacing: -0.14px;
-  cursor: pointer;
-}
-.page-complete-result-KBB .complete-top-action-bar .btn-wallet-main:active {
-  background-color: #f7f8f9;
-}
 .page-complete-result-KBB .complete-main-content {
   flex: 1;
   display: flex;
@@ -9498,28 +9400,6 @@ i[class^=icon-alarm-]::before {
   font-weight: 700;
   line-height: 33px;
   letter-spacing: -0.48px;
-}
-.page-complete-result-KBB .complete-bottom-footer {
-  padding: 0;
-}
-.page-complete-result-KBB .complete-bottom-footer .btn-confirm-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 56px;
-  background-color: #ffd338;
-  color: #26282c;
-  font-family: "KBFG Text", sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  padding-bottom: env(safe-area-inset-bottom);
-  box-sizing: content-box;
-}
-.page-complete-result-KBB .complete-bottom-footer .btn-confirm-bottom:active {
-  filter: brightness(0.96);
 }
 
 .bottom-sheet-container.bio-register-sheet .bottom-sheet-content .bio-guide-box {
@@ -9866,6 +9746,26 @@ i[class^=icon-alarm-]::before {
   vertical-align: middle;
 }
 
+.KBB .page-settings-KBB[class^=page-][class*=-KBB] {
+  padding-bottom: 0;
+}
+.KBB .page-settings-KBB[class^=page-][class*=-KBB] > main > .page-list-container:last-child {
+  padding-bottom: 35px;
+}
+.KBB .page-settings-KBB[class^=page-][class*=-KBB] > .footer-bottom-page:last-child {
+  padding-bottom: calc(77px + env(safe-area-inset-bottom));
+}
+
+.KBB .page-auth-security-KBB[class^=page-][class*=-KBB] {
+  padding-bottom: 0;
+}
+.KBB .page-auth-security-KBB[class^=page-][class*=-KBB] > main > .security-list-container:last-child {
+  padding-bottom: 40px;
+}
+.KBB .page-auth-security-KBB[class^=page-][class*=-KBB] > main > .security-list-container:last-child > .security-item:last-child {
+  padding-bottom: 18px;
+}
+
 .page-auth-security-KBB {
   min-height: 100vh;
   background-color: #ffffff;
@@ -10126,6 +10026,16 @@ i[class^=icon-alarm-]::before {
 }
 .page-notice-detail-KBB .notice-nav-actions .btn-nav-list {
   width: 100%;
+}
+
+.KBB .page-notice-list-KBB[class^=page-][class*=-KBB] {
+  min-height: auto;
+  padding: 0 24px calc(24px + env(safe-area-inset-bottom)) 24px;
+}
+
+.KBB .page-notice-detail-KBB[class^=page-][class*=-KBB] {
+  min-height: calc(100vh - 55px);
+  padding: 20px 24px calc(77px + env(safe-area-inset-bottom)) 24px;
 }
 
 .page-notice-empty-KBB {
@@ -11132,12 +11042,12 @@ i[class^=icon-alarm-]::before {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0 24px calc(80px + env(safe-area-inset-bottom)) 24px;
   padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 40px) !important;
 }
 .page-faq-list-KBB .faq-accordion-container {
   display: flex;
   flex-direction: column;
+  padding: 0 24px;
 }
 .page-faq-list-KBB .faq-accordion-container .faq-list {
   list-style: none;
@@ -11292,6 +11202,85 @@ i[class^=icon-alarm-]::before {
 }
 .page-faq-list-KBB .faq-help-section .help-btn-group .btn-help-outline:active {
   background-color: #f7f8f9;
+}
+
+.KBB .page-faq-list-KBB[class^=page-][class*=-KBB] {
+  min-height: auto;
+  padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 40px);
+}
+
+.page-faq-list-KBB .faq-accordion-container .notice-empty-container,
+.page-inquiry-list-KBB .inquiry-list-container .notice-empty-container,
+.page-notice-list-KBB .notice-empty-container {
+  margin-top: 16px;
+  padding: 44px 0 36px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.page-faq-list-KBB .faq-accordion-container .notice-empty-container .icon-empty-notice,
+.page-inquiry-list-KBB .inquiry-list-container .notice-empty-container .icon-empty-notice,
+.page-notice-list-KBB .notice-empty-container .icon-empty-notice {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/img-kb/icon_error_gray_60.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  margin-bottom: 16px;
+}
+.page-faq-list-KBB .faq-accordion-container .notice-empty-container .empty-text,
+.page-inquiry-list-KBB .inquiry-list-container .notice-empty-container .empty-text,
+.page-notice-list-KBB .notice-empty-container .empty-text {
+  margin: 0;
+  color: #26282c;
+  text-align: center;
+  font-family: "KBFG Text";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: -0.36px;
+  word-break: keep-all;
+}
+
+.page-inquiry-list-KBB .inquiry-list-container .notice-empty-container,
+.page-notice-list-KBB .notice-empty-container {
+  margin-top: 32px;
+}
+
+.KBB .page-inquiry-list-KBB[class^=page-][class*=-KBB] {
+  min-height: auto;
+  padding: 0 24px calc(60px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
+}
+
+.KBB .page-inquiry-write-KBB[class^=page-][class*=-KBB] {
+  min-height: auto;
+  padding: 16px 24px calc(60px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
+}
+.KBB .page-inquiry-write-KBB[class^=page-][class*=-KBB] .select-field-wrap button.common-form-select {
+  display: block;
+  text-align: left;
+}
+
+.KBB .page-inquiry-detail-KBB[class^=page-][class*=-KBB] {
+  min-height: auto;
+  padding: 24px 24px calc(96px + env(safe-area-inset-bottom) / 2 + 40px) 24px;
+}
+.KBB .page-inquiry-detail-KBB[class^=page-][class*=-KBB]:has(.inquiry-answer-container) {
+  padding: 0 0 calc(84px + env(safe-area-inset-bottom) / 2 + 40px) 0;
+}
+.KBB .page-inquiry-detail-KBB[class^=page-][class*=-KBB]:has(.inquiry-answer-container) .inquiry-detail-container {
+  padding: 12px 24px 0 24px;
+}
+.KBB .page-inquiry-detail-KBB[class^=page-][class*=-KBB]:has(.inquiry-answer-container) .inquiry-body-area {
+  padding-bottom: 48px;
+}
+.KBB .page-inquiry-detail-KBB[class^=page-][class*=-KBB] > .fixed-bottom-actions {
+  padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 40px);
 }
 
 .page-inquiry-list-KBB {

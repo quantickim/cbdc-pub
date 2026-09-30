@@ -20,10 +20,17 @@
       <!-- 카테고리 가로 스크롤 탭 -->
       <nav class="common-tab-nav" aria-label="질문 카테고리">
         <ul class="common-tab-list">
-          <li class="tab-item is-active"><button type="button" class="tab-btn">전체</button></li>
-          <li class="tab-item"><button type="button" class="tab-btn">가입 · 변경 · 탈퇴</button></li>
-          <li class="tab-item"><button type="button" class="tab-btn">서비스 이용</button></li>
-          <li class="tab-item"><button type="button" class="tab-btn">지갑 · 토큰</button></li>
+          <li class="tab-item is-active" data-filter="all"><button type="button" class="tab-btn">전체</button></li>
+          <li class="tab-item" data-filter="가입 · 변경 · 탈퇴">
+            <button type="button" class="tab-btn">가입 · 변경 · 탈퇴</button>
+          </li>
+          <li class="tab-item" data-filter="서비스 이용"><button type="button" class="tab-btn">서비스 이용</button></li>
+          <li class="tab-item" data-filter="지갑 · 토큰"><button type="button" class="tab-btn">지갑 · 토큰</button></li>
+          <li class="tab-item" data-filter="결제 · 송금 · 충전">
+            <button type="button" class="tab-btn">결제 · 송금 · 충전</button>
+          </li>
+          <li class="tab-item" data-filter="환불"><button type="button" class="tab-btn">환불</button></li>
+          <li class="tab-item" data-filter="전환"><button type="button" class="tab-btn">전환</button></li>
         </ul>
       </nav>
 
@@ -31,7 +38,7 @@
       <section class="faq-accordion-container">
         <ul class="faq-list">
           <!-- 1. 닫힘 항목 -->
-          <li class="faq-item">
+          <li class="faq-item" data-category="서비스 이용">
             <button type="button" class="faq-question-btn">
               <span class="question-text">[서비스 이용] 사용할 수 있는 곳을 확인하고 싶어요.</span>
               <i class="icon-faq-arrow" aria-hidden="true"></i>
@@ -42,7 +49,7 @@
           </li>
 
           <!-- 2. 닫힘 항목 -->
-          <li class="faq-item">
+          <li class="faq-item" data-category="가입 · 변경 · 탈퇴">
             <button type="button" class="faq-question-btn">
               <span class="question-text">[가입 · 변경 · 탈퇴] 탈퇴는 어디서 하나요?</span>
               <i class="icon-faq-arrow" aria-hidden="true"></i>
@@ -53,9 +60,9 @@
           </li>
 
           <!-- 3. 열림 항목 (시안 활성 상태) -->
-          <li class="faq-item is-open">
+          <li class="faq-item is-open" data-category="서비스 이용">
             <button type="button" class="faq-question-btn">
-              <span class="question-text">예금 토큰 전자지갑(프로젝트 ‘한강’)은 무엇인가요?</span>
+              <span class="question-text">[서비스 이용] 예금 토큰 전자지갑(프로젝트 ‘한강’)은 무엇인가요?</span>
               <i class="icon-faq-arrow" aria-hidden="true"></i>
             </button>
             <div class="faq-answer-body">
@@ -73,7 +80,7 @@
           </li>
 
           <!-- 4. 닫힘 항목 -->
-          <li class="faq-item">
+          <li class="faq-item" data-category="지갑 · 토큰">
             <button type="button" class="faq-question-btn">
               <span class="question-text">[지갑 · 토큰] 지갑은 하나만 생성할 수 있나요?</span>
               <i class="icon-faq-arrow" aria-hidden="true"></i>
@@ -84,7 +91,7 @@
           </li>
 
           <!-- 5. 닫힘 항목 -->
-          <li class="faq-item">
+          <li class="faq-item" data-category="결제 · 송금 · 충전">
             <button type="button" class="faq-question-btn">
               <span class="question-text">[결제 · 송금 · 충전] 예금 토큰 충전은 어떻게 하나요?</span>
               <i class="icon-faq-arrow" aria-hidden="true"></i>
@@ -95,7 +102,7 @@
           </li>
 
           <!-- 6. 닫힘 항목 -->
-          <li class="faq-item">
+          <li class="faq-item" data-category="결제 · 송금 · 충전">
             <button type="button" class="faq-question-btn">
               <span class="question-text">[결제 · 송금 · 충전] 예금 토큰 충전은 어떻게 하나요?</span>
               <i class="icon-faq-arrow" aria-hidden="true"></i>
@@ -106,7 +113,7 @@
           </li>
 
           <!-- 7. 닫힘 항목 -->
-          <li class="faq-item">
+          <li class="faq-item" data-category="결제 · 송금 · 충전">
             <button type="button" class="faq-question-btn">
               <span class="question-text">[결제 · 송금 · 충전] 예금 토큰 충전은 어떻게 하나요?</span>
               <i class="icon-faq-arrow" aria-hidden="true"></i>
@@ -117,7 +124,7 @@
           </li>
 
           <!-- 8. 닫힘 항목 -->
-          <li class="faq-item">
+          <li class="faq-item" data-category="결제 · 송금 · 충전">
             <button type="button" class="faq-question-btn">
               <span class="question-text">[결제 · 송금 · 충전] 예금 토큰 충전은 어떻게 하나요?</span>
               <i class="icon-faq-arrow" aria-hidden="true"></i>
