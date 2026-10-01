@@ -3891,6 +3891,15 @@
   }
 }
 
+// 전환입금 화면(앱): 퍼블리싱은 페이지 안에 헤더가 있어 min-height: 100vh 인데, 앱은 SubLayout 의 헤더(.common-header, 높이 55px)가
+// 페이지 밖에 있으므로 헤더를 뺀 높이로 맞춘다 (그대로 두면 헤더 높이만큼 늘 스크롤이 생긴다).
+// 전환중(.page-convert-progress-KBB)은 화면 전체를 덮는 고정 레이어라 맞출 필요가 없다.
+.KBB .page-convert-deposit-KBB,
+.KBB .page-convert-confirm-KBB,
+.KBB .page-convert-complete-KBB {
+  min-height: calc(100vh - 55px);
+}
+
 // =======================================
 // **** 송금 지갑 주소 입력 화면 (기본 폼, 은행 선택, 키패드 통합)
 // =======================================

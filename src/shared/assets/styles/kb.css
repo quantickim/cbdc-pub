@@ -5390,6 +5390,12 @@ th {
   vertical-align: middle;
 }
 
+.KBB .page-convert-deposit-KBB,
+.KBB .page-convert-confirm-KBB,
+.KBB .page-convert-complete-KBB {
+  min-height: calc(100vh - 55px);
+}
+
 .page-remit-address-KBB {
   display: flex;
   flex-direction: column;
