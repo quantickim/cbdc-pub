@@ -1313,8 +1313,8 @@ th {
 }
 .common-notice-accordion .btn-notice-toggle .title-wrapper .icon-notice-info {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/img-kb/icon_inform_24.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1691,8 +1691,7 @@ th {
 }
 .page-main-KBB .main-content section.main-wallet-container .main-wallet-card {
   width: -webkit-fill-available;
-  padding: 16px 16px 4px 16px;
-  min-height: 222px;
+  padding: 20px 16px 4px 16px;
   border: 1px solid #ebeef0;
   display: flex;
   justify-content: center;
@@ -1720,7 +1719,6 @@ th {
 .page-main-KBB .main-content section.main-wallet-container .main-wallet-card-top .main-wallet-title-container .main-wallet-left-wrapper {
   display: flex;
   gap: 6px;
-  padding-top: 4px;
 }
 .page-main-KBB .main-content section.main-wallet-container .main-wallet-card-top .main-wallet-title-container .main-wallet-left-wrapper .main-wallet-title-wrapper {
   flex-direction: column;
@@ -1912,7 +1910,7 @@ th {
   display: flex;
   justify-content: space-between;
   gap: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 .page-main-KBB .main-content section.main-wallet-container .main-wallet-card-middle button {
   display: flex;
@@ -1940,7 +1938,7 @@ th {
 }
 .page-main-KBB .main-content section.main-wallet-container .main-wallet-card-bottom {
   display: inline-flex;
-  padding: 6px 0 16px 0;
+  padding: 8px 0 16px 0;
   justify-content: center;
   align-items: center;
 }
@@ -5000,7 +4998,7 @@ th {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-image: url("../img/img-kb/logo_bank_KB.svg");
+  background-image: url("../img/img-kb/icon_ramp_loading_40.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -5381,9 +5379,9 @@ th {
 }
 .page-convert-progress-KBB .convert-progress-main .convert-progress-visual-section .wallet-visual-graphic .img-convert-progress {
   display: inline-block;
-  width: 200px;
-  height: 200px;
-  background-image: url("../img/img-kb/motion.svg");
+  width: 56px;
+  height: 80px;
+  background-image: url("../img/img-kb/image_loading.gif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -5394,6 +5392,33 @@ th {
 .KBB .page-convert-confirm-KBB,
 .KBB .page-convert-complete-KBB {
   min-height: calc(100vh - 55px);
+}
+
+.KBB .main-content .page-qr-scan-KBB {
+  height: calc(100dvh - 55px);
+}
+
+.KBB .main-content .page-qr-show-KBB {
+  min-height: calc(100vh - 55px);
+}
+
+.KBB .main-content .page-qr-pay-amount-KBB,
+.KBB .main-content .page-pay-confirm-KBB,
+.KBB .main-content .page-pay-complete-KBB {
+  min-height: calc(100vh - 55px);
+}
+
+.KBB .main-content .page-merchant-KBB.page-merchant-list-mode {
+  min-height: calc(100vh - 55px);
+}
+
+.KBB .main-content .page-merchant-KBB.page-merchant-map-mode {
+  height: calc(100dvh - 55px);
+  min-height: calc(100dvh - 55px);
+}
+
+.KBB .page-merchant-KBB .merchant-filter-bar .sort-toggle-wrapper {
+  line-height: normal;
 }
 
 .page-remit-address-KBB {
@@ -8904,7 +8929,7 @@ i[class^=icon-alarm-]::before {
   border-left: none;
   border-top: none;
   transform: rotate(45deg);
-  margin-top: -5px;
+  margin-top: -4px;
   margin-left: 16px;
   position: relative;
   z-index: 2;
@@ -9028,7 +9053,6 @@ i[class^=icon-alarm-]::before {
 }
 .bottom-sheet-overlay.sheet-map-merchant .bottom-sheet-container {
   width: 100%;
-  max-width: 500px;
   max-height: 90vh;
   background-color: #ffffff;
   border-radius: 16px 16px 0 0;
@@ -11503,12 +11527,23 @@ i[class^=icon-alarm-]::before {
   outline: none;
   resize: none;
   background: transparent;
+  padding: 0;
   font-family: "KBFG Text";
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: 23px;
   letter-spacing: -0.32px;
+  /* 1. iOS 네이티브 스타일 초기화 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* 2. 박스 규격 및 여백 명시 */
+  box-sizing: border-box;
+  margin: 0;
+  /* 3. iOS 둥근 모서리 및 그림자 제거 */
+  border-radius: 0;
+  outline: none;
 }
 .page-inquiry-write-KBB .inquiry-form-section .form-group .textarea-box-wrap .form-textarea::placeholder {
   color: #838b94;

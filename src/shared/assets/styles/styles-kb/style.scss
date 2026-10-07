@@ -23,8 +23,7 @@
       background: linear-gradient(180deg, #fff 0%, #f1f3f5 100%);
       .main-wallet-card {
         width: -webkit-fill-available;
-        padding: 16px 16px 4px 16px;
-        min-height: 222px;
+        padding: 20px 16px 4px 16px;
         border: 1px solid #ebeef0;
         display: flex;
         justify-content: center;
@@ -45,7 +44,6 @@
           .main-wallet-left-wrapper {
             display: flex;
             gap: 6px;
-            padding-top: 4px;
             .main-wallet-title-wrapper {
               flex-direction: column;
               display: flex;
@@ -214,7 +212,7 @@
         display: flex;
         justify-content: space-between;
         gap: 6px;
-        margin-bottom: 10px;
+        margin-bottom: 11px;
         button {
           display: flex;
           padding: 0 16px;
@@ -242,7 +240,7 @@
       }
       .main-wallet-card-bottom {
         display: inline-flex;
-        padding: 6px 0 16px 0;
+        padding: 8px 0 16px 0;
         justify-content: center;
         align-items: center;
         .btn-main-wallet-voucher {
@@ -3468,7 +3466,7 @@
       border-radius: 50%;
 
       &.icon-kb {
-        @include icon-style('logo_bank_KB.svg', 40px);
+        @include icon-style('icon_ramp_loading_40.svg', 40px);
       }
 
       &.icon-token {
@@ -3884,7 +3882,7 @@
         align-items: center;
 
         .img-convert-progress {
-          @include icon-style('motion.svg', 200px);
+          @include icon-style('image_loading.gif', 56px, 80px);
         }
       }
     }
@@ -3898,6 +3896,40 @@
 .KBB .page-convert-confirm-KBB,
 .KBB .page-convert-complete-KBB {
   min-height: calc(100vh - 55px);
+}
+
+// 아래 앱 전용 높이 덮어쓰기는 SubLayout 의 main.main-content 안에 있는 페이지에만 건다
+// (퍼블리싱 html 도 같은 kb.css 를 쓰므로, 그대로 걸면 헤더가 페이지 안에 있는 퍼블리싱 화면까지 줄어든다).
+// QR 스캔하기 화면(앱): 같은 이유로 퍼블리싱의 height: 100dvh 에서 SubLayout 헤더 높이(55px)를 뺀다.
+// 카메라 영상(#qr-reader)은 .qr-scan-main 을 가득 채우고 탭·안내·사각형·버튼이 그 위에 올라간다.
+.KBB .main-content .page-qr-scan-KBB {
+  height: calc(100dvh - 55px);
+}
+
+// QR 보여주기 화면(앱): 퍼블리싱의 min-height: 100vh 에서 SubLayout 헤더 높이(55px)를 뺀다.
+.KBB .main-content .page-qr-show-KBB {
+  min-height: calc(100vh - 55px);
+}
+
+// 결제 금액 입력·확인·완료 화면(앱): 같은 이유로 SubLayout 헤더 높이(55px)를 뺀다.
+.KBB .main-content .page-qr-pay-amount-KBB,
+.KBB .main-content .page-pay-confirm-KBB,
+.KBB .main-content .page-pay-complete-KBB {
+  min-height: calc(100vh - 55px);
+}
+
+// 사용처 화면(앱): 같은 이유로 SubLayout 헤더 높이(55px)를 뺀다. 지도 모드는 지도가 남은 높이를 채운다.
+.KBB .main-content .page-merchant-KBB.page-merchant-list-mode {
+  min-height: calc(100vh - 55px);
+}
+.KBB .main-content .page-merchant-KBB.page-merchant-map-mode {
+  height: calc(100dvh - 55px);
+  // 사용처 공통(.page-merchant-KBB)의 min-height: 100vh 가 height 보다 우선하므로 같이 줄인다
+  min-height: calc(100dvh - 55px);
+}
+// '가까운 순' 글자는 퍼블리싱에서 줄높이를 정하지 않아 문서 기본값(normal)을 쓰는데, 앱은 기본 줄높이가 달라 1px 커진다
+.KBB .page-merchant-KBB .merchant-filter-bar .sort-toggle-wrapper {
+  line-height: normal;
 }
 
 // =======================================
@@ -7260,7 +7292,7 @@ i[class^='icon-alarm-'] {
         border-left: none;
         border-top: none;
         transform: rotate(45deg);
-        margin-top: -5px; // 박스 안쪽으로 반쯤 물려 들어가게 배치
+        margin-top: -4px; // 박스 안쪽으로 반쯤 물려 들어가게 배치
         margin-left: 16px; // 좌측 기준 위치
         position: relative;
         z-index: 2;
@@ -7394,7 +7426,6 @@ i[class^='icon-alarm-'] {
 
   .bottom-sheet-container {
     width: 100%;
-    max-width: 500px;
     max-height: 90vh;
     background-color: #ffffff;
     border-radius: 16px 16px 0 0;
@@ -10136,6 +10167,7 @@ i[class^='icon-alarm-'] {
           outline: none;
           resize: none;
           background: transparent;
+          padding: 0;
 
           font-family: 'KBFG Text';
           font-size: 16px;
@@ -10143,7 +10175,18 @@ i[class^='icon-alarm-'] {
           font-weight: 300;
           line-height: 23px;
           letter-spacing: -0.32px;
+          /* 1. iOS 네이티브 스타일 초기화 */
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
 
+          /* 2. 박스 규격 및 여백 명시 */
+          box-sizing: border-box;
+          margin: 0;
+
+          /* 3. iOS 둥근 모서리 및 그림자 제거 */
+          border-radius: 0;
+          outline: none;
           &::placeholder {
             color: #838b94;
             font-weight: 300;

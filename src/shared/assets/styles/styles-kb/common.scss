@@ -1350,7 +1350,7 @@ span + span {
       gap: 8px;
 
       .icon-notice-info {
-        @include icon-style('icon_inform_24.svg', 20px);
+        @include icon-style('icon_inform_24.svg', 24px);
       }
 
       .notice-title {
