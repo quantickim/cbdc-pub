@@ -435,6 +435,15 @@ span + span {
       font-family: 'KBFG Text';
     }
 
+    // 비활성 입력 칸(예: 본인인증의 이름·주민번호)도 글자는 같은 색으로 보인다.
+    // iOS Safari 는 disabled 입력 칸 글자를 흐리게(-webkit-text-fill-color, opacity) 그려서 직접 지정한다.
+    &:disabled,
+    &.disabled {
+      color: #26282c;
+      -webkit-text-fill-color: #26282c;
+      opacity: 1;
+    }
+
     // 브라우저 자동완성이 입히는 배경색 제거 (background 로는 덮이지 않아 inset shadow 로 가린다)
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
@@ -1706,15 +1715,12 @@ span + span {
     }
 
     .tab-item {
-      padding: 0 2px;
-
       .tab-btn {
+        padding: 0 2px 7px 2px;
         background: transparent;
         border: none;
-        padding: 0;
         color: #838b94;
         text-align: center;
-        padding-bottom: 7px;
         font-family: 'KBFG Text';
         font-size: 16px;
         font-style: normal;

@@ -17,3 +17,14 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+// 곰 로딩 애니메이션: 프레임 11장을 가로로 이어 붙인 스프라이트(56×80 × 11칸)를 steps 로 한 칸씩 넘긴다.
+// alternate 로 갔다가 되돌아와서 예전 곰 gif(00000 → 00016 → 00022 → 00020 → 되돌아옴, 한 바퀴 1.2초)와 같은 왕복이 된다.
+// 프레임 하나 60ms × 11칸 = 한 방향 0.66초. keyframes(loading-bear)는 style.scss 에 있다.
+@mixin loading-bear-sprite {
+  display: inline-block;
+  width: 56px;
+  height: 80px;
+  background: url('../img/img-kb/loading-bear-sprite.svg') no-repeat 0 0 / 616px 80px;
+  animation: loading-bear 0.66s steps(11, jump-none) infinite alternate;
+}

@@ -456,6 +456,11 @@ th {
   color: #929292;
   font-family: "KBFG Text";
 }
+.common-input-field .common-form-input:disabled, .common-input-field .common-form-input.disabled {
+  color: #26282c;
+  -webkit-text-fill-color: #26282c;
+  opacity: 1;
+}
 .common-input-field .common-form-input:-webkit-autofill, .common-input-field .common-form-input:-webkit-autofill:hover, .common-input-field .common-form-input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px #fff inset;
   -webkit-text-fill-color: #26282c;
@@ -1625,16 +1630,12 @@ th {
 .common-tab-nav .common-tab-list::-webkit-scrollbar {
   display: none;
 }
-.common-tab-nav .common-tab-list .tab-item {
-  padding: 0 2px;
-}
 .common-tab-nav .common-tab-list .tab-item .tab-btn {
+  padding: 0 2px 7px 2px;
   background: transparent;
   border: none;
-  padding: 0;
   color: #838b94;
   text-align: center;
-  padding-bottom: 7px;
   font-family: "KBFG Text";
   font-size: 16px;
   font-style: normal;
@@ -5381,11 +5382,8 @@ th {
   display: inline-block;
   width: 56px;
   height: 80px;
-  background-image: url("../img/img-kb/image_loading.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  vertical-align: middle;
+  background: url("../img/img-kb/loading-bear-sprite.svg") no-repeat 0 0/616px 80px;
+  animation: loading-bear 0.66s steps(11, jump-none) infinite alternate;
 }
 
 .KBB .page-convert-deposit-KBB,
@@ -5415,6 +5413,20 @@ th {
 .KBB .main-content .page-merchant-KBB.page-merchant-map-mode {
   height: calc(100dvh - 55px);
   min-height: calc(100dvh - 55px);
+}
+
+.KBB .main-content .page-verification-KBB {
+  min-height: calc(100vh - 55px);
+}
+
+.KBB .main-content .page-complete-result-KBB {
+  min-height: calc(100vh - 55px);
+}
+
+.KBB .main-content .page-alarm-KBB,
+.KBB .main-content .page-remit-address-KBB,
+.KBB .main-content .page-history-detail-KBB {
+  min-height: calc(100vh - 55px);
 }
 
 .KBB .page-merchant-KBB .merchant-filter-bar .sort-toggle-wrapper {
@@ -5639,7 +5651,7 @@ th {
   vertical-align: middle;
 }
 .page-remit-address-KBB .remit-address-main .quick-bank-scroll-container {
-  margin-top: 20px;
+  margin-top: 12px;
   width: calc(100% + 48px);
   margin-left: -24px;
   margin-right: -24px;
@@ -8202,26 +8214,26 @@ i[class^=icon-alarm-]::before {
 }
 .page-remit-confirm-KBB .remit-amount-confirm-container .remit-amount-wrapper {
   display: inline-flex;
+  gap: 4px;
 }
 .page-remit-confirm-KBB .remit-amount-confirm-container .remit-amount-wrapper .amount-val {
-  color: #26282c;
   font-family: Roboto;
-  font-size: var(--Title-1-Size, 24px);
+  color: var(--Colors-KB_UI_02, #26282c);
+  font-family: var(--Number, Roboto);
+  font-size: 26px;
   font-style: normal;
-  font-weight: 700;
-  line-height: var(--Title-1-Line-Height, 33px);
-  letter-spacing: var(--Title-1-Tracking, -0.2px);
+  font-weight: 500;
+  line-height: 33px; /* 126.923% */
 }
 .page-remit-confirm-KBB .remit-amount-confirm-container .remit-amount-wrapper .amount-unit {
-  color: var(--Colors-KB_UI_02, #26282c);
   text-align: center;
-  /* Title/Title 1 */
-  font-family: var(--Title-1-Font, "KBFG Text");
-  font-size: var(--Title-1-Size, 24px);
+  color: var(--Colors-KB_UI_02, #26282c);
+  font-family: var(--Display-Font, "KBFG Text");
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: var(--Title-1-Line-Height, 33px); /* 137.5% */
-  letter-spacing: var(--Title-1-Tracking, -0.2px);
+  line-height: 33px; /* 137.5% */
+  letter-spacing: var(--Display-Tracking, -0.2px);
 }
 .page-remit-confirm-KBB .remit-amount-confirm-container .remit-confirm-question {
   color: #26282c;
@@ -11562,6 +11574,7 @@ i[class^=icon-alarm-]::before {
 .page-inquiry-write-KBB .inquiry-form-section .form-group .textarea-box-wrap .textarea-counter .current {
   text-align: right;
   text-align: right;
+  color: #26282c;
   /* Number/Body 04_medium */
   font-family: Roboto;
   font-size: 14px;
@@ -12312,6 +12325,73 @@ i[class^=icon-alarm-]::before {
   background-size: contain;
   vertical-align: middle;
   background-size: contain;
+}
+
+.KBB .loading,
+.KBB .loading.spinner {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.KBB .loading .inner-container,
+.KBB .loading.spinner .inner-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.KBB .loading.spinner {
+  pointer-events: none;
+}
+
+.KBB .intro {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.KBB .loading .loading-box,
+.KBB .intro .loading-box {
+  width: 56px;
+  height: 80px;
+}
+.KBB .loading .loading-box img,
+.KBB .intro .loading-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.KBB .page-convert-progress-KBB {
+  height: auto;
+}
+.KBB .page-convert-progress-KBB .convert-progress-main .convert-progress-visual-section {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.KBB .loading-bear {
+  display: inline-block;
+  width: 56px;
+  height: 80px;
+  background: url("../img/img-kb/loading-bear-sprite.svg") no-repeat 0 0/616px 80px;
+  animation: loading-bear 0.66s steps(11, jump-none) infinite alternate;
+  vertical-align: middle;
+}
+
+@keyframes loading-bear {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -560px 0;
+  }
 }
 
 /*# sourceMappingURL=kb.css.map */

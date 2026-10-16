@@ -3882,7 +3882,8 @@
         align-items: center;
 
         .img-convert-progress {
-          @include icon-style('image_loading.gif', 56px, 80px);
+          // 곰 로딩 애니메이션 (예전 image_loading.gif 대신 스프라이트 애니메이션, 앱의 LoadingBear 와 같음)
+          @include loading-bear-sprite;
         }
       }
     }
@@ -3926,6 +3927,20 @@
   height: calc(100dvh - 55px);
   // 사용처 공통(.page-merchant-KBB)의 min-height: 100vh 가 height 보다 우선하므로 같이 줄인다
   min-height: calc(100dvh - 55px);
+}
+// 본인인증 화면(앱): 같은 이유로 퍼블리싱의 min-height: 100vh 에서 SubLayout 헤더 높이(55px)를 뺀다.
+.KBB .main-content .page-verification-KBB {
+  min-height: calc(100vh - 55px);
+}
+// 회원가입 완료 화면(앱): 같은 이유로 SubLayout 헤더 높이(55px)를 뺀다.
+.KBB .main-content .page-complete-result-KBB {
+  min-height: calc(100vh - 55px);
+}
+// 알림 목록, 송금 받는 사람 입력, 거래내역 상세 화면(앱): 같은 이유로 SubLayout 헤더 높이(55px)를 뺀다.
+.KBB .main-content .page-alarm-KBB,
+.KBB .main-content .page-remit-address-KBB,
+.KBB .main-content .page-history-detail-KBB {
+  min-height: calc(100vh - 55px);
 }
 // '가까운 순' 글자는 퍼블리싱에서 줄높이를 정하지 않아 문서 기본값(normal)을 쓰는데, 앱은 기본 줄높이가 달라 1px 커진다
 .KBB .page-merchant-KBB .merchant-filter-bar .sort-toggle-wrapper {
@@ -4155,7 +4170,7 @@
     }
 
     .quick-bank-scroll-container {
-      margin-top: 20px;
+      margin-top: 12px;
       width: calc(100% + 48px);
       margin-left: -24px;
       margin-right: -24px;
@@ -6510,28 +6525,27 @@ i[class^='icon-alarm-'] {
 
     .remit-amount-wrapper {
       display: inline-flex;
+      gap: 4px;
       .amount-val {
-        color: #26282c;
-
         font-family: Roboto;
-        font-size: var(--Title-1-Size, 24px);
+
+        color: var(--Colors-KB_UI_02, #26282c);
+        font-family: var(--Number, Roboto);
+        font-size: 26px;
         font-style: normal;
-        font-weight: 700;
-        line-height: var(--Title-1-Line-Height, 33px);
-        letter-spacing: var(--Title-1-Tracking, -0.2px);
+        font-weight: 500;
+        line-height: 33px; /* 126.923% */
       }
 
       .amount-unit {
-        color: var(--Colors-KB_UI_02, #26282c);
         text-align: center;
-
-        /* Title/Title 1 */
-        font-family: var(--Title-1-Font, 'KBFG Text');
-        font-size: var(--Title-1-Size, 24px);
+        color: var(--Colors-KB_UI_02, #26282c);
+        font-family: var(--Display-Font, 'KBFG Text');
+        font-size: 24px;
         font-style: normal;
         font-weight: 700;
-        line-height: var(--Title-1-Line-Height, 33px); /* 137.5% */
-        letter-spacing: var(--Title-1-Tracking, -0.2px);
+        line-height: 33px; /* 137.5% */
+        letter-spacing: var(--Display-Tracking, -0.2px);
       }
     }
 
@@ -10205,6 +10219,8 @@ i[class^='icon-alarm-'] {
           .current {
             text-align: right;
             text-align: right;
+            // 입력한 글자 수는 진하게 (부모 .textarea-counter 의 회색 #838b94 를 그대로 받아 연하게 보였다)
+            color: #26282c;
 
             /* Number/Body 04_medium */
             font-family: Roboto;
@@ -10976,5 +10992,81 @@ i[class^='icon-alarm-'] {
         }
       }
     }
+  }
+}
+
+// 로딩 위치: 로딩 그림은 어느 화면에서 뜨든 항상 화면의 상하·좌우 가운데에 둔다.
+// 화면 안쪽 로딩(.loading.spinner)은 원래 제자리(position: static)에 그려져 영역 위쪽에 붙어 보였다.
+// 화면 안쪽 로딩은 화면에 고정하되 터치는 통과시킨다.
+// 높이는 100vh 대신 inset: 0 으로 맞춘다 (모바일에서 100vh 는 주소창만큼 실제 보이는 화면보다 클 수 있다).
+// 배경: 곰 로딩이 뜨는 곳은 모두 처리중 화면(.page-convert-progress-KBB)과 같은 반투명 검은 배경을 깐다.
+.KBB .loading,
+.KBB .loading.spinner {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .inner-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+}
+
+.KBB .loading.spinner {
+  pointer-events: none;
+}
+
+// 인트로(국민지갑 진입 → 복호화·로그인 처리 중) 곰 로딩도 같은 반투명 검은 배경
+.KBB .intro {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+// 로딩(앱): 공통 로딩(.loading)과 인트로(.intro)의 곰 로딩 그림 영역을 처리중 화면(.img-convert-progress)과 같은 크기(56×80)로 맞춘다
+.KBB .loading .loading-box,
+.KBB .intro .loading-box {
+  width: 56px;
+  height: 80px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// 처리중 화면(앱): 로딩 그림(곰)은 다른 로딩과 같이 화면의 상하·좌우 가운데에 둔다.
+// 퍼블리싱은 제목 바로 아래에 그림이 붙어 위쪽에 치우쳐 보인다. 화면 전체를 덮는 고정 레이어(.page-convert-progress-KBB)를
+// 기준으로 그림 영역을 펴서 가운데에 놓는다. 제목·금액은 퍼블리싱대로 헤더 아래에 둔다.
+// 레이어 높이는 100vh 대신 top·bottom 0 으로 맞춘다 (모바일에서 100vh 는 주소창만큼 실제 보이는 화면보다 커서 가운데가 아래로 밀린다).
+.KBB .page-convert-progress-KBB {
+  height: auto;
+
+  .convert-progress-main .convert-progress-visual-section {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+}
+
+// 곰 로딩 애니메이션 (앱의 LoadingBear). 내용은 mixin.scss 의 loading-bear-sprite.
+.KBB .loading-bear {
+  @include loading-bear-sprite;
+  vertical-align: middle;
+}
+
+@keyframes loading-bear {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -560px 0;
   }
 }
