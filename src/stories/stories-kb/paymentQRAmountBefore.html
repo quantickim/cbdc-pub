@@ -11,7 +11,7 @@
     <div class="page-qr-pay-amount-KBB">
       <!-- 상단 공통 헤더 -->
       <header class="common-header">
-        <button type="button" class="btn-go-main">메인으로</button>
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
       </header>
 
       <main class="qr-pay-amount-main">
@@ -19,7 +19,7 @@
         <section class="pay-amount-title-container">
           <h2 class="pay-title">
             스피카 나폴리 합정에서<br />
-            얼마를 결제할까요?
+            얼마를 결제하시겠어요?
           </h2>
         </section>
 
@@ -34,20 +34,20 @@
           </div>
           <div class="pay-amount-caption">
             <i class="icon-caption-info" aria-hidden="true"></i>
-            <span class="caption-text">결제는 예금토큰으로만 가능합니다</span>
+            <span class="caption-text">결제는 예금 토큰으로만 가능합니다.</span>
           </div>
         </section>
 
         <!-- 결제 수단 섹션 -->
         <section class="pay-method-container">
-          <h3 class="pay-method-title">예금 토큰</h3>
+          <h3 class="pay-method-title">예금 토큰 잔액</h3>
           <div class="pay-account-item">
             <i class="icon-token-account" aria-hidden="true"></i>
             <div class="account-info-wrapper">
-              <span class="bank-name">국민</span>
-              <span class="account-number">123456-12-123456</span>
+              <span class="bank-name">KB국민</span>
+              <span class="account-number">012345-67-890157</span>
               <div class="available-balance-wrapper">
-                <span class="available-balance-label">결제 가능 금액</span>
+                <!-- '결제 가능 금액' 라벨 제거 (스토리보드 0.7 98p 3번) -->
                 <span class="amount">500,000</span>
                 <span class="available-balance-unit">원</span>
               </div>
@@ -58,8 +58,9 @@
 
       <!-- 공통 하단 고정 버튼 (비활성화 상태) -->
       <div class="fixed-bottom-btn-wrapper">
-        <button type="button" class="btn-confirm-bottom disabled">확인</button>
+        <button type="button" class="btn-confirm-bottom disabled">다음</button>
       </div>
     </div>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
   </body>
 </html>

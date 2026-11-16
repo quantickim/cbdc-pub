@@ -12,29 +12,25 @@
     <div class="page-convert-deposit-KBB">
       <!-- 상단 공통 헤더 -->
       <header class="common-header">
-        <button type="button" class="btn-go-main">메인으로</button>
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
       </header>
 
       <main class="convert-deposit-main">
         <!-- 예금토큰 및 연계계좌 정보 (오프램프: 예금토큰 -> 연계계좌) -->
         <section class="account-info-section">
           <p class="account-title">
-            <span class="account-title-label">예금토큰</span>
-            <span class="account-title-unit">에서</span>
-          </p>
-          <p class="account-target">
-            <span class="account-target-label">연계계좌</span>
-            <span class="account-target-val">14019552327425</span>
-            <span class="account-target-unit">로</span>
+            <span class="account-title-label">전자지갑 주소</span>
+            <span class="account-title-unit" aria-hidden="true">|</span>
+            <span class="account-title-val">37110204140099</span>
           </p>
         </section>
 
         <!-- 중앙 질문 및 전환 가능 금액 영역 -->
         <!-- <section class="convert-question-section">
- <h2 class="question-title" id="convertQuestionTitle">얼마를 전환할까요?</h2>
+ <h2 class="question-title" id="convertQuestionTitle">얼마를 전환하시겠어요?</h2>
  <div class="available-amount-wrapper" id="availableAmountWrapper">
  <i class="icon-warning-fill" aria-hidden="true"></i>
- <span class="available-amount-label">전환 가능 금액</span>
+ <span class="available-amount-label">전환 한도</span>
  <span class="amount" id="maxAvailableAmount" data-max="471520">471,520</span>
  <span class="available-amount-unit">원</span>
  </div>
@@ -47,7 +43,7 @@
               type="text"
               id="convertAmountInput"
               class="question-input"
-              placeholder="얼마를 전환할까요?"
+              placeholder="얼마를 전환하시겠어요?"
               inputmode="numeric"
               autocomplete="off"
             />
@@ -55,7 +51,7 @@
           </div>
 
           <div class="available-amount-wrapper">
-            <span class="available-amount-label">전환 가능 금액</span>
+            <span class="available-amount-label">전환 한도</span>
             <span class="amount" id="maxAvailableAmount" data-max="471520">471,520</span>
             <span class="available-amount-unit">원</span>
           </div>

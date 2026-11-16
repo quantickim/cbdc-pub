@@ -12,17 +12,17 @@
     <!-- 공통 상단 헤더 -->
     <header>
       <div class="common-header">
-        <button type="button" class="btn-go-main">메인으로</button>
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
       </div>
     </header>
 
     <main>
       <!-- 설정 항목 리스트 영역 -->
       <section class="auto-setting-list">
-        <!-- 0. 마스터 토글: 모든 알람 -->
+        <!-- 0. 마스터 토글: 모두 켜기 -->
         <div class="setting-item master-setting-item">
           <div class="item-text-wrapper">
-            <p class="item-title">모든 알람</p>
+            <p class="item-title">모두 켜기</p>
           </div>
           <label class="common-switch" for="switchAllAlarms">
             <input type="checkbox" id="switchAllAlarms" class="switch-input" checked />
@@ -36,7 +36,7 @@
         <div class="setting-item">
           <div class="item-text-wrapper">
             <p class="item-title">토큰・결제</p>
-            <p class="item-desc">결제, 송금 등 토큰 이용 시 앱 푸시 알림을 받아요.</p>
+            <p class="item-desc">결제, 송금 등 토큰 사용 알림을 받아요.</p>
           </div>
           <label class="common-switch" for="switchPaymentAlarm">
             <input type="checkbox" id="switchPaymentAlarm" class="switch-input sub-switch" checked />
@@ -46,25 +46,12 @@
           </label>
         </div>
 
-        <!-- 2. 보안 -->
-        <div class="setting-item">
-          <div class="item-text-wrapper">
-            <p class="item-title">보안</p>
-            <p class="item-desc">보안 관련 앱 푸시 알림을 받아요.</p>
-          </div>
-          <label class="common-switch" for="switchSecurityAlarm">
-            <input type="checkbox" id="switchSecurityAlarm" class="switch-input sub-switch" checked />
-            <span class="switch-track">
-              <span class="switch-thumb"></span>
-            </span>
-          </label>
-        </div>
 
         <!-- 3. 활동・소식 -->
         <div class="setting-item">
           <div class="item-text-wrapper">
             <p class="item-title">활동・소식</p>
-            <p class="item-desc">공지사항 1:1 문의 답변 등 앱 내 활동/소식 관련 앱 푸시 알림을 받아요 .</p>
+            <p class="item-desc">공지사항 1:1 문의 답변 등 알림을 받아요.</p>
           </div>
           <label class="common-switch" for="switchActivityAlarm">
             <input type="checkbox" id="switchActivityAlarm" class="switch-input sub-switch" checked />
@@ -88,7 +75,7 @@
         <div class="notice-content-body">
           <ul class="notice-bullet-list">
             <li class="bullet-main-item">
-              서비스 이용에 필수적인 정보에 대한 알림은 설정과 관계없이 앱 푸시 알림이 발송됩니다.
+              알림을 꺼도 서비스 이용에 꼭 필요한 알림은 받을 수 있습니다.
             </li>
           </ul>
         </div>

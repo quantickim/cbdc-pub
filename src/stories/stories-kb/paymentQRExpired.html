@@ -11,7 +11,7 @@
     <div class="page-qr-show-KBB">
       <!-- 상단 공통 헤더 -->
       <header class="common-header">
-        <button type="button" class="btn-go-main">메인으로</button>
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
       </header>
 
       <main class="qr-show-main">
@@ -38,31 +38,31 @@
           <!-- 인증 만료 안내 문구 -->
           <div class="qr-expired-message">
             <i class="icon-warning-red" aria-hidden="true"></i>
-            <span class="message-text">인증 시간이 만료되었습니다.</span>
+            <span class="message-text">인증 시간이 지났습니다</span>
           </div>
 
-          <!-- 예금 토큰 보유 잔액 카드 -->
+          <!-- 예금 토큰 잔액 카드 -->
           <div class="qr-info-card">
             <div class="qr-info-card-left">
-              <span class="card-label">예금 토큰 보유 잔액</span>
+              <span class="card-label">예금 토큰 잔액</span>
               <div class="balance-wrapper">
                 <span class="balance-amount">3,270,000</span>
                 <span class="balance-unit">원</span>
                 <button type="button" class="btn-balance-toggle">숨김</button>
               </div>
             </div>
-            <button type="button" class="btn-card-arrow" aria-label="잔액 상세보기">
+            <button type="button" class="btn-card-arrow" aria-label="전환 입금하기">
               <i class="icon-arrow-right" aria-hidden="true"></i>
             </button>
           </div>
 
-          <!-- 바우처 혜택 적용 카드 (적용 상태) -->
-          <div class="qr-info-card">
+          <!-- 적용할 혜택 카드 (적용한 바우처 이름, 유효시간이 지나 누를 수 없음) -->
+          <div class="qr-info-card is-disabled" aria-disabled="true">
             <div class="qr-info-card-left">
-              <span class="card-label">바우처 혜택 적용</span>
-              <span class="card-value is-applied">적용</span>
+              <span class="card-label">적용할 혜택</span>
+              <span class="card-value is-applied">11% 캐시백 상품권</span>
             </div>
-            <button type="button" class="btn-card-arrow" aria-label="바우처 선택하기">
+            <button type="button" class="btn-card-arrow" aria-label="적용할 혜택 선택하기" disabled>
               <i class="icon-arrow-right" aria-hidden="true"></i>
             </button>
           </div>
@@ -74,5 +74,6 @@
         </section>
       </main>
     </div>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
   </body>
 </html>

@@ -101,7 +101,7 @@ span + span {
   justify-content: space-between;
 }
 .kbfg-text {
-  font-family: 'KBFG Text' !important;
+  font-family: 'KBText' !important;
 }
 .keypad-top {
   & + button {
@@ -111,6 +111,12 @@ span + span {
 .kb-pub-list {
   .sub-desc {
     margin-bottom: 20px;
+
+    .pub-update-legend {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #0068b7;
+    }
   }
   .wrap.bgw {
     min-height: 100vh;
@@ -198,6 +204,24 @@ span + span {
               }
             }
 
+            // 스토리보드를 반영하며 바뀌거나 추가된 화면: 메뉴명 앞 체크박스 + 파란 글씨
+            &.is-updated p .pub-name {
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              color: #0068b7;
+              font-weight: 600;
+              cursor: pointer;
+            }
+
+            .pub-update-check {
+              flex-shrink: 0;
+              width: 16px;
+              height: 16px;
+              margin: 0;
+              accent-color: #0068b7;
+            }
+
             // 바로가기 버튼 (우측 고정)
             .btn.arr-right {
               display: inline-flex;
@@ -272,7 +296,7 @@ span + span {
 .KBB {
   &,
   & * {
-    font-family: 'KBFG Text', sans-serif;
+    font-family: 'KBText', sans-serif;
   }
   span {
     @include ellipsis;
@@ -432,7 +456,7 @@ span + span {
     letter-spacing: -0.19px;
     &::placeholder {
       color: #929292;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
     }
 
     // 비활성 입력 칸(예: 본인인증의 이름·주민번호)도 글자는 같은 색으로 보인다.
@@ -468,6 +492,57 @@ span + span {
     .icon-input-clear {
       @include icon-style('icon_delete_input_24.svg', 20px);
     }
+  }
+}
+// ============================================================
+// **** 인풋 하단 에러 안내 문구 공통 스타일 (빨간 아이콘 + 문구)
+// ============================================================
+.common-error-message {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+
+  .icon-warning-red {
+    display: inline-block;
+    flex-shrink: 0;
+    @include icon-style('icon_input_caption_red2_16.svg', 16px);
+  }
+
+  .error-text {
+    color: #f23f3f;
+    font-family: 'KBText';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+  }
+}
+// ============================================================
+// **** 회색 안내 문구 공통 스타일 (회색 느낌표 아이콘 + 문구, 여러 줄이면 아이콘은 첫 줄에)
+// 결제 완료 화면의 안내 문구 스타일을 기준으로 완료 화면들이 같이 쓴다. 위 여백은 화면마다 준다
+// ============================================================
+.common-caption-message {
+  display: flex;
+  gap: 4px;
+
+  .icon-caption-info {
+    margin: 2px;
+    @include icon-style('icon_input_caption_16.svg', 16px);
+    flex-shrink: 0;
+  }
+
+  .caption-text {
+    white-space: normal;
+    color: #696e76;
+
+    font-family: 'KBText';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: -0.2px;
   }
 }
 // ============================================================
@@ -540,7 +615,7 @@ span + span {
     color: #26282c;
     text-align: center;
 
-    font-family: 'KBFG Text';
+    font-family: 'KBText';
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -577,7 +652,7 @@ span + span {
     align-items: center;
     cursor: pointer;
     text-align: center;
-    font-family: 'KBFG Text', sans-serif;
+    font-family: 'KBText', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -651,7 +726,7 @@ span + span {
 
       .bottom-sheet-title {
         color: #26282c;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -683,7 +758,7 @@ span + span {
           margin-bottom: 2px;
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 700;
@@ -693,7 +768,7 @@ span + span {
 
         .refund-total-amount {
           color: #26282c;
-          font-family: 'Roboto', 'KBFG Text', sans-serif;
+          font-family: 'Roboto', 'KBText', sans-serif;
           font-size: 26px;
           font-weight: 700;
           line-height: 34px;
@@ -708,7 +783,7 @@ span + span {
           }
           .amount-unit {
             color: #26282c;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
@@ -733,7 +808,7 @@ span + span {
 
           .refund-info-label {
             color: #696e76;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -745,7 +820,7 @@ span + span {
             color: #26282c;
             text-align: right;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -779,7 +854,7 @@ span + span {
             word-break: keep-all;
             color: #696e76;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -799,6 +874,7 @@ span + span {
         border-top: 1px solid #ebeef0;
 
         .qr-code-img {
+          position: relative;
           img {
             width: 100%;
             height: 100%;
@@ -807,6 +883,45 @@ span + span {
           i {
             @include icon-style('icon_qr.svg', 160px);
           }
+
+          // 유효시간(60초)이 지난 환불용 QR: QR 을 흐리게 하고 가운데 재발급 버튼 (bottomSheetRefundQRExpired.html)
+          &.is-expired {
+            > svg,
+            > img,
+            > i {
+              opacity: 0.18;
+            }
+            .btn-qr-reissue {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              gap: 4px;
+              padding: 6px 12px 6px 8px;
+              border: none;
+              border-radius: 30px;
+              background: #484b51;
+              color: #fff;
+              white-space: nowrap;
+              cursor: pointer;
+              z-index: 2;
+
+              .icon-refresh-white {
+                @include icon-style('icon_refresh_20.svg', 20px);
+              }
+              span {
+                font-family: 'KBText';
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 20px;
+                letter-spacing: -0.14px;
+              }
+            }
+          }
         }
 
         .qr-guide-text {
@@ -814,7 +929,7 @@ span + span {
           color: #26282c;
           text-align: center;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 18px;
           font-style: normal;
           font-weight: 300;
@@ -824,7 +939,6 @@ span + span {
       }
       .qr-notice-wrapper {
         display: flex;
-        align-items: center;
         gap: 4px;
         padding-top: 16px;
         border-top: 1px solid #ebeef0;
@@ -836,13 +950,16 @@ span + span {
         .qr-notice-text {
           color: #696e76;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
           line-height: 20px;
           letter-spacing: -0.14px;
           word-break: keep-all;
+          // .KBB span 공통 한 줄 말줄임을 풀어 두 줄로 (스토리보드 환불하기 QR 안내 문구)
+          white-space: normal;
+          overflow: visible;
         }
       }
 
@@ -864,7 +981,7 @@ span + span {
             background: transparent;
             color: #26282c;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 19px;
             font-style: normal;
             font-weight: 700;
@@ -889,7 +1006,7 @@ span + span {
 
           span {
             color: #696e76;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -918,7 +1035,7 @@ span + span {
             border: none;
             background: transparent;
             color: #26282c;
-            font-family: 'KBFG Text', sans-serif;
+            font-family: 'KBText', sans-serif;
             font-size: 16px;
             font-weight: 400;
             line-height: 22px;
@@ -928,6 +1045,23 @@ span + span {
 
             &:active {
               opacity: 0.6;
+            }
+
+            // 선택 표시 체크 (선택한 항목에만 보인다)
+            .icon-select-check {
+              @include icon-style('icon_check_gold_24.svg', 24px);
+              display: none;
+              flex-shrink: 0;
+              margin-left: auto;
+            }
+          }
+
+          // 고른 항목: 굵게 + 체크 (스토리보드 1:1 문의 유형 바텀시트 227p 1-1)
+          &.is-selected .btn-menu-link {
+            font-weight: 700;
+
+            .icon-select-check {
+              display: inline-block;
             }
           }
         }
@@ -947,7 +1081,7 @@ span + span {
 
         span {
           color: #696e76;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -982,7 +1116,7 @@ span + span {
               color: #26282c;
               text-align: center;
 
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 16px;
               font-style: normal;
               font-weight: 300;
@@ -1001,6 +1135,12 @@ span + span {
               font-weight: 500;
             }
           }
+        }
+
+        // 조회 기간 선택: 한 화면에 6개, 넘치면 스크롤 (스토리보드 조회 기간 선택 바텀시트 4)
+        &.is-month-list {
+          max-height: 240px;
+          overflow-y: auto;
         }
       }
     }
@@ -1021,7 +1161,7 @@ span + span {
         padding-bottom: calc(16px + env(safe-area-inset-bottom) / 2);
         color: #26282c;
         text-align: center;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -1115,18 +1255,18 @@ span + span {
       .modal-dialog-title {
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
         line-height: 28px;
-        letter-spacing: -0.32px;
+        letter-spacing: -0.4px;
         margin-bottom: 24px;
       }
 
       .modal-dialog-description {
         color: #484b51;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -1153,7 +1293,7 @@ span + span {
         color: #26282c;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -1207,6 +1347,97 @@ span + span {
   }
 }
 // ============================================================
+// **** PDF 문서 보기 풀스크린 팝업 공통 스타일 (약관 및 이용 동의 등, 스토리보드 0.7 235p)
+// - 받아온 PDF 파일을 .pdf-viewer-page 안에 페이지 단위로 그려 보여 준다
+// ============================================================
+.modal-dialog-overlay.modal-dialog-fullscreen.modal-pdf-viewer {
+  .modal-dialog-container {
+    position: relative;
+    background-color: #ffffff;
+  }
+
+  .pdf-viewer-header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+    padding: 0 20px 0 24px;
+    background-color: #43454a;
+
+    .pdf-viewer-title {
+      margin: 0;
+      color: #ffffff;
+
+      font-family: 'KBText';
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 26px;
+      letter-spacing: -0.36px;
+      @include ellipsis;
+    }
+
+    .btn-pdf-viewer-close {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: none;
+      background: url('../img/img-kb/icon_close_white_24.svg') no-repeat center / 24px 24px;
+      cursor: pointer;
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .modal-dialog-content.pdf-viewer-content {
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pdf-viewer-page {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-pdf-prev,
+  .btn-pdf-next {
+    position: absolute;
+    top: calc(50% + 29px);
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    border: none;
+    transform: translateY(-50%);
+    background: rgba(38, 40, 44, 0.5) url('../img/img-kb/icon_arrow_right_white_32.svg') no-repeat center / 32px 32px;
+    cursor: pointer;
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  .btn-pdf-prev {
+    left: 0;
+    transform: translateY(-50%) scaleX(-1);
+  }
+
+  .btn-pdf-next {
+    right: 0;
+  }
+
+  // 하단 버튼(개정사항 비교표 보기 등): 팝업 안에서는 고정하지 않고 본문 아래에 둔다
+  .fixed-bottom-btn-wrapper {
+    position: static;
+    flex-shrink: 0;
+  }
+}
+
+// ============================================================
 // **** 배지 공통 스타일
 // ============================================================
 .common-badge {
@@ -1218,7 +1449,7 @@ span + span {
   border-radius: 2px;
   flex-shrink: 0;
 
-  font-family: 'KBFG Text';
+  font-family: 'KBText';
   font-size: 13px;
   font-style: normal;
   font-weight: 300;
@@ -1296,7 +1527,7 @@ span + span {
     text-align: right;
     color: #26282c;
 
-    font-family: 'KBFG Text';
+    font-family: 'KBText';
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
@@ -1307,7 +1538,7 @@ span + span {
   .common-transactions-cancel {
     color: #26282c;
     text-align: right;
-    font-family: 'KBFG Text';
+    font-family: 'KBText';
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -1364,7 +1595,7 @@ span + span {
 
       .notice-title {
         color: #484b51;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
@@ -1398,7 +1629,7 @@ span + span {
 
         color: #484b51;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -1432,7 +1663,7 @@ span + span {
             color: var(--Colors-KB_UI_04, #696e76);
 
             /* Body/Body 4_Light */
-            font-family: var(--Text, 'KBFG Text');
+            font-family: var(--Text, 'KBText');
             font-size: var(--Body-4_Light-Size, 14px);
             font-style: normal;
             font-weight: 300;
@@ -1482,7 +1713,7 @@ span + span {
     }
 
     .quick-amount-unit {
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -1570,7 +1801,7 @@ span + span {
     color: #ebeef0;
     text-align: center;
 
-    font-family: 'KBFG Text';
+    font-family: 'KBText';
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -1648,7 +1879,7 @@ span + span {
   font-family: Roboto, sans-serif !important;
 }
 .common-font-kbfg {
-  font-family: 'KBFG Text', sans-serif !important;
+  font-family: 'KBText', sans-serif !important;
 }
 // ============================================================
 // 페이지네이션 공통 스타일
@@ -1721,7 +1952,7 @@ span + span {
         border: none;
         color: #838b94;
         text-align: center;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 700;

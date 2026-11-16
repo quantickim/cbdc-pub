@@ -57,7 +57,7 @@
                 overflow: hidden;
                 color: #484b51;
                 text-overflow: ellipsis;
-                font-family: 'KBFG Text';
+                font-family: 'KBText';
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 700;
@@ -74,7 +74,7 @@
                 background: #fff;
                 color: #484b51;
                 text-align: center;
-                font-family: 'KBFG Text';
+                font-family: 'KBText';
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 300;
@@ -85,7 +85,7 @@
               .main-wallet-status {
                 color: #484b51;
                 text-align: center;
-                font-family: 'KBFG Text';
+                font-family: 'KBText';
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 300;
@@ -153,7 +153,7 @@
           align-items: center;
           .main-wallet-token-name {
             color: #484b51;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -162,7 +162,7 @@
           }
           .main-wallet-token-hidden-text {
             color: #696e76;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 18px;
             font-style: normal;
             font-weight: 300;
@@ -180,7 +180,7 @@
             letter-spacing: -0.2px;
             .main-wallet-token-won {
               color: #26282c;
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 18px;
               font-style: normal;
               font-weight: 300;
@@ -198,7 +198,7 @@
             border: 1px solid #dde1e4;
             color: #696e76;
             text-align: center;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 13px;
             font-style: normal;
             font-weight: 300;
@@ -221,7 +221,7 @@
           align-items: center;
           flex: 1 0 0;
           border-radius: 2px;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 15px;
           font-style: normal;
           font-weight: 300;
@@ -246,7 +246,7 @@
         .btn-main-wallet-voucher {
           color: #696e76;
           text-align: right;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -280,7 +280,7 @@
       .btn-main-link-wrapper {
         .main-link-title {
           color: #26282c;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
@@ -303,6 +303,43 @@
       }
     }
 
+    // 발급받은 바우처 확인 배너
+    section.main-voucher-container {
+      padding: 0 24px 16px 24px;
+      background: #f1f3f5;
+      .btn-main-voucher-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        padding: 16px 20px;
+        border-radius: 12px;
+        background: #fff;
+        text-align: start;
+      }
+      .icon-main-voucher {
+        flex-shrink: 0;
+        @include icon-style('icon_voucher_32.svg', 32px);
+      }
+      .main-voucher-title {
+        flex: 1;
+        color: #26282c;
+        color: var(--Colors-KB_UI_02, #26282c);
+
+        /* Body/Body 3_Light */
+        font-family: var(--Text, 'KBText');
+        font-size: var(--Body-3_Light-Size, 15px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: var(--Body-3_Light-Line-Height, 21px); /* 140% */
+        letter-spacing: var(--Body-3_Light-Tracking, -0.2px);
+      }
+      .icon-main-voucher-arrow {
+        flex-shrink: 0;
+        @include icon-style('icon_arrow_16.svg', 16px);
+      }
+    }
+
     // 최근 이용내역
     section.main-transactions-container {
       padding: 0 24px 16px 24px;
@@ -318,7 +355,7 @@
         align-items: center;
         .main-transactions-title {
           color: #484b51;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
@@ -332,7 +369,7 @@
           .main-transactions-more {
             color: #696e76;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -389,7 +426,7 @@
             min-width: 0;
             .main-transactions-label {
               color: #484b51;
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 15px;
               font-style: normal;
               font-weight: 700;
@@ -414,7 +451,7 @@
               }
               .main-transactions-type {
                 color: #696e76;
-                font-family: 'KBFG Text';
+                font-family: 'KBText';
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 300;
@@ -450,7 +487,7 @@
               color: #484b51;
 
               /* Body/Body 3_Bold */
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 15px;
               font-style: normal;
               font-weight: 700;
@@ -478,7 +515,7 @@
         margin-bottom: 20px;
         .main-notice-title {
           color: #484b51;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
@@ -492,7 +529,7 @@
           .main-notice-more {
             color: #696e76;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -530,7 +567,7 @@
           }
           .main-notice-label {
             color: #484b51;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 15px;
             font-style: normal;
             font-weight: 700;
@@ -565,7 +602,7 @@
         color: #696e76;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -610,7 +647,7 @@
     .modal-dialog-reason {
       color: #f23f3f;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 14px;
       font-style: normal;
       font-weight: 700;
@@ -661,7 +698,7 @@
 
         .checkbox-text {
           color: #26282c;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 15px;
           font-weight: 400;
           line-height: 22px;
@@ -675,10 +712,15 @@
       flex-direction: column;
       gap: 6px;
 
+      // 고객센터 안내 아래에 체크박스가 이어지는 팝업(거래제한)
+      & + .modal-checkbox-wrapper {
+        margin-top: 24px;
+      }
+
       .contact-label {
         color: #484b51;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -711,7 +753,7 @@
         align-items: center;
         .wallet-detail-title {
           color: #26282c;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -728,23 +770,25 @@
           background: #f3f5f6;
           color: #484b51;
           text-align: center;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 13px;
           font-style: normal;
           font-weight: 300;
           line-height: 18px;
           letter-spacing: -0.13px;
         }
+        // 홈 '사업자' 배지(.main-wallet-badge-shop)와 같은 스타일
         .wallet-detail-shop {
-          margin-top: 1px;
           display: flex;
           padding: 0 4px;
           align-items: center;
+          gap: 10px;
           border-radius: 4px;
           border: 1px solid #c6cbd0;
           background: #fff;
+          color: #484b51;
           text-align: center;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 13px;
           font-style: normal;
           font-weight: 300;
@@ -779,7 +823,7 @@
         .wallet-detail-account-label {
           color: #696e76;
           text-align: right;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -811,7 +855,7 @@
     gap: 4px;
     .wallet-detail-token-title {
       color: #26282c;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -831,7 +875,7 @@
       align-self: flex-end;
       .wallet-detail-token-won {
         color: #26282c;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -849,7 +893,7 @@
       }
       .wallet-detail-token-status {
         color: #f23f3f;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -870,7 +914,9 @@
       .btn-wallet-detail-action {
         display: flex;
         height: 40px;
-        padding: 0 16px;
+        // '토큰으로 전환'·'예금으로 전환' 이 한 줄에 들어가도록 좌우 여백을 줄이고 줄바꿈하지 않는다
+        padding: 0 8px;
+        white-space: nowrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -878,7 +924,7 @@
         background: #ebeef0;
         color: #26282c;
         text-align: center;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -893,7 +939,7 @@
           background: #dde1e4;
           color: #aab0b8;
           text-align: center;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 15px;
           font-style: normal;
           font-weight: 300;
@@ -913,7 +959,7 @@
         .wallet-detail-qr-title {
           color: #696e76;
           text-align: right;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -923,10 +969,121 @@
         .icon-wallet-detail-qr {
           @include icon-style('icon_arrow_20.svg', 20px);
         }
+        // 거래제한 지갑 (walletTransactionRestricted.html)
+        &:disabled {
+          cursor: default;
+          .wallet-detail-qr-title {
+            color: #aab0b8;
+          }
+          .icon-wallet-detail-qr {
+            opacity: 0.4;
+          }
+        }
       }
     }
   }
   section.wallet-detail-filter-container {
+    // 조회 월 선택 (walletDetail.html): 위에 10px 회색 띠, '<  2022.04  >' 가운데 정렬
+    .wallet-detail-month-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      border-top: 10px solid #f1f3f5;
+      padding: 32px 24px 32px 24px;
+
+      .btn-wallet-detail-month {
+        display: inline-flex;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        // 조회 가능 기간(최근 1년) 끝에서는 더 못 넘긴다
+        &:disabled {
+          opacity: 0.3;
+          cursor: default;
+        }
+      }
+      // 가운데 월 '2026년 5월': 누르면 조회 기간 선택 바텀시트 (스토리보드 내 지갑 관리 1)
+      .btn-wallet-detail-month-select {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+      }
+      .icon-wallet-detail-month-next {
+        @include icon-style('icon_arrow_right_20.svg', 20px);
+      }
+      .icon-wallet-detail-month-prev {
+        @include icon-style('icon_arrow_right_20.svg', 20px);
+        transform: rotate(180deg);
+      }
+      .wallet-detail-month {
+        color: #26282c;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23px;
+        letter-spacing: -0.34px;
+      }
+    }
+
+    // 거래 내역 검색: 아래 2px 진한 밑줄은 오른쪽 화면 끝까지 이어진다
+    .wallet-detail-search-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 24px;
+      padding: 0 24px 12px 0;
+      border-bottom: 2px solid #26282c;
+
+      .wallet-detail-search-input {
+        flex: 1;
+        min-width: 0;
+        padding: 0 0 0 3px;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #26282c;
+        font-family: 'KBText', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27px;
+        letter-spacing: -0.38px;
+
+        &::placeholder {
+          color: #929292;
+        }
+      }
+      .btn-wallet-detail-search {
+        display: inline-flex;
+        flex-shrink: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+        .icon-wallet-detail-search {
+          @include icon-style('icon_search_24.svg', 24px);
+        }
+      }
+      // 초기화(X) 버튼: 입력한 글자가 있을 때만 보인다 (스토리보드 내 지갑 관리 2-1)
+      .btn-input-clear {
+        display: inline-flex;
+        flex-shrink: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        .icon-input-clear {
+          @include icon-style('icon_delete_input_24.svg', 20px);
+        }
+      }
+    }
+
     .wallet-detail-filter-top {
       padding: 18px 24px;
       border-top: 1px solid #dde1e4;
@@ -946,7 +1103,7 @@
             color: var(--text-kbui-0226282-c, #26282c);
 
             /* Contents/Body 03_bold */
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
@@ -999,7 +1156,7 @@
         flex-shrink: 0;
         white-space: nowrap;
 
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -1013,7 +1170,7 @@
           color: var(--Colors-KB_UI_11, #fff);
 
           /* Contents/Guide_bold */
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 15px;
           font-style: normal;
           font-weight: 700;
@@ -1054,7 +1211,7 @@
           }
           .wallet-detail-history-type {
             color: #696e76;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -1064,12 +1221,16 @@
         }
         .wallet-detail-history-label {
           color: #26282c;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 700;
           line-height: 23px;
           letter-spacing: -0.2px;
+          // 이용 내역은 최대 1줄, 넘치면 말줄임
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
       }
       .wallet-detail-history-item-bottom {
@@ -1084,7 +1245,7 @@
       .empty-text {
         color: var(--Colors-KB_UI_02, #26282c);
         text-align: center;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -1114,7 +1275,7 @@
     .account-main-title {
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
@@ -1127,7 +1288,7 @@
     .account-sub-desc {
       color: #484b51;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -1143,7 +1304,7 @@
       display: block;
       color: #696e76;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -1189,7 +1350,7 @@
             color: #26282c;
             text-overflow: ellipsis;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -1214,7 +1375,7 @@
             align-items: center;
             gap: 4px;
             color: #696e76;
-            font-family: 'KBFG Text', sans-serif;
+            font-family: 'KBText', sans-serif;
             font-size: 14px;
             font-weight: 400;
             line-height: 20px;
@@ -1222,7 +1383,7 @@
               color: var(--Colors-KB_UI_04, #696e76);
 
               /* Body/Body 4_Light */
-              font-family: var(--Text, 'KBFG Text');
+              font-family: var(--Text, 'KBText');
               font-size: var(--Body-4_Light-Size, 14px);
               font-style: normal;
               font-weight: 300;
@@ -1267,7 +1428,7 @@
       .auto-charge-title {
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -1332,7 +1493,7 @@
         .history-detail-title {
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
@@ -1375,7 +1536,7 @@
             text-align: right;
 
             /* Contents/Body 02_light */
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -1386,7 +1547,7 @@
         .history-detail-info-label {
           color: #696e76;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -1399,7 +1560,7 @@
           color: #26282c;
           text-align: right;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -1428,7 +1589,7 @@
             text-align: right;
 
             /* Contents/Body 02_light */
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -1454,7 +1615,7 @@
         left: 50%;
         transform: translate(-49%, -35px) rotate(-21deg);
         z-index: 0;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 80px;
         font-weight: 700;
         line-height: 1;
@@ -1465,6 +1626,31 @@
         -moz-user-select: none;
         user-select: none;
         letter-spacing: -1.6px;
+      }
+    }
+
+    // 혜택 영역이 없는 환불 완료 결제: 결제 정보 영역 가운데에 '환불 완료' (스토리보드 이용내역 상세(결제_환불완료) 3)
+    .history-detail-container {
+      position: relative;
+      > .watermark-stamp {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-21deg);
+        z-index: 0;
+        font-family: 'KBText', sans-serif;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 1;
+        color: rgba(220, 224, 230, 0.55);
+        white-space: nowrap;
+        pointer-events: none;
+        user-select: none;
+        letter-spacing: -1.6px;
+        ~ * {
+          position: relative;
+          z-index: 1;
+        }
       }
     }
 
@@ -1490,7 +1676,7 @@
         color: #26282c;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -1523,22 +1709,36 @@
     margin-top: -16px;
 
     .notice-info {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-
-      .icon-info-circle {
-        @include icon-style('icon_input_caption_16.svg', 16px);
-        flex-shrink: 0;
-      }
-
       .notice-text {
         color: #696e76;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
         letter-spacing: -0.14px;
+      }
+
+      // 안내 문구마다 느낌표를 붙이고, 줄바꿈된 본문은 같은 시작점에 맞춘다.
+      ul.notice-text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          position: relative;
+          padding-left: 20px;
+
+          &::before {
+            @include icon-style('icon_input_caption_16.svg', 16px);
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+          }
+        }
       }
     }
 
@@ -1559,7 +1759,7 @@
         color: var(--text-kbui-03484-b-51, #484b51);
 
         /* Button/Button 02_light */
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -1592,7 +1792,7 @@
         border: 1px solid #dde1e4;
         background: #fff;
         color: #484b51;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 13px;
         font-weight: 400;
         line-height: 18px;
@@ -1606,7 +1806,7 @@
       .page-title {
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -1618,7 +1818,7 @@
 
         color: #484b51;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -1628,7 +1828,7 @@
     }
 
     .business-register-guide-box {
-      background-color: #f8f9fa;
+      background-color: #f7f7f8;
       padding: 16px 24px;
       margin-bottom: 16px;
 
@@ -1643,7 +1843,7 @@
           color: var(--text-kbui-0226282-c, #26282c);
 
           /* Contents/Guide_light */
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 15px;
           font-style: normal;
           font-weight: 300;
@@ -1660,6 +1860,11 @@
             height: 3px;
             background-color: #696e76;
             border-radius: 50%;
+          }
+
+          // kftcvan.or.kr 링크: 브라우저 기본 링크색(파랑) 대신 안내 문구와 같은 색
+          a {
+            color: inherit;
           }
         }
       }
@@ -1680,7 +1885,7 @@
         .form-label {
           color: #696e76;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -1743,7 +1948,7 @@
         border: 1px solid #dde1e4;
         background: #fff;
         color: #484b51;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 13px;
         font-weight: 400;
         line-height: 18px;
@@ -1763,7 +1968,7 @@
         color: #26282c;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -1792,7 +1997,7 @@
     border-radius: 20px;
     color: #696e76;
     text-align: center;
-    font-family: 'KBFG Text';
+    font-family: 'KBText';
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -1847,7 +2052,7 @@
       z-index: 2;
       color: #fff;
       text-align: center;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 18px;
       font-style: normal;
       font-weight: 300;
@@ -1917,7 +2122,7 @@
       .btn-manual-pay {
         color: #fff;
         text-align: center;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -1937,7 +2142,7 @@
 
       .link-qr-guide {
         color: #ebeef0;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -2075,7 +2280,7 @@
 
             span {
               /* Button/Button 4_light */
-              font-family: var(--Text, 'KBFG Text');
+              font-family: var(--Text, 'KBText');
               font-size: 14px;
               font-style: normal;
               font-weight: 300;
@@ -2101,7 +2306,7 @@
         .message-text {
           color: #f23f3f;
           text-align: center;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 15px;
           font-style: normal;
           font-weight: 300;
@@ -2121,6 +2326,12 @@
         box-sizing: border-box;
         margin-bottom: 8px;
 
+        // 유효시간이 지나면 '적용할 혜택' 카드를 누를 수 없다 (paymentQRExpired)
+        &.is-disabled {
+          opacity: 0.4;
+          pointer-events: none;
+        }
+
         .qr-info-card-left {
           display: flex;
           flex-direction: column;
@@ -2129,7 +2340,7 @@
 
           .card-label {
             color: #484b51;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 15px;
             font-style: normal;
             font-weight: 300;
@@ -2153,7 +2364,7 @@
 
             .balance-unit {
               color: #26282c;
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 16px;
               font-style: normal;
               font-weight: 700;
@@ -2173,7 +2384,7 @@
               background: #fff;
               color: #696e76;
               text-align: center;
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 12px;
               font-style: normal;
               font-weight: 300;
@@ -2184,7 +2395,7 @@
 
           .card-value {
             color: #838b94;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -2219,7 +2430,7 @@
           text-decoration: underline;
           text-underline-position: under;
           color: var(--Colors-KB_UI_04, #696e76);
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -2329,7 +2540,7 @@
             color: #838b94;
             text-align: right;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
@@ -2355,7 +2566,7 @@
         color: #26282c;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -2366,6 +2577,36 @@
 
     .trade-code-input-container {
       width: 100%;
+
+      // 스토리보드 QR 직접입력하기 2: '거래 코드' 라벨, 아래 안내 'QR 아래 있는 코드를 입력해주세요.'
+      .trade-code-label {
+        display: block;
+        margin-bottom: 8px;
+        color: #696e76;
+        font-family: 'KBText';
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+      }
+      // 입력칸 아래 안내: 회색 느낌표 아이콘 + 문구
+      .trade-code-caption {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-top: 8px;
+        color: #696e76;
+        font-family: 'KBText';
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+
+        .icon-info-caption {
+          @include icon-style('icon_input_caption_16.svg', 16px);
+          flex-shrink: 0;
+        }
+      }
     }
   }
 }
@@ -2503,7 +2744,7 @@
           margin-top: 7px;
           color: #696e76;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -2539,10 +2780,10 @@
             &::placeholder {
               color: #929292;
               text-align: left;
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
 
               /* Input/Input Placeholder */
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 19px;
               font-style: normal;
               font-weight: 700;
@@ -2556,7 +2797,7 @@
 
             color: #26282c;
             text-align: right;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 19px;
             font-style: normal;
             font-weight: 700;
@@ -2582,7 +2823,7 @@
           color: #696e76;
           white-space: normal;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -2596,7 +2837,7 @@
       .pay-method-title {
         color: #696e76;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -2627,7 +2868,7 @@
             color: #26282c;
             text-overflow: ellipsis;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -2654,7 +2895,7 @@
             gap: 6px;
             color: #696e76;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -2702,7 +2943,7 @@
 
     .amount-unit {
       color: #26282c;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 22px;
       font-weight: 700;
       line-height: 32px;
@@ -2729,7 +2970,7 @@
       padding: 16px 0 40px 0;
 
       .pay-title {
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -2750,7 +2991,7 @@
         margin-bottom: 20px;
         color: #696e76;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -2821,7 +3062,7 @@
             .voucher-name {
               color: #26282c;
 
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 15px;
               font-style: normal;
               font-weight: 300;
@@ -2832,7 +3073,7 @@
             .voucher-desc {
               color: #696e76;
 
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 14px;
               font-style: normal;
               font-weight: 300;
@@ -2874,7 +3115,7 @@
           word-break: keep-all;
           color: #696e76;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -2930,7 +3171,7 @@
             text-align: right;
 
             /* Body/Body 2_Bold */
-            font-family: var(--Text, 'KBFG Text');
+            font-family: var(--Text, 'KBText');
             font-size: var(--Body-2_Bold-Size, 16px);
             font-style: normal;
             font-weight: 700;
@@ -2944,9 +3185,9 @@
         }
 
         &.highlight-card {
-          background-color: #fffdf2;
-          border-color: #ffd338;
-
+          border-radius: var(--Card-Radius-1, 8px);
+          border: 1px solid #f2eccf;
+          background: #fffdeb;
           .price-label {
             color: #26282c;
             font-weight: 700;
@@ -2970,7 +3211,7 @@
               text-align: right;
 
               /* Input/Input Text */
-              font-family: var(--Text, 'KBFG Text');
+              font-family: var(--Text, 'KBText');
               font-size: 19px;
               font-style: normal;
               font-weight: 700;
@@ -3013,7 +3254,7 @@
         margin-bottom: 24px;
         color: #26282c;
         text-align: center;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -3029,7 +3270,7 @@
 
         .total-label {
           color: #26282c;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -3054,7 +3295,7 @@
 
           .amount-unit {
             color: #26282c;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 24px;
             font-style: normal;
             font-weight: 700;
@@ -3087,10 +3328,11 @@
           }
 
           .info-label {
+            flex-shrink: 0;
             text-align: right;
             color: var(--Colors-KB_UI_04, #696e76);
             /* Body/Body 2_Light */
-            font-family: var(--Text, 'KBFG Text');
+            font-family: var(--Text, 'KBText');
             font-size: var(--Body-2_Light-Size, 16px);
             font-style: normal;
             font-weight: 300;
@@ -3102,7 +3344,7 @@
             color: #26282c;
             text-align: right;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
 
@@ -3112,14 +3354,20 @@
             text-align: right;
 
             /* Body/Body 2_Light */
-            font-family: var(--Text, 'KBFG Text');
+            font-family: var(--Text, 'KBText');
             font-size: var(--Body-2_Light-Size, 16px);
             font-style: normal;
             font-weight: 300;
             line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
             letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
 
+            // 결제 번호처럼 긴 값: 말줄임(.KBB span 공통 ellipsis) 없이 값 쪽만 여러 줄로, 오른쪽 정렬
             &.word-break {
+              flex: 1;
+              min-width: 0;
+              white-space: normal;
+              overflow: visible;
+              text-overflow: clip;
               word-break: break-all;
               font-family: Roboto, sans-serif;
             }
@@ -3147,28 +3395,9 @@
         }
       }
 
-      .complete-notice-message {
-        display: flex;
-        align-items: center;
-        gap: 4px;
+      // 안내 문구 스타일은 공통(.common-caption-message), 위 여백만 이 화면에서 준다
+      .common-caption-message {
         padding-top: 12px;
-
-        .icon-caption-info {
-          @include icon-style('icon_input_caption_16.svg', 16px);
-          flex-shrink: 0;
-        }
-
-        .notice-text {
-          word-break: keep-all;
-          color: #696e76;
-
-          font-family: 'KBFG Text';
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 20px;
-          letter-spacing: -0.2px;
-        }
       }
     }
   }
@@ -3196,7 +3425,7 @@
           color: var(--text-kbui-03484-b-51, #484b51);
 
           /* Contents/Body 02_bold */
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 700;
@@ -3218,7 +3447,7 @@
           color: var(--text-kbui-03484-b-51, #484b51);
 
           /* Body/Body 2_Light */
-          font-family: var(--Text, 'KBFG Text');
+          font-family: var(--Text, 'KBText');
           font-size: var(--Body-2_Light-Size, 16px);
           font-style: normal;
           font-weight: 300;
@@ -3231,7 +3460,7 @@
           color: var(--Colors-KB_UI_03, #484b51);
 
           /* Body/Body 2_Light */
-          font-family: var(--Text, 'KBFG Text');
+          font-family: var(--Text, 'KBText');
           font-size: var(--Body-2_Light-Size, 16px);
           font-style: normal;
           font-weight: 300;
@@ -3253,7 +3482,7 @@
           color: var(--Colors-KB_UI_03, #484b51);
 
           /* Body/Body 2_Light */
-          font-family: var(--Text, 'KBFG Text');
+          font-family: var(--Text, 'KBText');
           font-size: var(--Body-2_Light-Size, 16px);
           font-style: normal;
           font-weight: 300;
@@ -3266,7 +3495,7 @@
           color: var(--Colors-KB_UI_02, #26282c);
 
           /* Body/Body 4_Light */
-          font-family: var(--Text, 'KBFG Text');
+          font-family: var(--Text, 'KBText');
           font-size: var(--Body-4_Light-Size, 14px);
           font-style: normal;
           font-weight: 300;
@@ -3288,7 +3517,7 @@
           color: var(--Colors-KB_UI_02, #26282c);
 
           /* Body/Body 4_Light */
-          font-family: var(--Text, 'KBFG Text');
+          font-family: var(--Text, 'KBText');
           font-size: var(--Body-4_Light-Size, 14px);
           font-style: normal;
           font-weight: 300;
@@ -3311,9 +3540,14 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    // 금액이 비어 있으면 입력칸 너비를 정하지 않아 브라우저 기본 너비를 쓰는데, iOS(WebKit)는 28px 글꼴 기준으로
+    // 화면보다 넓게(375px 폭에서 527px) 잡아 좌우 스크롤이 생겼다. 입력칸이 화면 폭을 넘지 않게 한다
+    max-width: 100%;
     height: 39px;
     margin-bottom: 8px;
     .question-input {
+      min-width: 0;
+      max-width: 100%;
       border: none;
       outline: none;
       background: transparent;
@@ -3323,7 +3557,7 @@
       color: var(--text-kbui-0226282-c, #26282c);
       text-align: center;
       /* Display/Display */
-      font-family: var(--Display-Font, 'KBFG Text');
+      font-family: var(--Display-Font, 'KBText');
       font-size: var(--Display-Size, 28px);
       font-style: normal;
       font-weight: 700;
@@ -3331,7 +3565,7 @@
       letter-spacing: var(--Display-Tracking, -0.2px);
       &::placeholder {
         color: #929292;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 28px;
         font-weight: 700;
         line-height: 39px;
@@ -3341,7 +3575,7 @@
 
     .question-title-unit {
       display: none;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 28px;
       font-style: normal;
       font-weight: 700;
@@ -3391,7 +3625,7 @@
       text-align: center;
 
       /* Body/Body 4_Light */
-      font-family: var(--Text, 'KBFG Text');
+      font-family: var(--Text, 'KBText');
       font-size: var(--Body-4_Light-Size, 14px);
       font-style: normal;
       font-weight: 300;
@@ -3422,7 +3656,7 @@
         color: var(--Colors-Point-Red, #f23f3f);
 
         /* Body/Caption 1 */
-        font-family: var(--Caption-1-Font, 'KBFG Text');
+        font-family: var(--Caption-1-Font, 'KBText');
         font-size: var(--Caption-1-Size, 14px);
         font-style: normal;
         font-weight: 300;
@@ -3467,6 +3701,11 @@
 
       &.icon-kb {
         @include icon-style('icon_ramp_loading_40.svg', 40px);
+      }
+
+      // KB국민은행 심볼 (송금 확인 화면 보내는 쪽)
+      &.icon-kb-bank {
+        @include icon-style('logo_bank_KB.svg', 40px);
       }
 
       &.icon-token {
@@ -3525,7 +3764,7 @@
 
   .convert-confirm-title {
     color: #26282c;
-    font-family: 'KBFG Text', sans-serif;
+    font-family: 'KBText', sans-serif;
     font-size: 26px;
     font-weight: 700;
     line-height: 38px;
@@ -3535,7 +3774,7 @@
       color: #26282c;
       text-align: center;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
@@ -3557,7 +3796,7 @@
     .convert-confirm-label {
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 24px;
       font-style: normal;
       font-weight: 300;
@@ -3603,7 +3842,7 @@
           .convert-info-label {
             color: #696e76;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -3615,7 +3854,7 @@
             color: #26282c;
             text-align: right;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -3664,7 +3903,7 @@
         color: #26282c;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -3690,7 +3929,7 @@
 
         .convert-complete-unit {
           color: #26282c;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 24px;
           font-style: normal;
           font-weight: 700;
@@ -3724,7 +3963,7 @@
           .convert-info-label {
             color: #696e76;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -3736,7 +3975,7 @@
             color: #26282c;
             text-align: right;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -3751,29 +3990,6 @@
               }
             }
           }
-        }
-      }
-
-      .convert-notice-message {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-
-        .icon-caption-info {
-          display: inline-block;
-          @include icon-style('icon_input_caption_16.svg', 16px);
-          flex-shrink: 0;
-        }
-
-        span {
-          color: #696e76;
-
-          font-family: 'KBFG Text';
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 20px;
-          letter-spacing: -0.2px;
         }
       }
     }
@@ -3828,7 +4044,7 @@
 
       .convert-progress-title {
         color: #26282c;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 24px;
         font-weight: 700;
         line-height: 34px;
@@ -3860,7 +4076,7 @@
         }
 
         .convert-progress-unit {
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 28px;
           font-weight: 700;
           line-height: 39px;
@@ -3942,6 +4158,17 @@
 .KBB .main-content .page-history-detail-KBB {
   min-height: calc(100vh - 55px);
 }
+// 사업자 정보 등록 완료 화면(앱): 같은 이유로 SubLayout 헤더 높이(55px)를 뺀다 (그대로 두면 55px 세로 스크롤이 생긴다)
+.KBB .main-content .page-business-complete-KBB {
+  min-height: calc(100vh - 55px);
+}
+// 송금 금액 입력·확인 화면(앱): 퍼블리싱에 최소 높이가 없어 화면이 내용 높이뿐이다. iOS(사파리·크롬·웹뷰)는 내용 높이만 한
+// 당겨서 새로고침 영역(.ptr__children, overflow-y: auto) 밖에 있는 고정 버튼을 잘라 그려서, 짧은 폰(아이폰 SE)에서 하단 '확인' 버튼이
+// 안 보였다 (키보드가 열려 버튼이 영역 안으로 올라올 때만 보임). 다른 화면처럼 헤더를 뺀 화면 높이를 채운다.
+.KBB .main-content .page-remit-amount-KBB,
+.KBB .main-content .page-remit-confirm-KBB {
+  min-height: calc(100vh - 55px);
+}
 // '가까운 순' 글자는 퍼블리싱에서 줄높이를 정하지 않아 문서 기본값(normal)을 쓰는데, 앱은 기본 줄높이가 달라 1px 커진다
 .KBB .page-merchant-KBB .merchant-filter-bar .sort-toggle-wrapper {
   line-height: normal;
@@ -3972,7 +4199,7 @@
 
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 24px;
       font-style: normal;
       font-weight: 300;
@@ -4009,7 +4236,7 @@
           }
 
           &.is-empty .display-text {
-            font-family: 'KBFG Text', sans-serif;
+            font-family: 'KBText', sans-serif;
             font-size: 16px;
             font-weight: 400;
             color: #929292;
@@ -4050,7 +4277,7 @@
 
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -4087,7 +4314,7 @@
 
       .banner-text {
         color: #ffffff;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 15px;
         font-weight: 500;
         line-height: 22px;
@@ -4108,7 +4335,7 @@
         .banner-desc {
           color: #f7f7f8;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -4133,7 +4360,7 @@
           color: var(--text-kbui-0226282-c, #26282c);
 
           /* Input/Input Placeholder */
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 19px;
           font-style: normal;
           font-weight: 700;
@@ -4155,7 +4382,7 @@
         .selected-text {
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 19px;
           font-style: normal;
           font-weight: 700;
@@ -4259,7 +4486,7 @@
               @include icon-style('logo_bank_BNK.svg', 20px);
             }
             &.logo-im {
-              @include icon-style('logo_bank_DGB.svg', 20px);
+              @include icon-style('logo_bank_IM.svg', 20px);
             }
             &.logo-kbank {
               @include icon-style('logo_bank_KBANK.svg', 20px);
@@ -4275,7 +4502,7 @@
           .bank-name {
             color: #26282c;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -4304,7 +4531,7 @@
       .error-text {
         color: #f23f3f;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -4319,7 +4546,7 @@
 
       .link-wallet-scan {
         color: #484b51;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
@@ -4468,7 +4695,7 @@
             @include icon-style('logo_bank_BNK.svg', 24px);
           }
           &.logo-im {
-            @include icon-style('logo_bank_DGB.svg', 24px);
+            @include icon-style('logo_bank_IM.svg', 24px);
           }
           &.logo-kbank {
             @include icon-style('logo_bank_KBANK.svg', 24px);
@@ -4494,7 +4721,7 @@
           color: var(--text-kbui-0226282-c, #26282c);
 
           /* Contents/Guide_bold */
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 15px;
           font-style: normal;
           font-weight: 700;
@@ -4547,7 +4774,7 @@
         color: #26282c;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -4574,7 +4801,7 @@
         display: block;
         color: #696e76;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -4621,7 +4848,7 @@
         span {
           color: #696e76;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -4657,6 +4884,19 @@
     padding: 0 24px;
     width: 100%;
     box-sizing: border-box;
+
+    // 스토리보드 송금 금액 입력 3: 화면 위 회색 띠의 송금 한도 안내
+    .remit-limit-notice {
+      margin: 0 -24px;
+      padding: 10px 24px;
+      background-color: #f5f6f8;
+      color: #696e76;
+      font-family: 'KBText', sans-serif;
+      font-size: 13px;
+      line-height: 20px;
+      letter-spacing: -0.2px;
+      word-break: keep-all;
+    }
     .convert-question-section {
       margin-bottom: 40px;
     }
@@ -4673,7 +4913,7 @@
       .target-name,
       .target-bank,
       .target-suffix {
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-weight: 400;
       }
 
@@ -4684,7 +4924,7 @@
         color: var(--Colors-KB_UI_03, #484b51);
 
         /* Body/Body 2_Light */
-        font-family: var(--Text, 'KBFG Text');
+        font-family: var(--Text, 'KBText');
         font-size: var(--Body-2_Light-Size, 16px);
         font-style: normal;
         font-weight: 300;
@@ -4693,8 +4933,19 @@
       }
 
       .target-account {
+        display: inline-flex;
+        align-items: center;
         margin-left: 4px;
         color: var(--Colors-KB_UI_03, #484b51);
+
+        /* 스토리보드 133p: 은행명과 계좌번호 사이 세로줄 (국민│123456-78-910234) */
+        &::before {
+          content: '';
+          width: 1px;
+          height: 14px;
+          margin-right: 4px;
+          background-color: currentColor;
+        }
 
         /* Number/Number 2_Light */
         font-family: var(--Number-2_Light-Font, Roboto);
@@ -4723,7 +4974,7 @@
 
       .remit-available-label,
       .remit-available-unit {
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-weight: 300;
       }
 
@@ -4746,12 +4997,12 @@
 
         .error-tag {
           display: inline;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-weight: 500;
           margin-right: 2px;
           color: #f23f3f;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -4763,7 +5014,7 @@
         .remit-available-unit {
           color: #f23f3f;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -4836,7 +5087,7 @@
           .checkbox-text {
             color: #26282c;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -4870,7 +5121,7 @@
             color: #fff;
             text-align: center;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -4889,7 +5140,7 @@
           text-underline-position: under;
 
           color: #484b51;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -4951,7 +5202,7 @@
 
     .terms-agree-title {
       color: #26282c;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
@@ -5031,7 +5282,7 @@
           color: var(--Colors-KB_UI_02, #26282c);
 
           /* Contents/Body 01_bold */
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
@@ -5069,7 +5320,7 @@
 
         .terms-protection-desc {
           color: var(--KB_UI_02, #26282c);
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -5113,7 +5364,7 @@
                 color: var(--text-kbui-0226282-c, #26282c);
 
                 /* Contents/Body 02_light */
-                font-family: 'KBFG Text';
+                font-family: 'KBText';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 300;
@@ -5162,7 +5413,7 @@
                   color: var(--text-kbui-04696-e-76, #696e76);
 
                   /* Contents/Body 02_bold */
-                  font-family: 'KBFG Text';
+                  font-family: 'KBText';
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 300;
@@ -5196,7 +5447,7 @@
                     color: var(--text-kbui-0226282-c, #26282c);
 
                     /* Contents/Body 02_light */
-                    font-family: 'KBFG Text';
+                    font-family: 'KBText';
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 300;
@@ -5220,7 +5471,7 @@
   .modal-dialog-content {
     .modal-dialog-description.no-title {
       color: #26282c;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
@@ -5271,7 +5522,7 @@
           .account-title {
             color: #26282c;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -5299,7 +5550,7 @@
             .balance-label {
               color: #696e76;
 
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 14px;
               font-style: normal;
               font-weight: 300;
@@ -5321,7 +5572,7 @@
             .balance-unit {
               color: #696e76;
 
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 14px;
               font-style: normal;
               font-weight: 300;
@@ -5364,7 +5615,7 @@
     .notice-text {
       color: #696e76;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 14px;
       font-style: normal;
       font-weight: 300;
@@ -5389,7 +5640,7 @@
 
     .verification-main-title {
       color: #26282c;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
@@ -5410,7 +5661,7 @@
 
       .form-field-label {
         color: #696e76;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -5432,7 +5683,7 @@
           background: transparent;
           padding: 8px 2px;
           color: #26282c;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 19px;
           font-style: normal;
           font-weight: 700;
@@ -5556,7 +5807,7 @@
     .password-title {
       color: #26282c;
       text-align: center;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 20px;
       font-style: normal;
       font-weight: 700;
@@ -5568,7 +5819,7 @@
     .password-desc {
       color: #696e76;
       text-align: center;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 13px;
       font-style: normal;
       font-weight: 300;
@@ -5622,7 +5873,7 @@
       .security-text {
         color: #26282c;
         text-align: center;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 13px;
         font-style: normal;
         font-weight: 700;
@@ -5646,7 +5897,7 @@
         border: none;
         padding: 0;
         color: #fff;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
@@ -5697,7 +5948,7 @@
         background: transparent;
         border: none;
         color: #ffffff;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 16px;
         font-weight: 400;
         cursor: pointer;
@@ -5748,7 +5999,7 @@
           align-self: flex-start;
 
           color: var(--Text-KB_UI_03, #484b51);
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 15px;
           font-style: normal;
           font-weight: 300;
@@ -5763,7 +6014,7 @@
           color: var(--Text-KB_UI_03, #484b51);
 
           /* Button/Button 02_light */
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -5783,7 +6034,7 @@
       .alarm-banner-desc {
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -5795,7 +6046,7 @@
         color: #696e76;
         text-align: right;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -5832,7 +6083,7 @@
 
         color: #838b94;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -5851,7 +6102,7 @@
 
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 15px;
           font-style: normal;
           font-weight: 700;
@@ -5887,7 +6138,7 @@
           text-align: right;
 
           /* Body/Body 2_Bold */
-          font-family: var(--Text, 'KBFG Text');
+          font-family: var(--Text, 'KBText');
           font-size: var(--Body-2_Bold-Size, 16px);
           font-style: normal;
           font-weight: 700;
@@ -5913,7 +6164,7 @@
           text-align: right;
 
           /* Body/Body 4_Light */
-          font-family: var(--Text, 'KBFG Text');
+          font-family: var(--Text, 'KBText');
           font-size: var(--Body-4_Light-Size, 14px);
           font-style: normal;
           font-weight: 300;
@@ -5950,7 +6201,7 @@
               .alarm-item-title {
                 color: #484b51;
 
-                font-family: 'KBFG Text';
+                font-family: 'KBText';
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 700;
@@ -5995,7 +6246,7 @@
           .alarm-item-desc {
             color: #26282c;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -6052,7 +6303,7 @@
       span {
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -6075,7 +6326,7 @@
     border-top: 1px solid #ebeef0;
     .alarm-footer-text {
       color: #838b94;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -6103,7 +6354,7 @@
     .icon-list-title {
       color: #484b51;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 15px;
       font-style: normal;
       font-weight: 700;
@@ -6130,7 +6381,7 @@
         .icon-label {
           color: #484b51;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 15px;
           font-style: normal;
           font-weight: 700;
@@ -6252,7 +6503,7 @@ i[class^='icon-alarm-'] {
     .receipt-main-title {
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
@@ -6275,7 +6526,7 @@ i[class^='icon-alarm-'] {
         margin-top: 7px;
         color: #696e76;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -6301,7 +6552,7 @@ i[class^='icon-alarm-'] {
         .amount-unit {
           color: #26282c;
           text-align: right;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 19px;
           font-style: normal;
           font-weight: 700;
@@ -6330,7 +6581,7 @@ i[class^='icon-alarm-'] {
           font-family: Roboto;
         }
         .korean-unit {
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
         }
       }
 
@@ -6354,7 +6605,7 @@ i[class^='icon-alarm-'] {
           border-bottom-right-radius: 2px;
           border-top-right-radius: 2px;
           /* Button/Button 02_light */
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -6381,7 +6632,7 @@ i[class^='icon-alarm-'] {
             text-align: center;
 
             /* Button/Button 02_bold */
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -6442,11 +6693,17 @@ i[class^='icon-alarm-'] {
     box-sizing: border-box;
   }
 
+  // 스토리보드 134p: '이민국님 국민│123456-78-910234 변경' 한 줄
   .remit-target-summary-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 4px;
+
     .target-name-title {
       color: #484b51;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
@@ -6455,14 +6712,14 @@ i[class^='icon-alarm-'] {
       color: #484b51;
       font-weight: 300;
       strong {
-        font-weight: 700;
+        font-weight: 300;
       }
     }
 
     .target-account-wrapper {
       display: flex;
       align-items: center;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
@@ -6470,7 +6727,7 @@ i[class^='icon-alarm-'] {
       .bank-name {
         color: #484b51;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -6479,6 +6736,8 @@ i[class^='icon-alarm-'] {
       }
 
       .account-num {
+        display: inline-flex;
+        align-items: center;
         margin-left: 4px;
         font-family: Roboto, sans-serif;
         color: #484b51;
@@ -6489,6 +6748,15 @@ i[class^='icon-alarm-'] {
         font-weight: 400;
         line-height: 23px;
         letter-spacing: -0.2px;
+
+        /* 은행명과 계좌번호 사이 세로줄 (송금 금액 입력 화면과 같게) */
+        &::before {
+          content: '';
+          width: 1px;
+          height: 14px;
+          margin-right: 4px;
+          background-color: currentColor;
+        }
       }
 
       .btn-change-target {
@@ -6498,7 +6766,7 @@ i[class^='icon-alarm-'] {
         padding: 0;
         color: #696e76;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -6540,7 +6808,7 @@ i[class^='icon-alarm-'] {
       .amount-unit {
         text-align: center;
         color: var(--Colors-KB_UI_02, #26282c);
-        font-family: var(--Display-Font, 'KBFG Text');
+        font-family: var(--Display-Font, 'KBText');
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -6556,7 +6824,7 @@ i[class^='icon-alarm-'] {
       color: var(--Colors-KB_UI_02, #26282c);
 
       /* Title/Title 1 */
-      font-family: var(--Title-1-Font, 'KBFG Text');
+      font-family: var(--Title-1-Font, 'KBText');
       font-size: var(--Title-1-Size, 24px);
       font-style: normal;
       font-weight: 300;
@@ -6572,7 +6840,7 @@ i[class^='icon-alarm-'] {
         text-align: center;
 
         /* Title/Title 1 */
-        font-family: var(--Title-1-Font, 'KBFG Text');
+        font-family: var(--Title-1-Font, 'KBText');
         font-size: var(--Title-1-Size, 24px);
         font-style: normal;
         font-weight: 700;
@@ -6604,7 +6872,7 @@ i[class^='icon-alarm-'] {
           color: var(--Colors-KB_UI_04, #696e76);
 
           /* Body/Body 2_Light */
-          font-family: var(--Text, 'KBFG Text');
+          font-family: var(--Text, 'KBText');
           font-size: var(--Body-2_Light-Size, 16px);
           font-style: normal;
           font-weight: 300;
@@ -6618,24 +6886,26 @@ i[class^='icon-alarm-'] {
           text-align: right;
 
           /* Body/Body 2_Light */
-          font-family: var(--Text, 'KBFG Text');
+          font-family: var(--Text, 'KBText');
           font-size: var(--Body-2_Light-Size, 16px);
           font-style: normal;
           font-weight: 300;
           line-height: var(--Body-2_Light-Line-Height, 23px); /* 143.75% */
           letter-spacing: var(--Body-2_Light-Tracking, -0.2px);
 
+          // 스토리보드 134p: 전자지갑 주소 '국민 123456-78-910234' 한 줄
           &.text-right {
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 4px;
           }
 
           .wallet-address {
             color: #26282c;
             text-align: right;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -6696,7 +6966,7 @@ i[class^='icon-alarm-'] {
 
       .location-text {
         color: #484b51;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 15px;
         font-weight: 400;
         line-height: 22px;
@@ -6737,7 +7007,7 @@ i[class^='icon-alarm-'] {
     background: #f7f7f8;
     .total-count-wrapper {
       color: #696e76;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 15px;
       font-weight: 400;
       display: flex;
@@ -6756,7 +7026,7 @@ i[class^='icon-alarm-'] {
       .val-unit {
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -6772,7 +7042,7 @@ i[class^='icon-alarm-'] {
 
       .sort-label {
         color: #484b51;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 14px;
         font-weight: 400;
       }
@@ -6808,7 +7078,7 @@ i[class^='icon-alarm-'] {
           .merchant-category {
             color: #484b51;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -6819,7 +7089,7 @@ i[class^='icon-alarm-'] {
           .merchant-distance {
             color: #484b51;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -6832,7 +7102,7 @@ i[class^='icon-alarm-'] {
           display: block;
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
@@ -6844,7 +7114,7 @@ i[class^='icon-alarm-'] {
         .merchant-address {
           color: #484b51;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -6877,7 +7147,7 @@ i[class^='icon-alarm-'] {
           color: var(--Colors-KB_UI_02, #26282c);
 
           /* Button/Button 02_light */
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -6918,7 +7188,7 @@ i[class^='icon-alarm-'] {
 
         .notice-title {
           color: #26282c;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 16px;
           font-weight: 700;
           line-height: 24px;
@@ -6946,7 +7216,7 @@ i[class^='icon-alarm-'] {
           position: relative;
           padding-left: 10px;
           color: #696e76;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 13px;
           font-weight: 300;
           line-height: 20px;
@@ -7003,7 +7273,7 @@ i[class^='icon-alarm-'] {
       color: #26282c;
       text-align: center;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -7016,7 +7286,7 @@ i[class^='icon-alarm-'] {
       color: #696e76;
       text-align: center;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 14px;
       font-style: normal;
       font-weight: 300;
@@ -7276,7 +7546,7 @@ i[class^='icon-alarm-'] {
 
         .merchant-title {
           color: #26282c;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 700;
@@ -7286,7 +7556,7 @@ i[class^='icon-alarm-'] {
 
         .merchant-cate {
           color: #8c949e;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 13px;
           font-style: normal;
           font-weight: 300;
@@ -7378,7 +7648,7 @@ i[class^='icon-alarm-'] {
         span {
           color: #ffffff;
           text-align: center;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -7541,7 +7811,7 @@ i[class^='icon-alarm-'] {
 
         .info-label {
           color: #696e76;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -7554,7 +7824,7 @@ i[class^='icon-alarm-'] {
           margin: 0;
           color: #26282c;
           text-align: right;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -7592,7 +7862,7 @@ i[class^='icon-alarm-'] {
         span {
           color: #696e76;
           text-align: right;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -7640,7 +7910,7 @@ i[class^='icon-alarm-'] {
       text-align: center;
       color: #f23f3f;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 14px;
       font-style: normal;
       font-weight: 300;
@@ -7657,7 +7927,7 @@ i[class^='icon-alarm-'] {
     margin-bottom: 24px;
     .link-change-pwd {
       color: #696e76;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 14px;
       font-style: normal;
       font-weight: 300;
@@ -7723,7 +7993,7 @@ i[class^='icon-alarm-'] {
       color: #696e76;
       text-align: center;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 14px;
       font-style: normal;
       font-weight: 300;
@@ -7818,7 +8088,7 @@ i[class^='icon-alarm-'] {
       margin: 0;
       color: #26282c;
       text-align: center;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
@@ -7846,7 +8116,7 @@ i[class^='icon-alarm-'] {
         color: #26282c;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -7894,7 +8164,7 @@ i[class^='icon-alarm-'] {
       margin: 0 0 4px 0;
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 20px;
       font-style: normal;
       font-weight: 700;
@@ -7908,7 +8178,7 @@ i[class^='icon-alarm-'] {
       align-items: center;
       gap: 6px;
       color: #696e76;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 13px;
       font-style: normal;
       font-weight: 300;
@@ -7916,7 +8186,7 @@ i[class^='icon-alarm-'] {
       letter-spacing: -0.26px;
       .common-font-roboto {
         color: #696e76;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 13px;
         font-style: normal;
         font-weight: 300;
@@ -7984,7 +8254,7 @@ i[class^='icon-alarm-'] {
           color: #26282c;
           text-align: center;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 15px;
           font-style: normal;
           font-weight: 300;
@@ -8022,7 +8292,7 @@ i[class^='icon-alarm-'] {
       border-bottom: 1px solid #c6cbd0;
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -8047,7 +8317,7 @@ i[class^='icon-alarm-'] {
 
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 700;
@@ -8088,7 +8358,7 @@ i[class^='icon-alarm-'] {
     .kb-wallet {
       margin: 0 0 20px 0;
       color: #696e76;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 15px;
       font-style: normal;
       font-weight: 700;
@@ -8107,7 +8377,7 @@ i[class^='icon-alarm-'] {
         border: none;
         padding: 0;
         color: #696e76;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
@@ -8133,7 +8403,7 @@ i[class^='icon-alarm-'] {
       margin: 0 0 20px 0;
 
       color: #696e76;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 14px;
       font-style: normal;
       font-weight: 700;
@@ -8144,7 +8414,7 @@ i[class^='icon-alarm-'] {
       }
       .tel-info {
         color: #696e76;
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -8179,7 +8449,7 @@ i[class^='icon-alarm-'] {
       align-items: center;
       gap: 4px;
       color: #696e76;
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 10px;
       font-style: normal;
       font-weight: 300;
@@ -8263,7 +8533,7 @@ i[class^='icon-alarm-'] {
 
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 700;
@@ -8275,7 +8545,7 @@ i[class^='icon-alarm-'] {
           margin: 4px 0 0 0;
           color: #484b51;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -8338,7 +8608,7 @@ i[class^='icon-alarm-'] {
       .notice-title {
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -8366,6 +8636,91 @@ i[class^='icon-alarm-'] {
 }
 
 // ============================================================
+// **** 개인정보처리방침 개정 목록 페이지 (.page-privacy-policy-list-KBB, 스토리보드 0.7 236p)
+// ============================================================
+
+.page-privacy-policy-list-KBB {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px calc(24px + env(safe-area-inset-bottom)) 24px;
+  }
+
+  .policy-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    .policy-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid #ebeef0;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      &:first-child {
+        padding-top: 16px;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      &:active {
+        opacity: 0.6;
+      }
+
+      .item-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding-right: 16px;
+      }
+
+      .policy-title {
+        color: #26282c;
+
+        font-family: 'KBText';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 23px;
+        letter-spacing: -0.32px;
+        word-break: keep-all;
+      }
+
+      .policy-date {
+        color: #838b94;
+
+        font-family: 'KBText';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.3px;
+      }
+
+      .btn-arrow {
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        flex-shrink: 0;
+        @include icon-style('icon_arrow_right_20.svg', 20px);
+      }
+    }
+  }
+}
+
+// ============================================================
 // **** 공지사항 상세 페이지 (.page-notice-detail-KBB)
 // ============================================================
 
@@ -8386,7 +8741,7 @@ i[class^='icon-alarm-'] {
       margin: 0;
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -8430,7 +8785,7 @@ i[class^='icon-alarm-'] {
       margin: 0 0 8px 0;
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 18px;
       font-style: normal;
       font-weight: 700;
@@ -8461,7 +8816,7 @@ i[class^='icon-alarm-'] {
       margin: 0;
       color: #484b51;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -8503,7 +8858,7 @@ i[class^='icon-alarm-'] {
       border-radius: 2px;
       border: 1px solid #838b94;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -8528,6 +8883,22 @@ i[class^='icon-alarm-'] {
 .KBB .page-notice-list-KBB[class^='page-'][class*='-KBB'] {
   min-height: auto;
   padding: 0 24px calc(24px + env(safe-area-inset-bottom)) 24px;
+}
+// 개인정보처리방침 개정 목록도 공지사항 목록과 같이 앱에서는 SubLayout 의 <main> 안에 페이지 div 가 들어가므로
+// 퍼블리싱의 min-height: 100vh 를 풀고, 퍼블리싱 main 의 여백을 페이지 div 에 준다
+.KBB .page-privacy-policy-list-KBB[class^='page-'][class*='-KBB'] {
+  min-height: auto;
+  padding: 0 24px calc(24px + env(safe-area-inset-bottom)) 24px;
+}
+// 스토리보드 0.7 211p: 목록 제목은 최대 2줄, 넘치면 말줄임 (퍼블리싱에는 줄 수 제한이 없어 긴 제목이 모두 보였다).
+// 띄어쓰기 없는 긴 글자도 가로로 넘치지 않게 줄을 바꾼다
+.KBB .page-notice-list-KBB .notice-list .notice-item .notice-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
 }
 
 // 앱에서는 SubLayout 의 헤더(.common-header, 높이 55px) 아래 <main> 안에 .page-notice-detail-KBB div 가 들어가고,
@@ -8574,7 +8945,7 @@ i[class^='icon-alarm-'] {
       color: #26282c;
       text-align: center;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 18px;
       font-style: normal;
       font-weight: 300;
@@ -8614,7 +8985,7 @@ i[class^='icon-alarm-'] {
         display: block;
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 15px;
         font-style: normal;
         font-weight: 700;
@@ -8646,7 +9017,7 @@ i[class^='icon-alarm-'] {
         color: #26282c;
         text-align: right;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -8676,7 +9047,7 @@ i[class^='icon-alarm-'] {
         .val-unit {
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 20px;
           font-style: normal;
           font-weight: 700;
@@ -8730,7 +9101,7 @@ i[class^='icon-alarm-'] {
         .item-text-wrapper .item-title {
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
@@ -8746,7 +9117,7 @@ i[class^='icon-alarm-'] {
           margin: 0;
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 700;
@@ -8758,7 +9129,7 @@ i[class^='icon-alarm-'] {
           margin: 4px 0 0 0;
           color: #484b51;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 14px;
           font-style: normal;
           font-weight: 300;
@@ -8769,7 +9140,7 @@ i[class^='icon-alarm-'] {
           &.limit-value {
             color: #484b51;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -8789,6 +9160,68 @@ i[class^='icon-alarm-'] {
 
       .common-switch {
         flex-shrink: 0;
+      }
+
+      // 보유 한도 입력 영역 (스토리보드 자동 출금 212p 2번): 제목 아래 오른쪽 정렬 금액 입력칸 + 안내 문구
+      &.holding-limit-item {
+        flex-direction: column;
+        align-items: stretch;
+        border-bottom: none;
+
+        .item-title {
+          margin: 0 0 8px 0;
+          color: #26282c;
+
+          font-family: 'KBText';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 23px;
+          letter-spacing: -0.2px;
+        }
+
+        .holding-input-field {
+          .common-form-input {
+            text-align: right;
+            padding-right: 4px;
+          }
+
+          .input-unit {
+            flex-shrink: 0;
+            color: #26282c;
+
+            font-family: 'KBText';
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 27px;
+          }
+
+          // 자동 출금이 꺼져 있으면 입력할 수 없다 (누르면 안내 팝업)
+          &:has(.common-form-input:read-only) {
+            border-bottom: 2px solid #dde1e4;
+            background: #f7f7f8;
+          }
+        }
+
+        .input-guide-msg {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          margin: 8px 0 0 0;
+          color: #696e76;
+
+          font-family: 'KBText';
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 20px;
+          letter-spacing: -0.14px;
+
+          .icon-info-caption {
+            @include icon-style('icon_input_caption_16.svg', 16px);
+            flex-shrink: 0;
+          }
+        }
       }
     }
   }
@@ -8833,7 +9266,7 @@ i[class^='icon-alarm-'] {
           .terms-label-text {
             color: #26282c;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -8872,6 +9305,11 @@ i[class^='icon-alarm-'] {
           .terms-label-text {
             font-weight: 700;
           }
+
+          // 켜짐·꺼짐 원 크기를 큰 쪽(24px)에 맞춤: 원이 24px 로 꽉 찬 켜짐 아이콘
+          .check-input:checked + .custom-checkbox {
+            @include icon-style('icon_check_round_on_24.svg', 24px);
+          }
         }
 
         .terms-depth-list {
@@ -8881,6 +9319,11 @@ i[class^='icon-alarm-'] {
           display: flex;
           flex-direction: column;
           gap: 12px;
+
+          // 켜짐·꺼짐 원 크기를 작은 쪽(켜짐 아이콘의 20px 원)에 맞춤: 꺼짐 아이콘만 20px 로 줄임
+          .check-input:not(:checked) + .custom-checkbox {
+            background-size: 20px 20px;
+          }
 
           .terms-group-item {
             display: flex;
@@ -8894,7 +9337,7 @@ i[class^='icon-alarm-'] {
               .terms-label-text {
                 color: #26282c;
 
-                font-family: 'KBFG Text';
+                font-family: 'KBText';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 300;
@@ -8963,7 +9406,7 @@ i[class^='icon-alarm-'] {
       margin: 0;
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
@@ -9005,7 +9448,7 @@ i[class^='icon-alarm-'] {
       margin: 8px 0 0 0;
       color: #696e76;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 14px;
       font-style: normal;
       font-weight: 300;
@@ -9069,7 +9512,7 @@ i[class^='icon-alarm-'] {
           margin: 0 0 4px 0;
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 700;
@@ -9120,7 +9563,7 @@ i[class^='icon-alarm-'] {
 
         .balance-unit {
           color: #26282c;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 18px;
           font-style: normal;
           font-weight: 300;
@@ -9270,7 +9713,7 @@ i[class^='icon-alarm-'] {
           margin: 0;
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
@@ -9299,12 +9742,20 @@ i[class^='icon-alarm-'] {
 
           .val-unit {
             color: #26282c;
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 18px;
             font-style: normal;
             font-weight: 300;
             line-height: 25px;
             letter-spacing: -0.36px;
+          }
+
+          // 기한 만료 바우처는 잔액 색을 바꾼다 (스토리보드 0.7 220p 2-1). 색은 목록의 사용 불가 카드 글자색과 같게 둔다
+          &.is-expired {
+            .val-num,
+            .val-unit {
+              color: #aab0b8;
+            }
           }
         }
       }
@@ -9333,7 +9784,7 @@ i[class^='icon-alarm-'] {
 
           color: #696e76;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -9345,7 +9796,7 @@ i[class^='icon-alarm-'] {
           color: #26282c;
           text-align: right;
           white-space: normal;
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -9396,7 +9847,7 @@ i[class^='icon-alarm-'] {
         color: #696e76;
 
         /* Button/Button 4_light */
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -9432,7 +9883,7 @@ i[class^='icon-alarm-'] {
       border-bottom: 1px solid #c6cbd0;
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 18px;
       font-style: normal;
       font-weight: 700;
@@ -9481,7 +9932,7 @@ i[class^='icon-alarm-'] {
             margin: 0;
             color: #26282c;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -9507,7 +9958,7 @@ i[class^='icon-alarm-'] {
         color: #26282c;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -9562,7 +10013,7 @@ i[class^='icon-alarm-'] {
           margin: 0 0 16px 0;
           color: #26282c;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -9610,7 +10061,7 @@ i[class^='icon-alarm-'] {
               .category-name {
                 color: #484b51;
 
-                font-family: 'KBFG Text';
+                font-family: 'KBText';
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 300;
@@ -9621,7 +10072,7 @@ i[class^='icon-alarm-'] {
               .distance-value {
                 color: #484b51;
 
-                font-family: 'KBFG Text';
+                font-family: 'KBText';
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 300;
@@ -9633,7 +10084,7 @@ i[class^='icon-alarm-'] {
             .merchant-store-name {
               color: #26282c;
 
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 18px;
               font-style: normal;
               font-weight: 700;
@@ -9646,13 +10097,19 @@ i[class^='icon-alarm-'] {
               margin: 0;
               color: #484b51;
 
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 14px;
               font-style: normal;
               font-weight: 300;
               line-height: 20px;
               letter-spacing: -0.14px;
               word-break: keep-all;
+
+              // 주소가 2줄을 넘으면 말줄임 (스토리보드 0.7 221p 1-1)
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              overflow: hidden;
             }
           }
         }
@@ -9708,7 +10165,7 @@ i[class^='icon-alarm-'] {
           .question-text {
             color: #26282c;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 15px;
             font-style: normal;
             font-weight: 300;
@@ -9734,7 +10191,7 @@ i[class^='icon-alarm-'] {
           p {
             margin: 0;
             color: #484b51;
-            font-family: 'KBFG Text', sans-serif;
+            font-family: 'KBText', sans-serif;
             font-size: 15px;
             font-weight: 300;
             line-height: 24px;
@@ -9759,7 +10216,7 @@ i[class^='icon-alarm-'] {
             .question-text {
               color: #26282c;
 
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 15px;
               font-style: normal;
               font-weight: 700;
@@ -9775,7 +10232,7 @@ i[class^='icon-alarm-'] {
             display: block;
             color: #26282c;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 15px;
             font-style: normal;
             font-weight: 300;
@@ -9801,7 +10258,7 @@ i[class^='icon-alarm-'] {
         color: #26282c;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -9814,7 +10271,7 @@ i[class^='icon-alarm-'] {
         color: #696e76;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -9839,7 +10296,7 @@ i[class^='icon-alarm-'] {
         background-color: #fff;
         text-align: center;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -9886,7 +10343,7 @@ i[class^='icon-alarm-'] {
     color: #26282c;
     text-align: center;
 
-    font-family: 'KBFG Text';
+    font-family: 'KBText';
     font-size: 18px;
     font-style: normal;
     font-weight: 300;
@@ -10016,7 +10473,7 @@ i[class^='icon-alarm-'] {
             padding-left: 2px;
             color: #26282c;
 
-            font-family: 'KBFG Text';
+            font-family: 'KBText';
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -10074,7 +10531,7 @@ i[class^='icon-alarm-'] {
       margin: 0;
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
@@ -10097,7 +10554,7 @@ i[class^='icon-alarm-'] {
         margin-top: 7px;
         color: #696e76;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -10120,7 +10577,7 @@ i[class^='icon-alarm-'] {
           appearance: none;
           -webkit-appearance: none;
           color: #26282c;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 19px;
           font-weight: 700;
           line-height: 27px;
@@ -10145,7 +10602,7 @@ i[class^='icon-alarm-'] {
 
       .common-input-field {
         .common-form-input {
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 19px;
           font-weight: 700;
           line-height: 27px;
@@ -10183,7 +10640,7 @@ i[class^='icon-alarm-'] {
           background: transparent;
           padding: 0;
 
-          font-family: 'KBFG Text';
+          font-family: 'KBText';
           font-size: 16px;
           font-style: normal;
           font-weight: 300;
@@ -10263,7 +10720,7 @@ i[class^='icon-alarm-'] {
       margin: 0;
       color: #26282c;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -10320,7 +10777,7 @@ i[class^='icon-alarm-'] {
         margin: 0 0 8px 0;
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
@@ -10348,7 +10805,7 @@ i[class^='icon-alarm-'] {
         margin: 0;
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -10372,7 +10829,7 @@ i[class^='icon-alarm-'] {
 
       .answer-icon {
         color: var(--text-kbui-03484-b-51, #484b51);
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 22px;
         font-style: normal;
         font-weight: 700;
@@ -10388,7 +10845,7 @@ i[class^='icon-alarm-'] {
         color: var(--text-kbui-11-ffffff, #fff);
 
         /* Contents/Caption 02 */
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 13px;
         font-style: normal;
         font-weight: 300;
@@ -10406,7 +10863,7 @@ i[class^='icon-alarm-'] {
         margin: 0;
         color: #26282c;
 
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -10448,7 +10905,7 @@ i[class^='icon-alarm-'] {
       color: #26282c;
       text-align: center;
 
-      font-family: 'KBFG Text';
+      font-family: 'KBText';
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -10497,7 +10954,7 @@ i[class^='icon-alarm-'] {
 
       .logo-text {
         color: #26282c;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 17px;
         font-weight: 700;
         letter-spacing: -0.3px;
@@ -10532,7 +10989,7 @@ i[class^='icon-alarm-'] {
       border: 1px solid #dde1e4;
       background-color: #ffffff;
       color: #26282c;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 13px;
       font-weight: 400;
       line-height: 18px;
@@ -10554,7 +11011,7 @@ i[class^='icon-alarm-'] {
 
     .auth-pin-title {
       color: #26282c;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 24px;
       font-weight: 700;
       line-height: 32px;
@@ -10586,7 +11043,7 @@ i[class^='icon-alarm-'] {
 
     .auth-pin-guide {
       color: #696e76;
-      font-family: 'KBFG Text', sans-serif;
+      font-family: 'KBText', sans-serif;
       font-size: 14px;
       font-weight: 300;
       line-height: 20px;
@@ -10603,7 +11060,7 @@ i[class^='icon-alarm-'] {
 
       .link-find-password {
         color: #696e76;
-        font-family: 'KBFG Text', sans-serif;
+        font-family: 'KBText', sans-serif;
         font-size: 13px;
         font-weight: 400;
         line-height: 18px;
@@ -10665,7 +11122,7 @@ i[class^='icon-alarm-'] {
 
         &.btn-confirm-pin {
           color: #26282c;
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 17px;
           font-weight: 500;
           letter-spacing: -0.2px;
@@ -10705,7 +11162,7 @@ i[class^='icon-alarm-'] {
         color: var(--Colors-KB_UI_02, #26282c);
 
         /* Title/Page Title_completed_bold */
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -10719,7 +11176,7 @@ i[class^='icon-alarm-'] {
         color: var(--text-kbui-03484-b-51, #484b51);
 
         /* Contents/Body 02_light */
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -10763,7 +11220,7 @@ i[class^='icon-alarm-'] {
           color: var(--Colors-KB_UI_02, #26282c);
 
           /* Body/Body 2_Bold */
-          font-family: var(--Text, 'KBFG Text');
+          font-family: var(--Text, 'KBText');
           font-size: var(--Body-2_Bold-Size, 16px);
           font-style: normal;
           font-weight: 700;
@@ -10793,7 +11250,7 @@ i[class^='icon-alarm-'] {
               color: var(--Colors-KB_UI_02, #26282c);
 
               /* Contents/Guide_light */
-              font-family: 'KBFG Text';
+              font-family: 'KBText';
               font-size: 15px;
               font-style: normal;
               font-weight: 300;
@@ -10879,7 +11336,7 @@ i[class^='icon-alarm-'] {
           border: none;
           background: transparent;
           color: var(--Colors-KB_UI_05, #8c949e);
-          font-family: 'KBFG Text', sans-serif;
+          font-family: 'KBText', sans-serif;
           font-size: 18px;
           font-weight: 700;
           letter-spacing: -0.3px;
@@ -10928,7 +11385,7 @@ i[class^='icon-alarm-'] {
         color: var(--Colors-KB_UI_02, #26282c);
 
         /* Title/Sub Title */
-        font-family: var(--Sub-Title-Font, 'KBFG Text');
+        font-family: var(--Sub-Title-Font, 'KBText');
         font-size: var(--Sub-Title-Size, 18px);
         font-style: normal;
         font-weight: 700;
@@ -10940,7 +11397,7 @@ i[class^='icon-alarm-'] {
       .step-desc {
         margin: 0 0 16px 0;
         color: var(--Colors-KB_UI_03, #484b51);
-        font-family: 'KBFG Text';
+        font-family: 'KBText';
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -11068,5 +11525,38 @@ i[class^='icon-alarm-'] {
   }
   to {
     background-position: -560px 0;
+  }
+}
+
+// 내 지갑 QR 바텀시트 (홈 '내 지갑 QR 보기'): QR 160px 가운데, 아래 안내 두 줄
+.bottom-sheet-container.wallet-qr-sheet {
+  .wallet-qr-sheet-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 24px 0 24px;
+
+    .wallet-qr-image {
+      width: 160px;
+      height: 160px;
+
+      svg {
+        display: block;
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    .wallet-qr-guide {
+      color: #26282c;
+      text-align: center;
+      font-family: 'KBText';
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 25px;
+      letter-spacing: -0.2px;
+    }
   }
 }

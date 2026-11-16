@@ -12,53 +12,26 @@
     <!-- 공통 헤더 규격 -->
     <header>
       <div class="common-header">
-        <button type="button" class="btn-go-main">메인으로</button>
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
       </div>
     </header>
 
     <main>
       <section class="security-list-container">
-        <!-- 1. 간편 비밀번호 재설정 -->
-        <div class="security-item is-link" data-href="pin_reset.html">
+        <!-- 1. KB국민인증서 관리 (스토리보드 205p 1번, 간편 비밀번호·지문·얼굴 설정은 스타뱅킹 인증서 관리로 옮김) -->
+        <div class="security-item is-link">
           <div class="item-text-wrapper">
-            <p class="item-title">간편 비밀번호 재설정</p>
+            <p class="item-title">KB국민인증서 관리</p>
+            <p class="item-desc">간편 비밀번호, 생체, 패턴 인증 정보를 변경해요.</p>
           </div>
           <button type="button" class="btn-arrow" aria-label="이동"></button>
         </div>
 
-        <!-- 2. 지문인증 설정 -->
-        <div class="security-item">
-          <div class="item-text-wrapper">
-            <p class="item-title">지문인증 설정</p>
-            <p class="item-desc">지문을 활용하여 인증을 간편하게 할 수 있어요.</p>
-          </div>
-          <label class="common-switch" for="switchFingerprint">
-            <input type="checkbox" id="switchFingerprint" class="switch-input" />
-            <span class="switch-track">
-              <span class="switch-thumb"></span>
-            </span>
-          </label>
-        </div>
-
-        <!-- 3. 얼굴인증 설정 -->
-        <div class="security-item">
-          <div class="item-text-wrapper">
-            <p class="item-title">얼굴인증 설정</p>
-            <p class="item-desc">얼굴을 활용하여 인증을 간편하게 할 수 있어요.</p>
-          </div>
-          <label class="common-switch" for="switchFace">
-            <input type="checkbox" id="switchFace" class="switch-input" />
-            <span class="switch-track">
-              <span class="switch-thumb"></span>
-            </span>
-          </label>
-        </div>
-
-        <!-- 4. 토큰 잔액 숨기기 -->
+        <!-- 2. 토큰 잔액 숨기기 -->
         <div class="security-item">
           <div class="item-text-wrapper">
             <p class="item-title">토큰 잔액 숨기기</p>
-            <p class="item-desc">설정 시, 앱 화면에서 잔액이 숨겨져요.</p>
+            <p class="item-desc">홈, QR 보여주기 화면에서 잔액을 숨길 수 있어요.</p>
           </div>
           <label class="common-switch" for="switchHideBalance">
             <input type="checkbox" id="switchHideBalance" class="switch-input" />

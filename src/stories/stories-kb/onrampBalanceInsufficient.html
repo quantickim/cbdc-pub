@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - APP</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-convert-deposit-KBB">
+      <!-- 상단 공통 헤더 -->
+      <header class="common-header">
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
+      </header>
+
+      <main class="convert-deposit-main">
+        <!-- 연계계좌 정보 -->
+        <section class="account-info-section">
+          <p class="account-title">
+            <span class="account-title-label">연계계좌</span>
+            <span class="account-title-unit" aria-hidden="true">|</span>
+            <span class="account-title-val">012345-67-890125</span>
+          </p>
+          <p class="account-balance">
+            <span class="account-balance-label">계좌 잔액</span>
+            <span class="account-balance-val">300,000</span>
+            <span class="account-balance-unit">원</span>
+          </p>
+        </section>
+
+        <!-- 중앙 입력 금액 및 잔액부족 에러 영역 -->
+        <section class="convert-question-section">
+          <div class="question-title-wrapper has-value" id="convertTitleWrapper">
+            <input
+              type="text"
+              id="convertAmountInput"
+              class="question-input"
+              placeholder="얼마를 전환하시겠어요?"
+              value="500,000"
+              style="width: 122px"
+              inputmode="numeric"
+              autocomplete="off"
+            />
+            <span class="question-title-unit" aria-hidden="true">원</span>
+          </div>
+          <!-- <h2 class="question-title has-value" id="convertQuestionTitle">
+ <span class="val">5,000,000</span>
+ <span class="unit">원</span>
+ </h2> -->
+
+          <!-- 계좌 잔액 부족 에러 상태 (스토리보드 전환 입금(금액 입력) 1-2) -->
+          <div class="available-amount-wrapper is-insufficient" id="availableAmountWrapper">
+            <i class="icon-warning-fill" aria-hidden="true"></i>
+            <span class="insufficient-tag">계좌 잔액을 확인해주세요</span>
+          </div>
+        </section>
+      </main>
+      <!-- 공통 하단 고정 버튼 (id="btnConvertConfirm" 추가) -->
+      <div class="fixed-bottom-btn-wrapper">
+        <button type="button" class="btn-confirm-bottom" id="btnConvertConfirm">확인</button>
+      </div>
+      <!-- 바텀시트 키패드 (딤 없음) -->
+      <!-- <div class="bottom-sheet-overlay no-dim active">
+ <div class="bottom-sheet-container keypad-sheet-container">
+ <div class="bottom-sheet-content">
+ <div class="common-quick-amount-group" id="convertQuickGroup">
+ <button type="button" class="btn-quick-amount" data-add="1000000">
+ <span class="num">100</span><span class="quick-amount-unit">만</span>
+ </button>
+ <button type="button" class="btn-quick-amount" data-add="100000">
+ <span class="num">10</span><span class="quick-amount-unit">만</span>
+ </button>
+ <button type="button" class="btn-quick-amount" data-add="50000">
+ <span class="num">5</span><span class="quick-amount-unit">만</span>
+ </button>
+ <button type="button" class="btn-quick-amount" data-add="10000">
+ <span class="num">1</span><span class="quick-amount-unit">만</span>
+ </button>
+ <button type="button" class="btn-quick-amount" data-action="all">
+ <span class="quick-amount-unit">전액</span>
+ </button>
+ </div>
+
+ <div class="common-keypad-grid" id="convertKeypadGrid">
+ <button type="button" class="btn-key" data-key="1">1</button>
+ <button type="button" class="btn-key" data-key="2">2</button>
+ <button type="button" class="btn-key" data-key="3">3</button>
+ <button type="button" class="btn-key" data-key="4">4</button>
+ <button type="button" class="btn-key" data-key="5">5</button>
+ <button type="button" class="btn-key" data-key="6">6</button>
+ <button type="button" class="btn-key" data-key="7">7</button>
+ <button type="button" class="btn-key" data-key="8">8</button>
+ <button type="button" class="btn-key" data-key="9">9</button>
+ <button type="button" class="btn-key" data-key="00">00</button>
+ <button type="button" class="btn-key" data-key="0">0</button>
+ <button type="button" class="btn-key btn-key-delete" data-key="delete" aria-label="지우기">
+ <i class="icon-keypad-delete" aria-hidden="true"></i>
+ </button>
+ </div>
+ </div>
+
+ <div class="bottom-sheet-footer">
+ <button type="button" class="btn-sheet-confirm" id="btnConvertConfirm">확인</button>
+ </div>
+ </div>
+ </div> -->
+    </div>
+
+    <!-- 스크립트 실행 -->
+  </body>
+</html>

@@ -9,12 +9,11 @@
     <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
   </head>
   <body class="page-inquiry-detail-KBB KBB">
-    <!-- 닫기(X) 헤더 -->
-    <header class="detail-header">
-      <h1 class="header-title">1:1 문의</h1>
-      <button type="button" class="btn-detail-close" data-action="back" aria-label="닫기">
-        <i class="icon-close-24" aria-hidden="true"></i>
-      </button>
+    <!-- 공통 헤더 규격 -->
+    <header>
+      <div class="common-header">
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
+      </div>
     </header>
 
     <main>
@@ -33,8 +32,7 @@
       <!-- 2. 답변 완료 영역 -->
       <section class="inquiry-answer-container">
         <div class="answer-header">
-          <span class="answer-icon">A.</span>
-          <span class="common-badge badge-status-done">답변 완료</span>
+          <span class="common-badge badge-status-done">답변완료</span>
         </div>
         <div class="answer-body">
           <p class="answer-desc">
@@ -55,5 +53,6 @@
     <div class="fixed-bottom-actions">
       <button type="button" class="btn-action-outline btn-full" data-href="inquiry_list.html">확인</button>
     </div>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
   </body>
 </html>

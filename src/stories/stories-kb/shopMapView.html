@@ -12,7 +12,7 @@
     <div class="page-merchant-KBB page-merchant-map-mode">
       <!-- 상단 공통 헤더 -->
       <header class="common-header">
-        <button type="button" class="btn-go-main">메인으로</button>
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
       </header>
 
       <main class="main-content">
@@ -23,7 +23,7 @@
               type="text"
               id="searchInput"
               class="common-form-input"
-              placeholder="이름, 업종을 검색해보세요"
+              placeholder="사용처 명, 또는 업종으로 검색"
               aria-label="사용처 이름 또는 업종 검색"
             />
             <button type="button" id="btnSearch" class="btn-search-action" aria-label="검색">
@@ -104,7 +104,7 @@
               <dd class="info-value" id="sheetCategory">-</dd>
             </div>
             <div class="info-row row-voucher">
-              <dt class="info-label">사용가능 바우처</dt>
+              <dt class="info-label">사용 가능 바우처</dt>
               <dd class="info-value text-right" id="sheetVoucher">
                 국민서울사랑바우처, 대한민국화이팅<br />
                 바우처, 여의도사랑바우처, 캐시백<br />
@@ -312,7 +312,8 @@
           }
 
           var category = poi.upperBizName || poi.middleBizName || '사용처';
-          var title = poi.name;
+          // 스토리보드 228p 7: 사용처 명 최대 10글자, 넘으면 말줄임
+          var title = poi.name.length > 10 ? poi.name.slice(0, 10) + '...' : poi.name;
 
           var bubbleHtml = `
             <div class="map-bubble-marker">
@@ -384,5 +385,6 @@
 
       document.addEventListener('DOMContentLoaded', initTmap);
     </script>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
   </body>
 </html>

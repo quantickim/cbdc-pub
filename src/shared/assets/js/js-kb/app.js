@@ -173,7 +173,8 @@ function initAccountCopyToast() {
   let toastTimer = null;
 
   copyBtn.addEventListener('click', function () {
-    const accountText = accountElem.textContent.trim();
+    // 지갑 주소는 하이픈 없이 숫자만 복사한다 (앱과 같은 규칙: 송금 주소 입력이 숫자만 받는다)
+    const accountText = accountElem.textContent.replace(/\D/g, '');
     navigator.clipboard.writeText(accountText).then(() => {
       clearTimeout(toastTimer);
       toast.classList.add('show');
@@ -818,6 +819,38 @@ function initAccountPasswordInput() {
 }
 
 /**
+ * 약관 동의 바텀시트 (자동 충전/출금 이용약관)
+ * - '필수 약관 모두 동의'를 체크(해제)하면 아래 약관을 모두 체크(해제)한다
+ * - 약관을 체크(해제)하면 안쪽으로 들여쓴 하위 약관도 함께 체크(해제)하고, 하위 약관을 모두 체크하면 그 약관도 체크된다
+ * - 아래 약관을 모두 체크하면 '필수 약관 모두 동의'도 체크된다
+ */
+function initTermsAgreeSheet() {
+  document.querySelectorAll('.terms-agree-container').forEach(function (container) {
+    const allCheck = container.querySelector('.terms-all-check .check-input');
+    const items = container.querySelectorAll('.terms-depth-list .check-input');
+    if (!allCheck || !items.length) return;
+
+    const everyChecked = (list) => Array.from(list).every((el) => el.checked);
+
+    allCheck.addEventListener('change', function () {
+      items.forEach((item) => (item.checked = allCheck.checked));
+    });
+    items.forEach(function (item) {
+      item.addEventListener('change', function () {
+        const group = item.closest('.terms-group-item');
+        const groupCheck = group.querySelector('.terms-row .check-input');
+        const subChecks = group.querySelectorAll('.terms-sub-list .check-input');
+
+        if (item === groupCheck) subChecks.forEach((sub) => (sub.checked = item.checked));
+        else if (subChecks.length) groupCheck.checked = everyChecked(subChecks);
+
+        allCheck.checked = everyChecked(items);
+      });
+    });
+  });
+}
+
+/**
  * 공통 인라인 이벤트 위임 초기화
  * - data-href: 페이지 이동
  * - data-action="back": 뒤로가기
@@ -860,7 +893,8 @@ function initWalletDetailFilter() {
       });
       btn.classList.add('active');
 
-      var filterText = btn.querySelector('.wallet-detail-filter').textContent.trim();
+      // data-type 이 있으면 그 값으로 거른다 (칩 이름과 내역 종류 이름이 다를 때)
+      var filterText = btn.dataset.type || btn.querySelector('.wallet-detail-filter').textContent.trim();
 
       historyItems.forEach(function (item) {
         if (filterText === '전체') {
@@ -872,6 +906,67 @@ function initWalletDetailFilter() {
         item.style.display = typeText.indexOf(filterText) === 0 ? '' : 'none';
       });
     });
+  });
+}
+
+/**
+ * 지갑 상세 조회 월 선택 초기화 ('<  2026년 5월 ▾  >' 좌·우 버튼으로 이전 달·다음 달)
+ */
+function initWalletDetailMonth() {
+  var monthText = document.querySelector('.wallet-detail-month');
+  var prevBtn = document.querySelector('.btn-wallet-detail-month.prev');
+  var nextBtn = document.querySelector('.btn-wallet-detail-month.next');
+  if (!monthText || !prevBtn || !nextBtn) return;
+
+  var parts = monthText.textContent.match(/(\d{4})\D+(\d{1,2})/);
+  if (!parts) return;
+  var year = Number(parts[1]);
+  var month = Number(parts[2]);
+
+  function render() {
+    monthText.innerHTML = year + '<span class="kbfg-text">년</span> ' + month + '<span class="kbfg-text">월</span>';
+  }
+
+  function move(diff) {
+    month += diff;
+    if (month < 1) {
+      month = 12;
+      year -= 1;
+    } else if (month > 12) {
+      month = 1;
+      year += 1;
+    }
+    render();
+  }
+
+  prevBtn.addEventListener('click', function () {
+    move(-1);
+  });
+  nextBtn.addEventListener('click', function () {
+    move(1);
+  });
+}
+
+/**
+ * 지갑 상세 검색칸 초기화(X) 버튼: 글자가 있을 때만 보이고, 누르면 글자를 지우고 입력칸 포커스 유지
+ */
+function initWalletDetailSearchClear() {
+  var wrapper = document.querySelector('.wallet-detail-search-wrapper');
+  if (!wrapper) return;
+  var input = wrapper.querySelector('.wallet-detail-search-input');
+  var clearBtn = wrapper.querySelector('.btn-input-clear');
+  if (!input || !clearBtn) return;
+
+  function updateClearBtnVisibility() {
+    clearBtn.style.display = input.value ? 'inline-flex' : 'none';
+  }
+
+  updateClearBtnVisibility();
+  input.addEventListener('input', updateClearBtnVisibility);
+  clearBtn.addEventListener('click', function () {
+    input.value = '';
+    updateClearBtnVisibility();
+    input.focus();
   });
 }
 
@@ -916,6 +1011,9 @@ document.addEventListener('DOMContentLoaded', function () {
   initRemitAmountInput();
   initIdentityVerify();
   initAccountPasswordInput();
+  initTermsAgreeSheet();
   initWalletDetailFilter();
+  initWalletDetailMonth();
+  initWalletDetailSearchClear();
   initSegmentTab();
 });

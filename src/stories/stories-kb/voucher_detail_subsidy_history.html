@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - 내 바우처 상세</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="page-voucher-detail-KBB KBB">
+    <!-- 상단 [닫기] → [전자지갑 메인] (스토리보드 0.7 220p 1번) -->
+    <header>
+      <div class="common-header">
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="voucher-summary-container">
+        <div class="summary-top">
+          <span class="common-badge badge-receive">보조금</span>
+          <div class="title-amount-row">
+            <h2 class="voucher-title">서울 사용 바우처</h2>
+            <div class="voucher-amount">
+              <span class="val-num common-font-roboto">1,780,000</span>
+              <span class="val-unit">원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-info-list">
+          <div class="info-row">
+            <span class="info-label">발행 기관</span>
+            <span class="info-value">서울시</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">지원 대상</span>
+            <span class="info-value">
+              서울에 주민등록을 둔 만 <span class="common-font-roboto">19</span>세 이상 성인
+            </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">사용 조건</span>
+            <span class="info-value"> <span class="common-font-roboto">5,000</span>원 이상 결제 시 </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">발행 금액</span>
+            <span class="info-value voucher-amount-wrapper">
+              <span class="voucher-amount-value common-font-roboto">200,000</span>
+              <span class="voucher-amount-won">원</span>
+            </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">발행일</span>
+            <span class="info-value">2025.04.29</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">사용 기한</span>
+            <span class="info-value">2025.04.29 ~ 2025.06.30</span>
+          </div>
+        </div>
+
+        <div class="summary-bottom-link">
+          <button type="button" class="btn-merchant-link" data-href="guide_merchant.html">
+            <span>사용 가능 사용처 확인</span>
+            <i class="icon-arrow-right-16" aria-hidden="true"></i>
+          </button>
+        </div>
+      </section>
+
+      <div class="divider-container" aria-hidden="true"></div>
+
+      <section class="voucher-history-container">
+        <h3 class="history-section-title">이용 내역</h3>
+
+        <!-- 스토리보드 220p 5-1: 보조금 바우처와 예금 토큰(TD) 결제를 각각 내역으로.
+             보조금 바우처 결제는 바우처명, TD 결제는 사용처명, 바우처로만 결제하면 TD 결제 금액 '0원' -->
+        <ul class="history-list">
+          <li class="history-item">
+            <div class="item-left">
+              <span class="history-datetime common-font-roboto">07.11 10:10:04</span>
+              <p class="history-name">서울 사용 바우처</p>
+            </div>
+            <div class="common-transactions-value-wrapper">
+              <span class="common-transactions-value sign-minus">-5,000</span>
+              <span class="common-transactions-won">원</span>
+            </div>
+          </li>
+
+          <li class="history-item">
+            <div class="item-left">
+              <span class="history-datetime common-font-roboto">07.11 10:10:04</span>
+              <p class="history-name"><span class="common-font-roboto">GS</span>편의점 여의도점</p>
+            </div>
+            <div class="common-transactions-value-wrapper">
+              <span class="common-transactions-value">0</span>
+              <span class="common-transactions-won">원</span>
+            </div>
+          </li>
+
+          <li class="history-item">
+            <div class="item-left">
+              <span class="history-datetime common-font-roboto">07.10 18:20:11</span>
+              <p class="history-name">서울 사용 바우처</p>
+            </div>
+            <div class="common-transactions-value-wrapper">
+              <span class="common-transactions-value sign-minus">-10,000</span>
+              <span class="common-transactions-won">원</span>
+            </div>
+          </li>
+
+          <li class="history-item">
+            <div class="item-left">
+              <span class="history-datetime common-font-roboto">07.10 18:20:11</span>
+              <p class="history-name">스피카 나폴리 합정</p>
+            </div>
+            <div class="common-transactions-value-wrapper">
+              <span class="common-transactions-value sign-minus">-5,600</span>
+              <span class="common-transactions-won">원</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
+  </body>
+</html>

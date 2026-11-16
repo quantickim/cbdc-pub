@@ -42,7 +42,7 @@
 
           <!-- 2. 주민등록번호 입력 필드 (입력 가능형 앞자리 6자리 + 뒷자리 1자리) -->
           <div class="form-group-item">
-            <label class="form-field-label" for="userRrnFirst">주민등록번호</label>
+            <label class="form-field-label" for="userRrnFirst">생년월일</label>
             <div class="form-rrn-wrapper row-wrapper">
               <div class="common-input-field">
                 <input
@@ -52,36 +52,41 @@
                   placeholder="앞 6자리"
                   maxlength="6"
                   inputmode="numeric"
-                  value="9003151"
-                  size="7"
+                  value="900315"
+                  size="6"
                   disabled
                 />
                 <!-- 주민등록번호 뒤 6자리 마스킹 -->
-                <span class="rrn-masking-dots" aria-hidden="true">
+                <!-- <span class="rrn-masking-dots" aria-hidden="true">
                   <span class="dot"></span>
                   <span class="dot"></span>
                   <span class="dot"></span>
                   <span class="dot"></span>
                   <span class="dot"></span>
                   <span class="dot"></span>
-                </span>
+                </span> -->
               </div>
             </div>
           </div>
 
-          <!-- 3. 핸드폰 번호 입력 필드 (언더라인형) -->
+          <!-- 3. 휴대폰 번호 입력 필드 (언더라인형) -->
           <div class="form-group-item">
-            <label class="form-field-label" for="userPhone">핸드폰 번호</label>
+            <label class="form-field-label" for="userPhone">휴대폰 번호</label>
             <div class="common-input-field">
               <input
                 type="tel"
                 id="userPhone"
                 class="common-form-input"
-                placeholder="핸드폰 번호 입력"
+                placeholder="휴대폰 번호 입력"
                 maxlength="11"
                 inputmode="numeric"
                 value="01012345678"
               />
+            </div>
+            <!-- 에러 안내 문구 영역 (공통 스타일 common-error-message) -->
+            <div class="common-error-message" id="phoneErrorMessage">
+              <i class="icon-warning-red" aria-hidden="true"></i>
+              <span class="error-text">휴대폰번호가 일치하지 않습니다.</span>
             </div>
           </div>
         </section>

@@ -9,12 +9,11 @@
     <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
   </head>
   <body class="page-voucher-detail-KBB KBB">
-    <!-- 닫기(X) 헤더 -->
-    <header class="detail-header">
-      <h1 class="header-title">내 바우처 현황</h1>
-      <button type="button" class="btn-detail-close" data-action="back" aria-label="닫기">
-        <i class="icon-close-24" aria-hidden="true"></i>
-      </button>
+    <!-- 상단 [닫기] → [전자지갑 메인] (스토리보드 0.7 220p 1번) -->
+    <header>
+      <div class="common-header">
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
+      </div>
     </header>
 
     <main>
@@ -24,7 +23,7 @@
           <!-- 뱃지 그룹: 캐시백 + 기간만료 -->
           <div class="badge-group">
             <span class="common-badge badge-cashback">캐시백</span>
-            <span class="common-badge badge-cancel">기간만료</span>
+            <span class="common-badge badge-cancel">기한 만료</span>
           </div>
 
           <div class="title-amount-row">
@@ -54,11 +53,15 @@
             </span>
           </div>
           <div class="info-row">
+            <span class="info-label">발행 금액</span>
+            <span class="info-value"><span class="common-font-roboto">200,000</span>원</span>
+          </div>
+          <div class="info-row">
             <span class="info-label">발행일</span>
             <span class="info-value common-font-roboto">2025.04.29</span>
           </div>
           <div class="info-row">
-            <span class="info-label">유효기간</span>
+            <span class="info-label">사용 기한</span>
             <span class="info-value common-font-roboto">2025.04.29 ~ 2025.06.30</span>
           </div>
         </div>
@@ -76,7 +79,7 @@
 
       <!-- 이용내역 목록 섹션 -->
       <section class="voucher-history-container">
-        <h3 class="history-section-title">이용내역</h3>
+        <h3 class="history-section-title">이용 내역</h3>
 
         <ul class="history-list">
           <li class="history-item">
@@ -103,5 +106,6 @@
         </ul>
       </section>
     </main>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
   </body>
 </html>

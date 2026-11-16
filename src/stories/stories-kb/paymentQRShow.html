@@ -11,7 +11,7 @@
     <div class="page-qr-show-KBB">
       <!-- 상단 빠른 링크 버튼 (공통 헤더 영역) -->
       <header class="common-header">
-        <button type="button" class="btn-go-main">메인으로</button>
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
       </header>
 
       <main class="qr-show-main">
@@ -40,25 +40,25 @@
           <!-- 예금 토큰 잔액 카드 -->
           <div class="qr-info-card">
             <div class="qr-info-card-left">
-              <span class="card-label">예금 토큰 보유 잔액</span>
+              <span class="card-label">예금 토큰 잔액</span>
               <div class="balance-wrapper">
                 <span class="balance-amount">3,270,000</span>
                 <span class="balance-unit">원</span>
                 <button type="button" class="btn-balance-toggle">숨김</button>
               </div>
             </div>
-            <button type="button" class="btn-card-arrow" aria-label="잔액 상세보기">
+            <button type="button" class="btn-card-arrow" aria-label="전환 입금하기">
               <i class="icon-arrow-right" aria-hidden="true"></i>
             </button>
           </div>
 
-          <!-- 바우처 혜택 적용 카드 -->
+          <!-- 적용할 혜택 카드 -->
           <div class="qr-info-card">
             <div class="qr-info-card-left">
-              <span class="card-label">바우처 혜택 적용</span>
-              <span class="card-value">미적용</span>
+              <span class="card-label">적용할 혜택</span>
+              <span class="card-value">적용 안 함</span>
             </div>
-            <button type="button" class="btn-card-arrow" aria-label="바우처 선택하기">
+            <button type="button" class="btn-card-arrow" aria-label="적용할 혜택 선택하기">
               <i class="icon-arrow-right" aria-hidden="true"></i>
             </button>
           </div>
@@ -70,5 +70,6 @@
         </section>
       </main>
     </div>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
   </body>
 </html>

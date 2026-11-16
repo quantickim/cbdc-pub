@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
     <meta name="format-detection" content="telephone=no, address=no, email=no" />
-    <title>CBDC - 카테고리를 선택</title>
+    <title>CBDC - 문의 유형</title>
     <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
     <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
   </head>
@@ -14,28 +14,56 @@
       <div class="bottom-sheet-container">
         <!-- 상단 헤더 -->
         <div class="bottom-sheet-header">
-          <h2 class="bottom-sheet-title">카테고리를 선택</h2>
+          <h2 class="bottom-sheet-title">문의 유형</h2>
           <button type="button" class="btn-sheet-close" aria-label="닫기"></button>
         </div>
 
         <!-- 바텀시트 본문 (선택 메뉴 리스트) -->
         <div class="bottom-sheet-content">
+          <!-- 누르면 바로 적용하고 닫는다. 적용된 항목: is-selected (굵게 + 체크) -->
           <ul class="select-menu-list">
             <li class="select-menu-item">
-              <button type="button" class="btn-menu-link">가입/변경/탈퇴</button>
+              <button type="button" class="btn-menu-link" aria-pressed="false">
+                가입/변경/탈퇴
+                <i class="icon-select-check" aria-hidden="true"></i>
+              </button>
+            </li>
+            <li class="select-menu-item is-selected">
+              <button type="button" class="btn-menu-link" aria-pressed="true">
+                서비스 이용
+                <i class="icon-select-check" aria-hidden="true"></i>
+              </button>
             </li>
             <li class="select-menu-item">
-              <button type="button" class="btn-menu-link">서비스이용</button>
+              <button type="button" class="btn-menu-link" aria-pressed="false">
+                지갑/토큰
+                <i class="icon-select-check" aria-hidden="true"></i>
+              </button>
             </li>
             <li class="select-menu-item">
-              <button type="button" class="btn-menu-link">지갑/토큰</button>
+              <button type="button" class="btn-menu-link" aria-pressed="false">
+                결제/송금/충전
+                <i class="icon-select-check" aria-hidden="true"></i>
+              </button>
+            </li>
+            <!-- 스토리보드 0.7 232p: '기타' 대신 '환불'·'전환' -->
+            <li class="select-menu-item">
+              <button type="button" class="btn-menu-link" aria-pressed="false">
+                환불
+                <i class="icon-select-check" aria-hidden="true"></i>
+              </button>
             </li>
             <li class="select-menu-item">
-              <button type="button" class="btn-menu-link">결제/송금/충전</button>
+              <button type="button" class="btn-menu-link" aria-pressed="false">
+                전환
+                <i class="icon-select-check" aria-hidden="true"></i>
+              </button>
             </li>
           </ul>
         </div>
+
       </div>
     </div>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
   </body>
 </html>

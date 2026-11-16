@@ -6,12 +6,13 @@
     <meta name="format-detection" content="telephone=no, address=no, email=no" />
     <title>CBDC - APP</title>
     <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
   </head>
   <body class="KBB">
     <div class="page-wallet-detail-KBB">
       <header>
         <div class="common-header">
-          <button type="button" class="btn-go-main">메인으로</button>
+          <button type="button" class="btn-go-main">전자지갑 메인</button>
         </div>
       </header>
       <main>
@@ -21,14 +22,14 @@
               <h4 class="wallet-detail-title">내 지갑</h4>
             </div>
             <div class="wallet-detail-address-wrapper">
-              <span class="wallet-detail-address">371102-04-140099</span>
-              <button type="button" aria-label="복사하기" class="btn-wallet-detail-copy">
+              <span class="wallet-detail-address" id="userWalletAccount">012345-67-890199</span>
+              <button type="button" aria-label="복사하기" class="btn-wallet-detail-copy" id="btnCopyAccount">
                 <i class="icon-wallet-detail-copy" aria-hidden="true"></i>
               </button>
             </div>
             <div class="wallet-detail-account-wrapper">
               <span class="wallet-detail-account-label">연계계좌</span>
-              <span class="wallet-detail-account-value">123456-78-901234</span>
+              <span class="wallet-detail-account-value">012345-67-890134</span>
             </div>
           </div>
           <div class="wallet-detail-more-wrapper">
@@ -46,64 +47,87 @@
         </section>
         <section class="wallet-detail-action-container">
           <div class="wallet-detail-action-top">
-            <button aria-label="전환입금하기" type="button" class="btn-wallet-detail-action">전환입금</button>
-            <button aria-label="예금전환하기" type="button" class="btn-wallet-detail-action">예금전환</button>
-            <button aria-label="송금" type="button" class="btn-wallet-detail-action transfer">송금</button>
+            <button aria-label="전환 입금하기" type="button" class="btn-wallet-detail-action">전환 입금</button>
+            <button aria-label="예금 전환하기" type="button" class="btn-wallet-detail-action">예금 전환</button>
+            <button aria-label="송금하기" type="button" class="btn-wallet-detail-action transfer">송금</button>
           </div>
           <div class="wallet-detail-action-bottom">
             <button type="button" class="btn-wallet-detail-qr">
-              <span class="wallet-detail-qr-title"> QR 결제하기 </span>
+              <span class="wallet-detail-qr-title"> QR로 결제하기 </span>
               <i aria-hidden="true" class="icon-wallet-detail-qr"> </i>
             </button>
           </div>
         </section>
         <section class="wallet-detail-filter-container">
-          <div class="wallet-detail-filter-top">
-            <button aria-label="검색하기" class="btn-wallet-detail-search">
+          <!-- 조회 월 선택 -->
+          <div class="wallet-detail-month-wrapper">
+            <button type="button" class="btn-wallet-detail-month prev" aria-label="이전 달">
+              <i class="icon-wallet-detail-month-prev" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn-wallet-detail-month-select" aria-label="조회 기간 선택">
+              <span class="wallet-detail-month">2026<span class="kbfg-text">년</span> 5<span class="kbfg-text">월</span></span>
+            </button>
+            <button type="button" class="btn-wallet-detail-month next" aria-label="다음 달">
+              <i class="icon-wallet-detail-month-next" aria-hidden="true"></i>
+            </button>
+          </div>
+          <!-- 검색 -->
+          <div class="wallet-detail-search-wrapper">
+            <input
+              type="text"
+              id="walletHistorySearch"
+              name="walletHistorySearch"
+              class="wallet-detail-search-input"
+              placeholder="사용처, 받는 분, 은행명으로 검색"
+              aria-label="거래 내역 검색"
+            />
+            <!-- 초기화 버튼: 입력한 글자가 있을 때만 보인다 (app.js initWalletDetailSearchClear) -->
+            <button type="button" class="btn-input-clear" aria-label="입력 지우기">
+              <i class="icon-input-clear" aria-hidden="true"></i>
+            </button>
+            <button type="button" aria-label="검색하기" class="btn-wallet-detail-search">
               <i aria-hidden="true" class="icon-wallet-detail-search"></i>
             </button>
-            <div class="wallet-detail-date-wrapper">
-              <button type="button" class="btn-wallet-detail-date">
-                <span class="wallet-detail-date"
-                  >2025<span class="kbfg-text">년</span> 8<span class="kbfg-text">월</span>
-                </span>
-                <i class="icon-wallet-detail-date-down"></i>
-              </button>
-            </div>
           </div>
+          <!-- 거래 종류 필터 (가로 스크롤) -->
           <div class="wallet-detail-filter-bottom">
             <button type="button" class="btn-wallet-detail-filter active">
               <span class="wallet-detail-filter">전체</span>
             </button>
             <button type="button" class="btn-wallet-detail-filter">
-              <span class="wallet-detail-filter">받기</span>
-            </button>
-            <button type="button" class="btn-wallet-detail-filter">
               <span class="wallet-detail-filter">결제</span>
-            </button>
-            <button type="button" class="btn-wallet-detail-filter">
-              <span class="wallet-detail-filter">캐시백</span>
             </button>
             <button type="button" class="btn-wallet-detail-filter">
               <span class="wallet-detail-filter">환불</span>
             </button>
             <button type="button" class="btn-wallet-detail-filter">
-              <span class="wallet-detail-filter">전환입금</span>
+              <span class="wallet-detail-filter">전환 입금</span>
             </button>
             <button type="button" class="btn-wallet-detail-filter">
-              <span class="wallet-detail-filter">예금전환</span>
+              <span class="wallet-detail-filter">예금 전환</span>
+            </button>
+            <button type="button" class="btn-wallet-detail-filter">
+              <span class="wallet-detail-filter">캐시백</span>
             </button>
             <button type="button" class="btn-wallet-detail-filter">
               <span class="wallet-detail-filter">송금</span>
+            </button>
+            <button type="button" class="btn-wallet-detail-filter">
+              <span class="wallet-detail-filter">받음</span>
             </button>
           </div>
         </section>
         <section class="wallet-detail-history-container">
           <div class="main-empty-state">
-            <p class="empty-text">이용내역이 없습니다.</p>
+            <p class="empty-text">최근에 이용한 내역이 없어요.</p>
           </div>
         </section>
       </main>
+      <!-- 지갑 주소 복사 토스트 (main.html 과 같은 공통 하단 토스트) -->
+      <div class="common-toast-bottom" id="accountCopyToast" role="alert" aria-live="polite">
+        <p class="toast-message">지갑 주소를 복사했습니다.</p>
+      </div>
     </div>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
   </body>
 </html>

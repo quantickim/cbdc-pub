@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - 현금영수증 발행(사업자 지출 증빙용)</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+    <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
+  </head>
+  <body class="KBB">
+    <div class="page-cash-receipt-KBB">
+      <!-- 상단 공통 헤더 -->
+      <header>
+        <div class="common-header">
+          <button type="button" class="btn-go-main">전자지갑 메인</button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <!-- 타이틀 섹션 -->
+        <section class="receipt-title-container">
+          <h2 class="receipt-main-title">
+            현금영수증 받을 고객님의<br />
+            정보를 입력해주세요
+          </h2>
+        </section>
+
+        <!-- 발행 정보 입력 폼 섹션 -->
+        <section class="receipt-form-container">
+          <!-- 1. 금액 입력 영역 (직접 입력 가능) -->
+          <div class="form-group-item">
+            <label class="form-field-label" for="receiptAmount">금액</label>
+            <div class="common-input-field amount-input-box">
+              <input
+                type="tel"
+                id="receiptAmount"
+                class="common-form-input amount-val val-number"
+                value="30,000"
+                readonly
+              />
+              <span class="amount-unit">원</span>
+            </div>
+          </div>
+
+          <!-- 2. 구분 세그먼트 탭 영역 -->
+          <div class="form-group-item">
+            <span class="form-field-label">발행 용도</span>
+            <div class="segment-tab-wrapper" role="radiogroup" aria-label="현금영수증 구분 선택">
+              <button type="button" class="btn-segment-tab" role="radio" aria-checked="false">개인 소득공제용</button>
+              <button type="button" class="btn-segment-tab is-active" role="radio" aria-checked="true">
+                사업자 지출 증빙용
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. 사업자등록번호 3·2·5자리 (스토리보드 234p 2번) -->
+          <div class="form-group-item">
+            <span class="form-field-label">사업자등록번호</span>
+            <div class="phone-input-row">
+              <div class="common-input-field" style="flex: 3">
+                <input class="common-form-input" type="tel" placeholder="3자리 입력" maxlength="3" inputmode="numeric" />
+              </div>
+              <div class="common-input-field" style="flex: 2">
+                <input class="common-form-input" type="tel" placeholder="2자리 입력" maxlength="2" inputmode="numeric" />
+              </div>
+              <div class="common-input-field" style="flex: 5">
+                <input class="common-form-input" type="tel" placeholder="5자리 입력" maxlength="5" inputmode="numeric" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- 하단 공통 2버튼 (취소 40% / 확인 60%) -->
+      <div class="fixed-bottom-dual-btn-wrapper">
+        <button type="button" class="btn-dual-cancel" id="btnRecipientCancel">취소</button>
+        <button type="button" class="btn-dual-confirm" id="btnRecipientConfirm">발행</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -11,13 +11,13 @@
   <body class="KBB">
     <div class="page-history-detail-KBB">
       <header class="common-header">
-        <button type="button" class="btn-go-main">메인으로</button>
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
       </header>
       <main class="history-detail-main">
         <section class="history-detail-container">
           <div class="history-detail-title-wrapper">
             <h3 class="history-detail-title">김국민</h3>
-            <span class="common-badge badge-receive">받기</span>
+            <span class="common-badge badge-receive">받음</span>
           </div>
 
           <div class="history-detail-info-list">
@@ -54,10 +54,15 @@
           </div>
         </section>
       </main>
+      <!-- 현금영수증 발행 요청 완료 토스트 (스토리보드 0.7 243p 4) -->
+      <div class="common-toast-bottom show" role="alert" aria-live="polite">
+        <p class="toast-message">현금영수증 발행을 요청했습니다.</p>
+      </div>
       <!-- 하단 공통 고정 푸터 -->
       <div class="fixed-bottom-btn-wrapper">
         <button type="button" class="btn-confirm-bottom">환불하기</button>
       </div>
     </div>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
   </body>
 </html>

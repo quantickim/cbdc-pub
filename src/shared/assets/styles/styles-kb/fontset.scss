@@ -11,10 +11,8 @@
   font-weight: 400;
   font-display: swap;
   src:
-    local('Roboto'),
-    local('Roboto-Regular'),
-    url('../fonts/fonts-kb/Roboto-Regular.woff2') format('woff2'),
-    url('../fonts/fonts-kb/Roboto-Regular.woff') format('woff');
+    url('../fonts/fonts-kb/roboto_regular.woff2') format('woff2'),
+    url('../fonts/fonts-kb/roboto_regular.woff') format('woff');
 }
 @font-face {
   font-family: 'Roboto';
@@ -22,66 +20,119 @@
   font-weight: 500;
   font-display: swap;
   src:
-    local('Roboto Medium'),
-    local('Roboto-Medium'),
-    url('../fonts/fonts-kb/Roboto-Medium.woff2') format('woff2'),
-    url('../fonts/fonts-kb/Roboto-Medium.woff') format('woff');
+    url('../fonts/fonts-kb/roboto_medium.woff2') format('woff2'),
+    url('../fonts/fonts-kb/roboto_medium.woff') format('woff');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
+  // Roboto 는 Regular·Medium 두 파일만 쓴다: Bold(700)도 Medium 파일 (2026-10-26 요청, roboto_bold 미사용)
   src:
-    local('Roboto Bold'),
-    local('Roboto-Bold'),
-    url('../fonts/fonts-kb/Roboto-Bold.woff2') format('woff2'),
-    url('../fonts/fonts-kb/Roboto-Bold.woff') format('woff');
+    url('../fonts/fonts-kb/roboto_medium.woff2') format('woff2'),
+    url('../fonts/fonts-kb/roboto_medium.woff') format('woff');
 }
 
-// KBFG Text
+// KBText
 @font-face {
-  font-family: 'KBFG Text';
+  font-family: 'KBText';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
   src:
-    url('../fonts/fonts-kb/KBFGTextL.woff2') format('woff2'),
-    url('../fonts/fonts-kb/KBFGTextL.woff') format('woff');
+    url('../fonts/fonts-kb/kbfg_text_l.woff2') format('woff2'),
+    url('../fonts/fonts-kb/kbfg_text_l.woff') format('woff');
 }
 @font-face {
-  font-family: 'KBFG Text';
+  font-family: 'KBText';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src:
-    url('../fonts/fonts-kb/KBFGTextL.woff2') format('woff2'),
-    url('../fonts/fonts-kb/KBFGTextL.woff') format('woff');
+    url('../fonts/fonts-kb/kbfg_text_l.woff2') format('woff2'),
+    url('../fonts/fonts-kb/kbfg_text_l.woff') format('woff');
 }
 @font-face {
-  font-family: 'KBFG Text';
+  font-family: 'KBText';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
+  // KBText 는 Light(300·400)·Bold 두 파일만 쓴다: Medium(500)도 Bold 파일 (2026-10-26 요청, kbfg_text_m 미사용)
   src:
-    url('../fonts/fonts-kb/KBFGTextM.woff2') format('woff2'),
-    url('../fonts/fonts-kb/KBFGTextM.woff') format('woff');
+    url('../fonts/fonts-kb/kbfg_text_b.woff2') format('woff2'),
+    url('../fonts/fonts-kb/kbfg_text_b.woff') format('woff');
 }
 @font-face {
-  font-family: 'KBFG Text';
+  font-family: 'KBText';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
+  // KBText 는 Light(300·400)·Bold 두 파일만 쓴다: Medium(600)도 Bold 파일 (2026-10-26 요청, kbfg_text_m 미사용)
   src:
-    url('../fonts/fonts-kb/KBFGTextM.woff2') format('woff2'),
-    url('../fonts/fonts-kb/KBFGTextM.woff') format('woff');
+    url('../fonts/fonts-kb/kbfg_text_b.woff2') format('woff2'),
+    url('../fonts/fonts-kb/kbfg_text_b.woff') format('woff');
 }
 @font-face {
-  font-family: 'KBFG Text';
+  font-family: 'KBText';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src:
-    url('../fonts/fonts-kb/KBFGTextB.woff2') format('woff2'),
-    url('../fonts/fonts-kb/KBFGTextB.woff') format('woff');
+    url('../fonts/fonts-kb/kbfg_text_b.woff2') format('woff2'),
+    url('../fonts/fonts-kb/kbfg_text_b.woff') format('woff');
+}
+
+// KBText 안의 숫자·영문과 숫자 사이 기호(, - . / :)는 Roboto 로 보여 준다 (2026-10-30 요청)
+// - 같은 글꼴·굵기의 @font-face 가 unicode-range 로 겹치면 나중에 적은 것이 먼저 쓰이므로 KBText 정의 뒤에 둔다
+// - KBText Light(300·400) → Roboto Regular, Bold(500·600·700) → Roboto Medium
+@font-face {
+  font-family: 'KBText';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    url('../fonts/fonts-kb/roboto_regular.woff2') format('woff2'),
+    url('../fonts/fonts-kb/roboto_regular.woff') format('woff');
+  unicode-range: U+002C-002F, U+0030-003A, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'KBText';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url('../fonts/fonts-kb/roboto_regular.woff2') format('woff2'),
+    url('../fonts/fonts-kb/roboto_regular.woff') format('woff');
+  unicode-range: U+002C-002F, U+0030-003A, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'KBText';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url('../fonts/fonts-kb/roboto_medium.woff2') format('woff2'),
+    url('../fonts/fonts-kb/roboto_medium.woff') format('woff');
+  unicode-range: U+002C-002F, U+0030-003A, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'KBText';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url('../fonts/fonts-kb/roboto_medium.woff2') format('woff2'),
+    url('../fonts/fonts-kb/roboto_medium.woff') format('woff');
+  unicode-range: U+002C-002F, U+0030-003A, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'KBText';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url('../fonts/fonts-kb/roboto_medium.woff2') format('woff2'),
+    url('../fonts/fonts-kb/roboto_medium.woff') format('woff');
+  unicode-range: U+002C-002F, U+0030-003A, U+0041-005A, U+0061-007A;
 }

@@ -13,7 +13,7 @@
     <!-- 상단 공통 헤더 -->
     <header>
       <div class="common-header">
-        <button type="button" class="btn-go-main">메인으로</button>
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
       </div>
     </header>
 
@@ -55,12 +55,12 @@
       <!-- 구분선 -->
       <div class="divider-container" aria-hidden="true"></div>
 
-      <!-- 3. 서비스 설정 섹션 -->
+      <!-- 3. 설정 섹션 -->
       <section class="page-list-container">
-        <p class="page-list-title">서비스 설정</p>
+        <p class="page-list-title">설정</p>
         <div class="page-list">
           <div class="page-item" data-href="linked_account_info.html">
-            <p>연계 계좌 확인</p>
+            <p>연계계좌 확인</p>
             <button type="button" aria-label="이동"></button>
           </div>
           <div class="page-item" data-href="auto_charge_withdraw_setting.html">
@@ -104,11 +104,19 @@
         <p class="page-list-title">고객 지원</p>
         <div class="page-list">
           <div class="page-item" data-href="faq_list.html">
-            <p>자주 묻는 질문</p>
+            <p>자주 하는 질문</p>
             <button type="button" aria-label="이동"></button>
           </div>
           <div class="page-item" data-href="inquiry_list.html">
             <p><span class="common-font-roboto">1:1</span> <span>문의</span></p>
+            <button type="button" aria-label="이동"></button>
+          </div>
+          <div class="page-item" data-href="terms_pdf_popup.html">
+            <p>약관 및 이용 동의</p>
+            <button type="button" aria-label="이동"></button>
+          </div>
+          <div class="page-item" data-href="privacy_policy_list.html">
+            <p>개인정보처리방침</p>
             <button type="button" aria-label="이동"></button>
           </div>
         </div>
@@ -117,14 +125,6 @@
 
     <!-- 6. 국민지갑 하단 푸터 -->
     <footer class="footer-bottom-page">
-      <p class="kb-wallet">국민지갑</p>
-      <div class="bottom-page-container">
-        <button type="button" class="is-strong">개인정보처리방침</button>
-        <div class="divider" aria-hidden="true"></div>
-        <button type="button">위치기반서비스</button>
-        <div class="divider" aria-hidden="true"></div>
-        <button type="button">이용약관</button>
-      </div>
       <p class="customer-service">
         <span class="tel-info">고객센터:</span>
         <a href="tel:1588-9999" class="tel-link common-font-roboto">1588-9999</a>
@@ -136,5 +136,6 @@
         <span class="common-font-roboto">KB KOOKMIN BANK</span>
       </p>
     </footer>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
   </body>
 </html>

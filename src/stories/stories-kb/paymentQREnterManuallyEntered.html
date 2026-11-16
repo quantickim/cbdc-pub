@@ -29,26 +29,34 @@
               <span class="badge-sample-value">901TX0code0insert</span>
             </div>
           </div>
-          <p class="guide-card-title">거래코드는 QR 코드 아래에 있습니다.</p>
         </section>
 
         <!-- 거래코드 입력 영역 -->
         <section class="trade-code-input-container">
+          <label class="trade-code-label" for="tradeCodeInput">거래 코드</label>
           <div class="common-input-field">
             <input
               type="text"
               id="tradeCodeInput"
               class="common-form-input"
               value="901TX0code0insert"
-              placeholder="거래 코드를 입력해주세요."
+              placeholder="여기에 입력"
             />
+                      <!-- 초기화 버튼: 입력한 글자가 있을 때만 보인다 -->
+            <button type="button" class="btn-input-clear" aria-label="입력 지우기">
+              <i class="icon-input-clear" aria-hidden="true"></i>
+            </button>
           </div>
+          <p class="trade-code-caption">
+            <i class="icon-info-caption" aria-hidden="true"></i>
+            <span>QR 아래 있는 코드를 입력해주세요.</span>
+          </p>
         </section>
       </main>
 
       <!-- 공통 하단 고정 버튼 (기본 disabled) -->
       <div class="fixed-bottom-btn-wrapper">
-        <button type="button" class="btn-confirm-bottom" id="btnConfirm">확인</button>
+        <button type="button" class="btn-confirm-bottom" id="btnConfirm">다음</button>
       </div>
     </div>
   </body>

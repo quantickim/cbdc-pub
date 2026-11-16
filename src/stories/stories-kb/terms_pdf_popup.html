@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>CBDC - 약관 및 이용 동의</title>
+    <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
+  </head>
+  <body class="KBB">
+    <!-- 약관 및 이용 동의 팝업: 받아온 PDF 파일을 읽어 보여 주는 풀스크린 팝업 (스토리보드 0.7 235p 2) -->
+    <div
+      class="modal-dialog-overlay modal-dialog-fullscreen modal-pdf-viewer active"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="pdfViewerTitle"
+    >
+      <div class="modal-dialog-container">
+        <!-- 타이틀 + 닫기 (235p 2, 2-2: 터치 시 팝업 닫기) -->
+        <div class="pdf-viewer-header">
+          <h2 class="pdf-viewer-title" id="pdfViewerTitle">약관 및 이용 동의</h2>
+          <button type="button" class="btn-pdf-viewer-close" aria-label="닫기"></button>
+        </div>
+
+        <!-- 약관 상세 (235p 2-1): PDF 페이지를 그려 넣는 영역. 퍼블의 이미지는 예시이고, 앱에서는 받아온 PDF 페이지를 canvas 등으로 그린다 -->
+        <div class="modal-dialog-content pdf-viewer-content">
+          <img class="pdf-viewer-page" src="../../shared/assets/img/img-kb/img_pdf_sample_page.png" alt="" />
+        </div>
+
+        <!-- 좌/우 넘김 (235p 2-3): 이동할 페이지가 없으면 반응 없음 -->
+        <button type="button" class="btn-pdf-prev" aria-label="이전 페이지"></button>
+        <button type="button" class="btn-pdf-next" aria-label="다음 페이지"></button>
+      </div>
+    </div>
+    <script src="../../shared/assets/js/js-kb/pub-change-notes.js"></script>
+  </body>
+</html>

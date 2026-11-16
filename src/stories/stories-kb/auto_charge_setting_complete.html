@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
     <meta name="format-detection" content="telephone=no, address=no, email=no" />
-    <title>CBDC - 자동 충전/출금 설정</title>
+    <title>CBDC - 자동 충전 설정 완료</title>
     <link rel="stylesheet" href="../../shared/assets/styles/kb.css" />
     <script type="text/javascript" src="../../shared/assets/js/js-kb/app.js"></script>
   </head>
@@ -12,51 +12,24 @@
     <!-- 공통 상단 헤더 -->
     <header>
       <div class="common-header">
-        <button type="button" class="btn-go-main">메인으로</button>
+        <button type="button" class="btn-go-main">전자지갑 메인</button>
       </div>
     </header>
 
     <main>
       <!-- 설정 항목 리스트 영역 -->
       <section class="auto-setting-list">
-        <!-- 1. 자동 충전 -->
         <div class="setting-item">
           <div class="item-text-wrapper">
             <p class="item-title">자동 충전</p>
-            <p class="item-desc">결제 시 예금 토큰 잔액이 부족할 경우 연결된 계좌에서 자동 충전하여 결제를 진행해요.</p>
+            <p class="item-desc">결제할 때 예금 토큰 잔액이 부족하면 연계계좌에서 자동 충전해요.</p>
           </div>
           <label class="common-switch" for="switchAutoCharge">
-            <input type="checkbox" id="switchAutoCharge" class="switch-input" />
+            <input type="checkbox" id="switchAutoCharge" class="switch-input" checked />
             <span class="switch-track">
               <span class="switch-thumb"></span>
             </span>
           </label>
-        </div>
-
-        <!-- 2. 자동 출금 -->
-        <div class="setting-item">
-          <div class="item-text-wrapper">
-            <p class="item-title">자동 출금</p>
-            <p class="item-desc">설정하신 보유 한도 초과 시 초과된 금액은 연결된 계좌로 자동 전환되어 입금해요.</p>
-          </div>
-          <label class="common-switch" for="switchAutoWithdraw">
-            <input type="checkbox" id="switchAutoWithdraw" class="switch-input" />
-            <span class="switch-track">
-              <span class="switch-thumb"></span>
-            </span>
-          </label>
-        </div>
-
-        <!-- 3. 보유 한도 설정 링크 -->
-        <div class="setting-item is-link" data-href="holding_limit_setting.html">
-          <div class="item-text-wrapper">
-            <p class="item-title">보유 한도</p>
-            <p class="item-desc limit-value">
-              <span class="common-font-roboto">1,000,000</span>
-              <span>원</span>
-            </p>
-          </div>
-          <button type="button" class="btn-arrow" aria-label="보유 한도 변경"></button>
         </div>
       </section>
 
@@ -73,12 +46,16 @@
         <div class="notice-content-body">
           <ul class="notice-bullet-list">
             <li class="bullet-main-item">
-              자동 충전/출금은 연결 계좌 잔액 부족, 계좌 정지, 점검 시간에는 실패할 수 있습니다.
+              자동 충전/출금은 연계계좌 잔액 부족, 계좌 정지, 점검 시간에는 실패할 수 있습니다.
             </li>
           </ul>
         </div>
       </section>
     </main>
+    <!-- 하단 설정하기 버튼 -->
+    <div class="fixed-bottom-btn-wrapper">
+      <button type="button" class="btn-confirm-bottom">설정하기</button>
+    </div>
 
     <!-- 공통 토스트 팝업 -->
     <div class="common-toast-bottom show" role="alert" aria-live="polite">
