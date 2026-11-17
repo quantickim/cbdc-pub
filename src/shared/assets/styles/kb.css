@@ -2231,11 +2231,12 @@ th {
 .page-main-KBB .main-content section.main-qrshop-container button {
   display: flex;
   height: 112px;
-  padding: 14px 16px 12px 16px;
+  padding: 14px clamp(8px, (100vw - 280px) / 5, 16px) 12px;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   flex: 1 0 0;
+  min-width: 0;
   border-radius: 12px;
   background: #fff;
 }
@@ -3876,15 +3877,7 @@ th {
 }
 .page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item {
   flex: 1;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item.flex-1 {
-  flex: 1.2;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item.flex-2 {
-  flex: 1;
-}
-.page-business-register-KBB .business-register-main .business-register-form-container .form-item .business-number-inputs .input-item.flex-3 {
-  flex: 1.5;
+  min-width: 0;
 }
 
 .page-business-complete-KBB {
@@ -11218,6 +11211,10 @@ i[class^=icon-alarm-]::before {
   flex-shrink: 0;
 }
 
+.KBB .page-voucher-status-KBB[class^=page-][class*=-KBB] > main > section.voucher-list-container > .voucher-card:last-child {
+  padding-bottom: 18px;
+}
+
 .page-voucher-status-KBB {
   min-height: 100vh;
   background-color: #ffffff;
@@ -12095,6 +12092,12 @@ i[class^=icon-alarm-]::before {
   line-height: 23px;
   letter-spacing: -0.32px;
   word-break: keep-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
 }
 .page-inquiry-list-KBB .inquiry-list-container .inquiry-list .inquiry-item .item-content .inquiry-date {
   color: #838b94;

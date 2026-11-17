@@ -269,11 +269,14 @@
       button {
         display: flex;
         height: 112px;
-        padding: 14px 16px 12px 16px;
+        // 360px 미만 화면은 폭을 같게 나누면 'QR 스캔해서'가 카드 밖으로 넘쳐 좌우 여백을 줄인다 (320px 에서 8px)
+        padding: 14px clamp(8px, calc((100vw - 280px) / 5), 16px) 12px;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
         flex: 1 0 0;
+        // 글 길이와 관계없이 세 카드 폭을 같게 (기본 min-width: auto 면 글이 긴 카드가 넓어짐)
+        min-width: 0;
         border-radius: 12px;
         background: #fff;
       }
@@ -1898,18 +1901,11 @@
           align-items: center;
           gap: 8px;
 
+          // 세 칸 안내 문구('3자리 입력'·'2자리 입력'·'5자리 입력')는 길이가 같아 같은 폭으로 나눈다.
+          // 1.2 : 1 : 1.5 로 나누면 360px 화면에서 가운데 칸이 76px 로 '2자리 입력'(80px)이 잘렸다 (2026-11-17 개발폰)
           .input-item {
             flex: 1;
-
-            &.flex-1 {
-              flex: 1.2;
-            }
-            &.flex-2 {
-              flex: 1;
-            }
-            &.flex-3 {
-              flex: 1.5;
-            }
+            min-width: 0;
           }
         }
       }
@@ -9466,6 +9462,12 @@ i[class^='icon-alarm-'] {
 // **** 내 바우처 현황 페이지 (.page-voucher-status-KBB)
 // ============================================================
 
+// common.scss 의 [class^='page-'][class*='-KBB'] > main > section:last-child > :last-child (아래 여백 0) 가
+// 마지막 바우처 카드의 아래 안쪽 여백(18px)까지 없애 카드가 낮아 보였다 (2026-11-16 사용자 확인). 카드 여백을 되돌린다
+.KBB .page-voucher-status-KBB[class^='page-'][class*='-KBB'] > main > section.voucher-list-container > .voucher-card:last-child {
+  padding-bottom: 18px;
+}
+
 .page-voucher-status-KBB {
   min-height: 100vh;
   background-color: #ffffff;
@@ -10480,6 +10482,15 @@ i[class^='icon-alarm-'] {
             line-height: 23px;
             letter-spacing: -0.32px;
             word-break: keep-all;
+
+            // 스토리보드 0.8 238P 1번: 질문명은 최대 2줄, 넘치면 말줄임 (퍼블리싱에는 줄 수 제한이 없음).
+            // 띄어쓰기 없는 긴 글자도 가로로 넘치지 않게 줄을 바꾼다
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            overflow: hidden;
+            overflow-wrap: anywhere;
           }
 
           .inquiry-date {
